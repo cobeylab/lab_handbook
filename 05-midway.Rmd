@@ -1,0 +1,324 @@
+# Midway
+
+Midway is the main computing cluster used by the lab, run by the Research Computing Center. The official documentation is maintained here by RCC:
+
+[https://rcc.uchicago.edu/docs/](https://rcc.uchicago.edu/docs/)
+
+This page contains some tasks that are likely to be useful to you.
+
+## Storage on Midway
+
+There are three places you can store things on Midway: (1) your home directory; (2) your scratch space; and (3) a shared project directory for the lab.
+
+Your home directory is in `/home/<CNetID>` and has a quota of 25 GB. This is a good place to check out your code, install software you want to use for runs, etc. You should NOT, in general, store simulation output in your home directory.
+
+Your scratch space is `$HOME/scratch-midway` and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., `2014-12-08-antigen-vaccine`; you may want prefer a hierarchy.
+
+The lab project directory is `/project/cobey` and has a quota of 500 GB for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. `/project/cobey/bcellproject-storage/2014-12-08-test`.
+
+To check your disk usage, use the `quota` command. These quotas are current as of 8 December 2014.
+
+## Connecting to Midway
+
+Details here:
+
+[https://rcc.uchicago.edu/docs/connecting/](https://rcc.uchicago.edu/docs/connecting/)
+
+### SSH (terminal)
+
+To connect via ssh, use your CNetID:
+
+```
+$ ssh <CNetID>@midway.rcc.uchicago.edu
+```
+
+You can either type your password every time you want to log in, or, way cooler, set up a [passwordless login](Passwordless Login) using public-key authentication.
+
+### SCP
+
+You can copy individual files or directly back and forth using the `scp` command, e.g.,
+
+```
+$ scp <local-path> <CNetID>@midway.rcc.uchicago.edu:<remote-path>
+$ scp <CNetID>@midway.rcc.uchicago.edu:<remote-path> <local-path> 
+```
+
+There are also graphical SSH/SCP browsers for Mac OS X, Linux, and Windows:
+
+* [WinSCP](http://winscp.net/eng/index.php) (Windows)
+* [FileZilla](https://filezilla-project.org) (all platforms)
+* [Fugu](http://rsug.itd.umich.edu/software/fugu/) (Mac OS X; be sure to download 1.2.1pre1; see the News section)
+
+### SMB (connect as a disk)
+
+You can make Midway to look like a local disk on your computer using [SMB](http://en.wikipedia.org/wiki/Server_Message_Block). This is convenient for things like editing job submission scripts using your favorite editor directly on the server, without having to copy things back and forth.
+
+Midway's SMB hostname is `midwaysmb.rcc.uchicago.edu`.
+
+If you're off campus, you'll need to be connected to the U of C VPN to access SMB. It will also be pretty slow, especially if you're on a crappy cafe connection like the one I'm on now--you may find a GUI SCP client to be a better choice offsite.
+
+On Mac OS X, go to the Finder, choose Go > Connect to Server... (Command-K), and then type in the URL for the directory you want to access. The URLs are currently confusing (you need to specify your CNetID in the scratch URL but not in the home URL):
+
+```
+   Home:  smb://midwaysmb.rcc.uchicago.edu/homes
+Scratch:  smb://midwaysmb.rcc.uchicago.edu/midway-scratch/<CNetID>
+Project:  smb://midwaysmb.rcc.uchicago.edu/project/cobey
+```
+
+### ssh -X (terminal with graphical forwarding)
+
+If you connect to Midway via `ssh -X`, graphical windows will get forwarded to your local machine. On Linux, this should work out of the box; on Mac OS X you'll need to install [XQuartz](https://xquartz.macosforge.org/) first. (There's probably a way to make this work on Windows too; if you figure this out, please add instructions here.)
+
+It's then as simple as doing this when logging in:
+
+```
+$ ssh -X <CNetID>@midway.rcc.uchicago.edu
+```
+
+This is especially useful for the `sview` command (see below); it also will forward the graphics of a job running on a cluster node if you use `ssh -X and then `sinteractive`.
+
+### VNC (graphical interface via ThinLinc)
+
+You can also get a full Linux desktop GUI on a Midway connection using a program called ThinLinc:
+
+[https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc](https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc)
+
+WARNING: the first time you use ThinLinc, before you click Connect go to Options... > Screen and turn off full-screen mode. Otherwise ThinLinc will take over all your screens, making it rather hard to use your computer.
+
+## Configuring Software on Midway
+
+Before you run anything on Midway, you'll need to load the necessary software modules using the `module` command:
+
+[https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/](https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/)
+
+If you're not sure what the name of your module is, use, e.g.,
+
+```
+$ module avail intel
+```
+
+and you'll be presented with a list of options. You can then load/unload modules using, e.g.,
+
+```
+$ module load intel/15.0
+$ module unload intel/15.0
+```
+
+There are multiple versions of many modules, so you'll generally want to check `module avail` before trying `module load`.
+
+If you want to automatically load modules every time you log in, you can add `module load` commands to the end of your `~/.bash_profile` file (before `# User specific environment and startup programs`).
+
+### Git
+
+The easiest way to get your code onto Midway is to check it out 
+
+```
+$ module avail git
+```
+
+### Java
+
+```
+$ module avail java
+```
+
+As of writing, Midway only has one version of Java (1.7), so be sure not to use JDK 1.8 features in your Java code.
+
+### C/C++
+
+```
+$ module avail intel
+$ module avail gcc
+```
+
+There are three C/C++ compiler modules available on Midway: `gcc`, `intel`, and `pgi`. The Intel and PGI compilers are high-performance compilers that should produce faster machine code than GCC, but only `intel` seems to be kept up to date on Midway, so I'd recommend using that one.
+
+The Intel compilers should work essentially the same as GCC, except due to ambiguities in the C++ language specification you may sometimes find that code that worked on GCC needs adjustment for Intel. To use the Intel compiler, just load the module and compile C code using `icc` and C++ code using `icpc`.
+
+Unless you have a good reason not to, you should use `module avail` to make sure you're using the latest GCC and Intel compilers, especially since adoption of the [C++11 language standard](http://wikipedia.org/wiki/C++11) by compilers has been relatively recent at the time of writing.
+
+Also, it's worth knowing that Mac OS X, by default, uses a different compiler entirely: [LLVM/Clang](http://llvm.org). (Currently, only an old version of LLVM/Clang is available on Midway). So you might find yourself making sure your code can compile using three different implementations of C++, each with their own quirks.
+
+Here's how you compile C++11 code using the three compilers:
+
+```
+$ g++ -std=c++11 -O3 my_program.cpp -o my_program
+$ icpc -std=c++11 -O3 my_program.cpp -o my_program
+$ clang++ -std=c++11 -stdlib=libc++ -O3 my_program.cpp -o my_program
+```
+
+NOTE: the `-O3` flag means "optimization level 3", which means, "make really fast code." If you're using a debugger, you'll want to leave this flag off so the debugger can figure out where it is in your code. If you're trying to generate results quickly, you'll want to include this flag. (If you're using Apple Xcode, having the flag off and on roughly correspond to "Debug" and "Release" configurations that you can choose in "Edit Scheme".)
+
+If you want to make it easy to compile your code with different compilers on different systems, you can use the `make.py` script in the [bcellmodel](https://bitbucket.org/cobeylab/bcellmodel) project as a starting point. It tries Intel, then Clang, then GCC until one is available. (This kind of thing is possible, but a bit annoying to get working, using traditional Makefiles, so I've switched to using simple Python build scripts for simple code.)
+
+### R
+
+```
+$ module avail R
+```
+
+shows several versions of R. The best version will probably be the latest one alongside the Intel compiler, e.g., `R/3.1+intel-15.0` at the time of writing.
+
+### Python
+
+In order to keep a consistent Python environment between your personal machine and Midway, we are maintaining our own Python installations in `/project/cobey`. Skip the Midway Python modules entirely, and instead include this in your `~/.bash_profile`:
+
+```
+export PATH=/project/cobey/anaconda/bin:/project/cobey/pypy/bin:$PATH
+```
+
+To make sure things are set up properly make sure that `which python` finds `/project/cobey/anaconda/bin/python` and `which pypy` finds `/project/cobey/pypy/bin/pypy`. See the Python page on this wiki for more information.
+
+### Matlab and Mathematica
+
+You shouldn't use Matlab or Mathematica if possible, because if you publish your code your results will only be reproducible to people that want to pay for Matlab or Mathematica.
+
+But if you must...
+
+```
+module avail matlab
+module avail mathematica
+```
+
+shows that they are available on Midway. (Getting a graphical Mathematica notebook to run on the cluster is a pain in the ass, though, so you're probably better off just running it locally if you can get away with it.)
+
+## Running Jobs on Midway
+
+I'll leave most of the details to the official documentation:
+
+[https://rcc.uchicago.edu/docs/using-midway/#using-midway](https://rcc.uchicago.edu/docs/using-midway/#using-midway)
+
+but a summary of important stuff follows.
+
+### Overview
+
+Midway consists of a large number of multi-core nodes, and uses a system called [SLURM](http://slurm.schedmd.com) to allocate jobs to cores on nodes.
+
+Some details on the terminology: a "node" is what you normally think of as an individual computer: a box with a motherboard, a hard drive, etc., running a copy of Linux. Each node's motherboard contains several [processors](http://en.wikipedia.org/wiki/Microprocessor) (a physical chip that plugs into the motherboard), each of which may contain several cores. A "core" is a collection of circuits inside the processor that can, conceptually speaking, perform one series of instructions at a time. (Until a few years ago, processors only consisted of one core and people talked about "processors" the way they now talk about "cores," so you might hear people confusing these from time to time.)
+
+If you are writing code that does only one thing at a time (serial code), then all you really need to know is that a single run of your code requires a single core.
+
+### Job structure
+
+Note that Midway counts service units, or core-hours in increments of 0.01. To minimize waste, we're best off designing jobs to be at least several minutes each. (It makes sense that we wouldn't want to bog down the scheduler anyway.)
+
+### Priority
+
+As described below, if your jobs aren't running right away, you can use 
+
+```
+$ squeue -u <CNetID>
+```
+to see what's going on. 
+
+If your jobs are queued with `(Priority)` status, it means other jobs are taking priority. Job priorities are determined by the size of the job, its time in the queue, the requested wall time (so it pays to be precise and know your jobs well), and group-level prior usage. Groups that have consumed fewer resources get higher priority than those using more. This usage has a half-life of approximately 14 days, which means it's less awkward to spread jobs out over time. You can view the priority of queued jobs using
+
+```
+$ sprio
+```
+
+### Useful commands
+
+#### sinteractive
+
+To get a dedicated job that you can interact with just like any login session--e.g., if you want to manually type commands at the command line to try some code out, make changes, do some analysis, etc.--you can use the `sinteractive` command:
+
+[https://rcc.uchicago.edu/docs/using-midway/#sinteractive](https://rcc.uchicago.edu/docs/using-midway/#sinteractive)
+
+If you connected via `ssh -X`, then graphical windows will also get forwarded from the cluster to your local machine.
+
+#### sbatch
+
+To submit a single non-interactive job to the cluster, use the `sbatch` command:
+
+[https://rcc.uchicago.edu/docs/using-midway/#sbatch](https://rcc.uchicago.edu/docs/using-midway/#sbatch)
+
+This involves preparing a script with special indications to SLURM regarding how much memory you need, how many cores, how long you want the job to run, etc.
+
+#### squeue
+
+View jobs you are currently running:
+
+```
+$ squeue -u <CNetID>
+```
+
+#### scancel
+
+Cancel jobs by job ID:
+
+```
+$ scancel <job-ID>
+```
+
+Cancel all of your jobs:
+
+```
+$ scancel -u <CNetID>
+```
+
+#### accounts
+
+Display number of used/available CPU-hours for the lab:
+
+```
+$ accounts balance
+```
+
+Display number of CPU hours used by you:
+
+```
+$ accounts usage
+```
+
+#### sview
+
+If you're connected graphically to Midway (either via `ssh -X` or using ThinLinc), you can get a graphical view of the SLURM cluster, which makes it easy to do things like selectively cancel a bunch of jobs at once:
+
+```
+$ sview
+```
+
+The most useful command: Actions > Search > Specific User's Job(s)
+
+####quota
+
+Display storage usage:
+
+```
+$ quota
+```
+The standard quota on an individual account is 25GB. When you exceed this, Midway will notify you the next time you log in. There is a grace period of 7 days to adjust your usage. There is also a hard limit of 30GB.
+
+### Parameter sweeps
+
+TODO
+
+## SLURM tricks
+
+`squeue -o` lets you specify additional information for squeue using a format string. These are annoying to type every time you want to query things. You can create an alias in your `.bash_profile` script:
+
+```{sh}
+alias sq='squeue -o "%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m"'
+```
+
+which includes standard info plus some extra stuff (including time limit, # nodes, # CPUs, and memory). Then you can just type `sq`, `sq -p cobey`, `sq -u edbaskerville`, etc. to perform queries with your customized format string.
+
+See `man squeue` for a list of format string options.
+
+`sinfo -o` has similar options, including the ability to see how many processors are available/in use:
+
+```{sh}
+alias si='sinfo -o "%P %.5a %.10l %.6D %.6t %C"'
+```
+
+A full list of aliases for user edbaskerville might look like:
+
+```{sh}
+alias sq='squeue -o "%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m"'
+alias qcobey='sq -p cobey'
+alias qsandyb='sq -p sandyb -u edbaskerville'
+alias si='sinfo -o "%P %.5a %.10l %.6D %.6t %C"'
+alias icobey='si -p cobey'
+alias isandyb='si -p sandyb'
+```

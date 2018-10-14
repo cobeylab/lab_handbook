@@ -1,0 +1,42 @@
+# Onboarding
+
+Welcome to the lab! This is an incomplete checklist of items to cover in your first week. We'll review all of this in a meeting the first day.
+
+The most important things are to read the whole handbook and not to hesitate to ask questions.
+
+**Workspace**
+
+* Identify hardware to purchase: monitor, laptop, external hard drive, keyboard, mouse, etc. 
+* Any other accommodations needed for comfortable work station?
+* Key to lab (from E&E office, $20 deposit required)
+* Get UChicago ID card from library. This gives you access to the building.
+* Consider asking for access now to other spaces you may visit, e.g., immunology (4th floor of KCBD).
+
+**Computing and admin**
+
+* [Request an account](https://rcc.uchicago.edu/accounts-allocations/general-user-account-request) to use the Cobey partition on Midway.
+* Request access to the lab's Asana workspace.
+* Request access to [cobeylab github account](https://github.com/cobeylab). (Create a github account if you've not yet.)
+* Request access to the theory group calendar and the lab calendar
+* Consider signing up for emails on additional seminar series and groups. (Note that a list of almost all BSD seminars will be emailed to you every day.)
+* Ask Garnett to help you set up CrashPlan Pro and the external hard drive for backups.
+* Figure out a lab service task.
+* Write your profile for the lab website.
+
+**Research**
+
+* Identify a time for weekly meetings.
+* Develop your one-year goals and describe your long-term plans. 
+* Meet with Sarah to identify short-term research goals and funding and conference deadlines.
+* Learn who/what is funding your research.
+
+**Introductions**
+
+* Lab members!
+* E&E administrators and IT: Mary, Bonnie, Connie, Jeff, Linda, Garnett, Mike
+* Building administrators and custodians
+* Neighbors in the Erman Building
+* Other faculty
+
+
+

@@ -1,0 +1,173 @@
+# So you wanna...
+
+## Join the lab
+
+We welcome applications from skilled, ambitious, and independent researchers at all levels, as long as they are burning to do good research promptly.
+
+**Undergraduate students** interested in joining the lab generally need to be proficient (not brilliant) in at least one programming language, such as Python, R, Matlab, C(++), or Java, and have some biological background or curiosity in at least one research area. You should also be proficient in basic statistics.
+
+**Prospective graduate students** are encouraged to review the details of the graduate program and the research described here. They may wish to consider working as research assistants in the lab to ensure a good fit before applying to the graduate program.
+
+**Rotation students** must start with strong quantitative and some programming skills.
+
+**Senior researchers, research programmers, and postdoctoral fellows** are also welcome to contact Sarah about opportunities for support and collaboration. We are especially looking for more postdocs to study the evolutionary dynamics of adaptive immunity.
+
+All who are interested in joining the lab should explain in their initial communication what skills they could bring to the lab and what they hope to obtain from collaborating. It is essential to have read recent papers in the relevant research area, including some from our group, and to have an idea of the kind of questions or problems that excite you.
+
+## Do some research
+
+**Identify a good question:** This can take some time. Talk with other people, read, keep talking, study patterns, reason from first principles, and keep talking. What phenomena are you trying to explain?
+
+**Develop a game plan:** Draft some approaches. Prioritize a few. Add the actionable tasks to Asana. (You can keep backup ideas there too in a separate section.)
+
+**Set up a notebook:** It's easiest if you create a version-controlled "lab notebook" in which to record your progress, which includes your thinking, notes from papers, and your analyses. There are a lot of fine ways to do this. You could use Asana and Overleaf (Latex), or a R markdown file, or a Jupyter notebook. It doesn't matter too much. Put files in a repository, synced to the lab's github account. Everything you do should be traceable and reproducible in some way---no quick "one off" figures that exist only on your laptop.
+
+**Have the right attitude:** As long as you're reasoning based on evidence, you're making progress. See [Schwartz (2015)](http://jcs.biologists.org/content/128/15/2745). Not all projects should move ahead. This is why it's useful to step back, reassess, and discuss your work with others.
+
+## Code well and efficiently
+
+(Populate with content from [lab wiki](https://bitbucket.org/cobeylab/wiki/wiki/Home))
+
+## Write well
+
+* One of the best ways to write good papers is to read lots of good papers. 
+This is more comfortable than learning incrementally from rejections. Also, there are useful books and essays on the subject (see below). 
+* For grants and papers, the central challenge is to articulate an interesting question and show how you have helped or will help answer it. Practice doing this from the beginning of your research project, as you sketch ideas and results in your notebook.
+* **Be clear.** Use topic sentences. Assume your reader is an intelligent first-year graduate student. Try to state things vividly and directly. Your writing will almost always improve if you try to explain your reasoning as transparently as possible.
+* Focus on ideas, not paradigms or studies. Do not say, "Many studies have shown X," just state what has been shown and give references.
+* Be consistent. If you define a parameter, refer to it the same way throughout your paper. This holds for all sorts of annoying punctuation and formatting conventions. Channel the reader's attention into one clear, fascinating story, and let nothing distract from it.
+* Recommendations: ["Why Academics Stink at Writing"](https://stevenpinker.com/files/pinker/files/why_academics_stink_at_writing.pdf), [*The Elements of Style*](https://www.bartleby.com/141/index.html) (which I really like, contrary to [Claus](https://serialmentor.com/blog/2017/11/12/move-over-Strunk-White)), and ["Ten Simple Rules for Writing Research Papers"](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003453) 
+
+## Write good emails
+
+* Be concise. 
+Be clear if you are asking for something, or if you are simply giving information.
+Try to minimize the number of back-and-forths required: instead of asking if someone is free to meet next week, list blocks of time you are available and propose a location. 
+Make it easy to reply quickly.
+* Rather than send large attachments, send a link to a Box or Dropbox directory where the file can be downloaded.
+* Be polite. (Being concise is part of being polite, but being polite also means using professional titles and spell-checking your email.)
+Striking the right tone can be hard sometimes. 
+One error that very junior scientists sometimes make is being excessively deferential ("I was wondering maybe if you might consider...").
+
+
+## Make nice figures
+
+Mostly, see Claus Wilke's excellent online guide, [Data Visualization](https://serialmentor.com/dataviz/). 
+Some immediate suggestions:
+
+* Label your axes. All parameters should be spelled out and accompanied by their symbol (e.g., "Transmission rate, $\beta$").
+* Save figures in vector formats.
+* If many points are plotted over one another, consider semi-transparency or plotting densities.
+* Minimize wasted space in figures while ensuring your axis limits are appropriate (e.g., that fractions ranging from 0 to 1 have y-axis ranges of [0,1]).
+* Titles are frequently a waste of space, but be sure to include key information somewhere nearby, e.g., what the shaded area represents, how you assessed significance, etc.
+* To increase accessibility, avoid relying on red/green contrasts.
+
+## Keep up with the literature
+
+Keeping up with the literature involves two challenges: finding papers and reading them. I've described what I do, but there could be better solutions.
+
+**Finding papers**: 
+
+1. Use a RSS reader. Subscribe to major journals and bioRxiv and arXiv topics. Skim the titles and abstracts when you have a few minutes here and there. This will probably identify 90% of the papers you might care about.
+
+2. Set up Google alerts so you can get emails when particular papers and people are cited.
+
+3. Do a good search in any area of interest so you can identify relevant papers published decades ago. It is amazing how rapidly phenomenal work can be forgotten by a field.
+
+**Reading papers**:
+
+1. Just block off the time on your calendar and do it.
+
+2. Consider setting up a small reading group to discuss more challenging papers. (For easier papers, this can double the time it takes to read them.) Also take advantage of theory group and lab meetings to force these discussions.
+
+## Get funded
+
+1. Aggressively search for opportunities. Ask the grad student and postdoc coordinators, ask your peers, do searches, etc. Periodically recheck.
+
+2. Work backwards from deadlines, giving yourself much more time than seems necessary, and establish a schedule. Ask Linda if the grant will need to be reviewed by the URA and find out what their deadline is. This is the effective deadline (it's usually about two weeks before the submission deadline). Letter writers usually need at least three weeks before then, and it is best if you can give them a good copy of your research proposal by then too. Depending on the complexity of the application, we may need four or more weeks to bounce drafts back and forth. For applications with mentoring plans, it's especially useful to get started several months ahead, so we can identify if another sponsor should be brought on board. It's also important to start early if we're unsure the research will be a good fit for the funder: we need the time to revise our pitch in coordination with the program officer.
+
+3. Identify several people who will read a draft of your proposal. It's best if some of them have been successfully funded and if they are not in your subfield. (Ideally, they'd be just like the review panel.) Ask how long they'll need with the proposal to give you comments, and work backwards to figure out when your draft needs to be ready.
+
+4. Obtain copies of as many successfully funded applications of this type as you can, ideally with their summary sheets or reviewer comments. You'll usually have to promise confidentiality to get them. You can search for funded federal grants on the [NIH RePORTER website](https://federalreporter.nih.gov/). It's also worthwhile just asking around.
+
+4. Read [4 Steps to Funding](https://www.amazon.com/Funding-Rejection-Funded-Simple-Formula/dp/0615505589) in its entirety before drafting anything. It should only take a few hours. We have a copy in the lab somewhere.
+
+5. Study the call/grant description carefully and study the funded applications. What consistencies appear? Potentially consult with program officers and other applicants to make sure you understand what reviewers are looking for. 
+
+6. Write the proposal, and get funded! No seriously, we'll discuss proposal-specific details in person. But as a mentor once told me, people generally like things in proportion to how well they understand them, so you want to make sure the proposal is really exciting---see *4 Steps to Funding*---and really, really clear. This is why we ask people outside our subfield to give us comments.
+
+## Do peer review
+
+I'm assuming you've already been invited to review a paper. 
+If you've not, there's not too much you can do, aside from publishing.
+(I'm always on the lookout for papers I can invite lab members to review with me or in my place.)
+If you make positive comments about unpublished work at a meeting, there's a chance the authors will suggest you as a reviewer.
+
+If you've been asked to review a paper,
+
+* Ensure you do not have a conflict of interest. Check the journal's policy, but regardless, look in your heart of hearts, and do not overestimate your impartiality. You should decline to review papers by friends and recent collaborators. I also decline to read manuscripts that seem to be directly "competing" with my own, i.e., they are tackling the same question using similar methods. They're probably not really competing, but if I feel they are, that's enough to disqualify me.
+* Confirm you can make the deadline. If you need more time, it's better to ask the editor for extra time now.
+* It might be a good idea to ask if they want your review as a backup. It seems rude to ask and probably usually is, but I've twice agreed to review manuscripts for journals only to be told *after I'd agreed but before the deadline* that they had received a sufficient number of reviews and no longer needed mine. This doesn't seem polite except under extraordinary circumstances and wasted hours of my time. I'll name the journals and editors in person.
+* Read over the journal's criteria for judging manuscripts. For some journals, novelty is unimportant, or there's no requirement to work with empirical data. It's really annoying to be held to standards that the journal itself does not endorse; the editors sometimes don't know. (Nope, no baggage here!) 
+* It's good to start your reviews with a succinct summary of the manuscript, especially by placing it in the context of other work in the field. This helps the editor, who might not understand the paper so well, and also shows that you understand the paper. Directly discuss what the paper contributes or could contribute and the extent to which the paper satisfies the criteria important to the journal.
+* Next review the major strengths and weaknesses of the paper. Be very clear about what makes or doesn't make the paper convincing.
+* Especially regarding claims of novelty, it is critical to cite! One of the most maddening things is to get a review saying, "Meh, this has basically been done before," with no references. Citations also help the authors improve their work quickly, especially if you're suggesting relevant papers they've missed.
+* In general, do not punish the authors for not doing the study you would've done or think should be done. Focus on what the paper *does* contribute or could contribute with minor or moderate changes. 
+* Do not recommend acceptance, major revisions, minor revisions, etc., directly in the body of the review. That recommendation is for the editor to make. Your job is to help the editor make a decision and the authors to understand your impression of their paper---both what's good about it and what can be improved.
+* Be constructive. Never be snarky or sarcastic. Imagine this is the first review the first author is receiving.
+* Let the editor know in your review or confidential comments if you do not feel qualified to judge certain parts of the manuscript.
+* Especially for papers that need a lot of work, it's not a good use of time to note every small mistake or error. You do not need to be the copy editor.
+* For papers involving code, try to run the code and check its documentation, but do not reimplement the analysis unless you want to. You also do not need to check complex mathematical derivations. However, the methods should appear clear and reproducible.
+* It's fine, even good, to comment on other reviewers' comments in later rounds of review, especially if you disagree with them.
+
+## Have productive meetings
+
+**Before the meeting:**
+
+1. If proposing an ad hoc meeting, give an estimate of how much time it should take in your invitation. This will help people focus during the meeting.
+
+2. If the meeting is routine, let the other participants know in advance if you expect it to be especially short or long.
+
+3. Make sure every meeting has a purpose that everyone understands. It is good if you can send an agenda beforehand. Some people also like to review materials, such as summaries, beforehand. Ask they want this.
+
+**At the meeting:**
+
+1. Present the agenda and remind people of the meeting's purpose.
+
+2. If discussing research, ensure you give appropriate background information and context, and ensure your figures and numbers are clear (even if they're not "pretty").
+
+3. Take notes rather than forcing yourself to recall things later. 
+
+4. End by summarizing the next steps, who does them, and the timeline.
+
+5. Keep the meeting on track: If a less relevant discussion takes off, flag this as a topic to address later.
+
+**After the meeting:**
+
+1. For committee meetings, meetings with collaborators, etc., it is extremely helpful to send a short follow-up email summarizing what was decided and what will happen next.
+
+2. Follow up on those commitments.
+
+## Book travel
+
+The general idea is to reduce costs as much as possible while remaining comfortable and productive.
+(These savings will go toward more travel, research, and fun lab things.)
+The grants that fund travel have different allowable expenses and documentation requirements, so please check flights and your total budget with me before booking.
+
+Tips:
+
+* Imagine the money as your own. Please plan your travel far enough in advance that we are not paying through the nose for registration or flights. 
+Please book flights at least six weeks in advance, unless you're really confident the price is dropping.
+For conferences, book flights earlier.
+* UChicago has discounts with various airlines, hotels, etc. Check them. 
+You may need to use the University's travel agency or use a special website (e.g., swabiz.com for Southwest). 
+(Some of these "deals" should probably be checked against Hotwire or Priceline.)
+* Bonnie can book the flight for you so you do not have to pay and then be reimbursed. If you pay upfront yourself, you will have to wait until after the travel is complete to be reimbursed.
+* If you book an atypical flight, such as something arriving a few days early or leaving a few days late, or that includes personal travel, funding groups generally require that you also include a quote, *obtained at the time of booking*, of the cost of the flight for typical (business-only) travel.
+They'll only reimburse up to this amount. But it's otherwise totally fine to include personal travel with business, as long as you document carefully.
+* If your travel is funded by the federal government, you generally have to fly with a U.S. carrier or book your ticket through that carrier.
+* You are not required to share hotel rooms or use Airbnb, but if you do, it's appreciated! 
+* It's also great if you can share rides/taxis and take public transit, but you're not expected to go to great inconvenience to save money. 
+* Your food costs should be reimbursable up to federal rates, but I think the principled thing to do is only submit receipts for food costs above what you'd normally spend (and not to go crazy with spending). Note the receipts must be itemized, and alcohol cannot appear on the receipts of NIH-funded travel.
+* Submit receipts to Bonnie within one month of travel. 
+* Sign up for airline loyalty programs if you haven't yet.
