@@ -214,7 +214,7 @@ Practical suggestions:
 ### Imposter syndrome
 It's really common and can't completely be cured. 
 My best advice is to practice acknowledging doubt and then moving on to whatever you want to do.
-Because research involves working on unsolved problems with an ever-expanding set of tools, and the world is complicated, we have to be comfortable pushing through the discomfort of ignorance and mediocrity ([Schwartz 2015](http://jcs.biologists.org/content/128/15/2745)).
+Because research involves working on unsolved problems with an ever-expanding set of tools, and the world is complicated, we have to be comfortable pushing through the discomfort of ignorance and mediocrity ([Schwartz 2008](http://jcs.biologists.org/content/121/11/1771)).
 Once you accept this, it can mostly be fun to work on interesting problems with great people.
 
 In general, you should not conflate your *or anyone else's* confidence and competence (see the [Dunning-Kruger effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect)).
