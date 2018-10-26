@@ -123,8 +123,8 @@ If you've been asked to review a paper,
 * Be constructive. *Never* be snarky or sarcastic. Imagine this is the first review the first author is receiving.
 * Let the editor know in your review or confidential comments if you do not feel qualified to judge certain parts of the manuscript. It is okay to state this in the main body of your review too. Just remember you have a positive duty to disclose.
 * Especially for papers that need a lot of work, it's not a good use of time to note every small mistake or error. You do not need to be the copy editor. If there are important small mistakes, e.g., the colors on a graph are switched or the notation is messed up, put them in a section for minor comments.
-* For papers involving code, try in 5 min to run the code and check its documentation, but do not reimplement the analysis unless you want to. You also do not need to check complex mathematical derivations. However, the methods should be clear and completely reproducible from the content of the manuscript. (I am not a fan of "See previous papers Us et al. $X_t$, Us et al. $X_{t-1}$,...", though a bit is okay.)
-* It's fine, even good, to comment on other reviewers' comments in later rounds of review, especially if you disagree with them. If you think a reviewer has made a major error, you can always email the editor separately.
+* For papers involving code, try in 5 min to run the code and check its documentation, but do not reimplement the analysis unless you want to. You also do not need to check complex mathematical derivations. However, the methods should be clear and completely reproducible from the content of the manuscript. (I am not a fan of "See previous papers $X_t$, $X_{t-1}$,...", though a bit is okay.)
+* It's fine, even good, to comment on other reviewers' comments in later rounds of review, especially if you disagree with them. If you think a reviewer has made a major error, email the editor
 
 ## Have productive meetings
 
