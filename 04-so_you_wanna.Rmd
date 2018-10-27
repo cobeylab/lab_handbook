@@ -53,7 +53,7 @@ This is more comfortable than learning incrementally from rejections. Also, ther
 The following procedure seems to work well, but if you prefer another one, let me know.
 
 1. Start yesterday by writing summaries of the research in your lab notebook as you go. You can probably write most of the methods and many results this way. You'll also accumulate the major points for the intro and discussion in your notes too.
-1. Identify a target journal in consultation with me and coauthors. Check their instructions for authors.
+1. Identify a target journal in consultation with me and coauthors. Check the journal's instructions for authors so you know how to structure your manuscript.
 2. When it is time to write the manuscript, set up a repository synced to Overleaf. Draft the figures and abstract first. Discuss the arc with me and potentially other coauthors. Sign up for a future lab meeting or theory meeting, in which we'll discuss the complete draft (which you'll need to distribute a week in advance). Propose an ordered author list and discuss with me. 
 3. Next write an outline---with the main steps in the argument as  topic sentences, so it's really possible to trace the whole story---with each result in its own subsection and figures inline.
 4. Draft the results section. Ask another person in the lab for feedback and then revise, and then show me. *N.B. I have a pathetically hard time looking past poor construction and focusing on the ideas, so I appreciate it when the writing is clear, organized, and relatively free of typos, even at these early stages.*
