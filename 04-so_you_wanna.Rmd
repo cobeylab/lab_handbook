@@ -331,7 +331,7 @@ Submit your changes as a pull request.
 If you'd like to make many contributions, let me know, and I'll add you as an owner.
 (I'm still figuring out how to associate authors with particular sections, but in the meantime, you can add your name to the top of a section, or write, "So-and-so recommends...".)
 
-## Make the most of conferences
+## Win conferences
 
 There are a bazillion resources on this. I think they boil down to
 
