@@ -35,7 +35,7 @@ knitr::include_graphics(rep("images/owl.png"))
 
 (To be populated with content from [lab wiki](https://bitbucket.org/cobeylab/wiki/wiki/Home))
 
-## Write well
+## Write good
 
 ### General advice
 
@@ -67,7 +67,7 @@ The following procedure seems to work well, but if you prefer another one, let m
 12. When the final manuscript is ready for coauthors' approval, confirm with them (if you've not yet) their funding and preferred and non-preferred reviewers. Make sure they don't have a COI with any of the preferred reviewers.
 13. When all coauthors have approved the manuscript, we submit it to a preprint server, publish the repository, and submit to a journal.
 
-## Write good emails
+## Email like a pro
 
 * **Be concise.** 
 Be clear if you are asking for something, or if you are simply giving information.
