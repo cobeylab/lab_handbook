@@ -4,6 +4,10 @@ Welcome to the lab! This is an incomplete checklist of items to cover in your fi
 
 The most important things are to read the whole handbook and not to hesitate to ask questions.
 
+**Before you arrive**, if possible, let me know if you'll need a laptop, so we can have one waiting for you.
+Connie can work with you if you need a visa.
+I can also help link you up with people who can help with housing.
+
 **Workspace**
 
 * Identify hardware to purchase: monitor, laptop, external hard drive, keyboard, mouse, etc. 
@@ -16,27 +20,39 @@ The most important things are to read the whole handbook and not to hesitate to 
 
 * [Request an account](https://rcc.uchicago.edu/accounts-allocations/general-user-account-request) to use the Cobey partition on Midway.
 * Request access to the lab's Asana workspace.
-* Request access to [cobeylab github account](https://github.com/cobeylab). (Create a github account if you've not yet.)
+* Request access to the [cobeylab github account](https://github.com/cobeylab). (Create a github account if you've not yet.)
+* Get access to our [Instagram account](https://www.instagram.com/cobeylab/). You're free to contribute whenever you want.
 * Request access to the theory group calendar and the lab calendar
-* Consider signing up for emails on additional seminar series and groups. (Note that a list of almost all BSD seminars will be emailed to you every day.)
+* Download and install the [University VPN](https://uchicago.service-now.com/it?id=kb_article&kb=kb00015292) so you can access resources off campus
+* Consider signing up for emails on additional seminar series and groups. (Note that a list of almost all BSD seminars will automatically be emailed to you every day.)
 * Ask Garnett to help you set up CrashPlan Pro and the external hard drive for backups.
+* Garnett can also help you add the printer.
 * Figure out a lab service task.
-* Write your profile for the lab website.
+* Write your profile for the lab website, and upload your CV (we could review it together first, if you like).
 
 **Research**
 
 * Identify a time for weekly meetings.
-* Develop your one-year goals and describe your long-term plans. 
-* Meet with Sarah to identify short-term research goals and funding and conference deadlines.
-* Learn who/what is funding your research.
+* Discuss one-year goals and your long-term plans. 
+* Identify short-term research goals (i.e., your initial project(s)) and deadlines for funding and conferences.
+* Let me know how you like to be mentored, how you like to work, and if there are practices or principles described in the handbook that you would like to see changed (or at least don't work well for you).
+* Learn who/what is funding your research. Read at least the corresponding grant proposal, if we have one, and potentially other recent proposals (all on Asana).
+* Figure out if you need training in human subjects research.
+* Read recent papers from the lab so you are familiar with lab member's areas of expertise.
 
 **Introductions**
 
-* Lab members!
-* E&E administrators and IT: Mary, Bonnie, Connie, Jeff, Linda, Garnett, Mike
+* Lab members! We'll have a big lab lunch or dinner soon after you arrive, but I encourage you to meet with everyone individually in the first week too.
+* E&E administrators and IT
 * Building administrators and custodians
 * Neighbors in the Erman Building
 * Other faculty
+* Postdocs should consider joining the postdoc happy hour on Fridays
 
+**Life and around town**
 
+* Check out University [perks & discounts](https://humanresources.uchicago.edu/benefits/retirefinancial/perks/index.shtml). Note deals for phones, housing, etc.
+* If you're commuting from outside Hyde Park, consider signing up for commuter benefits (if you are eligible). Get a [Ventra](https://www.ventrachicago.com/) card, which works on all buses and the El/CTA.
+* You can download the [Metra](https://metrarail.com/) app if you'll be taking the Metra Electric line to/from downtown.
+* Ask around about which health plans are en vogue.
 

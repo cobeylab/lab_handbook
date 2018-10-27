@@ -26,12 +26,13 @@ Develop a scientific reading habit if you don't have one yet.
 As a general guideline, on average, graduate researchers and postdocs should be reading five papers a week, and skimming more.
 
 **Be open to collaboration, and respect your collaborators.**
-Getting anything worthwhile done in research requires learning from others, whether through papers or talks.
+Getting anything worthwhile done in research requires learning from others, including through papers, talks, and whiteboard time.
 Be proactive in thinking about who might have relevant expertise.
 Ask for help, give help, and carefully acknowledge the contributions of others.
 Clarify expectations when you start on a project: make agreements explicit (and for all but the smallest things, in writing), with expectations and timelines, and be reliable.
 For instance, let your collaborators know when they can expect to hear from you with new results, drafts, etc.
 These principles hold for interactions inside and outside the lab.
+By default, you should think of yourself as a collaborator on every project in the lab, and remain engaged.
 
 **Communicate assertively.**
 It's nice to hear from other people that they've benefited from your analysis, timeliness, criticism, etc.
@@ -58,7 +59,7 @@ Resist the temptation to run from one deadline to the next, and think instead ab
 (Do this especially if you're (i) fresh out of undergrad, or (ii) have never done it before because you think you work best under pressure.)
 Aim for 40 hours of focused work per week.
 If you're not happy with your progress or productivity, *there's no shame in asking for help or ideas from others*, including your advisor.
-For what it's worth, I do think it's possible to do great research while having a life. (I've seen others do it!!! lolz)
+For what it's worth, I do think it's possible to do great research while having a life. (I've seen others do it... lolz)
 A great resource for sustainable habits is the [National Center for Faculty Development and Diversity](https://www.facultydiversity.org/). 
 They have online classes, weekly newsletters, and writing support groups. 
 The University of Chicago has a subscription, so you should be able to get free access.
@@ -100,9 +101,10 @@ If others are present, have meetings (in person or via Skype) in an adjacent con
 * Please feel free to customize your space. Adjust the location and height of your desk and file cabinet as you see fit. Let me know if you'd like a privacy screen, a fan or space heater, etc.
 * Check with others before bringing pets to work.
 * Consult others before making dramatic changes to the lighting or temperature.
-* Keep things clean. Wipe your desk. Wipe the kitchen counter. Do not wipe crumbs on the floor. Clean up spills. Gently encourage others to do the same. Bad habits kill adorable, innocent mice.
+* Keep things clean. Wipe your desk. Wipe the kitchen counter. Do not wipe crumbs on the floor. Clean up spills. Gently encourage others to do the same. Bad habits kill mice.
 * To make the room easier to clean, avoid letting your stuff overflow past your desk. Don't leave piles of stuff on the floor for more than a few days.
 * Please let me know if there are ways the space can be more comfortable, or if there are particular things (e.g., new computer or software) that would improve your work.
+* Lock the door if you leave and no one is in the lab.
 
 ## Communication
 Please limit the use of email for research questions and discussions.
@@ -119,24 +121,31 @@ If the door is closed, it means I'm working, and it's best to communicate via As
 
 ## Weekly check-ins
 
-Every week, you'll meet individually with me to discuss research and occasionally other topics.
+Most weeks, you'll meet individually with me to discuss research and occasionally other topics.
 The agendas of these meetings is largely up to you.
 However, I ask you to come prepared with slides, an updated summary, or notebook (Rmd, Jupyter, etc.) concisely describing progress since the last meeting. 
-You can choose whichever specific format works best for you, but somehow,
-your notes should clearly state (i) what goals you had set last week for this week, (ii) your progress on each goal, and (iii) what you think comes next.
-(This format is really helpful for me.)
+You can choose whichever format works best for you, but somehow, your notes should clearly state (i) what goals you had set last week for this week, (ii) your progress on each goal, and (iii) what you think comes next.
+(This structure is really helpful for me.)
+You should also be prepared to show system and unit tests, or some kind of validation, to convince me your research results are correct.
 The meeting is time to both dig into the weeds but also think about the big picture.
+
 I'll try to remind you of this, but one of my main goals for each meeting is to learn how I can best support you, during the meeting and after. 
 If our relationship needs adjusting, please let me know.
+If you want to talk about career goals, that's fine too.
+This is your time.
+
 When I'm traveling, these weekly meetings may need to be rescheduled or occur over the phone.
+Please always feel free to request a meeting when I am traveling, unless I'm on vacation.
 
 ## Lab meetings
 
-We'll meet weekly as a lab. 
+We'll meet weekly as a lab.
 Meetings start with various announcements of abstract deadlines, cool upcoming talks, new papers, etc., and then we briefly update one another on our research (roughly 1-5 min per person).
-The point of these updates is to practice describing our research and also keep each other involved in our work, which includes providing helpful suggestions.
-The rest of the meeting is usually dedicated to in-depth presentation and discussion of one of our research projects or a discussion of a paper.
+The point of these updates is to practice describing our research and especially to keep each other involved in our work, which includes providing helpful suggestions.
+The rest of the meeting is usually dedicated to an in-depth presentation and discussion of one of our research projects or a discussion of a paper.
 Plan to present your research once per quarter and to lead at least one paper discussion per quarter.
+Pick papers at least a week in advance so people have time to read them.
+Everyone is expected to show up having read and critically thought about the paper.
 
 ## Reproducible research
 
@@ -144,7 +153,7 @@ You have broad freedom in most aspects of how you work, but there are certain pr
 
 **Reproducible** means that other researchers could use your notes and code to reconstruct your results precisely without guesswork or manual labor. All of the figures and results in any manuscript must be fully reproducible by executing one or a few scripts in a public github repository. It should also be easy to reproduce intermediate results during development. Basically, this means we use version control, [git](https://git-scm.com/book/en/v1/Getting-Started-About-Version-Control).
 
-**Accessible** means that (i) all of your code, including small scripts, is maintained in a git repository that is regularly (e.g., daily) synced to the lab's github account; (ii) all raw data and major results are stored on Midway projects/cobey (unless other arrangements required by IRB); (iii) project management is visible to all lab members on Asana; and (iv) you regularly back up your laptop using an external hard drive *and* CrashPlan Pro.
+**Accessible** means that (i) all of your code, including small scripts, is maintained in a git repository that is regularly (e.g., daily) synced to the lab's github account; (ii) all raw data and major results are stored on Midway projects/cobey (unless other arrangements are required by IRB); (iii) project management is visible to all lab members on Asana; and (iv) you regularly back up your laptop using an external hard drive *and* CrashPlan Pro.
 
 **Organized** means that you keep your project files organized, use version control, document your code, include unit and system tests, use Asana and/or notebooks to record all decisions in your analysis from day to day and week to week, and you refactor code when it stinks. It also means you communicate progress promptly to collaborators in meetings and (for external collaborators) emails.
 

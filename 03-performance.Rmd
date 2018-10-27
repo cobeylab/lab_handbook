@@ -11,7 +11,7 @@ Postdocs and salaried researchers will get formal annual reviews as required by 
 
 * Meet with you at least biweekly (usually weekly) to discuss research and professional opportunities.
 * Help give you an accelerated introduction to the field.
-* Provide rapid (within days) critical feedback on research ideas and drafts (with advance notice!).
+* Provide rapid (within days) critical feedback on research ideas and drafts---*with advance notice!*
 * Help you establish relationships with other scientists in field.
 * Promote your work in conferences and meetings.
 * Help you attend conferences and meetings.
@@ -27,13 +27,14 @@ Postdocs and salaried researchers will get formal annual reviews as required by 
 * Take full intellectual ownership of your research, i.e., think hard about whether you and your collaborators are doing the right thing, search for relevant papers, and push your projects forward at a good pace.
 * Develop annual and long-term professional goals as soon as you join the lab, and discuss them with me then and regularly thereafter. Let me know whenever yours goals change. (It's okay if your long-term goals are amorphous, just let me know.)
 * Work steadily, understand how you work, and let me know how I can help you work better. (See Philip Guo's [list of performance bounds](http://www.pgbovine.net/human-bounds.htm) for examples.) 
+Please let me know especially if my availability, the environment, software, or hardware are slowing you down.
+* Learn from your mistakes. Programming bugs, bad writing, awkward slides, undiscovered papers, are all an unfortunate part of research. Forgive yourself *and* take corrective action to reduce the error rate in the future. Of course, the optimal error rate is usually not zero... The only *real* mistakes are blowing off or ignoring what people (reviewers, coauthors, committee members, me, etc.) are telling you, ignoring data related to your research or performance, and being a jerk.  
 * Perform lab service, as agreed upon (e.g., maintain the lab calendar, order office supplies, water the plants).
 
 ## Graduate researchers
 I've listed below the skills I think graduate researchers should have by the time they defend their PhD. 
 Your adviser and committee will help steer you, but you are in control.
 (I kind of dislike the "student" convention, tbh. You're scientists, just less experienced ones.)
-To have the best possible time in grad school, it's probably useful to draft your own list and discuss any differences with me.
 
 * *Intellectual independence and mastery*
     * Be able to define a coherent field of study, including the progress that has been made in it and the problems that remain. 
@@ -58,7 +59,9 @@ To have the best possible time in grad school, it's probably useful to draft you
     * Understand social and political context for scientific research.
     * Practice sharing your work with broader audiences, e.g., via blog posts, talks to the public, and interviews.
 * Seek funding opportunities and apply for grants.
-* Have an established habit of reliability from communicating with committees, collaborators, and administrators in a timely, respectful way.
+* Establish your reliability in communicating with committees, collaborators, and administrators in a timely, respectful way, and follow through on your commitments.
+
+Please note that you are ultimately responsible for ensuring you are meeting the requirements for your degree. The Student Advisory Committee (SAC) and later your thesis committee will help you with the planning, but you should take initiative in scheduling and planning ahead.
 
 ## Postdoctoral researchers
 
@@ -66,6 +69,6 @@ Generally, postdocs should have facility with all of the skills listed above and
 
 * Develop new research projects and manage external collaborations.
 * Drive projects forward in consideration of existing and ongoing research in the field.
-* Manage research performed under federal contracts, including the completion of monthly progress reports.
+* As negotiated, potentially take a major role in managing research performed under federal contracts, including the completion of monthly progress reports.
 * Teach selectively, if interested in a teaching position.
 * Mentor junior researchers.
