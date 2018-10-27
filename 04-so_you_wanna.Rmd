@@ -286,8 +286,8 @@ Your workplace should obviously be supporting you.
 ## Give a good talk
 
 I like this [advice from Jonathan Shewchuk](https://people.eecs.berkeley.edu/~jrs/speaking.html).
-Read [Tim Urban's](https://waitbutwhy.com/2016/03/doing-a-ted-talk-the-full-story.html) essay about his TED talk for inspiration on getting started.
-If it's the first time you've given the talk, it's probably a good idea to sign up on the lab calendar to give a practice presentation at least a week before the talk itself.
+If you're scared to get started, read [Tim Urban's](https://waitbutwhy.com/2016/03/doing-a-ted-talk-the-full-story.html) essay about his TED talk for inspirations.
+If it's the first time you've given the talk, sign up on the lab calendar to give a practice presentation at least a week before the talk itself.
 
 ## Interview someone
 
@@ -341,13 +341,14 @@ There are a bazillion resources on this. I think they boil down to
 * Get in the habit of introducing yourself, asking people about their research, etc. 
 * Avoid spending much time with lab members. Really, the opportunity cost of hanging out with lab members is big. Meeting new people might not always feel like it amounts to much, but it will pay big dividends, I promise. You'll see many of them again. You'll probably collaborate with a few. 
 
-## Understand authorship
+## Negotiate authorship
 
 We follow the [APA guidelines](https://www.apa.org/research/responsible/publication/) for determining authorship:
 
 > Authorship credit should reflect the individual's contribution to the study. An author is considered anyone involved with initial research design, data collection and analysis, manuscript drafting, and final approval. However, the following do not necessarily qualify for authorship: providing funding or resources, mentorship, or contributing research but not helping with the publication itself. **The primary author assumes responsibility for the publication, making sure that the data are accurate, that all deserving authors have been credited, that all authors have given their approval to the final draft; and handles responses to inquiries after the manuscript is published.**  
 
-Authorship frequently needs to be [negotiated](https://www.apa.org/science/about/psa/2015/06/determining-authorship.aspx).
+(Emphasis mine.) 
+Authorship frequently needs to be [renegotiated](https://www.apa.org/science/about/psa/2015/06/determining-authorship.aspx).
 It's better not to postpone this.
 Please talk to me if you are unclear about authorship.
 In general, I expect first authors to be corresponding authors, unless they want to pass responsibility for future communication to me (or the senior author).
