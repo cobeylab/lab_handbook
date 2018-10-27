@@ -17,7 +17,7 @@ Postdocs and salaried researchers will get formal annual reviews as required by 
 * Help you attend conferences and meetings.
 * Help identify areas of professional growth.
 * Provide teaching and mentoring opportunities, if desired.
-* Fund you for at least $n$ years (as agreed).
+* Fund you for at least $n$ years (as agreed), assuming steady progress.
 * Be a trustworthy, reliable, honest, hard-working, constructive, respectful, and communicative colleague.
 * (For postdocs) Help you identify a line of research to continue when you leave the lab.
 
@@ -26,6 +26,7 @@ Postdocs and salaried researchers will get formal annual reviews as required by 
 * Follow the lab's principles (Section \@ref(principles)) and all our described work practices, including the project management and programming techniques described in Section \@ref(so-you-wanna).
 * Take full intellectual ownership of your research, i.e., think hard about whether you and your collaborators are doing the right thing, search for relevant papers, and push your projects forward at a good pace.
 * Develop annual and long-term professional goals as soon as you join the lab, and discuss them with me then and regularly thereafter. Let me know whenever yours goals change. (It's okay if your long-term goals are amorphous, just let me know.)
+* Work steadily, understand how you work, and let me know how I can help you work better. (See Philip Guo's [list of performance bounds](http://www.pgbovine.net/human-bounds.htm) for examples.) 
 * Perform lab service, as agreed upon (e.g., maintain the lab calendar, order office supplies, water the plants).
 
 ## Graduate researchers

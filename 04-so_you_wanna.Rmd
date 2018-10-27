@@ -216,20 +216,30 @@ Practical suggestions:
 ### Imposter syndrome
 It's really common and can't completely be cured. 
 My best advice is to practice acknowledging doubt and then moving on to whatever you want to do.
+(I like [this post](https://psycgirl.wordpress.com/2016/07/22/the-tale-of-the-unwritten-manuscript/) from psycgirl.)
 Because research involves working on unsolved problems with an ever-expanding set of tools, and the world is complicated, we have to be comfortable pushing through the discomfort of ignorance and mediocrity ([Schwartz 2008](http://jcs.biologists.org/content/121/11/1771)).
 Once you accept this, it can mostly be fun to work on interesting problems with great people.
 
 In general, you should not conflate your *or anyone else's* confidence and competence (see the [Dunning-Kruger effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect)).
 This is important in making science more equitable.
 
+
 ### Mental health and medical problems
 Please take a "mental health day" if you need one, and if you feel stuck, I encourage you to consider talking to a therapist. 
 If you are new to therapy, keep in mind that there's enormous variation in quality and style between therapists.
 If you don't feel like you're making progress with a therapist, find a new one. 
 Remember that many University health plans cover therapists who are not on campus.
+Of course, there are a bazillion ways to maintain our mental health, and I encourage you to develop [multiple strategies](http://drtregoning.blogspot.com/2015/05/using-pop-songs-to-maintain-good-mental.html) if you're feeling lean.
+
 
 If you're not getting good medical care or you have a condition that interferes with your work, please let me know so we can find better care and/or accommodate your needs. 
 
 ### Unwelcome environment
 If your environment is creating difficulty, e.g., the University or lab does not feel like a welcoming place, or you are under great financial strain, please let me know.
+
+## Give a good talk
+
+I like this [advice from Jonathan Shewchuk](https://people.eecs.berkeley.edu/~jrs/speaking.html).
+Read [Tim Urban's](https://waitbutwhy.com/2016/03/doing-a-ted-talk-the-full-story.html) essay about his TED talk for inspiration on getting started.
+If it's the first time you've given the talk, it's probably a good idea to sign up on the lab calendar to give a practice presentation at least a week before the talk itself.
 
