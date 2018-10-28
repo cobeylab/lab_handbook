@@ -161,7 +161,7 @@ If you've been asked to review a paper,
 * Let the editor know in your review or confidential comments if you do not feel qualified to judge certain parts of the manuscript. It is okay to state this in the main body of your review too. Just remember you have a positive duty to disclose.
 * Especially for papers that need a lot of work, it's not a good use of time to note every small mistake. You do not need to be the copy editor. If there are small technical mistakes, e.g., the lines on a graph are switched or the notation is messed up, put them in a section for minor comments.
 * For papers involving code, try in 10 min to run the code and check its documentation, but do not reimplement the analysis unless you want to. You also do not need to check complex mathematical derivations. However, the methods should be clear and completely reproducible from the content of the manuscript. (I am not a fan of "See previous papers $X_{t_1}$, $X_{t_2}$,...", though a bit is okay.)
-* It's fine, even good, to comment on other reviewers' comments in later rounds of review, especially if you disagree with them. If you think a reviewer has made a major error, email the editor
+* It's fine, even good, to comment on other reviewers' comments in later rounds of review, especially if you disagree with them. If you think a reviewer has made a major error, email the editor.
 * Try to limit your likeliy biases in peer review. People often favor manuscripts by authors of the same gender and nationality ([Murray et al. 2018](https://www.biorxiv.org/content/biorxiv/early/2018/08/29/400515.full.pdf)). (There are also biases in the selection of reviewers; [Helmer et al. 2017](https://elifesciences.org/articles/21718).)
 
 ## Have productive meetings
@@ -300,23 +300,25 @@ You can take it as read that whoever is doing the hiring wants feedback promptly
 Please also let me know if you think particularly great people are on the market!
 
 It's vitally important to decide *before* we meet a potential hire what criteria we should use to judge them: studies show that we often subconsciously rationalize biases by identifying criteria post hoc.
-Academia in particular is prone to discrimination.
+I think academics in particular are prone to discrimination because their self-identity is so predicated on objectivity.
 It is useful to have a core, fixed set of questions or topics to discuss with different candidates.
 This doesn't mean the conversation can't wander, but it promotes fair comparisons.
-I think hiring can be hard, but I'm happy to talk about the criteria I use for different positions.
+I'm happy to talk about the criteria I use for different positions.
 
-Please keep in mind that many laws exist about what potential employers can and cannot ask interviewees.
-These laws are designed to protect potential hires from discrimination.
+Please keep in mind that many laws exist to protect people from discrimination, and they affect what potential employers can and cannot ask interviewees.
 Even though you might not have hiring authority, as a representative of the University, you should avoid asking these questions too, even indirectly. 
-(You might not have an intent to discriminate when asking, but it could rattle the candidate, and anyone else who might be present might be inappropriately influenced.)
+(You might not have any intent to discriminate, but the questions could rattle the candidate, and others who hear might be inappropriately influenced.)
 Do not ask questions about race, color, national identity, or citizenship; religion; sex, gender identity, or sexual orientation; pregnancy status, marital status, or parenthood status; disability; and age.
 For instance, do not ask about what languages someone speaks (unless it is somehow relevant to the position, which it usually isn't), their accent, where their parents were born, or their partner's job, or the existence of a partner.
 It is especially inappropriate to bring up two-body issues when discussing candidates until an offer has been made.
-It is also inappropriate to ask if someone drinks alcohol socially. (It's a violation of the Americans with Disabilities Act, which protects recovering alcoholics.)
-Indirect questions about age ("When did you graduate?" "How long have you been working?") are also considered verboten, although it's usually pretty easy to guess someone's age when we have a CV; these laws are mostly meant to protect older people. 
 Questions related to economic status (e.g., car or home ownership, debt, etc.) are also unwise.
+The basic principle is equity.
+Equity is a moral imperative. 
+It also has the handy feature of broadening the talent pool for any position and probably accelerating the pace of science.
+From this principle, it follows we should not discriminate or draw conclusions about scientific and professional merit based on dumb things, like whether someone wears or doesn't wear makeup, seems really excited about sports, programmed in Fortran at age 3, knows your friends, drinks socially, etc.
+We should also make an effort to work well with people who are different from us.
 
-I have heard almost every type of illegal interview question in academia.
+I have heard almost every type of inappropriate interview question in academia.
 It's pretty sad.
 If you hear someone asking one of these questions, do your part by telling the candidate they don't need to answer and/or immediately changing the topic of conversation.
 Candidates will often answer these questions anyway or even volunteer protected information on their own.
@@ -331,7 +333,7 @@ Submit your changes as a pull request.
 If you'd like to make many contributions, let me know, and I'll add you as an owner.
 (I'm still figuring out how to associate authors with particular sections, but in the meantime, you can add your name to the top of a section, or write, "So-and-so recommends...".)
 
-## Win conferences
+## Win at conferences
 
 There are a bazillion resources on this. I think they boil down to
 
@@ -343,11 +345,13 @@ There are a bazillion resources on this. I think they boil down to
 
 ## Negotiate authorship
 
-We follow the [APA guidelines](https://www.apa.org/research/responsible/publication/) for determining authorship:
+We try to follow the [APA guidelines](https://www.apa.org/research/responsible/publication/) for determining authorship:
 
 > Authorship credit should reflect the individual's contribution to the study. An author is considered anyone involved with initial research design, data collection and analysis, manuscript drafting, and final approval. However, the following do not necessarily qualify for authorship: providing funding or resources, mentorship, or contributing research but not helping with the publication itself. **The primary author assumes responsibility for the publication, making sure that the data are accurate, that all deserving authors have been credited, that all authors have given their approval to the final draft; and handles responses to inquiries after the manuscript is published.**  
 
 (Emphasis mine.) 
+Not everyone we work with follows these guidelines, and they can differ from journals' policies.
+We'll talk about it.
 Authorship frequently needs to be [renegotiated](https://www.apa.org/science/about/psa/2015/06/determining-authorship.aspx).
 It's better not to postpone this.
 Please talk to me if you are unclear about authorship.
