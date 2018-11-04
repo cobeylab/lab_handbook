@@ -16,7 +16,7 @@ All who are interested in joining the lab should explain in their initial commun
 
 ## Do some research
 
-```{r owl-plot, out.width='50%', echo=FALSE, fig.show='hold', fig.cap='Basically, except less sequential'}
+```{r owl-plot, out.width='50%', echo=FALSE, fig.show='hold', fig.align="center", fig.cap='Basically, except less sequential'}
 knitr::include_graphics(rep("images/owl.png"))
 ```
 

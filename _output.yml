@@ -7,7 +7,7 @@ bookdown::gitbook:
       before: |
         <li><a href="https://cobeylab.uchicago.edu/">Cobey Lab</a></li>
       after: null
-    edit: yes
+    edit: null
     download: null
     search: yes
     sharing:

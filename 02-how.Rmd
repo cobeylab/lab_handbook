@@ -74,7 +74,7 @@ Always look for better hypotheses and approaches.
 Speak up if you see something that's not right.
 Remember we'll all be dead soon enough, and this is our opportunity to help others.
 
-```{r danse-macabre, out.width='50%', echo=FALSE, fig.show='hold', fig.cap='A contrasting time scale of research'}
+```{r danse-macabre, out.width='50%', echo=FALSE, fig.show='hold', fig.align="center", fig.cap='A contrasting time scale of research'}
 knitr::include_graphics(rep("images/danse-macabre.png"))
 ```
 
