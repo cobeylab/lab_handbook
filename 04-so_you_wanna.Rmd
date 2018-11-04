@@ -323,11 +323,12 @@ Do not ask questions about race, color, national identity, or citizenship; relig
 For instance, do not ask about what languages someone speaks (unless it is somehow relevant to the position, which it usually isn't), their accent, where their parents were born, or their partner's job, or the existence of a partner.
 It is especially inappropriate to bring up two-body issues when discussing candidates until an offer has been made.
 Questions related to economic status (e.g., car or home ownership, debt, etc.) are also unwise.
+
 The basic principle is equity.
 Equity is a moral imperative. 
 It also has the handy feature of broadening the talent pool for any position and probably accelerating the pace of science.
-From this principle, it follows we should not discriminate or draw conclusions about scientific and professional merit based on a huge class of dumb things, like whether someone wears or doesn't wear makeup, seems really excited about sports, programmed in Fortran at age 3, knows your friends, drinks socially, etc.
-We should also make an effort to work well with people who are different from us.
+From this principle, it follows we should not discriminate or draw conclusions about scientific and professional merit based on a huge class of dumb things, like whether someone wears makeup, seems really excited about sports, programmed in Fortran at age 3, knows your friends, drinks socially, etc.
+We should make an effort to work well with people who are different from us.
 
 I have heard almost every type of inappropriate interview question in academia.
 It's pretty sad.
