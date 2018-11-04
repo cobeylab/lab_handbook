@@ -339,11 +339,11 @@ Do not follow up, and attempt not to be influenced by the information.
 ## Contribute to the handbook
 
 I'd love to make the handbook as useful as possible.
-Please contribute if you see ways to improve it
+Please contribute if you see ways to improve it (especially if you have css skills!).
 The handbook repository is in the lab's github account. 
 Submit your changes as a pull request.
 If you'd like to make many contributions, let me know, and I'll add you as an owner.
-(I'm still figuring out how to associate authors with particular sections, but in the meantime, you can add your name to the top of a section, or write, "So-and-so recommends...".)
+I'm still figuring out how to associate authors with particular sections, but in the meantime, you can add your name to the top of a section, or write, "So-and-so recommends...".
 
 ## Win at conferences
 
