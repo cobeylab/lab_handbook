@@ -2,12 +2,17 @@ bookdown::gitbook:
   css: style.css
   config:
     toc:
+      collapse: section
+      scroll_highlight: yes
       before: |
-        <li><a href="./">Cobey Lab Handbook</a></li>
-      after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
-    download: ["pdf", "epub"]
+        <li><a href="https://cobeylab.uchicago.edu/">Cobey Lab</a></li>
+      after: null
+    edit: null
+    download: null
+    search: yes
+    sharing:
+      twitter: yes
+      google: yes
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

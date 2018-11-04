@@ -1,0 +1,159 @@
+--- 
+title: "Cobey Lab Handbook"
+#author: "Sarah Cobey"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: cobeylab/lab_handbook
+description: "Handbook for the Cobey Lab at the University of Chicago"
+---
+
+# Preface {-}
+
+This handbook is partly for prospective or new lab members who want to know how we do things. The first chapters, where we lay out our principles and general style of work, are most relevant here. 
+
+The main purpose of this handbook, however, is to help current lab members share knowledge, develop skills, and get things done. Contributions welcome.
+
+***Contributors:** 
+Most of the handbook is currently by Sarah Cobey, but the chapter on Midway (and forthcoming section on programming) is by Ed Baskerville.*
+
+<!--chapter:end:index.Rmd-->
+
+# Why we work {#why}
+
+As a lab, we have two equally important goals: 
+
+1. to perform high-quality research and
+2. to create an environment that accelerates the growth of scientists and improves the practice of science. 
+
+Performing high-quality research means that we undertake meaningful problems, investigate them in a rigorous way, and promptly publish our results so that others can easily pick up where we leave off.
+
+Creating an environment that promotes the growth of scientists means that we support the expansion of our own and one another's research capacities, especially through persistent effort, curiosity, and constructive criticism.
+
+These practices in themselves should improve the way science is done, but we also have broader responsibilities to promote equity, limit unnecessary struggle and wasted resources, and perform research with the public good in mind.
+
+This handbook outlines practices to help us achieve these goals. We'll always be improving our methods! If you work here, you can help.
+
+<!--chapter:end:01-why.Rmd-->
+
+
+# How we work
+
+Placeholder
+
+
+## Principles
+## Work hours
+## Workspace
+## Communication
+## Weekly check-ins
+## Lab meetings
+## Reproducible research
+
+<!--chapter:end:02-how.Rmd-->
+
+
+# Performance
+
+Placeholder
+
+
+## Reviews
+## My commitments
+## Basic expectations
+## Graduate researchers
+## Postdoctoral researchers
+
+<!--chapter:end:03-performance.Rmd-->
+
+
+# So you wanna...
+
+Placeholder
+
+
+## Join the lab
+## Do some research
+## Code well and efficiently
+## Write good
+### General advice
+### Initial submissions
+### "Mature" papers
+## Email like a pro
+## Make nice figures
+## Keep up with the literature
+## Get funded
+## See our funding
+## Review your peers
+## Have productive meetings
+### Research meetings
+### Seminar speakers
+## Book travel
+## Be happy doing research
+### Time management 
+### Imposter syndrome
+### Mental health and medical problems
+### Unwelcome environment
+## Give a good talk
+## Interview someone
+## Contribute to the handbook
+## Win at conferences
+## Negotiate authorship
+
+<!--chapter:end:04-so_you_wanna.Rmd-->
+
+
+# Midway
+
+Placeholder
+
+
+## Storage on Midway
+## Connecting to Midway
+### SSH (terminal)
+### SCP
+### SMB (connect as a disk)
+### ssh -X (terminal with graphical forwarding)
+### VNC (graphical interface via ThinLinc)
+## Configuring Software on Midway
+### Git
+### Java
+### C/C++
+### R
+### Python
+### Matlab and Mathematica
+## Running Jobs on Midway
+### Overview
+### Job structure
+### Priority
+### Useful commands
+#### sinteractive
+#### sbatch
+#### squeue
+#### scancel
+#### accounts
+#### sview
+### Parameter sweeps
+## SLURM tricks
+
+<!--chapter:end:05-midway.Rmd-->
+
+
+# Onboarding
+
+Placeholder
+
+
+
+<!--chapter:end:06-onboarding.Rmd-->
+
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+
+<!--chapter:end:08-references.Rmd-->
+
