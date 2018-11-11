@@ -294,6 +294,8 @@ If you're not getting good medical care or you have a condition that interferes 
 If your environment is creating difficulty, e.g., the University or lab does not feel like a welcoming place, or you are under great financial strain, please let me know.
 Your workplace should obviously be supporting you.
 
+A note to students: Under [Title IX](https://voices.uchicago.edu/equity/title-ix/), if you speak with me about sexual misconduct, I am required to talk to the Title IX Coordinator about it. The University may proceed with an investigation (potentially despite your wishes). If you wish to maintain confidentiality, there are a [variety of people](https://voices.uchicago.edu/equity/title-ix/confidential-resources/) you can talk to.
+
 ## Give a good talk
 
 I like this [advice from Jonathan Shewchuk](https://people.eecs.berkeley.edu/~jrs/speaking.html).
