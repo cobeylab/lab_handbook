@@ -1,5 +1,7 @@
 # Midway
 
+Note: This section is being updated; the information here is a few years old and most importantly does not account for the supplanting of `midway.rcc.uchicago.edu` with `midway2.rcc.uchicago.edu`.
+
 Midway is the main computing cluster used by the lab, run by the Research Computing Center. The official documentation is maintained here by RCC:
 
 [https://rcc.uchicago.edu/docs/](https://rcc.uchicago.edu/docs/)
