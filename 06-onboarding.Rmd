@@ -35,11 +35,16 @@ I can also help link you up with people who can help with housing.
 * Scour the active research projects on Asana. (If you can see them, you're welcome to investigate the contents.) Ask people what's going on with each.
 * Read more recent papers from the lab so you are familiar with lab member's areas of expertise.
 * Discuss one-year goals and your long-term plans. 
-* Identify short-term research goals (i.e., your initial project(s)), deadlines for initial research outputs, and deadlines for funding and conferences.
-* Let me know how you like to interact, how you like to work, and if there are practices or principles described in the handbook that you would like to see changed (or at least don't work well for you). We can negotiate policies.
+* Identify short-term research goals (i.e., your initial project(s)), deadlines for initial research outputs, and deadlines for funding and conferences. 
+Although we should focus on outputs, let's discuss if there are any immediate skills you need to develop to complete the work (Figure).
+* Let me know how you like to interact, how you like to work, and if there are practices or principles described in the handbook that you would like to see changed, or at least don't work well for you. We can negotiate policies.
 * Learn who/what is funding your research. Read at least the corresponding grant proposal, if we have one, and potentially other recent proposals (all on Asana).
 * Identify a time for weekly meetings.
 * Figure out with me if you need training in human subjects research.
+
+```{r data-plot, out.width='40%', echo=FALSE, fig.show='hold', fig.align="center", fig.cap='No'}
+knitr::include_graphics(rep("images/data_science.png"))
+```
 
 **Introductions**
 
