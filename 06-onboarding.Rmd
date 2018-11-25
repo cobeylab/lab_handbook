@@ -27,7 +27,7 @@ I can also help link you up with people who can help with housing.
 * Consider signing up for emails on additional seminar series and groups. (Note that a list of almost all BSD seminars will automatically be emailed to you every day.)
 * Ask Garnett to help you set up CrashPlan Pro and the external hard drive for backups.
 * Garnett can also help you add the printer.
-* Figure out a lab service task.
+* Figure out a lab service task. These tasks are basically chores, e.g., managing office supplies and the lab environment, maintaining the lab calendar and getting people signed up for meetings, etc. On Asana, they go by the euphemism "Areas of Responsibility". They're nonetheless critical for allowing us to work efficiently and happily. You'll also be assigned to a week of kitchen duty (basically, making sure other people clean up their messes, and picking up the slack if they don't).
 * Write your profile for the lab website, and upload your CV (we could review it together first, if you like).
 
 **Research**
@@ -35,15 +35,15 @@ I can also help link you up with people who can help with housing.
 * Scour the active research projects on Asana. (If you can see them, you're welcome to investigate the contents.) Ask people what's going on with each.
 * Read more recent papers from the lab so you are familiar with lab member's areas of expertise.
 * Discuss one-year goals and your long-term plans. 
-* Identify short-term research goals (i.e., your initial project(s)) and deadlines for funding and conferences.
-* Let me know how you like to be mentored, how you like to work, and if there are practices or principles described in the handbook that you would like to see changed (or at least don't work well for you).
+* Identify short-term research goals (i.e., your initial project(s)), deadlines for initial research outputs, and deadlines for funding and conferences.
+* Let me know how you like to interact, how you like to work, and if there are practices or principles described in the handbook that you would like to see changed (or at least don't work well for you). We can negotiate policies.
 * Learn who/what is funding your research. Read at least the corresponding grant proposal, if we have one, and potentially other recent proposals (all on Asana).
 * Identify a time for weekly meetings.
-* Figure out if you need training in human subjects research.
+* Figure out with me if you need training in human subjects research.
 
 **Introductions**
 
-* Lab members! We'll have a big lab lunch or dinner soon after you arrive, but I encourage you to meet with everyone individually in the first week too.
+* Lab members! We'll have a big lab lunch or dinner soon after you arrive, but I encourage you to meet with everyone individually in the first week or two.
 * E&E administrators and IT
 * Building administrators and custodians
 * Neighbors in the Erman Building
