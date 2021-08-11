@@ -1,10 +1,12 @@
 # Midway
 
-Note: This section is being updated; the information here is a few years old and most importantly does not account for the supplanting of `midway.rcc.uchicago.edu` with `midway2.rcc.uchicago.edu`.
+Note: This section was updated in August 2021. The information includes references to Midway3, but at this time the majority of computing takes place on Midway2. 
 
-Midway is the main computing cluster used by the lab, run by the Research Computing Center. The official documentation is maintained here by RCC:
+Midway2 and Midway3 are the main computing clusters used by the lab, run by the Research Computing Center. Midway3 was launched in March 2021. The official documentation for Midway2 and Midway3 are maintained here by RCC:
 
-[https://rcc.uchicago.edu/docs/](https://rcc.uchicago.edu/docs/)
+**Midway2**: [https://rcc.uchicago.edu/docs/](https://rcc.uchicago.edu/docs/)
+
+**Midway3**: [https://mdw3.rcc.uchicago.edu/](https://mdw3.rcc.uchicago.edu/)
 
 This page contains some tasks that are likely to be useful to you.
 
@@ -12,13 +14,13 @@ This page contains some tasks that are likely to be useful to you.
 
 There are three places you can store things on Midway: (1) your home directory; (2) your scratch space; and (3) a shared project directory for the lab.
 
-Your home directory is in `/home/<CNetID>` and has a quota of 25 GB. This is a good place to check out your code, install software you want to use for runs, etc. You should NOT, in general, store simulation output in your home directory.
+Your home directory is in `/home/<CNetID>` and has a quota of 30 GB. This is a good place to check out your code, install software you want to use for runs, etc. You should NOT, in general, store simulation output in your home directory.
 
-Your scratch space is `$HOME/scratch-midway` and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., `2014-12-08-antigen-vaccine`; you may want prefer a hierarchy.
+Your scratch space is `home/<CNetID>/scratch-midway2` and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., `2014-12-08-antigen-vaccine`; you may want prefer a hierarchy.
 
-The lab project directory is `/project/cobey` and has a quota of 500 GB for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. `/project/cobey/bcellproject-storage/2014-12-08-test`.
+The lab project directory is `/project2/cobey` (for Midway2() (`/project/cobey` for Midway3 but as of 8/2021 there is no storage quota) and has a quota of 4.49 TB, with a hard limit of 4.94 TB, for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. `/project2/cobey/bcellproject-storage/2014-12-08-test`. The lab directory has a file quota of 1,885,693 files, with a hard limit of 2,074,262 files. 
 
-To check your disk usage, use the `quota` command. These quotas are current as of 8 December 2014.
+To check your disk usage, use the `quota` command. These quotas are current as of August 2021.
 
 ## Connecting to Midway
 
@@ -31,7 +33,7 @@ Details here:
 To connect via ssh, use your CNetID:
 
 ```
-$ ssh <CNetID>@midway.rcc.uchicago.edu
+$ ssh <CNetID>@midway2.rcc.uchicago.edu
 ```
 
 You can either type your password every time you want to log in, or, way cooler, set up a [passwordless login](Passwordless Login) using public-key authentication.
@@ -41,21 +43,21 @@ You can either type your password every time you want to log in, or, way cooler,
 You can copy individual files or directly back and forth using the `scp` command, e.g.,
 
 ```
-$ scp <local-path> <CNetID>@midway.rcc.uchicago.edu:<remote-path>
-$ scp <CNetID>@midway.rcc.uchicago.edu:<remote-path> <local-path> 
+$ scp <local-path> <CNetID>@midway2.rcc.uchicago.edu:<remote-path>
+$ scp <CNetID>@midway2.rcc.uchicago.edu:<remote-path> <local-path> 
 ```
 
 There are also graphical SSH/SCP browsers for Mac OS X, Linux, and Windows:
 
 * [WinSCP](http://winscp.net/eng/index.php) (Windows)
 * [FileZilla](https://filezilla-project.org) (all platforms)
-* [Fugu](http://rsug.itd.umich.edu/software/fugu/) (Mac OS X; be sure to download 1.2.1pre1; see the News section)
+* **Mac OS X specific to be updated**
 
-### SMB (connect as a disk)
+### SAMBA (SMB) (connect as a disk)
 
-You can make Midway to look like a local disk on your computer using [SMB](http://en.wikipedia.org/wiki/Server_Message_Block). This is convenient for things like editing job submission scripts using your favorite editor directly on the server, without having to copy things back and forth.
+You can make Midway to look like a local disk on your computer using [SAMBA](https://en.wikipedia.org/wiki/Samba_(software)). This is convenient for things like editing job submission scripts using your favorite editor directly on the server, without having to copy things back and forth.
 
-Midway's SMB hostname is `midwaysmb.rcc.uchicago.edu`.
+Midway's SAMBA (SMB) hostname is `midwaysmb.rcc.uchicago.edu`.
 
 If you're off campus, you'll need to be connected to the U of C VPN to access SMB. It will also be pretty slow, especially if you're on a crappy cafe connection like the one I'm on now--you may find a GUI SCP client to be a better choice offsite.
 
@@ -74,7 +76,7 @@ If you connect to Midway via `ssh -X`, graphical windows will get forwarded to y
 It's then as simple as doing this when logging in:
 
 ```
-$ ssh -X <CNetID>@midway.rcc.uchicago.edu
+$ ssh -X <CNetID>@midway2.rcc.uchicago.edu
 ```
 
 This is especially useful for the `sview` command (see below); it also will forward the graphics of a job running on a cluster node if you use `ssh -X and then `sinteractive`.
@@ -159,7 +161,12 @@ If you want to make it easy to compile your code with different compilers on dif
 $ module avail R
 ```
 
-shows several versions of R. The best version will probably be the latest one alongside the Intel compiler, e.g., `R/3.1+intel-15.0` at the time of writing.
+shows several versions of R. The default version (as of August 2021) is `R/3.6.1`. The best version will probably be the latest one alongside the Intel compiler, e.g., `R/3.3+intel-16.0` at the time of writing. You can choose which version of `R` to use: 
+
+```
+$ module load R/4.0.1
+```
+If you have already loaded the default version of `R` (`$ module load R`), you will need to first unload `R` (`$ module unload R`) before you can specify a version. 
 
 ### Python
 
@@ -182,7 +189,46 @@ module avail matlab
 module avail mathematica
 ```
 
-shows that they are available on Midway. (Getting a graphical Mathematica notebook to run on the cluster is a pain in the ass, though, so you're probably better off just running it locally if you can get away with it.)
+shows that they are available on Midway2. (Getting a graphical Mathematica notebook to run on the cluster is a pain in the ass, though, so you're probably better off just running it locally if you can get away with it.)
+
+### Installing R and Python libraries
+
+#### R 
+
+We usually need specific libraries to run R scripts. It is important to check what version of `R` are necessaryfor libraries to be installed and adjust accordingly. I find it helpful to create an `installation.R` script to install libraries into the correct directory, for example:
+
+```
+#!/usr/bin/Rscript
+
+## Create the personal library if it doesn't exist. Ignore a warning if the directory already exists.
+dir.create(Sys.getenv("R_LIBS_USER"), showWarnings = FALSE, recursive = TRUE)
+
+## Install multiple packages
+install.packages(c('dplyr',
+                   'optparse', 
+                   'doParallel'),
+                 dependencies = T,
+                 Sys.getenv("R_LIBS_USER"), 
+                 repos = 'http://cran.us.r-project.org'
+)
+```
+
+Other libraries (such as [`panelPomp`](https://rdrr.io/github/cbreto/panelPomp/)), are not yet in the CRAN respository. These libraries often need to be installed from GitHub, which is possible using `devtools`. 
+
+```
+## panelPomp from GitHub
+install.packages(c("devtools"),
+                 dependencies = T,
+                 Sys.getenv("R_LIBS_USER"), 
+                 repos = 'http://cran.us.r-project.org'
+)
+
+devtools::install_github('cbreto/panelPomp')
+```
+
+#### Python 
+
+
 
 ## Running Jobs on Midway
 
@@ -290,7 +336,7 @@ Display storage usage:
 ```
 $ quota
 ```
-The standard quota on an individual account is 25GB. When you exceed this, Midway will notify you the next time you log in. There is a grace period of 7 days to adjust your usage. There is also a hard limit of 30GB.
+The standard quota on an individual account is 30GB. When you exceed this, Midway will notify you the next time you log in. There is a grace period of 7 days to adjust your usage. There is also a hard limit of 35GB.
 
 ### Parameter sweeps
 
@@ -324,3 +370,16 @@ alias si='sinfo -o "%P %.5a %.10l %.6D %.6t %C"'
 alias icobey='si -p cobey'
 alias isandyb='si -p sandyb'
 ```
+
+## Other Midway items to keep track of
+
+### Allocation requests
+Each September we have to submit an allocation request to the RCC to request Service Units (SUs). SUs are the basic unit of computational resources and they represents the use of one core for one hour on the Midway Cluster. Allocation requests from 2019-2020 and 2020-2021 are housed on `/project2/cobey/allocation_requests_midway_resources`. 
+
+### Node life
+For each node purchased by the lab, the warranty is 5 years. Once the warranty runs out, the nodes can still be active on Midway2, but if they break or go down, the RCC will not fix them. For any long-duration jobs, please ensure you are using a node that is under warranty to reduce the likelihood of data loss. A spreadsheet with nodes, cores, purchase date, and warranty duration is housed in `/project2/cobey/allocation_requests_midway_resources`. 
+
+### Transitioning from Midway2 to Midway3
+Any nodes purchased after March 2021 are housed on Midway3. The RCC will mount storage from Midway2 onto Midway3, meaning it will be accessible when running jobs from Midway3. As of August 2021, this has not yet occurred (due to delays related to the pandemic), but they expect this will occurr by October 2021. After this point, it will make sense for all new projects to be housed on Midway3 instead of Midway2. 
+
+
