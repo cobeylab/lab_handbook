@@ -319,6 +319,11 @@ Display number of CPU hours used by you:
 $ accounts usage
 ```
 
+Displace account usage (SUs) for a previous period (update --cycle to indicate the academic cycle of interest): 
+
+```
+$ /software/systool/bin/accounts balance --account=pi-cobey --cycle=2019-2020
+```
 #### sview
 
 If you're connected graphically to Midway (either via `ssh -X` or using ThinLinc), you can get a graphical view of the SLURM cluster, which makes it easy to do things like selectively cancel a bunch of jobs at once:
@@ -329,7 +334,7 @@ $ sview
 
 The most useful command: Actions > Search > Specific User's Job(s)
 
-####quota
+#### quota
 
 Display storage usage:
 
@@ -338,9 +343,14 @@ $ quota
 ```
 The standard quota on an individual account is 30GB. When you exceed this, Midway will notify you the next time you log in. There is a grace period of 7 days to adjust your usage. There is also a hard limit of 35GB.
 
+The check the file and storage breakdown on `\project2\cobey` (or `\project\cobey`), add the `-F` flag:
+
+```
+$ quota -F /project2/cobey
+```
 ### Parameter sweeps
 
-TODO
+Do people think this could be useful?
 
 ## SLURM tricks
 
@@ -373,11 +383,18 @@ alias isandyb='si -p sandyb'
 
 ## Other Midway items to keep track of
 
+### Protected health information (PHI) and MidwayR
+There are instances where we work with data that qualifies as [PHI](https://en.wikipedia.org/wiki/Protected_health_information). Most often, this is individual-level data that includes a specific date related to an individual (e.g., birth date, admission date, vaccination date). These types of data cannot be stored or used in jobs running on Midway2/Midway3. For PHI and other protected data types, MidwayR may be useful. MidwayR is similar to the Midway computing environment but is also equipped with tools and software needed to meet the highest levels of secure data protection. Even with using MidwayR, it may be necessary to obscure dates that qualify as PHI. 
+
 ### Allocation requests
 Each September we have to submit an allocation request to the RCC to request Service Units (SUs). SUs are the basic unit of computational resources and they represents the use of one core for one hour on the Midway Cluster. Allocation requests from 2019-2020 and 2020-2021 are housed on `/project2/cobey/allocation_requests_midway_resources`. 
 
 ### Node life
-For each node purchased by the lab, the warranty is 5 years. Once the warranty runs out, the nodes can still be active on Midway2, but if they break or go down, the RCC will not fix them. For any long-duration jobs, please ensure you are using a node that is under warranty to reduce the likelihood of data loss. A spreadsheet with nodes, cores, purchase date, and warranty duration is housed in `/project2/cobey/allocation_requests_midway_resources`. 
+For each node purchased by the lab, the warranty is 5 years. Once the warranty runs out, the nodes can still be active on Midway2, but if they break or go down, the RCC will not fix them. For any long-duration jobs, please ensure you are using a node that is under warranty to reduce the likelihood of data loss. A spreadsheet with nodes, purchase date, warranty duration, and node label is housed in `/project2/cobey/allocation_requests_midway_resources`. 
+
+```{r node-life, echo=FALSE, fig.show='hold', fig.align="center", fig.cap='Expected node lifetime. Color denotes number of nodes with the same RAM and lifetime. Black vertical line denots 17 August 2021 (the time of writing).'}
+knitr::include_graphics(rep("images/node_life_2021-08-17.png"))
+```
 
 ### Transitioning from Midway2 to Midway3
 Any nodes purchased after March 2021 are housed on Midway3. The RCC will mount storage from Midway2 onto Midway3, meaning it will be accessible when running jobs from Midway3. As of August 2021, this has not yet occurred (due to delays related to the pandemic), but they expect this will occurr by October 2021. After this point, it will make sense for all new projects to be housed on Midway3 instead of Midway2. 
