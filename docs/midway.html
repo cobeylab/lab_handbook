@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Cobey Lab Handbook</title>
-  <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Midway | Cobey Lab Handbook</title>
+  <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Cobey Lab Handbook" />
+  <meta property="og:title" content="Chapter 5 Midway | Cobey Lab Handbook" />
   <meta property="og:type" content="book" />
   
   
@@ -17,28 +16,33 @@
   <meta name="github-repo" content="cobeylab/lab_handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cobey Lab Handbook" />
+  <meta name="twitter:title" content="Chapter 5 Midway | Cobey Lab Handbook" />
   
   <meta name="twitter:description" content="Handbook of the Cobey Lab at the University of Chicago" />
   
 
 
 
-<meta name="date" content="2018-11-29">
+<meta name="date" content="2021-08-20" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="so-you-wanna.html">
-<link rel="next" href="onboarding.html">
+<link rel="prev" href="so-you-wanna.html"/>
+<link rel="next" href="onboarding.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -49,41 +53,68 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -104,7 +135,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i><b>1</b> Why we work</a></li>
-<li class="chapter" data-level="2" data-path="how-we-work.html"><a href="how-we-work.html"><i class="fa fa-check"></i><b>2</b> How we work</a><ul>
+<li class="chapter" data-level="2" data-path="how-we-work.html"><a href="how-we-work.html"><i class="fa fa-check"></i><b>2</b> How we work</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="how-we-work.html"><a href="how-we-work.html#principles"><i class="fa fa-check"></i><b>2.1</b> Principles</a></li>
 <li class="chapter" data-level="2.2" data-path="how-we-work.html"><a href="how-we-work.html#work-hours"><i class="fa fa-check"></i><b>2.2</b> Work hours</a></li>
 <li class="chapter" data-level="2.3" data-path="how-we-work.html"><a href="how-we-work.html#workspace"><i class="fa fa-check"></i><b>2.3</b> Workspace</a></li>
@@ -113,18 +145,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.6" data-path="how-we-work.html"><a href="how-we-work.html#lab-meetings"><i class="fa fa-check"></i><b>2.6</b> Lab meetings</a></li>
 <li class="chapter" data-level="2.7" data-path="how-we-work.html"><a href="how-we-work.html#reproducible-research"><i class="fa fa-check"></i><b>2.7</b> Reproducible research</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="performance.html"><a href="performance.html"><i class="fa fa-check"></i><b>3</b> Performance</a><ul>
+<li class="chapter" data-level="3" data-path="performance.html"><a href="performance.html"><i class="fa fa-check"></i><b>3</b> Performance</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="performance.html"><a href="performance.html#reviews"><i class="fa fa-check"></i><b>3.1</b> Reviews</a></li>
 <li class="chapter" data-level="3.2" data-path="performance.html"><a href="performance.html#my-commitments"><i class="fa fa-check"></i><b>3.2</b> My commitments</a></li>
 <li class="chapter" data-level="3.3" data-path="performance.html"><a href="performance.html#basic-expectations"><i class="fa fa-check"></i><b>3.3</b> Basic expectations</a></li>
 <li class="chapter" data-level="3.4" data-path="performance.html"><a href="performance.html#graduate-researchers"><i class="fa fa-check"></i><b>3.4</b> Graduate researchers</a></li>
 <li class="chapter" data-level="3.5" data-path="performance.html"><a href="performance.html#postdoctoral-researchers"><i class="fa fa-check"></i><b>3.5</b> Postdoctoral researchers</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="so-you-wanna.html"><a href="so-you-wanna.html"><i class="fa fa-check"></i><b>4</b> So you wanna…</a><ul>
+<li class="chapter" data-level="4" data-path="so-you-wanna.html"><a href="so-you-wanna.html"><i class="fa fa-check"></i><b>4</b> So you wanna…</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#join-the-lab"><i class="fa fa-check"></i><b>4.1</b> Join the lab</a></li>
 <li class="chapter" data-level="4.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#do-some-research"><i class="fa fa-check"></i><b>4.2</b> Do some research</a></li>
 <li class="chapter" data-level="4.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#code-well-and-efficiently"><i class="fa fa-check"></i><b>4.3</b> Code well and efficiently</a></li>
-<li class="chapter" data-level="4.4" data-path="so-you-wanna.html"><a href="so-you-wanna.html#write-good"><i class="fa fa-check"></i><b>4.4</b> Write good</a><ul>
+<li class="chapter" data-level="4.4" data-path="so-you-wanna.html"><a href="so-you-wanna.html#write-good"><i class="fa fa-check"></i><b>4.4</b> Write good</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#general-advice"><i class="fa fa-check"></i><b>4.4.1</b> General advice</a></li>
 <li class="chapter" data-level="4.4.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#initial-submissions"><i class="fa fa-check"></i><b>4.4.2</b> Initial submissions</a></li>
 <li class="chapter" data-level="4.4.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#mature-papers"><i class="fa fa-check"></i><b>4.4.3</b> “Mature” papers</a></li>
@@ -135,12 +170,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.8" data-path="so-you-wanna.html"><a href="so-you-wanna.html#get-funded"><i class="fa fa-check"></i><b>4.8</b> Get funded</a></li>
 <li class="chapter" data-level="4.9" data-path="so-you-wanna.html"><a href="so-you-wanna.html#see-our-funding"><i class="fa fa-check"></i><b>4.9</b> See our funding</a></li>
 <li class="chapter" data-level="4.10" data-path="so-you-wanna.html"><a href="so-you-wanna.html#review-your-peers"><i class="fa fa-check"></i><b>4.10</b> Review your peers</a></li>
-<li class="chapter" data-level="4.11" data-path="so-you-wanna.html"><a href="so-you-wanna.html#have-productive-meetings"><i class="fa fa-check"></i><b>4.11</b> Have productive meetings</a><ul>
+<li class="chapter" data-level="4.11" data-path="so-you-wanna.html"><a href="so-you-wanna.html#have-productive-meetings"><i class="fa fa-check"></i><b>4.11</b> Have productive meetings</a>
+<ul>
 <li class="chapter" data-level="4.11.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#research-meetings"><i class="fa fa-check"></i><b>4.11.1</b> Research meetings</a></li>
 <li class="chapter" data-level="4.11.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#seminar-speakers"><i class="fa fa-check"></i><b>4.11.2</b> Seminar speakers</a></li>
 </ul></li>
 <li class="chapter" data-level="4.12" data-path="so-you-wanna.html"><a href="so-you-wanna.html#book-travel"><i class="fa fa-check"></i><b>4.12</b> Book travel</a></li>
-<li class="chapter" data-level="4.13" data-path="so-you-wanna.html"><a href="so-you-wanna.html#be-happy-doing-research"><i class="fa fa-check"></i><b>4.13</b> Be happy doing research</a><ul>
+<li class="chapter" data-level="4.13" data-path="so-you-wanna.html"><a href="so-you-wanna.html#be-happy-doing-research"><i class="fa fa-check"></i><b>4.13</b> Be happy doing research</a>
+<ul>
 <li class="chapter" data-level="4.13.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#time-management"><i class="fa fa-check"></i><b>4.13.1</b> Time management</a></li>
 <li class="chapter" data-level="4.13.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#imposter-syndrome"><i class="fa fa-check"></i><b>4.13.2</b> Imposter syndrome</a></li>
 <li class="chapter" data-level="4.13.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#mental-health-and-medical-problems"><i class="fa fa-check"></i><b>4.13.3</b> Mental health and medical problems</a></li>
@@ -153,24 +190,29 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.18" data-path="so-you-wanna.html"><a href="so-you-wanna.html#negotiate-authorship"><i class="fa fa-check"></i><b>4.18</b> Negotiate authorship</a></li>
 <li class="chapter" data-level="4.19" data-path="so-you-wanna.html"><a href="so-you-wanna.html#engage-with-the-public"><i class="fa fa-check"></i><b>4.19</b> Engage with the public</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="midway.html"><a href="midway.html"><i class="fa fa-check"></i><b>5</b> Midway</a><ul>
+<li class="chapter" data-level="5" data-path="midway.html"><a href="midway.html"><i class="fa fa-check"></i><b>5</b> Midway</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="midway.html"><a href="midway.html#storage-on-midway"><i class="fa fa-check"></i><b>5.1</b> Storage on Midway</a></li>
-<li class="chapter" data-level="5.2" data-path="midway.html"><a href="midway.html#connecting-to-midway"><i class="fa fa-check"></i><b>5.2</b> Connecting to Midway</a><ul>
+<li class="chapter" data-level="5.2" data-path="midway.html"><a href="midway.html#connecting-to-midway"><i class="fa fa-check"></i><b>5.2</b> Connecting to Midway</a>
+<ul>
 <li class="chapter" data-level="5.2.1" data-path="midway.html"><a href="midway.html#ssh-terminal"><i class="fa fa-check"></i><b>5.2.1</b> SSH (terminal)</a></li>
 <li class="chapter" data-level="5.2.2" data-path="midway.html"><a href="midway.html#scp"><i class="fa fa-check"></i><b>5.2.2</b> SCP</a></li>
-<li class="chapter" data-level="5.2.3" data-path="midway.html"><a href="midway.html#smb-connect-as-a-disk"><i class="fa fa-check"></i><b>5.2.3</b> SMB (connect as a disk)</a></li>
+<li class="chapter" data-level="5.2.3" data-path="midway.html"><a href="midway.html#samba-smb-connect-as-a-disk"><i class="fa fa-check"></i><b>5.2.3</b> SAMBA (SMB) (connect as a disk)</a></li>
 <li class="chapter" data-level="5.2.4" data-path="midway.html"><a href="midway.html#ssh--x-terminal-with-graphical-forwarding"><i class="fa fa-check"></i><b>5.2.4</b> ssh -X (terminal with graphical forwarding)</a></li>
 <li class="chapter" data-level="5.2.5" data-path="midway.html"><a href="midway.html#vnc-graphical-interface-via-thinlinc"><i class="fa fa-check"></i><b>5.2.5</b> VNC (graphical interface via ThinLinc)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="midway.html"><a href="midway.html#configuring-software-on-midway"><i class="fa fa-check"></i><b>5.3</b> Configuring Software on Midway</a><ul>
+<li class="chapter" data-level="5.3" data-path="midway.html"><a href="midway.html#configuring-software-on-midway"><i class="fa fa-check"></i><b>5.3</b> Configuring Software on Midway</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="midway.html"><a href="midway.html#git"><i class="fa fa-check"></i><b>5.3.1</b> Git</a></li>
 <li class="chapter" data-level="5.3.2" data-path="midway.html"><a href="midway.html#java"><i class="fa fa-check"></i><b>5.3.2</b> Java</a></li>
 <li class="chapter" data-level="5.3.3" data-path="midway.html"><a href="midway.html#cc"><i class="fa fa-check"></i><b>5.3.3</b> C/C++</a></li>
 <li class="chapter" data-level="5.3.4" data-path="midway.html"><a href="midway.html#r"><i class="fa fa-check"></i><b>5.3.4</b> R</a></li>
 <li class="chapter" data-level="5.3.5" data-path="midway.html"><a href="midway.html#python"><i class="fa fa-check"></i><b>5.3.5</b> Python</a></li>
 <li class="chapter" data-level="5.3.6" data-path="midway.html"><a href="midway.html#matlab-and-mathematica"><i class="fa fa-check"></i><b>5.3.6</b> Matlab and Mathematica</a></li>
+<li class="chapter" data-level="5.3.7" data-path="midway.html"><a href="midway.html#installing-r-and-python-libraries"><i class="fa fa-check"></i><b>5.3.7</b> Installing R and Python libraries</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="midway.html"><a href="midway.html#running-jobs-on-midway"><i class="fa fa-check"></i><b>5.4</b> Running Jobs on Midway</a><ul>
+<li class="chapter" data-level="5.4" data-path="midway.html"><a href="midway.html#running-jobs-on-midway"><i class="fa fa-check"></i><b>5.4</b> Running Jobs on Midway</a>
+<ul>
 <li class="chapter" data-level="5.4.1" data-path="midway.html"><a href="midway.html#overview"><i class="fa fa-check"></i><b>5.4.1</b> Overview</a></li>
 <li class="chapter" data-level="5.4.2" data-path="midway.html"><a href="midway.html#job-structure"><i class="fa fa-check"></i><b>5.4.2</b> Job structure</a></li>
 <li class="chapter" data-level="5.4.3" data-path="midway.html"><a href="midway.html#priority"><i class="fa fa-check"></i><b>5.4.3</b> Priority</a></li>
@@ -178,9 +220,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.4.5" data-path="midway.html"><a href="midway.html#parameter-sweeps"><i class="fa fa-check"></i><b>5.4.5</b> Parameter sweeps</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="midway.html"><a href="midway.html#slurm-tricks"><i class="fa fa-check"></i><b>5.5</b> SLURM tricks</a></li>
+<li class="chapter" data-level="5.6" data-path="midway.html"><a href="midway.html#other-midway-items-to-keep-track-of"><i class="fa fa-check"></i><b>5.6</b> Other Midway items to keep track of</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="midway.html"><a href="midway.html#protected-health-information-phi-and-midwayr"><i class="fa fa-check"></i><b>5.6.1</b> Protected health information (PHI) and MidwayR</a></li>
+<li class="chapter" data-level="5.6.2" data-path="midway.html"><a href="midway.html#allocation-requests"><i class="fa fa-check"></i><b>5.6.2</b> Allocation requests</a></li>
+<li class="chapter" data-level="5.6.3" data-path="midway.html"><a href="midway.html#node-life"><i class="fa fa-check"></i><b>5.6.3</b> Node life</a></li>
+<li class="chapter" data-level="5.6.4" data-path="midway.html"><a href="midway.html#transitioning-from-midway2-to-midway3"><i class="fa fa-check"></i><b>5.6.4</b> Transitioning from Midway2 to Midway3</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="onboarding.html"><a href="onboarding.html"><i class="fa fa-check"></i><b>6</b> Onboarding</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -198,70 +248,71 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="midway" class="section level1">
+<div id="midway" class="section level1" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Midway</h1>
-<p>Note: This section is being updated; the information here is a few years old and most importantly does not account for the supplanting of <code>midway.rcc.uchicago.edu</code> with <code>midway2.rcc.uchicago.edu</code>.</p>
-<p>Midway is the main computing cluster used by the lab, run by the Research Computing Center. The official documentation is maintained here by RCC:</p>
-<p><a href="https://rcc.uchicago.edu/docs/" class="uri">https://rcc.uchicago.edu/docs/</a></p>
+<p>Note: This section was updated in August 2021. The information includes references to Midway3, but at this time the majority of computing takes place on Midway2.</p>
+<p>Midway2 and Midway3 are the main computing clusters used by the lab, run by the Research Computing Center. Midway3 was launched in March 2021. The official documentation for Midway2 and Midway3 are maintained here by RCC:</p>
+<p><strong>Midway2</strong>: <a href="https://rcc.uchicago.edu/docs/">https://rcc.uchicago.edu/docs/</a></p>
+<p><strong>Midway3</strong>: <a href="https://mdw3.rcc.uchicago.edu/">https://mdw3.rcc.uchicago.edu/</a></p>
 <p>This page contains some tasks that are likely to be useful to you.</p>
-<div id="storage-on-midway" class="section level2">
+<div id="storage-on-midway" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Storage on Midway</h2>
 <p>There are three places you can store things on Midway: (1) your home directory; (2) your scratch space; and (3) a shared project directory for the lab.</p>
-<p>Your home directory is in <code>/home/&lt;CNetID&gt;</code> and has a quota of 25 GB. This is a good place to check out your code, install software you want to use for runs, etc. You should NOT, in general, store simulation output in your home directory.</p>
-<p>Your scratch space is <code>$HOME/scratch-midway</code> and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., <code>2014-12-08-antigen-vaccine</code>; you may want prefer a hierarchy.</p>
-<p>The lab project directory is <code>/project/cobey</code> and has a quota of 500 GB for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. <code>/project/cobey/bcellproject-storage/2014-12-08-test</code>.</p>
-<p>To check your disk usage, use the <code>quota</code> command. These quotas are current as of 8 December 2014.</p>
+<p>Your home directory is in <code>/home/&lt;CNetID&gt;</code> and has a quota of 30 GB. This is a good place to check out your code, install software you want to use for runs, etc. You should NOT, in general, store simulation output in your home directory.</p>
+<p>Your scratch space is <code>home/&lt;CNetID&gt;/scratch-midway2</code> and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., <code>2014-12-08-antigen-vaccine</code>; you may want prefer a hierarchy.</p>
+<p>The lab project directory is <code>/project2/cobey</code> (for Midway2() (<code>/project/cobey</code> for Midway3 but as of 8/2021 there is no storage quota) and has a quota of 4.49 TB, with a hard limit of 4.94 TB, for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. <code>/project2/cobey/bcellproject-storage/2014-12-08-test</code>. The lab directory has a file quota of 1,885,693 files, with a hard limit of 2,074,262 files.</p>
+<p>To check your disk usage, use the <code>quota</code> command. These quotas are current as of August 2021.</p>
 </div>
-<div id="connecting-to-midway" class="section level2">
+<div id="connecting-to-midway" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Connecting to Midway</h2>
 <p>Details here:</p>
-<p><a href="https://rcc.uchicago.edu/docs/connecting/" class="uri">https://rcc.uchicago.edu/docs/connecting/</a></p>
-<div id="ssh-terminal" class="section level3">
+<p><a href="https://rcc.uchicago.edu/docs/connecting/">https://rcc.uchicago.edu/docs/connecting/</a></p>
+<div id="ssh-terminal" class="section level3" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> SSH (terminal)</h3>
 <p>To connect via ssh, use your CNetID:</p>
-<pre><code>$ ssh &lt;CNetID&gt;@midway.rcc.uchicago.edu</code></pre>
+<pre><code>$ ssh &lt;CNetID&gt;@midway2.rcc.uchicago.edu</code></pre>
 <p>You can either type your password every time you want to log in, or, way cooler, set up a <a href="Passwordless%20Login">passwordless login</a> using public-key authentication.</p>
 </div>
-<div id="scp" class="section level3">
+<div id="scp" class="section level3" number="5.2.2">
 <h3><span class="header-section-number">5.2.2</span> SCP</h3>
 <p>You can copy individual files or directly back and forth using the <code>scp</code> command, e.g.,</p>
-<pre><code>$ scp &lt;local-path&gt; &lt;CNetID&gt;@midway.rcc.uchicago.edu:&lt;remote-path&gt;
-$ scp &lt;CNetID&gt;@midway.rcc.uchicago.edu:&lt;remote-path&gt; &lt;local-path&gt; </code></pre>
+<pre><code>$ scp &lt;local-path&gt; &lt;CNetID&gt;@midway2.rcc.uchicago.edu:&lt;remote-path&gt;
+$ scp &lt;CNetID&gt;@midway2.rcc.uchicago.edu:&lt;remote-path&gt; &lt;local-path&gt; </code></pre>
 <p>There are also graphical SSH/SCP browsers for Mac OS X, Linux, and Windows:</p>
 <ul>
 <li><a href="http://winscp.net/eng/index.php">WinSCP</a> (Windows)</li>
 <li><a href="https://filezilla-project.org">FileZilla</a> (all platforms)</li>
-<li><a href="http://rsug.itd.umich.edu/software/fugu/">Fugu</a> (Mac OS X; be sure to download 1.2.1pre1; see the News section)</li>
+<li><strong>Mac OS X specific to be updated</strong></li>
 </ul>
 </div>
-<div id="smb-connect-as-a-disk" class="section level3">
-<h3><span class="header-section-number">5.2.3</span> SMB (connect as a disk)</h3>
-<p>You can make Midway to look like a local disk on your computer using <a href="http://en.wikipedia.org/wiki/Server_Message_Block">SMB</a>. This is convenient for things like editing job submission scripts using your favorite editor directly on the server, without having to copy things back and forth.</p>
-<p>Midway’s SMB hostname is <code>midwaysmb.rcc.uchicago.edu</code>.</p>
+<div id="samba-smb-connect-as-a-disk" class="section level3" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> SAMBA (SMB) (connect as a disk)</h3>
+<p>You can make Midway to look like a local disk on your computer using <a href="https://en.wikipedia.org/wiki/Samba_(software)">SAMBA</a>. This is convenient for things like editing job submission scripts using your favorite editor directly on the server, without having to copy things back and forth.</p>
+<p>Midway’s SAMBA (SMB) hostname is <code>midwaysmb.rcc.uchicago.edu</code>.</p>
 <p>If you’re off campus, you’ll need to be connected to the U of C VPN to access SMB. It will also be pretty slow, especially if you’re on a crappy cafe connection like the one I’m on now–you may find a GUI SCP client to be a better choice offsite.</p>
 <p>On Mac OS X, go to the Finder, choose Go &gt; Connect to Server… (Command-K), and then type in the URL for the directory you want to access. The URLs are currently confusing (you need to specify your CNetID in the scratch URL but not in the home URL):</p>
 <pre><code>   Home:  smb://midwaysmb.rcc.uchicago.edu/homes
 Scratch:  smb://midwaysmb.rcc.uchicago.edu/midway-scratch/&lt;CNetID&gt;
 Project:  smb://midwaysmb.rcc.uchicago.edu/project/cobey</code></pre>
 </div>
-<div id="ssh--x-terminal-with-graphical-forwarding" class="section level3">
+<div id="ssh--x-terminal-with-graphical-forwarding" class="section level3" number="5.2.4">
 <h3><span class="header-section-number">5.2.4</span> ssh -X (terminal with graphical forwarding)</h3>
 <p>If you connect to Midway via <code>ssh -X</code>, graphical windows will get forwarded to your local machine. On Linux, this should work out of the box; on Mac OS X you’ll need to install <a href="https://xquartz.macosforge.org/">XQuartz</a> first. (There’s probably a way to make this work on Windows too; if you figure this out, please add instructions here.)</p>
 <p>It’s then as simple as doing this when logging in:</p>
-<pre><code>$ ssh -X &lt;CNetID&gt;@midway.rcc.uchicago.edu</code></pre>
+<pre><code>$ ssh -X &lt;CNetID&gt;@midway2.rcc.uchicago.edu</code></pre>
 <p>This is especially useful for the <code>sview</code> command (see below); it also will forward the graphics of a job running on a cluster node if you use <code>ssh -X and then</code>sinteractive`.</p>
 </div>
-<div id="vnc-graphical-interface-via-thinlinc" class="section level3">
+<div id="vnc-graphical-interface-via-thinlinc" class="section level3" number="5.2.5">
 <h3><span class="header-section-number">5.2.5</span> VNC (graphical interface via ThinLinc)</h3>
 <p>You can also get a full Linux desktop GUI on a Midway connection using a program called ThinLinc:</p>
-<p><a href="https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc" class="uri">https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc</a></p>
+<p><a href="https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc">https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc</a></p>
 <p>WARNING: the first time you use ThinLinc, before you click Connect go to Options… &gt; Screen and turn off full-screen mode. Otherwise ThinLinc will take over all your screens, making it rather hard to use your computer.</p>
 </div>
 </div>
-<div id="configuring-software-on-midway" class="section level2">
+<div id="configuring-software-on-midway" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Configuring Software on Midway</h2>
 <p>Before you run anything on Midway, you’ll need to load the necessary software modules using the <code>module</code> command:</p>
-<p><a href="https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/" class="uri">https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/</a></p>
+<p><a href="https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/">https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/</a></p>
 <p>If you’re not sure what the name of your module is, use, e.g.,</p>
 <pre><code>$ module avail intel</code></pre>
 <p>and you’ll be presented with a list of options. You can then load/unload modules using, e.g.,</p>
@@ -269,17 +320,17 @@ Project:  smb://midwaysmb.rcc.uchicago.edu/project/cobey</code></pre>
 $ module unload intel/15.0</code></pre>
 <p>There are multiple versions of many modules, so you’ll generally want to check <code>module avail</code> before trying <code>module load</code>.</p>
 <p>If you want to automatically load modules every time you log in, you can add <code>module load</code> commands to the end of your <code>~/.bash_profile</code> file (before <code># User specific environment and startup programs</code>).</p>
-<div id="git" class="section level3">
+<div id="git" class="section level3" number="5.3.1">
 <h3><span class="header-section-number">5.3.1</span> Git</h3>
 <p>The easiest way to get your code onto Midway is to check it out</p>
 <pre><code>$ module avail git</code></pre>
 </div>
-<div id="java" class="section level3">
+<div id="java" class="section level3" number="5.3.2">
 <h3><span class="header-section-number">5.3.2</span> Java</h3>
 <pre><code>$ module avail java</code></pre>
 <p>As of writing, Midway only has one version of Java (1.7), so be sure not to use JDK 1.8 features in your Java code.</p>
 </div>
-<div id="cc" class="section level3">
+<div id="cc" class="section level3" number="5.3.3">
 <h3><span class="header-section-number">5.3.3</span> C/C++</h3>
 <pre><code>$ module avail intel
 $ module avail gcc</code></pre>
@@ -294,42 +345,76 @@ $ clang++ -std=c++11 -stdlib=libc++ -O3 my_program.cpp -o my_program</code></pre
 <p>NOTE: the <code>-O3</code> flag means “optimization level 3”, which means, “make really fast code.” If you’re using a debugger, you’ll want to leave this flag off so the debugger can figure out where it is in your code. If you’re trying to generate results quickly, you’ll want to include this flag. (If you’re using Apple Xcode, having the flag off and on roughly correspond to “Debug” and “Release” configurations that you can choose in “Edit Scheme”.)</p>
 <p>If you want to make it easy to compile your code with different compilers on different systems, you can use the <code>make.py</code> script in the <a href="https://bitbucket.org/cobeylab/bcellmodel">bcellmodel</a> project as a starting point. It tries Intel, then Clang, then GCC until one is available. (This kind of thing is possible, but a bit annoying to get working, using traditional Makefiles, so I’ve switched to using simple Python build scripts for simple code.)</p>
 </div>
-<div id="r" class="section level3">
+<div id="r" class="section level3" number="5.3.4">
 <h3><span class="header-section-number">5.3.4</span> R</h3>
 <pre><code>$ module avail R</code></pre>
-<p>shows several versions of R. The best version will probably be the latest one alongside the Intel compiler, e.g., <code>R/3.1+intel-15.0</code> at the time of writing.</p>
+<p>shows several versions of R. The default version (as of August 2021) is <code>R/3.6.1</code>. The best version will probably be the latest one alongside the Intel compiler, e.g., <code>R/3.3+intel-16.0</code> at the time of writing. You can choose which version of <code>R</code> to use:</p>
+<pre><code>$ module load R/4.0.1</code></pre>
+<p>If you have already loaded the default version of <code>R</code> (<code>$ module load R</code>), you will need to first unload <code>R</code> (<code>$ module unload R</code>) before you can specify a version.</p>
 </div>
-<div id="python" class="section level3">
+<div id="python" class="section level3" number="5.3.5">
 <h3><span class="header-section-number">5.3.5</span> Python</h3>
 <p>In order to keep a consistent Python environment between your personal machine and Midway, we are maintaining our own Python installations in <code>/project/cobey</code>. Skip the Midway Python modules entirely, and instead include this in your <code>~/.bash_profile</code>:</p>
 <pre><code>export PATH=/project/cobey/anaconda/bin:/project/cobey/pypy/bin:$PATH</code></pre>
 <p>To make sure things are set up properly make sure that <code>which python</code> finds <code>/project/cobey/anaconda/bin/python</code> and <code>which pypy</code> finds <code>/project/cobey/pypy/bin/pypy</code>. See the Python page on this wiki for more information.</p>
 </div>
-<div id="matlab-and-mathematica" class="section level3">
+<div id="matlab-and-mathematica" class="section level3" number="5.3.6">
 <h3><span class="header-section-number">5.3.6</span> Matlab and Mathematica</h3>
 <p>You shouldn’t use Matlab or Mathematica if possible, because if you publish your code your results will only be reproducible to people that want to pay for Matlab or Mathematica.</p>
 <p>But if you must…</p>
 <pre><code>module avail matlab
 module avail mathematica</code></pre>
-<p>shows that they are available on Midway. (Getting a graphical Mathematica notebook to run on the cluster is a pain in the ass, though, so you’re probably better off just running it locally if you can get away with it.)</p>
+<p>shows that they are available on Midway2. (Getting a graphical Mathematica notebook to run on the cluster is a pain in the ass, though, so you’re probably better off just running it locally if you can get away with it.)</p>
+</div>
+<div id="installing-r-and-python-libraries" class="section level3" number="5.3.7">
+<h3><span class="header-section-number">5.3.7</span> Installing R and Python libraries</h3>
+<div id="r-1" class="section level4" number="5.3.7.1">
+<h4><span class="header-section-number">5.3.7.1</span> R</h4>
+<p>We usually need specific libraries to run R scripts. It is important to check what version of <code>R</code> are necessaryfor libraries to be installed and adjust accordingly. I find it helpful to create an <code>installation.R</code> script to install libraries into the correct directory, for example:</p>
+<pre><code>#!/usr/bin/Rscript
+
+## Create the personal library if it doesn&#39;t exist. Ignore a warning if the directory already exists.
+dir.create(Sys.getenv(&quot;R_LIBS_USER&quot;), showWarnings = FALSE, recursive = TRUE)
+
+## Install multiple packages
+install.packages(c(&#39;dplyr&#39;,
+                   &#39;optparse&#39;, 
+                   &#39;doParallel&#39;),
+                 dependencies = T,
+                 Sys.getenv(&quot;R_LIBS_USER&quot;), 
+                 repos = &#39;http://cran.us.r-project.org&#39;
+)</code></pre>
+<p>Other libraries (such as <a href="https://rdrr.io/github/cbreto/panelPomp/"><code>panelPomp</code></a>), are not yet in the CRAN respository. These libraries often need to be installed from GitHub, which is possible using <code>devtools</code>.</p>
+<pre><code>## panelPomp from GitHub
+install.packages(c(&quot;devtools&quot;),
+                 dependencies = T,
+                 Sys.getenv(&quot;R_LIBS_USER&quot;), 
+                 repos = &#39;http://cran.us.r-project.org&#39;
+)
+
+devtools::install_github(&#39;cbreto/panelPomp&#39;)</code></pre>
+</div>
+<div id="python-1" class="section level4" number="5.3.7.2">
+<h4><span class="header-section-number">5.3.7.2</span> Python</h4>
 </div>
 </div>
-<div id="running-jobs-on-midway" class="section level2">
+</div>
+<div id="running-jobs-on-midway" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Running Jobs on Midway</h2>
 <p>I’ll leave most of the details to the official documentation:</p>
-<p><a href="https://rcc.uchicago.edu/docs/using-midway/#using-midway" class="uri">https://rcc.uchicago.edu/docs/using-midway/#using-midway</a></p>
+<p><a href="https://rcc.uchicago.edu/docs/using-midway/#using-midway">https://rcc.uchicago.edu/docs/using-midway/#using-midway</a></p>
 <p>but a summary of important stuff follows.</p>
-<div id="overview" class="section level3">
+<div id="overview" class="section level3" number="5.4.1">
 <h3><span class="header-section-number">5.4.1</span> Overview</h3>
 <p>Midway consists of a large number of multi-core nodes, and uses a system called <a href="http://slurm.schedmd.com">SLURM</a> to allocate jobs to cores on nodes.</p>
 <p>Some details on the terminology: a “node” is what you normally think of as an individual computer: a box with a motherboard, a hard drive, etc., running a copy of Linux. Each node’s motherboard contains several <a href="http://en.wikipedia.org/wiki/Microprocessor">processors</a> (a physical chip that plugs into the motherboard), each of which may contain several cores. A “core” is a collection of circuits inside the processor that can, conceptually speaking, perform one series of instructions at a time. (Until a few years ago, processors only consisted of one core and people talked about “processors” the way they now talk about “cores,” so you might hear people confusing these from time to time.)</p>
 <p>If you are writing code that does only one thing at a time (serial code), then all you really need to know is that a single run of your code requires a single core.</p>
 </div>
-<div id="job-structure" class="section level3">
+<div id="job-structure" class="section level3" number="5.4.2">
 <h3><span class="header-section-number">5.4.2</span> Job structure</h3>
 <p>Note that Midway counts service units, or core-hours in increments of 0.01. To minimize waste, we’re best off designing jobs to be at least several minutes each. (It makes sense that we wouldn’t want to bog down the scheduler anyway.)</p>
 </div>
-<div id="priority" class="section level3">
+<div id="priority" class="section level3" number="5.4.3">
 <h3><span class="header-section-number">5.4.3</span> Priority</h3>
 <p>As described below, if your jobs aren’t running right away, you can use</p>
 <pre><code>$ squeue -u &lt;CNetID&gt;</code></pre>
@@ -337,73 +422,102 @@ module avail mathematica</code></pre>
 <p>If your jobs are queued with <code>(Priority)</code> status, it means other jobs are taking priority. Job priorities are determined by the size of the job, its time in the queue, the requested wall time (so it pays to be precise and know your jobs well), and group-level prior usage. Groups that have consumed fewer resources get higher priority than those using more. This usage has a half-life of approximately 14 days, which means it’s less awkward to spread jobs out over time. You can view the priority of queued jobs using</p>
 <pre><code>$ sprio</code></pre>
 </div>
-<div id="useful-commands" class="section level3">
+<div id="useful-commands" class="section level3" number="5.4.4">
 <h3><span class="header-section-number">5.4.4</span> Useful commands</h3>
-<div id="sinteractive" class="section level4">
+<div id="sinteractive" class="section level4" number="5.4.4.1">
 <h4><span class="header-section-number">5.4.4.1</span> sinteractive</h4>
 <p>To get a dedicated job that you can interact with just like any login session–e.g., if you want to manually type commands at the command line to try some code out, make changes, do some analysis, etc.–you can use the <code>sinteractive</code> command:</p>
-<p><a href="https://rcc.uchicago.edu/docs/using-midway/#sinteractive" class="uri">https://rcc.uchicago.edu/docs/using-midway/#sinteractive</a></p>
+<p><a href="https://rcc.uchicago.edu/docs/using-midway/#sinteractive">https://rcc.uchicago.edu/docs/using-midway/#sinteractive</a></p>
 <p>If you connected via <code>ssh -X</code>, then graphical windows will also get forwarded from the cluster to your local machine.</p>
 </div>
-<div id="sbatch" class="section level4">
+<div id="sbatch" class="section level4" number="5.4.4.2">
 <h4><span class="header-section-number">5.4.4.2</span> sbatch</h4>
 <p>To submit a single non-interactive job to the cluster, use the <code>sbatch</code> command:</p>
-<p><a href="https://rcc.uchicago.edu/docs/using-midway/#sbatch" class="uri">https://rcc.uchicago.edu/docs/using-midway/#sbatch</a></p>
+<p><a href="https://rcc.uchicago.edu/docs/using-midway/#sbatch">https://rcc.uchicago.edu/docs/using-midway/#sbatch</a></p>
 <p>This involves preparing a script with special indications to SLURM regarding how much memory you need, how many cores, how long you want the job to run, etc.</p>
 </div>
-<div id="squeue" class="section level4">
+<div id="squeue" class="section level4" number="5.4.4.3">
 <h4><span class="header-section-number">5.4.4.3</span> squeue</h4>
 <p>View jobs you are currently running:</p>
 <pre><code>$ squeue -u &lt;CNetID&gt;</code></pre>
 </div>
-<div id="scancel" class="section level4">
+<div id="scancel" class="section level4" number="5.4.4.4">
 <h4><span class="header-section-number">5.4.4.4</span> scancel</h4>
 <p>Cancel jobs by job ID:</p>
 <pre><code>$ scancel &lt;job-ID&gt;</code></pre>
 <p>Cancel all of your jobs:</p>
 <pre><code>$ scancel -u &lt;CNetID&gt;</code></pre>
 </div>
-<div id="accounts" class="section level4">
+<div id="accounts" class="section level4" number="5.4.4.5">
 <h4><span class="header-section-number">5.4.4.5</span> accounts</h4>
 <p>Display number of used/available CPU-hours for the lab:</p>
 <pre><code>$ accounts balance</code></pre>
 <p>Display number of CPU hours used by you:</p>
 <pre><code>$ accounts usage</code></pre>
+<p>Displace account usage (SUs) for a previous period (update –cycle to indicate the academic cycle of interest):</p>
+<pre><code>$ /software/systool/bin/accounts balance --account=pi-cobey --cycle=2019-2020</code></pre>
 </div>
-<div id="sview" class="section level4">
+<div id="sview" class="section level4" number="5.4.4.6">
 <h4><span class="header-section-number">5.4.4.6</span> sview</h4>
 <p>If you’re connected graphically to Midway (either via <code>ssh -X</code> or using ThinLinc), you can get a graphical view of the SLURM cluster, which makes it easy to do things like selectively cancel a bunch of jobs at once:</p>
 <pre><code>$ sview</code></pre>
 <p>The most useful command: Actions &gt; Search &gt; Specific User’s Job(s)</p>
 </div>
-<div id="quota" class="section level4">
+<div id="quota" class="section level4" number="5.4.4.7">
 <h4><span class="header-section-number">5.4.4.7</span> quota</h4>
 <p>Display storage usage:</p>
 <pre><code>$ quota</code></pre>
-<p>The standard quota on an individual account is 25GB. When you exceed this, Midway will notify you the next time you log in. There is a grace period of 7 days to adjust your usage. There is also a hard limit of 30GB.</p>
+<p>The standard quota on an individual account is 30GB. When you exceed this, Midway will notify you the next time you log in. There is a grace period of 7 days to adjust your usage. There is also a hard limit of 35GB.</p>
+<p>The check the file and storage breakdown on <code>\project2\cobey</code> (or <code>\project\cobey</code>), add the <code>-F</code> flag:</p>
+<pre><code>$ quota -F /project2/cobey</code></pre>
 </div>
 </div>
-<div id="parameter-sweeps" class="section level3">
+<div id="parameter-sweeps" class="section level3" number="5.4.5">
 <h3><span class="header-section-number">5.4.5</span> Parameter sweeps</h3>
-<p>TODO</p>
+<p>Do people think this could be useful?</p>
 </div>
 </div>
-<div id="slurm-tricks" class="section level2">
+<div id="slurm-tricks" class="section level2" number="5.5">
 <h2><span class="header-section-number">5.5</span> SLURM tricks</h2>
 <p><code>squeue -o</code> lets you specify additional information for squeue using a format string. These are annoying to type every time you want to query things. You can create an alias in your <code>.bash_profile</code> script:</p>
-<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb28-1"><a href="midway.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></span></code></pre></div>
 <p>which includes standard info plus some extra stuff (including time limit, # nodes, # CPUs, and memory). Then you can just type <code>sq</code>, <code>sq -p cobey</code>, <code>sq -u edbaskerville</code>, etc. to perform queries with your customized format string.</p>
 <p>See <code>man squeue</code> for a list of format string options.</p>
 <p><code>sinfo -o</code> has similar options, including the ability to see how many processors are available/in use:</p>
-<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb29-1"><a href="midway.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></span></code></pre></div>
 <p>A full list of aliases for user edbaskerville might look like:</p>
-<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span>
-<span class="bu">alias</span> qcobey=<span class="st">&#39;sq -p cobey&#39;</span>
-<span class="bu">alias</span> qsandyb=<span class="st">&#39;sq -p sandyb -u edbaskerville&#39;</span>
-<span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span>
-<span class="bu">alias</span> icobey=<span class="st">&#39;si -p cobey&#39;</span>
-<span class="bu">alias</span> isandyb=<span class="st">&#39;si -p sandyb&#39;</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb30-1"><a href="midway.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></span>
+<span id="cb30-2"><a href="midway.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> qcobey=<span class="st">&#39;sq -p cobey&#39;</span></span>
+<span id="cb30-3"><a href="midway.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> qsandyb=<span class="st">&#39;sq -p sandyb -u edbaskerville&#39;</span></span>
+<span id="cb30-4"><a href="midway.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></span>
+<span id="cb30-5"><a href="midway.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> icobey=<span class="st">&#39;si -p cobey&#39;</span></span>
+<span id="cb30-6"><a href="midway.html#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> isandyb=<span class="st">&#39;si -p sandyb&#39;</span></span></code></pre></div>
+</div>
+<div id="other-midway-items-to-keep-track-of" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Other Midway items to keep track of</h2>
+<div id="protected-health-information-phi-and-midwayr" class="section level3" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Protected health information (PHI) and MidwayR</h3>
+<p>There are instances where we work with data that qualifies as <a href="https://en.wikipedia.org/wiki/Protected_health_information">PHI</a>. Most often, this is individual-level data that includes a specific date related to an individual (e.g., birth date, admission date, vaccination date). These types of data cannot be stored or used in jobs running on Midway2/Midway3. For PHI and other protected data types, MidwayR may be useful. MidwayR is similar to the Midway computing environment but is also equipped with tools and software needed to meet the highest levels of secure data protection. Even with using MidwayR, it may be necessary to obscure dates that qualify as PHI.</p>
+</div>
+<div id="allocation-requests" class="section level3" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Allocation requests</h3>
+<p>Each September we have to submit an allocation request to the RCC to request Service Units (SUs). SUs are the basic unit of computational resources and they represents the use of one core for one hour on the Midway Cluster. Allocation requests from 2019-2020 and 2020-2021 are housed on <code>/project2/cobey/allocation_requests_midway_resources</code>.</p>
+</div>
+<div id="node-life" class="section level3" number="5.6.3">
+<h3><span class="header-section-number">5.6.3</span> Node life</h3>
+<p>For each node purchased by the lab, the warranty is 5 years. Once the warranty runs out, the nodes can still be active on Midway2, but if they break or go down, the RCC will not fix them. For any long-duration jobs, please ensure you are using a node that is under warranty to reduce the likelihood of data loss. A spreadsheet with nodes, purchase date, warranty duration, and node label is housed in <code>/project2/cobey/allocation_requests_midway_resources</code>.</p>
+<div class="figure" style="text-align: center"><span id="fig:node-life"></span>
+<img src="images/node_life_2021-08-17.png" alt="Expected node lifetime. Color denotes number of nodes with the same RAM and lifetime. Black vertical line denots 17 August 2021 (the time of writing)." width="1000" />
+<p class="caption">
+Figure 5.1: Expected node lifetime. Color denotes number of nodes with the same RAM and lifetime. Black vertical line denots 17 August 2021 (the time of writing).
+</p>
+</div>
+</div>
+<div id="transitioning-from-midway2-to-midway3" class="section level3" number="5.6.4">
+<h3><span class="header-section-number">5.6.4</span> Transitioning from Midway2 to Midway3</h3>
+<p>Any nodes purchased after March 2021 are housed on Midway3. The RCC will mount storage from Midway2 onto Midway3, meaning it will be accessible when running jobs from Midway3. As of August 2021, this has not yet occurred (due to delays related to the pandemic), but they expect this will occurr by October 2021. After this point, it will make sense for all new projects to be housed on Midway3 instead of Midway2.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -417,11 +531,13 @@ module avail mathematica</code></pre>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -429,12 +545,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": true,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"],
+"google": true
 },
 "fontsettings": {
 "theme": "white",
@@ -442,6 +558,14 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
 "download": null,
 "toc": {
 "collapse": "section",
@@ -452,19 +576,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
