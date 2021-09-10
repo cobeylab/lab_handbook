@@ -36,7 +36,7 @@ To connect via ssh, use your CNetID:
 $ ssh <CNetID>@midway2.rcc.uchicago.edu
 ```
 
-You can either type your password every time you want to log in, or, way cooler, set up a [passwordless login](Passwordless Login) using public-key authentication.
+Passwordless login is no longer available, and two factor authentication is required.
 
 ### SCP
 
