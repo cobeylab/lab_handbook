@@ -305,6 +305,22 @@ Cancel all of your jobs:
 $ scancel -u <CNetID>
 ```
 
+### scontrol update
+
+Useful for changing the resources requested for PENDING jobs.
+
+Move a PENDING job to another partition:
+
+```
+$ scontrol update partition=<partition_name> qos=<partition_name> jobid=<jobid>
+```
+
+Change the time limit for a PENDING job:
+
+```
+$ scontrol update TimeLimit=<HH:MM:SS> jobid=<jobid>
+```
+
 #### accounts
 
 Display number of used/available CPU-hours for the lab:
