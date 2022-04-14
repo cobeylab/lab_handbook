@@ -1,0 +1,528 @@
+# Coding Handbook
+
+## Justification
+
+The practice of science requires special care to ensure integrity. Not only do we want to know our results are correct, we need to show outside collaborators, institutions, publishers, and funders. The standards for these groups are also rising, particularly in the areas of data and code. Excerpts from the Fostering Integrity in Research (2018) checklists for researchers, journals, and research sponsors:
+
+Researchers:
+
+* Develop data management and sharing plan at the outset of a project.
+* Incorporate appropriate data management expertise in the project team.
+* Understand and follow data collection, management, and sharing standards, policies, and regulations of the discipline, institution, funder, journal, and relevant government agencies.
+
+Journals:
+
+* Provide a link to data and code that support articles, and facilitate long-term access.
+* Require full descriptions of methods in method sections or electronic supplements.
+
+Research sponsors:
+
+* Develop data and code access policies for extramural grants appropriate to
+the research being funded, and make fulfillment of these policies a condi-
+tion of future funding.
+* Cover the costs borne by researchers and institutions to make data and
+code available.
+* Practice transparency of data and code for intramural programs.
+* Promote responsible sharing of data in areas such as clinical trials.
+
+One of the main reasons research has changed with respect to ensuring integrity in the last few decades is the increasing role of data and computer software. New norms, standards, and training are required, and new opportunities for communication and reuse are available.
+
+
+## Coding Culture
+
+As with any high-stakes endeavor, it's important to think about how our treatment of each other contributes to success. Software development depends on accuracy, interdependence, and requires human judgment. Culture can therefore greatly impact productivity and resiliency.
+
+### Cultural practices
+
+1. Be open with your code, and your understanding. Coding productivity depends on information. Passing the information as quickly and openly as possible will help overcome this and facilitate progress. The communication phenomenon has been known since the [70s](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) yet it is easy to forget.
+
+2. Be charitable with your feedback. No error is so obvious that even the most experienced programmer won't make it from time to time. Break your PR reviews into demonstrable chunks that you can prove with a code snippet. Don't make sweeping or vague judgements.
+
+3. Be thick-skinned. Code has a way of seeming absolute and damning when you get it wrong. On the other hand, that is its nature. Any error will feel that way, and everyone makes [mistakes](https://en.wikipedia.org/wiki/List_of_software_bugs).
+
+
+## Complexity
+
+
+"The art of programming is the art of organizing complexity."
+
+  — Edsger W. Dijkstra
+
+Programs tend to be difficult to understand. They are written by someone with roughly the same capacity for complexity as the reader, but with the advantage of having written it. This person will usually write to the limit of *their own* understanding because we write competitive programs that are as sophisticated and full-featured as possible.
+
+There are strong incentives in all of computing to write complex code. There are also a limitless number of ways to write code that are functionally identical to each other.
+
+It's also important to remember that complexity is a force of nature. Once enough possible states of a program have been achieved that are difficult to characterize – which is easy to do – it becomes impossible for any human brain to understand completely. This doesn't happen for all programs, but due to combinatorics, the point at which an application becomes complex can easily sneak up on the author.
+
+
+## Why writing code is easier than reading it
+
+
+"The process of understanding a code practically involves redoing it." -- John von Neumann
+
+Take a function in a large codebase. The person who wrote it understands:
+
+      1. The expected -- or possible -- range of inputs for this particular application. (Number of possible arguments -- values -- can easily be in the trillions for a simple function.) Possible range will often depend on the entire rest of the codebase and will usually be implicit.
+      2. How often the function is called at runtime (Note: This is different from the number of times it is referenced in the codebase.)
+      3. The intentions of the code. This can be different from what it *does* and is simpler to understand. (Usually intention vs reality is cleared up with comments.)
+      4. The narrative of the code. The history of a codebase is a powerful mnemonic device. "We wrote this because there was an issue in January. There are three other places this functionality is handled."
+
+All of this asymmetry between the author and the reader is in addition to the raw size of the source code. In other words, these depend on the combinatorial explosion of interconnected components.
+
+
+### Science and Software
+
+Some coding principles are *less important* in science because:
+  * Scientific applications are more mathematical. You can reason about the range of values more easily.
+  * They can be very short.
+  * They are often meant to be run one way. For example, a Jupyter notebook that is intended to run in the order the cells are in on the page.
+
+Some coding principles are *more important* in science because:
+  * Scientific applications are meant to be read. They are intended to teach and be verified.
+  * They are meant to be open-source, and reused.
+  * They are at the forefront of human understanding. Extra complexity is detrimental.
+  * They are sensitive to error. The stakes are high.
+
+
+## Indirection, Abstraction, and Generalization
+
+Indirection, abstraction, and generalization are three closely-related concepts in programming.
+
+Indirection is the most general in that it refers to any symbolic representation of a process in the place of the process itself. A function calling another function, for instance.
+
+Indirection can reduce complexity, and multiply the number of cases a piece of code can handle, *and be a source of complexity itself*.
+
+The so-called [Fundamental Theorem of Software Engineering](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) is: "We can solve any problem by introducing an extra level of indirection. (Except for the problem of too many levels of indirection)." (David J. Wheeler)
+
+Abstraction is also very general but refers to the process of removing details that are not relevant to some concept one is trying to model.
+
+Finally, generalization is very similar to abstraction with the connotation of combining the functionality of several similar pieces of code into one, usually parameterized, copy.
+
+Thinking about how accurately, simply, and powerfully your code represents what is being modeled is important because it makes your code more useful, understandable, and because it becomes more mathematical: You've distilled a model to its essence.
+
+
+### Example: [The Weasel Algorithm](https://en.wikipedia.org/wiki/Weasel_program#Weasel_algorithm)
+
+``` python
+
+from random import choice, random
+
+charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ '
+target  = list("METHINKS IT IS LIKE A WEASEL")
+
+# create a random parent
+parent  = [choice(charset) for _ in range(28)]
+while parent != target:
+
+    # calculate how fast to mutate depending on how close we are to the target.
+    rate = 1-((28 - (sum(t == h for t, h in zip(parent, target))
+)) / 28 * 0.9)
+
+    # initialize ten copies of the parent, randomly mutated.
+    mut1 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut2 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut3 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut4 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut5 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut6 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut7 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut8 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut9 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+    mut10 = [(ch if random() <= rate else choice(charset)) for ch in parent]
+
+    # put mutants in an array
+    copies = [mut1, mut2, mut3, mut4, mut5, mut6, mut7, mut8, mut9, parent]
+
+    # pick most fit parent from the beginning of the list
+    parent1 = max(copies[:4], key=lambda trial: sum(t == h for t, h in zip(trial, target)))
+
+    # pick most fit parent from the end of the list
+    parent2 = max(copies[4:], key=lambda trial: sum(t == h for t, h in zip(trial, target)))
+
+    # choose a place in the "genome" to split between the two parents.
+    place = choice(range(28))
+    mated = [parent1, parent2, parent1[:place] + parent2[place:], parent2[:place] + parent1[place:]]
+
+    # choose most fit amongst the parents and two progeny
+    parent = max(mated, key=lambda trial: sum(t == h for t, h in zip(trial, target)))
+
+    print(''.join(parent))
+print('Success! \n', ''.join(parent))
+
+```
+
+This code has several problems.
+
+1. There's a lot of duplication. Initializing the array requires as many lines as there are elements in the array. `sum(t == h for t, h in zip(trial, target))` is copied anywhere it is needed, etc.
+2. It only works for specific lengths of `target` and `copies` because a user would need to modify code instead of changing a parameter. Literal values like 4 and 28 are used instead of variables (hardcoding).
+3. It's not conceptual. If it weren't for the comments, it would be difficult to tell what the author is getting at. What does 28 mean in this context? Is it the same as other 28s?
+4. It would be difficult to maintain (particularly if this style was used in a large program). Will the program still work if we change some of it? Is there an error in some of the duplicated code? How do we add functionality without adding more duplication?
+
+All of these are problems that can be solved by generalization.
+
+This code was adapted from a much more general version at [Rosetta Code](https://www.rosettacode.org/wiki/Evolutionary_algorithm#Python). In some ways the less general version is easier to understand. Your eye doesn't need to jump around as much to see what is going on. Usually, though, the more general code is preferred.
+
+How a particular program should be written is a judgment call based on its size, predicted longevity, and what is most clear to readers. If you're starting to lose productivity or bugs are difficult to fix, it might be time to generalize. As with almost any engineering topic, generalization is a tradeoff and can be taken too far.
+
+
+## Debugging
+
+Debugging and experimentation are fundamentally the same. Debugging is done by isolating variables to identify the cause of a problem. It is comparing the results of two runs of a program with one variable changed. If one run reproduces a bug and the other doesn't, you can usually conclude the value of the variable is the cause. ("Variable" may not be a literal variable. It may be a short section of code, or input.)
+
+Modular, functional code is easier to debug than the opposite: arbitrarily interconnected code. The reason for this is it's easier to understand, and it's easier to “change one thing” and understand the outcome. Code that is easy to debug is also generally [modular](#link_to_modular), [functional](#link_to_functional), and [testable](#link_to_testable).
+
+
+## Functional Programming
+
+The term "functional" comes from Functional Programming, which the discipline of programming where:
+
+1. Functions always return the same output for an input. For instance:
+
+``` python
+
+def f(x):
+    return x + 2
+
+```
+
+Always returns the corresponding x + 2 for every x no matter the context and across time.
+
+``` python
+
+from random import randint
+
+def f(x):
+    return x + randint(0, 10)
+
+```
+
+Does not.
+
+2. Functions have no side-effects. The function can't modify any variables outside itself.
+
+``` python
+
+g = 0
+
+def f(x):
+    global g
+    g = g + 1
+    return x + 2
+
+```
+
+Modifies `y`, which is outside the scope of the function `f`. State applies to external systems as well. Modifying a database, for instance, counts as out-of-scope, and can affect future runs of a function with the same input.
+
+These properties guarantee that a program is [referentially transparent](https://en.wikipedia.org/wiki/Referential_transparency). You can easily modify it because you can replace any instance of a function with a value, and you can move functions without concern that their behavior will change. Additionally, variables that can be changed by many different functions, in the worst case global mutable variables, add complexity to programs. This is analogous to running an experiment where variables can't be controlled because the state of the program generally involves variables that could be at any state at any time and may radically change the behavior of the program. A function in functional programming (also known as a pure function) can be tested completely by changing its arguments.
+
+The benefits of functional programming are closely related to [modularity](#modularity). Functional programs are modular in that every function encapsulates some functionality and has a well-defined interface, the function signature.
+
+
+## Unit Testing
+
+Unit testing is a technique of verifying applications by writing an example input and expected output for a number of simple functions in your codebase. Ideally your code will be structured to get the most out of unit tests by relying on a base of testable functions that are used throughout.
+
+### Testability
+
+A function is easier to test when there's a simple way to characterize its behavior with some inputs and expected outputs. This generally means small, easy-to-write input/output pairs. For example:
+
+``` python
+
+def f(i, j, s):
+    if i > j:
+        return s + " is above the line"
+    else:
+        return s + " is below the line"
+
+def test_low_f():
+    assert f(2, 3, "test") == "test is below the line"
+
+def test_high_f():
+    assert f(3, -1, "test") == "test is above the line"
+
+```
+
+``` python
+
+def g(i, j, s):
+  if i > j and is_thursday and urllib.request.urlopen("http://line.status.org") and random.randrange(1,10) > 2:
+    return "It's thursday and the line status is good and you're lucky."
+
+```
+
+Function f:
+  1. Is purely functional. It doesn't modify or depend on values outside its scope, and always returns the same values for the corresponding input.
+
+`f` is easy to test. `test_low_f` and `test_high_f` cover both branches (the if and else) and characterize the behavior of `f` well. Note: It's a judgment call whether or not enough of the input space has been tested. It's easy to see in this case that all integers will behave predictably. This also doesn't cover exceptions, which should generally be tested.
+
+Function g:
+  1. Works differently depending on the day, the status of an external web site, and a random number. The behavior of g depends on a lot of values, and values that are outside the scope of the function.
+  2. Does not handle all values of its parameters.
+
+`g` is not purely functional and very difficult to test. The state that would be needed to get a predictable output is difficult to prepare. (Functions should also almost never silently fail.)
+
+This most commonly occurs in practice with large global, mutable variables and large objects in general, and the results of connections to external services. Sometimes this can't be avoided, but structuring your program strategically can minimize the effects of state.
+
+
+## Modules and Modularity
+
+The "messiness" of code is hard to quantify. Messy, difficult-to-understand code is sometimes called "spaghetti code" because connections between components are made from anywhere, to anywhere without much planning or structure. However:
+
+1. A complex codebase *should* have many connections such as function calls, imports, variable mutation etc.
+2. Where and when to make connections can be a matter of what “lens” through which you're viewing the code. There isn't an absolute objective standard.
+
+Modularity is one path to clean, simple, maintainable code that is considered distinct from "spaghetti" and can be put in objective terms.
+
+The word "module" has a specific meaning in certain programming languages. As a general term, it means a section of code that acts as a unit, usually on a particular topic or domain, that has a well-defined interface.
+
+An [interface]((https://en.wikipedia.org/wiki/Interface_(computing)) is a boundary between components over which information is exchanged. The simplest well-defined interface is a function signature.
+
+``` python
+
+def f(a, b, c):
+  product = a * b
+  return product + c
+
+```
+
+The "module" `f` has an interface that is the parameters `a`, `b`, and `c`. Any code that calls `f` needs to provide these parameters. They are defined explicitly in the codebase and enforced by the compiler. Variables within `f` can't be accessed from outside `f`. In other words, a connection, or metaphorical spaghetti strand can't be made to anything inside `f`.
+
+Once a codebase is organized into modules, it becomes much simpler and easier to maintain. Modularity also contributes to "[separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)" one of the most important, if not *the* most important software principle. Software organized into concerns with interfaces in between is easier to reason about because the modules can be reasoned about, and modified, independently.
+
+Returning to the evolutionary algorithm example, a more modular version might look like this (adapted from [Rosetta Code]((https://www.rosettacode.org/wiki/Evolutionary_algorithm#Python)):
+
+
+``` python
+
+"""Module for simulating evolution of strings."""
+
+from random import choice, random
+from functools import partial
+
+def fitness(trial, target):
+    """Compare a string with a target. The more matching characters, the higher the fitness."""
+    return sum(t == h for t, h in zip(trial, target))
+
+def mutaterate(parent, target):
+    """Calculate a mutation rate that shrinks as the target approaches."""
+    perfectfitness = float(len(target))
+    return (perfectfitness - fitness(parent, target)) / perfectfitness
+
+def mutate(parent, rate, alphabet):
+    """Randomly change characters in parent to random characters from alphabet."""
+    return [(ch if random() <= 1 - rate else choice(alphabet)) for ch in parent]
+
+def mate(a, b):
+    """
+    Split two strings in the center and return 4 combinations of the two:
+        1. a
+        2. b
+        3. beginning of a, then the end of b
+        4. beginning of b, then the end of a
+    """
+    place = int(len(a)/2)
+    return a, b, a[:place] + b[place:], b[:place] + a[place:]
+
+
+def evolve(seed, target_string, alphabet, population_size=100):
+    """Randomly mutate populations of seed until it "evolves" into target_string."""
+
+    assert all([l in alphabet for l in target_string]), \
+            "Error: Target must only contain characters from alphabet."
+    assert len(seed) == len(target_string), \
+            "Error: Target and Seed must be the same length."
+
+    # For performance
+    target = list(target_string)
+    parent = seed
+    generations = 0
+
+    while parent != target:
+        rate = mutaterate(parent, target)
+        mutations = [mutate(parent, rate, alphabet) for _ in range(population_size)] + [parent]
+
+        center = int(population_size/2)
+        parent1 = max(mutations[:center], key=partial(fitness, target))
+        parent2 = max(mutations[center:], key=partial(fitness, target))
+        parent = max(mate(parent1, parent2), key=partial(fitness, target))
+        generations += 1
+    return generations
+
+# Tests
+import unittest
+
+class TestEvolveMethods(unittest.TestCase):
+
+    def test_fitness(self):
+        self.assertEqual(fitness("abcd", "axxd"), 2)
+        self.assertEqual(fitness("abcd", "abcd"), 4)
+        self.assertEqual(fitness("abcd", "wxyz"), 0)
+
+    def test_mutaterate(self):
+        self.assertEqual(mutaterate("abcd", "wxyz"), 1)
+        self.assertEqual(mutaterate("abcd", "abce"), 0.25)
+        self.assertEqual(mutaterate("abcd", "abcd"), 0)
+
+    def test_mutate(self):
+        """mutate with no mutation rate returns the parent."""
+        alphabet = "abcdefgh"
+        self.assertEqual(mutate("abcd", 0, alphabet), ['a', 'b', 'c', 'd'])
+
+        """mutate returns only characters from the alphabet."""
+        self.assertTrue(all([l in alphabet for l in mutate("abcd", 0.25, "abcdefgh")]))
+
+    def test_mate(self):
+        self.assertEqual(mate("abcd", "efgh"), ('abcd', 'efgh', 'abgh', 'efcd'))
+
+    def test_evolve(self):
+        """evolve raises error if target is not composed of the alphabet."""
+        with self.assertRaises(AssertionError):
+            evolve("abcd", "abcx", "abcd")
+
+        """evolve raises error if seed and target are different lengths."""
+        with self.assertRaises(AssertionError):
+            evolve("abc", "abcd", "abcd")
+
+
+print("Evolve some strings.")
+
+"""
+
+Classic example. From random seed to english sentence.
+
+"""
+seed = "RHBpoxYLCGjNpUgLYnMfiKskRHmk"
+target = "METHINKS IT IS LIKE A WEASEL"
+alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+
+generations = evolve(seed, target, alphabet)
+print(f"Success in {generations} generations!")
+
+
+"""
+
+DNA example.
+
+"""
+seed = "CGATGATGTATACTGTACGTATCTACTAC"
+dna_target = "AATCCGCTAGGTATCAGACTAGTAGCAGT"
+dna_alphabet = "ATCG"
+
+dna_generations = evolve(seed, dna_target, dna_alphabet)
+print(f"Success in {dna_generations} generations!")
+
+
+print("Run tests")
+unittest.main()
+
+```
+
+
+1. Code is organized into functions with well-defined domains (concerns), and well-defined interfaces.
+2. Functions are purely functional unless there's a good reason. Good reasons include needing to throw exceptions, write to logs, generate random numbers, and limited use of global variables.
+3. The "module" has a public interface (`evolve`). If this were a true module in the Python sense, or a class, all other methods could be private.
+4. `evolve` returns a useful value to the caller. Functions should, in general, return values instead of modifying variables in the body, printing to the screen, writing to files etc. There's nothing wrong with these things but they are easier to manage at the top level of a program.
+5. All parameters are exposed to the caller. The module doesn't need to be modified to use the whole space of possible seeds, targets, and population sizes.
+
+
+## Version Control
+
+Version control systems such as git are nearly indispensable for maintaining the accuracy and integrity of a codebase. Services like Github also facilitate publishing code in a verifiable, archivable, and contributor-friendly format.
+
+There are eight git commands that are the backbone of git usage. These commands can be memorized in one sitting and provide most of what is needed for the vast majority of routine use.
+
+
+``` bash
+
+git clone
+
+# Clone (copy) a repo to the current directory.
+
+git add
+
+# Begin tracking a file or directory. "Add" it to the local repo.
+
+git checkout <branch name>
+
+# Make <branch name> the current branch.
+
+git checkout -b <new branch name>
+
+# Create and check out <new branch name>.
+
+git pull
+
+# Copy the latest versions of the files in the current branch.
+
+git status -s
+
+# Get a list of files that have been modified locally.
+
+git diff
+
+# Get the differences between the local files and the current branch.
+
+git commit -am "<new commit message>"
+
+# Commit (create a set of changed files to be sent to the remote repository).
+
+git push
+
+# Push new commit(s) from the local to the remote repository.
+
+
+```
+
+The key to understanding git is 1. Understanding why it is used and 2. A good mental model of repositories, branches, and commits.
+
+Repository: A copy of all the code and history for a particular project. The remote repository is usually on a remote server or service such as github.com.
+
+Branch: A copy of the files in a repository that can be modified independently of other branches. Reconciling the differences between two branches and consolidating them into one branch is *merging* them.
+
+Commit: A bundle of changes to the files in a repository. The history of a repository consists of a list of commits to various branches, and merges of the branches into another. (Usually there's one *main* branch where all the changes eventually end up. The canonical current state of the repo is the state of the main branch, and versioned releases are usually of the main branch.)
+
+
+
+## Statistics and other Modeling
+
+Statistics and other forms of modeling and simulation are the most common form of software produced in the practice of science. It is also an area that affects reproducibility and interpretation of research. In a Nature survey assessing the effect of implementing a publication checklist, respondents strongly associated statistical reporting with research quality: "Of those survey respondents who thought the checklist had improved the quality of research at Nature journals, 83% put this down to better reporting of statistics as a result of the checklist." [Nature 556, 273-274 (2018)](https://www.nature.com/articles/d41586-018-04590-7)
+
+[TBD]
+
+
+## Guidelines for Writing Code
+
+1. Write comments. Cover the intention, and how this code fits in with the rest of the codebase, and any meta-information such as [deprecation](https://en.wikipedia.org/wiki/Deprecation).
+2. Lint. Use a linter before committing. Git hooks can be set up to run a linter every time you commit. This helps avoid committing a large number of linter corrections at once.
+3. Write unit tests. Unit tests written early will give you confidence to refactor code, and they help to verify a user is getting the same results.
+4. Use version control regularly.
+5. Write code that's meant to be read and understood.
+
+
+## Standards
+
+
+The key qualities that make a codebase reproducible and reusable are:
+
+1. Clarity: How simply and understandably the concepts are presented.
+2. Determinism: How well the starting state of the code, data, and environment are controlled so the user produces the same result as the researcher.
+3. Interoperability: How well the code interfaces with other tools, and has a standard method for interacting with it.
+
+
+1. Document your code, preferably as you go. Even if these are rough notes at first, they are very valuable for reuse.
+
+Documentation should be tied to a version. The version of the README in a repo should be about the same version of the code.
+
+Document for superficial users who will only run the runbook and leave, and users who might want to contribute to, or reuse your code. If you're writing Python, write [docstrings](https://peps.python.org/pep-0257/#abstract).
+
+2. Do versioned releases. Many times there will only be one release when a paper is published for instance, but it pins your code and documentation to a point in time that is canonical.
+
+3. Include a runbook. It should start with data in the same format the user will receive and do any transformations. It should run tests, or give some indication that the run was successful.
+
+4. Include your data if possible. If your data is not publicly available, direct the users who will have access clearly to the data in the same format and file name they will receive. If the data comes from a database or API, connect to it as simply as possible to avoid confusion.
+
+5. Include any output data (charts, files) in the repository if possible. This gives the reader a quick reference without running the program, and will alert them if their results are slightly different.
+
+6. Treat the repository as a published artifact. Respect publishing norms such as attribution and long-term access.
+
+
