@@ -1,6 +1,6 @@
 # Midway
 
-Note: This section was updated in August 2021. The information includes references to Midway3, but at this time the majority of computing takes place on Midway2. 
+Note: This section was updated in August 2021. The information includes references to Midway3, but at this time the majority of computing takes place on Midway2.
 
 Midway2 and Midway3 are the main computing clusters used by the lab, run by the Research Computing Center. Midway3 was launched in March 2021. The official documentation for Midway2 and Midway3 are maintained here by RCC:
 
@@ -18,7 +18,7 @@ Your home directory is in `/home/<CNetID>` and has a quota of 30 GB. This is a g
 
 Your scratch space is `home/<CNetID>/scratch-midway2` and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., `2014-12-08-antigen-vaccine`; you may want prefer a hierarchy.
 
-The lab project directory is `/project2/cobey` (for Midway2() (`/project/cobey` for Midway3 but as of 8/2021 there is no storage quota) and has a quota of 4.49 TB, with a hard limit of 4.94 TB, for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. `/project2/cobey/bcellproject-storage/2014-12-08-test`. The lab directory has a file quota of 1,885,693 files, with a hard limit of 2,074,262 files. 
+The lab project directory is `/project2/cobey` (for Midway2() (`/project/cobey` for Midway3 but as of 8/2021 there is no storage quota) and has a quota of 4.49 TB, with a hard limit of 4.94 TB, for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. `/project2/cobey/bcellproject-storage/2014-12-08-test`. The lab directory has a file quota of 1,885,693 files, with a hard limit of 2,074,262 files.
 
 To check your disk usage, use the `quota` command. These quotas are current as of August 2021.
 
@@ -44,7 +44,7 @@ You can copy individual files or directly back and forth using the `scp` command
 
 ```
 $ scp <local-path> <CNetID>@midway2.rcc.uchicago.edu:<remote-path>
-$ scp <CNetID>@midway2.rcc.uchicago.edu:<remote-path> <local-path> 
+$ scp <CNetID>@midway2.rcc.uchicago.edu:<remote-path> <local-path>
 ```
 
 There are also graphical SSH/SCP browsers for Mac OS X, Linux, and Windows:
@@ -114,7 +114,7 @@ If you want to automatically load modules every time you log in, you can add `mo
 
 ### Git
 
-The easiest way to get your code onto Midway is to check it out 
+The easiest way to get your code onto Midway is to check it out
 
 ```
 $ module avail git
@@ -161,12 +161,12 @@ If you want to make it easy to compile your code with different compilers on dif
 $ module avail R
 ```
 
-shows several versions of R. The default version (as of August 2021) is `R/3.6.1`. The best version will probably be the latest one alongside the Intel compiler, e.g., `R/3.3+intel-16.0` at the time of writing. You can choose which version of `R` to use: 
+shows several versions of R. The default version (as of August 2021) is `R/3.6.1`. The best version will probably be the latest one alongside the Intel compiler, e.g., `R/3.3+intel-16.0` at the time of writing. You can choose which version of `R` to use:
 
 ```
 $ module load R/4.0.1
 ```
-If you have already loaded the default version of `R` (`$ module load R`), you will need to first unload `R` (`$ module unload R`) before you can specify a version. 
+If you have already loaded the default version of `R` (`$ module load R`), you will need to first unload `R` (`$ module unload R`) before you can specify a version.
 
 ### Python
 
@@ -193,7 +193,7 @@ shows that they are available on Midway2. (Getting a graphical Mathematica noteb
 
 ### Installing R and Python libraries
 
-#### R 
+#### R
 
 We usually need specific libraries to run R scripts. It is important to check what version of `R` are necessaryfor libraries to be installed and adjust accordingly. I find it helpful to create an `installation.R` script to install libraries into the correct directory, for example:
 
@@ -205,28 +205,28 @@ dir.create(Sys.getenv("R_LIBS_USER"), showWarnings = FALSE, recursive = TRUE)
 
 ## Install multiple packages
 install.packages(c('dplyr',
-                   'optparse', 
+                   'optparse',
                    'doParallel'),
                  dependencies = T,
-                 Sys.getenv("R_LIBS_USER"), 
+                 Sys.getenv("R_LIBS_USER"),
                  repos = 'http://cran.us.r-project.org'
 )
 ```
 
-Other libraries (such as [`panelPomp`](https://rdrr.io/github/cbreto/panelPomp/)), are not yet in the CRAN respository. These libraries often need to be installed from GitHub, which is possible using `devtools`. 
+Other libraries (such as [`panelPomp`](https://rdrr.io/github/cbreto/panelPomp/)), are not yet in the CRAN respository. These libraries often need to be installed from GitHub, which is possible using `devtools`.
 
 ```
 ## panelPomp from GitHub
 install.packages(c("devtools"),
                  dependencies = T,
-                 Sys.getenv("R_LIBS_USER"), 
+                 Sys.getenv("R_LIBS_USER"),
                  repos = 'http://cran.us.r-project.org'
 )
 
 devtools::install_github('cbreto/panelPomp')
 ```
 
-#### Python 
+#### Python
 
 
 
@@ -252,12 +252,12 @@ Note that Midway counts service units, or core-hours in increments of 0.01. To m
 
 ### Priority
 
-As described below, if your jobs aren't running right away, you can use 
+As described below, if your jobs aren't running right away, you can use
 
 ```
 $ squeue -u <CNetID>
 ```
-to see what's going on. 
+to see what's going on.
 
 If your jobs are queued with `(Priority)` status, it means other jobs are taking priority. Job priorities are determined by the size of the job, its time in the queue, the requested wall time (so it pays to be precise and know your jobs well), and group-level prior usage. Groups that have consumed fewer resources get higher priority than those using more. This usage has a half-life of approximately 14 days, which means it's less awkward to spread jobs out over time. You can view the priority of queued jobs using
 
@@ -335,7 +335,7 @@ Display number of CPU hours used by you:
 $ accounts usage
 ```
 
-Displace account usage (SUs) for a previous period (update --cycle to indicate the academic cycle of interest): 
+Displace account usage (SUs) for a previous period (update --cycle to indicate the academic cycle of interest):
 
 ```
 $ /software/systool/bin/accounts balance --account=pi-cobey --cycle=2019-2020
@@ -400,19 +400,19 @@ alias isandyb='si -p sandyb'
 ## Other Midway items to keep track of
 
 ### Protected health information (PHI) and MidwayR
-There are instances where we work with data that qualifies as [PHI](https://en.wikipedia.org/wiki/Protected_health_information). Most often, this is individual-level data that includes a specific date related to an individual (e.g., birth date, admission date, vaccination date). These types of data cannot be stored or used in jobs running on Midway2/Midway3. For PHI and other protected data types, MidwayR may be useful. MidwayR is similar to the Midway computing environment but is also equipped with tools and software needed to meet the highest levels of secure data protection. Even with using MidwayR, it may be necessary to obscure dates that qualify as PHI. 
+There are instances where we work with data that qualifies as [PHI](https://en.wikipedia.org/wiki/Protected_health_information). Most often, this is individual-level data that includes a specific date related to an individual (e.g., birth date, admission date, vaccination date). These types of data cannot be stored or used in jobs running on Midway2/Midway3. For PHI and other protected data types, MidwayR may be useful. MidwayR is similar to the Midway computing environment but is also equipped with tools and software needed to meet the highest levels of secure data protection. Even with using MidwayR, it may be necessary to obscure dates that qualify as PHI.
 
 ### Allocation requests
-Each September we have to submit an allocation request to the RCC to request Service Units (SUs). SUs are the basic unit of computational resources and they represents the use of one core for one hour on the Midway Cluster. Allocation requests from 2019-2020 and 2020-2021 are housed on `/project2/cobey/allocation_requests_midway_resources`. 
+Each September we have to submit an allocation request to the RCC to request Service Units (SUs). SUs are the basic unit of computational resources and they represents the use of one core for one hour on the Midway Cluster. Allocation requests from 2019-2020 and 2020-2021 are housed on `/project2/cobey/allocation_requests_midway_resources`.
 
 ### Node life
-For each node purchased by the lab, the warranty is 5 years. Once the warranty runs out, the nodes can still be active on Midway2, but if they break or go down, the RCC will not fix them. For any long-duration jobs, please ensure you are using a node that is under warranty to reduce the likelihood of data loss. A spreadsheet with nodes, purchase date, warranty duration, and node label is housed in `/project2/cobey/allocation_requests_midway_resources`. 
+For each node purchased by the lab, the warranty is 5 years. Once the warranty runs out, the nodes can still be active on Midway2, but if they break or go down, the RCC will not fix them. For any long-duration jobs, please ensure you are using a node that is under warranty to reduce the likelihood of data loss. A spreadsheet with nodes, purchase date, warranty duration, and node label is housed in `/project2/cobey/allocation_requests_midway_resources`.
 
 ```{r node-life, echo=FALSE, fig.show='hold', fig.align="center", fig.cap='Expected node lifetime. Color denotes number of nodes with the same RAM and lifetime. Black vertical line denots 17 August 2021 (the time of writing).'}
 knitr::include_graphics(rep("images/node_life_2021-08-17.png"))
 ```
 
 ### Transitioning from Midway2 to Midway3
-Any nodes purchased after March 2021 are housed on Midway3. The RCC will mount storage from Midway2 onto Midway3, meaning it will be accessible when running jobs from Midway3. As of August 2021, this has not yet occurred (due to delays related to the pandemic), but they expect this will occurr by October 2021. After this point, it will make sense for all new projects to be housed on Midway3 instead of Midway2. 
+Any nodes purchased after March 2021 are housed on Midway3. The RCC will mount storage from Midway2 onto Midway3, meaning it will be accessible when running jobs from Midway3. As of August 2021, this has not yet occurred (due to delays related to the pandemic), but they expect this will occurr by October 2021. After this point, it will make sense for all new projects to be housed on Midway3 instead of Midway2.
 
 
