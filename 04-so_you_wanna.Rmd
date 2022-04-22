@@ -33,7 +33,7 @@ knitr::include_graphics(rep("images/owl.png"))
 
 ## Code well and efficiently
 
-(To be populated with content from [lab wiki](https://bitbucket.org/cobeylab/wiki/wiki/Home))
+See the [coding handbook](coding-handbook.html#coding-handbook).
 
 ## Write good
 

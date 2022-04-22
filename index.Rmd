@@ -19,4 +19,4 @@ This handbook is partly for prospective or new lab members who want to know how 
 The main purpose of this handbook, however, is to help current lab members share knowledge, develop skills, and get things done. Contributions welcome.
 
 ***Contributors:** 
-Most of the handbook is currently by Sarah Cobey, but the chapter on Midway is originally by Ed Baskerville with updates made by Rachel Oidtman.*
+By Sarah Cobey. Midway section is originally by Ed Baskerville with updates made by Rachel Oidtman. Coding section is by Alex Byrnes.*
