@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Cobey Lab Handbook</title>
-  <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Performance | Cobey Lab Handbook</title>
+  <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Cobey Lab Handbook" />
+  <meta property="og:title" content="Chapter 3 Performance | Cobey Lab Handbook" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Handbook of the Cobey Lab at the University of Chicago" />
   <meta name="github-repo" content="cobeylab/lab_handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cobey Lab Handbook" />
+  <meta name="twitter:title" content="Chapter 3 Performance | Cobey Lab Handbook" />
   
   <meta name="twitter:description" content="Handbook of the Cobey Lab at the University of Chicago" />
   
 
 
 
-<meta name="date" content="2018-11-29">
+<meta name="date" content="2022-04-28" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="how-we-work.html">
-<link rel="next" href="so-you-wanna.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="prev" href="how-we-work.html"/>
+<link rel="next" href="so-you-wanna.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -46,45 +47,77 @@
 
 
 
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -102,85 +135,100 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://cobeylab.uchicago.edu/">Cobey Lab</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i><b>1</b> Why we work</a></li>
-<li class="chapter" data-level="2" data-path="how-we-work.html"><a href="how-we-work.html"><i class="fa fa-check"></i><b>2</b> How we work</a><ul>
-<li class="chapter" data-level="2.1" data-path="how-we-work.html"><a href="how-we-work.html#principles"><i class="fa fa-check"></i><b>2.1</b> Principles</a></li>
-<li class="chapter" data-level="2.2" data-path="how-we-work.html"><a href="how-we-work.html#work-hours"><i class="fa fa-check"></i><b>2.2</b> Work hours</a></li>
-<li class="chapter" data-level="2.3" data-path="how-we-work.html"><a href="how-we-work.html#workspace"><i class="fa fa-check"></i><b>2.3</b> Workspace</a></li>
-<li class="chapter" data-level="2.4" data-path="how-we-work.html"><a href="how-we-work.html#communication"><i class="fa fa-check"></i><b>2.4</b> Communication</a></li>
-<li class="chapter" data-level="2.5" data-path="how-we-work.html"><a href="how-we-work.html#weekly-check-ins"><i class="fa fa-check"></i><b>2.5</b> Weekly check-ins</a></li>
-<li class="chapter" data-level="2.6" data-path="how-we-work.html"><a href="how-we-work.html#lab-meetings"><i class="fa fa-check"></i><b>2.6</b> Lab meetings</a></li>
-<li class="chapter" data-level="2.7" data-path="how-we-work.html"><a href="how-we-work.html#reproducible-research"><i class="fa fa-check"></i><b>2.7</b> Reproducible research</a></li>
+<li><a href="index.html#preface" id="toc-preface">Preface<span></span></a></li>
+<li><a href="why.html#why" id="toc-why"><span class="toc-section-number">1</span> Why we work<span></span></a></li>
+<li><a href="how-we-work.html#how-we-work" id="toc-how-we-work"><span class="toc-section-number">2</span> How we work<span></span></a>
+<ul>
+<li><a href="how-we-work.html#principles" id="toc-principles"><span class="toc-section-number">2.1</span> Principles<span></span></a></li>
+<li><a href="how-we-work.html#work-hours" id="toc-work-hours"><span class="toc-section-number">2.2</span> Work hours<span></span></a></li>
+<li><a href="how-we-work.html#workspace" id="toc-workspace"><span class="toc-section-number">2.3</span> Workspace<span></span></a></li>
+<li><a href="how-we-work.html#communication" id="toc-communication"><span class="toc-section-number">2.4</span> Communication<span></span></a></li>
+<li><a href="how-we-work.html#weekly-check-ins" id="toc-weekly-check-ins"><span class="toc-section-number">2.5</span> Weekly check-ins<span></span></a></li>
+<li><a href="how-we-work.html#lab-meetings" id="toc-lab-meetings"><span class="toc-section-number">2.6</span> Lab meetings<span></span></a></li>
+<li><a href="how-we-work.html#reproducible-research" id="toc-reproducible-research"><span class="toc-section-number">2.7</span> Reproducible research<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="performance.html"><a href="performance.html"><i class="fa fa-check"></i><b>3</b> Performance</a><ul>
-<li class="chapter" data-level="3.1" data-path="performance.html"><a href="performance.html#reviews"><i class="fa fa-check"></i><b>3.1</b> Reviews</a></li>
-<li class="chapter" data-level="3.2" data-path="performance.html"><a href="performance.html#my-commitments"><i class="fa fa-check"></i><b>3.2</b> My commitments</a></li>
-<li class="chapter" data-level="3.3" data-path="performance.html"><a href="performance.html#basic-expectations"><i class="fa fa-check"></i><b>3.3</b> Basic expectations</a></li>
-<li class="chapter" data-level="3.4" data-path="performance.html"><a href="performance.html#graduate-researchers"><i class="fa fa-check"></i><b>3.4</b> Graduate researchers</a></li>
-<li class="chapter" data-level="3.5" data-path="performance.html"><a href="performance.html#postdoctoral-researchers"><i class="fa fa-check"></i><b>3.5</b> Postdoctoral researchers</a></li>
+<li><a href="performance.html#performance" id="toc-performance"><span class="toc-section-number">3</span> Performance<span></span></a>
+<ul>
+<li><a href="performance.html#reviews" id="toc-reviews"><span class="toc-section-number">3.1</span> Reviews<span></span></a></li>
+<li><a href="performance.html#my-commitments" id="toc-my-commitments"><span class="toc-section-number">3.2</span> My commitments<span></span></a></li>
+<li><a href="performance.html#basic-expectations" id="toc-basic-expectations"><span class="toc-section-number">3.3</span> Basic expectations<span></span></a></li>
+<li><a href="performance.html#graduate-researchers" id="toc-graduate-researchers"><span class="toc-section-number">3.4</span> Graduate researchers<span></span></a></li>
+<li><a href="performance.html#postdoctoral-researchers" id="toc-postdoctoral-researchers"><span class="toc-section-number">3.5</span> Postdoctoral researchers<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="so-you-wanna.html"><a href="so-you-wanna.html"><i class="fa fa-check"></i><b>4</b> So you wanna…</a><ul>
-<li class="chapter" data-level="4.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#join-the-lab"><i class="fa fa-check"></i><b>4.1</b> Join the lab</a></li>
-<li class="chapter" data-level="4.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#do-some-research"><i class="fa fa-check"></i><b>4.2</b> Do some research</a></li>
-<li class="chapter" data-level="4.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#code-well-and-efficiently"><i class="fa fa-check"></i><b>4.3</b> Code well and efficiently</a></li>
-<li class="chapter" data-level="4.4" data-path="so-you-wanna.html"><a href="so-you-wanna.html#write-good"><i class="fa fa-check"></i><b>4.4</b> Write good</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#general-advice"><i class="fa fa-check"></i><b>4.4.1</b> General advice</a></li>
-<li class="chapter" data-level="4.4.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#initial-submissions"><i class="fa fa-check"></i><b>4.4.2</b> Initial submissions</a></li>
-<li class="chapter" data-level="4.4.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#mature-papers"><i class="fa fa-check"></i><b>4.4.3</b> “Mature” papers</a></li>
+<li><a href="so-you-wanna.html#so-you-wanna" id="toc-so-you-wanna"><span class="toc-section-number">4</span> So you wanna…<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#join-the-lab" id="toc-join-the-lab"><span class="toc-section-number">4.1</span> Join the lab<span></span></a></li>
+<li><a href="so-you-wanna.html#do-some-research" id="toc-do-some-research"><span class="toc-section-number">4.2</span> Do some research<span></span></a></li>
+<li><a href="so-you-wanna.html#code-well-and-efficiently" id="toc-code-well-and-efficiently"><span class="toc-section-number">4.3</span> Code well and efficiently<span></span></a></li>
+<li><a href="so-you-wanna.html#write-good" id="toc-write-good"><span class="toc-section-number">4.4</span> Write good<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#general-advice" id="toc-general-advice"><span class="toc-section-number">4.4.1</span> General advice<span></span></a></li>
+<li><a href="so-you-wanna.html#initial-submissions" id="toc-initial-submissions"><span class="toc-section-number">4.4.2</span> Initial submissions<span></span></a></li>
+<li><a href="so-you-wanna.html#mature-papers" id="toc-mature-papers"><span class="toc-section-number">4.4.3</span> “Mature” papers<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="so-you-wanna.html"><a href="so-you-wanna.html#email-like-a-pro"><i class="fa fa-check"></i><b>4.5</b> Email like a pro</a></li>
-<li class="chapter" data-level="4.6" data-path="so-you-wanna.html"><a href="so-you-wanna.html#make-nice-figures"><i class="fa fa-check"></i><b>4.6</b> Make nice figures</a></li>
-<li class="chapter" data-level="4.7" data-path="so-you-wanna.html"><a href="so-you-wanna.html#keep-up-with-the-literature"><i class="fa fa-check"></i><b>4.7</b> Keep up with the literature</a></li>
-<li class="chapter" data-level="4.8" data-path="so-you-wanna.html"><a href="so-you-wanna.html#get-funded"><i class="fa fa-check"></i><b>4.8</b> Get funded</a></li>
-<li class="chapter" data-level="4.9" data-path="so-you-wanna.html"><a href="so-you-wanna.html#see-our-funding"><i class="fa fa-check"></i><b>4.9</b> See our funding</a></li>
-<li class="chapter" data-level="4.10" data-path="so-you-wanna.html"><a href="so-you-wanna.html#review-your-peers"><i class="fa fa-check"></i><b>4.10</b> Review your peers</a></li>
-<li class="chapter" data-level="4.11" data-path="so-you-wanna.html"><a href="so-you-wanna.html#have-productive-meetings"><i class="fa fa-check"></i><b>4.11</b> Have productive meetings</a><ul>
-<li class="chapter" data-level="4.11.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#research-meetings"><i class="fa fa-check"></i><b>4.11.1</b> Research meetings</a></li>
-<li class="chapter" data-level="4.11.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#seminar-speakers"><i class="fa fa-check"></i><b>4.11.2</b> Seminar speakers</a></li>
+<li><a href="so-you-wanna.html#email-like-a-pro" id="toc-email-like-a-pro"><span class="toc-section-number">4.5</span> Email like a pro<span></span></a></li>
+<li><a href="so-you-wanna.html#make-nice-figures" id="toc-make-nice-figures"><span class="toc-section-number">4.6</span> Make nice figures<span></span></a></li>
+<li><a href="so-you-wanna.html#keep-up-with-the-literature" id="toc-keep-up-with-the-literature"><span class="toc-section-number">4.7</span> Keep up with the literature<span></span></a></li>
+<li><a href="so-you-wanna.html#get-funded" id="toc-get-funded"><span class="toc-section-number">4.8</span> Get funded<span></span></a></li>
+<li><a href="so-you-wanna.html#see-our-funding" id="toc-see-our-funding"><span class="toc-section-number">4.9</span> See our funding<span></span></a></li>
+<li><a href="so-you-wanna.html#review-your-peers" id="toc-review-your-peers"><span class="toc-section-number">4.10</span> Review your peers<span></span></a></li>
+<li><a href="so-you-wanna.html#have-productive-meetings" id="toc-have-productive-meetings"><span class="toc-section-number">4.11</span> Have productive meetings<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#research-meetings" id="toc-research-meetings"><span class="toc-section-number">4.11.1</span> Research meetings<span></span></a></li>
+<li><a href="so-you-wanna.html#seminar-speakers" id="toc-seminar-speakers"><span class="toc-section-number">4.11.2</span> Seminar speakers<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.12" data-path="so-you-wanna.html"><a href="so-you-wanna.html#book-travel"><i class="fa fa-check"></i><b>4.12</b> Book travel</a></li>
-<li class="chapter" data-level="4.13" data-path="so-you-wanna.html"><a href="so-you-wanna.html#be-happy-doing-research"><i class="fa fa-check"></i><b>4.13</b> Be happy doing research</a><ul>
-<li class="chapter" data-level="4.13.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#time-management"><i class="fa fa-check"></i><b>4.13.1</b> Time management</a></li>
-<li class="chapter" data-level="4.13.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#imposter-syndrome"><i class="fa fa-check"></i><b>4.13.2</b> Imposter syndrome</a></li>
-<li class="chapter" data-level="4.13.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#mental-health-and-medical-problems"><i class="fa fa-check"></i><b>4.13.3</b> Mental health and medical problems</a></li>
-<li class="chapter" data-level="4.13.4" data-path="so-you-wanna.html"><a href="so-you-wanna.html#unwelcome-environment"><i class="fa fa-check"></i><b>4.13.4</b> Unwelcome environment</a></li>
+<li><a href="so-you-wanna.html#book-travel" id="toc-book-travel"><span class="toc-section-number">4.12</span> Book travel<span></span></a></li>
+<li><a href="so-you-wanna.html#be-happy-doing-research" id="toc-be-happy-doing-research"><span class="toc-section-number">4.13</span> Be happy doing research<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#time-management" id="toc-time-management"><span class="toc-section-number">4.13.1</span> Time management<span></span></a></li>
+<li><a href="so-you-wanna.html#imposter-syndrome" id="toc-imposter-syndrome"><span class="toc-section-number">4.13.2</span> Imposter syndrome<span></span></a></li>
+<li><a href="so-you-wanna.html#mental-health-and-medical-problems" id="toc-mental-health-and-medical-problems"><span class="toc-section-number">4.13.3</span> Mental health and medical problems<span></span></a></li>
+<li><a href="so-you-wanna.html#unwelcome-environment" id="toc-unwelcome-environment"><span class="toc-section-number">4.13.4</span> Unwelcome environment<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.14" data-path="so-you-wanna.html"><a href="so-you-wanna.html#give-a-good-talk"><i class="fa fa-check"></i><b>4.14</b> Give a good talk</a></li>
-<li class="chapter" data-level="4.15" data-path="so-you-wanna.html"><a href="so-you-wanna.html#interview-someone"><i class="fa fa-check"></i><b>4.15</b> Interview someone</a></li>
-<li class="chapter" data-level="4.16" data-path="so-you-wanna.html"><a href="so-you-wanna.html#contribute-to-the-handbook"><i class="fa fa-check"></i><b>4.16</b> Contribute to the handbook</a></li>
-<li class="chapter" data-level="4.17" data-path="so-you-wanna.html"><a href="so-you-wanna.html#win-at-conferences"><i class="fa fa-check"></i><b>4.17</b> Win at conferences</a></li>
-<li class="chapter" data-level="4.18" data-path="so-you-wanna.html"><a href="so-you-wanna.html#negotiate-authorship"><i class="fa fa-check"></i><b>4.18</b> Negotiate authorship</a></li>
-<li class="chapter" data-level="4.19" data-path="so-you-wanna.html"><a href="so-you-wanna.html#engage-with-the-public"><i class="fa fa-check"></i><b>4.19</b> Engage with the public</a></li>
+<li><a href="so-you-wanna.html#give-a-good-talk" id="toc-give-a-good-talk"><span class="toc-section-number">4.14</span> Give a good talk<span></span></a></li>
+<li><a href="so-you-wanna.html#interview-someone" id="toc-interview-someone"><span class="toc-section-number">4.15</span> Interview someone<span></span></a></li>
+<li><a href="so-you-wanna.html#contribute-to-the-handbook" id="toc-contribute-to-the-handbook"><span class="toc-section-number">4.16</span> Contribute to the handbook<span></span></a></li>
+<li><a href="so-you-wanna.html#win-at-conferences" id="toc-win-at-conferences"><span class="toc-section-number">4.17</span> Win at conferences<span></span></a></li>
+<li><a href="so-you-wanna.html#negotiate-authorship" id="toc-negotiate-authorship"><span class="toc-section-number">4.18</span> Negotiate authorship<span></span></a></li>
+<li><a href="so-you-wanna.html#engage-with-the-public" id="toc-engage-with-the-public"><span class="toc-section-number">4.19</span> Engage with the public<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="midway.html"><a href="midway.html"><i class="fa fa-check"></i><b>5</b> Midway</a><ul>
-<li class="chapter" data-level="5.1" data-path="midway.html"><a href="midway.html#storage-on-midway"><i class="fa fa-check"></i><b>5.1</b> Storage on Midway</a></li>
-<li class="chapter" data-level="5.2" data-path="midway.html"><a href="midway.html#connecting-to-midway"><i class="fa fa-check"></i><b>5.2</b> Connecting to Midway</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="midway.html"><a href="midway.html#ssh-terminal"><i class="fa fa-check"></i><b>5.2.1</b> SSH (terminal)</a></li>
-<li class="chapter" data-level="5.2.2" data-path="midway.html"><a href="midway.html#scp"><i class="fa fa-check"></i><b>5.2.2</b> SCP</a></li>
-<li class="chapter" data-level="5.2.3" data-path="midway.html"><a href="midway.html#smb-connect-as-a-disk"><i class="fa fa-check"></i><b>5.2.3</b> SMB (connect as a disk)</a></li>
-<li class="chapter" data-level="5.2.4" data-path="midway.html"><a href="midway.html#ssh--x-terminal-with-graphical-forwarding"><i class="fa fa-check"></i><b>5.2.4</b> ssh -X (terminal with graphical forwarding)</a></li>
-<li class="chapter" data-level="5.2.5" data-path="midway.html"><a href="midway.html#vnc-graphical-interface-via-thinlinc"><i class="fa fa-check"></i><b>5.2.5</b> VNC (graphical interface via ThinLinc)</a></li>
+<li><a href="coding-handbook.html#coding-handbook" id="toc-coding-handbook"><span class="toc-section-number">5</span> Coding Handbook<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#justification" id="toc-justification"><span class="toc-section-number">5.1</span> Justification<span></span></a></li>
+<li><a href="coding-handbook.html#coding-culture" id="toc-coding-culture"><span class="toc-section-number">5.2</span> Coding Culture<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#cultural-practices" id="toc-cultural-practices"><span class="toc-section-number">5.2.1</span> Cultural practices<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="midway.html"><a href="midway.html#configuring-software-on-midway"><i class="fa fa-check"></i><b>5.3</b> Configuring Software on Midway</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="midway.html"><a href="midway.html#git"><i class="fa fa-check"></i><b>5.3.1</b> Git</a></li>
-<li class="chapter" data-level="5.3.2" data-path="midway.html"><a href="midway.html#java"><i class="fa fa-check"></i><b>5.3.2</b> Java</a></li>
-<li class="chapter" data-level="5.3.3" data-path="midway.html"><a href="midway.html#cc"><i class="fa fa-check"></i><b>5.3.3</b> C/C++</a></li>
-<li class="chapter" data-level="5.3.4" data-path="midway.html"><a href="midway.html#r"><i class="fa fa-check"></i><b>5.3.4</b> R</a></li>
-<li class="chapter" data-level="5.3.5" data-path="midway.html"><a href="midway.html#python"><i class="fa fa-check"></i><b>5.3.5</b> Python</a></li>
-<li class="chapter" data-level="5.3.6" data-path="midway.html"><a href="midway.html#matlab-and-mathematica"><i class="fa fa-check"></i><b>5.3.6</b> Matlab and Mathematica</a></li>
+<li><a href="coding-handbook.html#complexity" id="toc-complexity"><span class="toc-section-number">5.3</span> Complexity<span></span></a></li>
+<li><a href="coding-handbook.html#why-writing-code-is-easier-than-reading-it" id="toc-why-writing-code-is-easier-than-reading-it"><span class="toc-section-number">5.4</span> Why writing code is easier than reading it<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#science-and-software" id="toc-science-and-software"><span class="toc-section-number">5.4.1</span> Science and Software<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="midway.html"><a href="midway.html#running-jobs-on-midway"><i class="fa fa-check"></i><b>5.4</b> Running Jobs on Midway</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="midway.html"><a href="midway.html#overview"><i class="fa fa-check"></i><b>5.4.1</b> Overview</a></li>
-<li class="chapter" data-level="5.4.2" data-path="midway.html"><a href="midway.html#job-structure"><i class="fa fa-check"></i><b>5.4.2</b> Job structure</a></li>
-<li class="chapter" data-level="5.4.3" data-path="midway.html"><a href="midway.html#priority"><i class="fa fa-check"></i><b>5.4.3</b> Priority</a></li>
-<li class="chapter" data-level="5.4.4" data-path="midway.html"><a href="midway.html#useful-commands"><i class="fa fa-check"></i><b>5.4.4</b> Useful commands</a></li>
-<li class="chapter" data-level="5.4.5" data-path="midway.html"><a href="midway.html#parameter-sweeps"><i class="fa fa-check"></i><b>5.4.5</b> Parameter sweeps</a></li>
+<li><a href="coding-handbook.html#indirection-abstraction-and-generalization" id="toc-indirection-abstraction-and-generalization"><span class="toc-section-number">5.5</span> Indirection, Abstraction, and Generalization<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#example-the-weasel-algorithm" id="toc-example-the-weasel-algorithm"><span class="toc-section-number">5.5.1</span> Example: <span>The Weasel Algorithm</span><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="midway.html"><a href="midway.html#slurm-tricks"><i class="fa fa-check"></i><b>5.5</b> SLURM tricks</a></li>
+<li><a href="coding-handbook.html#debugging" id="toc-debugging"><span class="toc-section-number">5.6</span> Debugging<span></span></a></li>
+<li><a href="coding-handbook.html#functional-programming" id="toc-functional-programming"><span class="toc-section-number">5.7</span> Functional Programming<span></span></a></li>
+<li><a href="coding-handbook.html#unit-testing" id="toc-unit-testing"><span class="toc-section-number">5.8</span> Unit Testing<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#testability" id="toc-testability"><span class="toc-section-number">5.8.1</span> Testability<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="onboarding.html"><a href="onboarding.html"><i class="fa fa-check"></i><b>6</b> Onboarding</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li><a href="coding-handbook.html#modules-and-modularity" id="toc-modules-and-modularity"><span class="toc-section-number">5.9</span> Modules and Modularity<span></span></a></li>
+<li><a href="coding-handbook.html#statistics-and-other-modeling" id="toc-statistics-and-other-modeling"><span class="toc-section-number">5.10</span> Statistics and other Modeling<span></span></a></li>
+<li><a href="coding-handbook.html#guidelines-for-writing-code" id="toc-guidelines-for-writing-code"><span class="toc-section-number">5.11</span> Guidelines for Writing Code<span></span></a></li>
+<li><a href="coding-handbook.html#standards" id="toc-standards"><span class="toc-section-number">5.12</span> Standards<span></span></a></li>
+<li><a href="coding-handbook.html#lab-systems" id="toc-lab-systems"><span class="toc-section-number">5.13</span> Lab Systems<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#version-control" id="toc-version-control"><span class="toc-section-number">5.13.1</span> Version Control<span></span></a></li>
+<li><a href="coding-handbook.html#midway" id="toc-midway"><span class="toc-section-number">5.13.2</span> Midway<span></span></a></li>
+<li><a href="coding-handbook.html#running-jobs-on-midway" id="toc-running-jobs-on-midway"><span class="toc-section-number">5.13.3</span> Running Jobs on Midway<span></span></a></li>
+<li><a href="coding-handbook.html#slurm-tricks" id="toc-slurm-tricks"><span class="toc-section-number">5.13.4</span> SLURM tricks<span></span></a></li>
+<li><a href="coding-handbook.html#other-midway-items-to-keep-track-of" id="toc-other-midway-items-to-keep-track-of"><span class="toc-section-number">5.13.5</span> Other Midway items to keep track of<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="onboarding.html#onboarding" id="toc-onboarding"><span class="toc-section-number">6</span> Onboarding<span></span></a></li>
+<li><a href="references.html#references" id="toc-references">References<span></span></a></li>
 </ul>
 
       </nav>
@@ -198,14 +246,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="performance" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Performance</h1>
-<div id="reviews" class="section level2">
-<h2><span class="header-section-number">3.1</span> Reviews</h2>
-<p>There should be informal reviews at every weekly meeting. The point is mutual feedback, i.e., we can discuss your progress and develop achievable goals for the next few days to years, and you can tell me if there are areas in which I can provide better help. If you would like more formal progress reviews, let me know. Please also let me know if you are ever worried about your progress. Postdocs and salaried researchers will get formal annual reviews as required by the Biological Sciences Division, but they are really secondary to the regular meetings (i.e., there should be no surprises).</p>
+<div id="performance" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Performance<a href="performance.html#performance" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="reviews" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Reviews<a href="performance.html#reviews" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There should be informal reviews at every weekly meeting.
+The point is mutual feedback, i.e., we can discuss your progress and develop achievable goals for the next few days to years, and you can tell me if there are areas in which I can provide better help.
+If you would like more formal progress reviews, let me know.
+Please also let me know if you are ever worried about your progress.
+Postdocs and salaried researchers will get formal annual reviews as required by the Biological Sciences Division, but they are really secondary to the regular meetings (i.e., there should be no surprises).</p>
 </div>
-<div id="my-commitments" class="section level2">
-<h2><span class="header-section-number">3.2</span> My commitments</h2>
+<div id="my-commitments" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> My commitments<a href="performance.html#my-commitments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Meet with you at least biweekly (usually weekly) to discuss research and professional opportunities.</li>
 <li>Help give you an accelerated introduction to the field.</li>
@@ -220,25 +272,29 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>(For postdocs) Help you identify a line of research to continue when you leave the lab.</li>
 </ul>
 </div>
-<div id="basic-expectations" class="section level2">
-<h2><span class="header-section-number">3.3</span> Basic expectations</h2>
+<div id="basic-expectations" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Basic expectations<a href="performance.html#basic-expectations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Follow the lab’s principles (Section <a href="how-we-work.html#principles">2.1</a>) and all our described work practices, including the project management and programming techniques described in Section <a href="so-you-wanna.html#so-you-wanna">4</a>.</li>
 <li>Take full intellectual ownership of your research, i.e., think hard about whether you and your collaborators are doing the right thing, search for relevant papers, and push your projects forward at a good pace.</li>
 <li>Develop annual and long-term professional goals as soon as you join the lab, and discuss them with me then and regularly thereafter. Let me know whenever yours goals change. (It’s okay if your long-term goals are amorphous, just let me know.)</li>
-<li>Work steadily, understand how you work, and let me know how I can help you work better. (See Philip Guo’s <a href="http://www.pgbovine.net/human-bounds.htm">list of performance bounds</a> for examples.) Please let me know especially if my availability, the environment, software, or hardware are slowing you down.</li>
+<li>Work steadily, understand how you work, and let me know how I can help you work better. (See Philip Guo’s <a href="http://www.pgbovine.net/human-bounds.htm">list of performance bounds</a> for examples.)
+Please let me know especially if my availability, the environment, software, or hardware are slowing you down.</li>
 <li>Learn from your mistakes. Programming bugs, bad writing, awkward slides, undiscovered papers, are all an unfortunate part of research. Forgive yourself <em>and</em> take corrective action to reduce the error rate in the future. Of course, the optimal error rate is usually not zero… The only <em>real</em> mistakes are blowing off or ignoring what people (reviewers, coauthors, committee members, me, etc.) are telling you, ignoring data related to your research or performance, and being a jerk.<br />
 </li>
 <li>Perform lab service, as agreed upon (e.g., maintain the lab calendar, order office supplies, water the plants).</li>
 </ul>
 </div>
-<div id="graduate-researchers" class="section level2">
-<h2><span class="header-section-number">3.4</span> Graduate researchers</h2>
-<p>I’ve listed below the skills I think graduate researchers should have by the time they defend their PhD. Your adviser and committee will help steer you, but you are in control. (I kind of dislike the “student” convention, tbh. You’re scientists, just less experienced ones.)</p>
+<div id="graduate-researchers" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Graduate researchers<a href="performance.html#graduate-researchers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I’ve listed below the skills I think graduate researchers should have by the time they defend their PhD.
+Your adviser and committee will help steer you, but you are in control.
+(I kind of dislike the “student” convention, tbh. You’re scientists, just less experienced ones.)</p>
 <ul>
 <li><em>Intellectual independence and mastery</em>
 <ul>
-<li>Be able to define a coherent field of study, including the progress that has been made in it and the problems that remain. This requires following the literature by regular, self-directed reading (at least five papers a week, conservatively, on average).</li>
+<li>Be able to define a coherent field of study, including the progress that has been made in it and the problems that remain.
+This requires following the literature by regular, self-directed reading (at least five papers a week, conservatively, on average).</li>
 <li>Have enough statistical and general knowledge to assess the strength of evidence of (almost) any study or general claim in this field</li>
 <li>Propose and carry out tractable, meaningful studies</li>
 <li>Identify new questions you want to answer and have an idea of how to address them</li>
@@ -246,7 +302,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><em>Intellectual contributions</em>
 <ul>
-<li>Publish at least two papers on which you’re first author. These papers should be submitted by the time you defend. Note, this is not the requirement of the UChicago MSTP or E&amp;E programs, but I think it is an important minimal target.</li>
+<li>Publish at least two papers on which you’re first author.
+These papers should be submitted by the time you defend. Note, this is not the requirement of the UChicago MSTP or E&amp;E programs, but I think it is an important minimal target.</li>
 <li>Give talks outside the department and handle questions about your work.</li>
 <li>Collaborate on projects on which you’re not the first author.</li>
 <li>Ask public questions during conference talks and seminars.</li>
@@ -269,8 +326,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p>Please note that you are ultimately responsible for ensuring you are meeting the requirements for your degree. The Student Advisory Committee (SAC) and later your thesis committee will help you with the planning, but you should take initiative in scheduling and planning ahead.</p>
 </div>
-<div id="postdoctoral-researchers" class="section level2">
-<h2><span class="header-section-number">3.5</span> Postdoctoral researchers</h2>
+<div id="postdoctoral-researchers" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Postdoctoral researchers<a href="performance.html#postdoctoral-researchers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Generally, postdocs should have facility with all of the skills listed above and</p>
 <ul>
 <li>Develop new research projects and manage external collaborations.</li>
@@ -292,12 +349,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -305,12 +363,13 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": true,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"],
+"google": true
 },
 "fontsettings": {
 "theme": "white",
@@ -318,12 +377,23 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
@@ -333,10 +403,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
