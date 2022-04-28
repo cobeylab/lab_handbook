@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Coding Handbook | Cobey Lab Handbook</title>
+  <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Coding Handbook | Cobey Lab Handbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Handbook of the Cobey Lab at the University of Chicago" />
+  <meta name="github-repo" content="cobeylab/lab_handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Coding Handbook | Cobey Lab Handbook" />
+  
+  <meta name="twitter:description" content="Handbook of the Cobey Lab at the University of Chicago" />
+  
+
+
+
+<meta name="date" content="2022-04-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="so-you-wanna.html"/>
+<link rel="next" href="onboarding.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://cobeylab.uchicago.edu/">Cobey Lab</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#preface" id="toc-preface">Preface<span></span></a></li>
+<li><a href="why.html#why" id="toc-why"><span class="toc-section-number">1</span> Why we work<span></span></a></li>
+<li><a href="how-we-work.html#how-we-work" id="toc-how-we-work"><span class="toc-section-number">2</span> How we work<span></span></a>
+<ul>
+<li><a href="how-we-work.html#principles" id="toc-principles"><span class="toc-section-number">2.1</span> Principles<span></span></a></li>
+<li><a href="how-we-work.html#work-hours" id="toc-work-hours"><span class="toc-section-number">2.2</span> Work hours<span></span></a></li>
+<li><a href="how-we-work.html#workspace" id="toc-workspace"><span class="toc-section-number">2.3</span> Workspace<span></span></a></li>
+<li><a href="how-we-work.html#communication" id="toc-communication"><span class="toc-section-number">2.4</span> Communication<span></span></a></li>
+<li><a href="how-we-work.html#weekly-check-ins" id="toc-weekly-check-ins"><span class="toc-section-number">2.5</span> Weekly check-ins<span></span></a></li>
+<li><a href="how-we-work.html#lab-meetings" id="toc-lab-meetings"><span class="toc-section-number">2.6</span> Lab meetings<span></span></a></li>
+<li><a href="how-we-work.html#reproducible-research" id="toc-reproducible-research"><span class="toc-section-number">2.7</span> Reproducible research<span></span></a></li>
+</ul></li>
+<li><a href="performance.html#performance" id="toc-performance"><span class="toc-section-number">3</span> Performance<span></span></a>
+<ul>
+<li><a href="performance.html#reviews" id="toc-reviews"><span class="toc-section-number">3.1</span> Reviews<span></span></a></li>
+<li><a href="performance.html#my-commitments" id="toc-my-commitments"><span class="toc-section-number">3.2</span> My commitments<span></span></a></li>
+<li><a href="performance.html#basic-expectations" id="toc-basic-expectations"><span class="toc-section-number">3.3</span> Basic expectations<span></span></a></li>
+<li><a href="performance.html#graduate-researchers" id="toc-graduate-researchers"><span class="toc-section-number">3.4</span> Graduate researchers<span></span></a></li>
+<li><a href="performance.html#postdoctoral-researchers" id="toc-postdoctoral-researchers"><span class="toc-section-number">3.5</span> Postdoctoral researchers<span></span></a></li>
+</ul></li>
+<li><a href="so-you-wanna.html#so-you-wanna" id="toc-so-you-wanna"><span class="toc-section-number">4</span> So you wanna…<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#join-the-lab" id="toc-join-the-lab"><span class="toc-section-number">4.1</span> Join the lab<span></span></a></li>
+<li><a href="so-you-wanna.html#do-some-research" id="toc-do-some-research"><span class="toc-section-number">4.2</span> Do some research<span></span></a></li>
+<li><a href="so-you-wanna.html#code-well-and-efficiently" id="toc-code-well-and-efficiently"><span class="toc-section-number">4.3</span> Code well and efficiently<span></span></a></li>
+<li><a href="so-you-wanna.html#write-good" id="toc-write-good"><span class="toc-section-number">4.4</span> Write good<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#general-advice" id="toc-general-advice"><span class="toc-section-number">4.4.1</span> General advice<span></span></a></li>
+<li><a href="so-you-wanna.html#initial-submissions" id="toc-initial-submissions"><span class="toc-section-number">4.4.2</span> Initial submissions<span></span></a></li>
+<li><a href="so-you-wanna.html#mature-papers" id="toc-mature-papers"><span class="toc-section-number">4.4.3</span> “Mature” papers<span></span></a></li>
+</ul></li>
+<li><a href="so-you-wanna.html#email-like-a-pro" id="toc-email-like-a-pro"><span class="toc-section-number">4.5</span> Email like a pro<span></span></a></li>
+<li><a href="so-you-wanna.html#make-nice-figures" id="toc-make-nice-figures"><span class="toc-section-number">4.6</span> Make nice figures<span></span></a></li>
+<li><a href="so-you-wanna.html#keep-up-with-the-literature" id="toc-keep-up-with-the-literature"><span class="toc-section-number">4.7</span> Keep up with the literature<span></span></a></li>
+<li><a href="so-you-wanna.html#get-funded" id="toc-get-funded"><span class="toc-section-number">4.8</span> Get funded<span></span></a></li>
+<li><a href="so-you-wanna.html#see-our-funding" id="toc-see-our-funding"><span class="toc-section-number">4.9</span> See our funding<span></span></a></li>
+<li><a href="so-you-wanna.html#review-your-peers" id="toc-review-your-peers"><span class="toc-section-number">4.10</span> Review your peers<span></span></a></li>
+<li><a href="so-you-wanna.html#have-productive-meetings" id="toc-have-productive-meetings"><span class="toc-section-number">4.11</span> Have productive meetings<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#research-meetings" id="toc-research-meetings"><span class="toc-section-number">4.11.1</span> Research meetings<span></span></a></li>
+<li><a href="so-you-wanna.html#seminar-speakers" id="toc-seminar-speakers"><span class="toc-section-number">4.11.2</span> Seminar speakers<span></span></a></li>
+</ul></li>
+<li><a href="so-you-wanna.html#book-travel" id="toc-book-travel"><span class="toc-section-number">4.12</span> Book travel<span></span></a></li>
+<li><a href="so-you-wanna.html#be-happy-doing-research" id="toc-be-happy-doing-research"><span class="toc-section-number">4.13</span> Be happy doing research<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#time-management" id="toc-time-management"><span class="toc-section-number">4.13.1</span> Time management<span></span></a></li>
+<li><a href="so-you-wanna.html#imposter-syndrome" id="toc-imposter-syndrome"><span class="toc-section-number">4.13.2</span> Imposter syndrome<span></span></a></li>
+<li><a href="so-you-wanna.html#mental-health-and-medical-problems" id="toc-mental-health-and-medical-problems"><span class="toc-section-number">4.13.3</span> Mental health and medical problems<span></span></a></li>
+<li><a href="so-you-wanna.html#unwelcome-environment" id="toc-unwelcome-environment"><span class="toc-section-number">4.13.4</span> Unwelcome environment<span></span></a></li>
+</ul></li>
+<li><a href="so-you-wanna.html#give-a-good-talk" id="toc-give-a-good-talk"><span class="toc-section-number">4.14</span> Give a good talk<span></span></a></li>
+<li><a href="so-you-wanna.html#interview-someone" id="toc-interview-someone"><span class="toc-section-number">4.15</span> Interview someone<span></span></a></li>
+<li><a href="so-you-wanna.html#contribute-to-the-handbook" id="toc-contribute-to-the-handbook"><span class="toc-section-number">4.16</span> Contribute to the handbook<span></span></a></li>
+<li><a href="so-you-wanna.html#win-at-conferences" id="toc-win-at-conferences"><span class="toc-section-number">4.17</span> Win at conferences<span></span></a></li>
+<li><a href="so-you-wanna.html#negotiate-authorship" id="toc-negotiate-authorship"><span class="toc-section-number">4.18</span> Negotiate authorship<span></span></a></li>
+<li><a href="so-you-wanna.html#engage-with-the-public" id="toc-engage-with-the-public"><span class="toc-section-number">4.19</span> Engage with the public<span></span></a></li>
+</ul></li>
+<li><a href="coding-handbook.html#coding-handbook" id="toc-coding-handbook"><span class="toc-section-number">5</span> Coding Handbook<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#justification" id="toc-justification"><span class="toc-section-number">5.1</span> Justification<span></span></a></li>
+<li><a href="coding-handbook.html#coding-culture" id="toc-coding-culture"><span class="toc-section-number">5.2</span> Coding Culture<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#cultural-practices" id="toc-cultural-practices"><span class="toc-section-number">5.2.1</span> Cultural practices<span></span></a></li>
+</ul></li>
+<li><a href="coding-handbook.html#complexity" id="toc-complexity"><span class="toc-section-number">5.3</span> Complexity<span></span></a></li>
+<li><a href="coding-handbook.html#why-writing-code-is-easier-than-reading-it" id="toc-why-writing-code-is-easier-than-reading-it"><span class="toc-section-number">5.4</span> Why writing code is easier than reading it<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#science-and-software" id="toc-science-and-software"><span class="toc-section-number">5.4.1</span> Science and Software<span></span></a></li>
+</ul></li>
+<li><a href="coding-handbook.html#indirection-abstraction-and-generalization" id="toc-indirection-abstraction-and-generalization"><span class="toc-section-number">5.5</span> Indirection, Abstraction, and Generalization<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#example-the-weasel-algorithm" id="toc-example-the-weasel-algorithm"><span class="toc-section-number">5.5.1</span> Example: <span>The Weasel Algorithm</span><span></span></a></li>
+</ul></li>
+<li><a href="coding-handbook.html#debugging" id="toc-debugging"><span class="toc-section-number">5.6</span> Debugging<span></span></a></li>
+<li><a href="coding-handbook.html#functional-programming" id="toc-functional-programming"><span class="toc-section-number">5.7</span> Functional Programming<span></span></a></li>
+<li><a href="coding-handbook.html#unit-testing" id="toc-unit-testing"><span class="toc-section-number">5.8</span> Unit Testing<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#testability" id="toc-testability"><span class="toc-section-number">5.8.1</span> Testability<span></span></a></li>
+</ul></li>
+<li><a href="coding-handbook.html#modules-and-modularity" id="toc-modules-and-modularity"><span class="toc-section-number">5.9</span> Modules and Modularity<span></span></a></li>
+<li><a href="coding-handbook.html#statistics-and-other-modeling" id="toc-statistics-and-other-modeling"><span class="toc-section-number">5.10</span> Statistics and other Modeling<span></span></a></li>
+<li><a href="coding-handbook.html#guidelines-for-writing-code" id="toc-guidelines-for-writing-code"><span class="toc-section-number">5.11</span> Guidelines for Writing Code<span></span></a></li>
+<li><a href="coding-handbook.html#standards" id="toc-standards"><span class="toc-section-number">5.12</span> Standards<span></span></a></li>
+<li><a href="coding-handbook.html#lab-systems" id="toc-lab-systems"><span class="toc-section-number">5.13</span> Lab Systems<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#version-control" id="toc-version-control"><span class="toc-section-number">5.13.1</span> Version Control<span></span></a></li>
+<li><a href="coding-handbook.html#midway" id="toc-midway"><span class="toc-section-number">5.13.2</span> Midway<span></span></a></li>
+<li><a href="coding-handbook.html#running-jobs-on-midway" id="toc-running-jobs-on-midway"><span class="toc-section-number">5.13.3</span> Running Jobs on Midway<span></span></a></li>
+<li><a href="coding-handbook.html#slurm-tricks" id="toc-slurm-tricks"><span class="toc-section-number">5.13.4</span> SLURM tricks<span></span></a></li>
+<li><a href="coding-handbook.html#other-midway-items-to-keep-track-of" id="toc-other-midway-items-to-keep-track-of"><span class="toc-section-number">5.13.5</span> Other Midway items to keep track of<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="onboarding.html#onboarding" id="toc-onboarding"><span class="toc-section-number">6</span> Onboarding<span></span></a></li>
+<li><a href="references.html#references" id="toc-references">References<span></span></a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Cobey Lab Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="coding-handbook" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Coding Handbook<a href="coding-handbook.html#coding-handbook" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="justification" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Justification<a href="coding-handbook.html#justification" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The practice of science requires special care to ensure integrity. Not only do we want to know our results are correct, we need to show outside collaborators, institutions, publishers, and funders. The standards for these groups are also rising, particularly in the areas of data and code. Excerpts from the Fostering Integrity in Research (2018) checklists for researchers, journals, and research sponsors:</p>
+<p>Researchers:</p>
+<ul>
+<li>Develop data management and sharing plan at the outset of a project.</li>
+<li>Incorporate appropriate data management expertise in the project team.</li>
+<li>Understand and follow data collection, management, and sharing standards, policies, and regulations of the discipline, institution, funder, journal, and relevant government agencies.</li>
+</ul>
+<p>Journals:</p>
+<ul>
+<li>Provide a link to data and code that support articles, and facilitate long-term access.</li>
+<li>Require full descriptions of methods in method sections or electronic supplements.</li>
+</ul>
+<p>Research sponsors:</p>
+<ul>
+<li>Develop data and code access policies for extramural grants appropriate to
+the research being funded, and make fulfillment of these policies a condi-
+tion of future funding.</li>
+<li>Cover the costs borne by researchers and institutions to make data and
+code available.</li>
+<li>Practice transparency of data and code for intramural programs.</li>
+<li>Promote responsible sharing of data in areas such as clinical trials.</li>
+</ul>
+<p>One of the main reasons research has changed with respect to ensuring integrity in the last few decades is the increasing role of data and computer software. New norms, standards, and training are required, and new opportunities for communication and reuse are available.</p>
+</div>
+<div id="coding-culture" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Coding Culture<a href="coding-handbook.html#coding-culture" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As with any high-stakes endeavor, it’s important to think about how our treatment of each other contributes to success. Software development depends on accuracy, interdependence, and requires human judgment. Culture can therefore greatly impact productivity and resiliency.</p>
+<div id="cultural-practices" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Cultural practices<a href="coding-handbook.html#cultural-practices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Be open with your code, and your understanding. Coding productivity depends on information. Passing the information as quickly and openly as possible will help overcome this and facilitate progress. The communication phenomenon has been known since the <a href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month">70s</a> yet it is easy to forget.</p></li>
+<li><p>Be charitable with your feedback. No error is so obvious that even the most experienced programmer won’t make it from time to time. Break your PR reviews into demonstrable chunks that you can prove with a code snippet. Don’t make sweeping or vague judgements.</p></li>
+<li><p>Be thick-skinned. Code has a way of seeming absolute and damning when you get it wrong. On the other hand, that is its nature. Any error will feel that way, and everyone makes <a href="https://en.wikipedia.org/wiki/List_of_software_bugs">mistakes</a>.</p></li>
+</ol>
+</div>
+</div>
+<div id="complexity" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Complexity<a href="coding-handbook.html#complexity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>The art of programming is the art of organizing complexity.
+— Edsger W. Dijkstra</p>
+</blockquote>
+<p>Programs tend to be difficult to understand. They are written by someone with roughly the same capacity for complexity as the reader, but with the advantage of having written it. This person will usually write to the limit of <em>their own</em> understanding because we write competitive programs that are as sophisticated and full-featured as possible.</p>
+<p>There are strong incentives in all of computing to write complex code. There are also a limitless number of ways to write code that are functionally identical to each other.</p>
+<p>It’s also important to remember that complexity is a force of nature. Once enough possible states of a program have been achieved that are difficult to characterize – which is easy to do – it becomes impossible for any human brain to understand completely. This doesn’t happen for all programs, but due to combinatorics, the point at which an application becomes complex can easily sneak up on the author.</p>
+</div>
+<div id="why-writing-code-is-easier-than-reading-it" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Why writing code is easier than reading it<a href="coding-handbook.html#why-writing-code-is-easier-than-reading-it" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>The process of understanding a code practically involves redoing it.
+— John von Neumann</p>
+</blockquote>
+<p>Take a function in a large codebase. The person who wrote it understands:</p>
+<ol style="list-style-type: decimal">
+<li>The expected – or possible – range of inputs for this particular application. (Number of possible arguments – values – can easily be in the trillions for a simple function.) Possible range will often depend on the entire rest of the codebase and will usually be implicit.</li>
+<li>How often the function is called at runtime (Note: This is different from the number of times it is referenced in the codebase.)</li>
+<li>The intentions of the code. This can be different from what it <em>does</em> and is simpler to understand. (Usually intention vs reality is cleared up with comments.)</li>
+<li>The narrative of the code. The history of a codebase is a powerful mnemonic device. “We wrote this because there was an issue in January. There are three other places this functionality is handled.”</li>
+</ol>
+<p>All of this asymmetry between the author and the reader is in addition to the raw size of the source code. In other words, these depend on the combinatorial explosion of interconnected components.</p>
+<div id="science-and-software" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Science and Software<a href="coding-handbook.html#science-and-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Some coding principles are <em>less important</em> in science because:</p>
+<ul>
+<li>Scientific applications are more mathematical. You can reason about the range of values more easily.</li>
+<li>They can be very short.</li>
+<li>They are often meant to be run one way. For example, a Jupyter notebook that is intended to run in the order the cells are in on the page.</li>
+</ul>
+<p>Some coding principles are <em>more important</em> in science because:</p>
+<ul>
+<li>Scientific applications are meant to be read. They are intended to teach and be verified.</li>
+<li>They are meant to be open-source, and reused.</li>
+<li>They are at the forefront of human understanding. Extra complexity is detrimental.</li>
+<li>They are sensitive to error. The stakes are high.</li>
+</ul>
+</div>
+</div>
+<div id="indirection-abstraction-and-generalization" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Indirection, Abstraction, and Generalization<a href="coding-handbook.html#indirection-abstraction-and-generalization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Indirection, abstraction, and generalization are three closely-related concepts in programming.</p>
+<p>Indirection is the most general in that it refers to any symbolic representation of a process in the place of the process itself. A function calling another function, for instance.</p>
+<p>Indirection can reduce complexity, and multiply the number of cases a piece of code can handle, <em>and be a source of complexity itself</em>.</p>
+<p>The so-called <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering">Fundamental Theorem of Software Engineering</a>, attributed to David J. Wheeler, is: “We can solve any problem by introducing an extra level of indirection. (Except for the problem of too many levels of indirection.)”</p>
+<p>Abstraction is also very general but refers to the process of removing details that are not relevant to some concept one is trying to model.</p>
+<p>Finally, generalization is very similar to abstraction with the connotation of combining the functionality of several similar pieces of code into one, usually parameterized, copy.</p>
+<p>Thinking about how accurately, simply, and powerfully your code represents what is being modeled is important because it makes your code more useful, understandable, and because it becomes more mathematical: You’ve distilled a model to its essence.</p>
+<div id="example-the-weasel-algorithm" class="section level3 hasAnchor" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Example: <a href="https://en.wikipedia.org/wiki/Weasel_program#Weasel_algorithm">The Weasel Algorithm</a><a href="coding-handbook.html#example-the-weasel-algorithm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="coding-handbook.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> choice, random</span>
+<span id="cb1-2"><a href="coding-handbook.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="coding-handbook.html#cb1-3" aria-hidden="true" tabindex="-1"></a>charset <span class="op">=</span> <span class="st">&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ &#39;</span></span>
+<span id="cb1-4"><a href="coding-handbook.html#cb1-4" aria-hidden="true" tabindex="-1"></a>target  <span class="op">=</span> <span class="bu">list</span>(<span class="st">&quot;METHINKS IT IS LIKE A WEASEL&quot;</span>)</span>
+<span id="cb1-5"><a href="coding-handbook.html#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="coding-handbook.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># create a random parent</span></span>
+<span id="cb1-7"><a href="coding-handbook.html#cb1-7" aria-hidden="true" tabindex="-1"></a>parent  <span class="op">=</span> [choice(charset) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">28</span>)]</span>
+<span id="cb1-8"><a href="coding-handbook.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> parent <span class="op">!=</span> target:</span>
+<span id="cb1-9"><a href="coding-handbook.html#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="coding-handbook.html#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calculate how fast to mutate depending on how close we are to the target.</span></span>
+<span id="cb1-11"><a href="coding-handbook.html#cb1-11" aria-hidden="true" tabindex="-1"></a>    rate <span class="op">=</span> <span class="dv">1</span><span class="op">-</span>((<span class="dv">28</span> <span class="op">-</span> (<span class="bu">sum</span>(t <span class="op">==</span> h <span class="cf">for</span> t, h <span class="kw">in</span> <span class="bu">zip</span>(parent, target))</span>
+<span id="cb1-12"><a href="coding-handbook.html#cb1-12" aria-hidden="true" tabindex="-1"></a>)) <span class="op">/</span> <span class="dv">28</span> <span class="op">*</span> <span class="fl">0.9</span>)</span>
+<span id="cb1-13"><a href="coding-handbook.html#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="coding-handbook.html#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># initialize ten copies of the parent, randomly mutated.</span></span>
+<span id="cb1-15"><a href="coding-handbook.html#cb1-15" aria-hidden="true" tabindex="-1"></a>    mut1 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-16"><a href="coding-handbook.html#cb1-16" aria-hidden="true" tabindex="-1"></a>    mut2 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-17"><a href="coding-handbook.html#cb1-17" aria-hidden="true" tabindex="-1"></a>    mut3 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-18"><a href="coding-handbook.html#cb1-18" aria-hidden="true" tabindex="-1"></a>    mut4 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-19"><a href="coding-handbook.html#cb1-19" aria-hidden="true" tabindex="-1"></a>    mut5 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-20"><a href="coding-handbook.html#cb1-20" aria-hidden="true" tabindex="-1"></a>    mut6 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-21"><a href="coding-handbook.html#cb1-21" aria-hidden="true" tabindex="-1"></a>    mut7 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-22"><a href="coding-handbook.html#cb1-22" aria-hidden="true" tabindex="-1"></a>    mut8 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-23"><a href="coding-handbook.html#cb1-23" aria-hidden="true" tabindex="-1"></a>    mut9 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-24"><a href="coding-handbook.html#cb1-24" aria-hidden="true" tabindex="-1"></a>    mut10 <span class="op">=</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> rate <span class="cf">else</span> choice(charset)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb1-25"><a href="coding-handbook.html#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="coding-handbook.html#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># put mutants in an array</span></span>
+<span id="cb1-27"><a href="coding-handbook.html#cb1-27" aria-hidden="true" tabindex="-1"></a>    copies <span class="op">=</span> [mut1, mut2, mut3, mut4, mut5, mut6, mut7, mut8, mut9, parent]</span>
+<span id="cb1-28"><a href="coding-handbook.html#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="coding-handbook.html#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pick most fit parent from the beginning of the list</span></span>
+<span id="cb1-30"><a href="coding-handbook.html#cb1-30" aria-hidden="true" tabindex="-1"></a>    parent1 <span class="op">=</span> <span class="bu">max</span>(copies[:<span class="dv">4</span>], key<span class="op">=</span><span class="kw">lambda</span> trial: <span class="bu">sum</span>(t <span class="op">==</span> h <span class="cf">for</span> t, h <span class="kw">in</span> <span class="bu">zip</span>(trial, target)))</span>
+<span id="cb1-31"><a href="coding-handbook.html#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="coding-handbook.html#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pick most fit parent from the end of the list</span></span>
+<span id="cb1-33"><a href="coding-handbook.html#cb1-33" aria-hidden="true" tabindex="-1"></a>    parent2 <span class="op">=</span> <span class="bu">max</span>(copies[<span class="dv">4</span>:], key<span class="op">=</span><span class="kw">lambda</span> trial: <span class="bu">sum</span>(t <span class="op">==</span> h <span class="cf">for</span> t, h <span class="kw">in</span> <span class="bu">zip</span>(trial, target)))</span>
+<span id="cb1-34"><a href="coding-handbook.html#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="coding-handbook.html#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># choose a place in the &quot;genome&quot; to split between the two parents.</span></span>
+<span id="cb1-36"><a href="coding-handbook.html#cb1-36" aria-hidden="true" tabindex="-1"></a>    place <span class="op">=</span> choice(<span class="bu">range</span>(<span class="dv">28</span>))</span>
+<span id="cb1-37"><a href="coding-handbook.html#cb1-37" aria-hidden="true" tabindex="-1"></a>    mated <span class="op">=</span> [parent1, parent2, parent1[:place] <span class="op">+</span> parent2[place:], parent2[:place] <span class="op">+</span> parent1[place:]]</span>
+<span id="cb1-38"><a href="coding-handbook.html#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="coding-handbook.html#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># choose most fit amongst the parents and two progeny</span></span>
+<span id="cb1-40"><a href="coding-handbook.html#cb1-40" aria-hidden="true" tabindex="-1"></a>    parent <span class="op">=</span> <span class="bu">max</span>(mated, key<span class="op">=</span><span class="kw">lambda</span> trial: <span class="bu">sum</span>(t <span class="op">==</span> h <span class="cf">for</span> t, h <span class="kw">in</span> <span class="bu">zip</span>(trial, target)))</span>
+<span id="cb1-41"><a href="coding-handbook.html#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="coding-handbook.html#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;&#39;</span>.join(parent))</span>
+<span id="cb1-43"><a href="coding-handbook.html#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Success! </span><span class="ch">\n</span><span class="st">&#39;</span>, <span class="st">&#39;&#39;</span>.join(parent))</span></code></pre></div>
+<p>This code has several problems.</p>
+<ol style="list-style-type: decimal">
+<li>There’s a lot of duplication. Initializing the array requires as many lines as there are elements in the array. <code>sum(t == h for t, h in zip(trial, target))</code> is copied anywhere it is needed, etc.</li>
+<li>It only works for specific lengths of <code>target</code> and <code>copies</code> because a user would need to modify code instead of changing a parameter. Literal values like 4 and 28 are used instead of variables (hardcoding).</li>
+<li>It’s not conceptual. If it weren’t for the comments, it would be difficult to tell what the author is getting at. What does 28 mean in this context? Is it the same as other 28s?</li>
+<li>It would be difficult to maintain (particularly if this style was used in a large program). Will the program still work if we change some of it? Is there an error in some of the duplicated code? How do we add functionality without adding more duplication?</li>
+</ol>
+<p>All of these are problems that can be solved by generalization.</p>
+<p>This code was adapted from a much more general version at <a href="https://www.rosettacode.org/wiki/Evolutionary_algorithm#Python">Rosetta Code</a>. In some ways the less general version is easier to understand. Your eye doesn’t need to jump around as much to see what is going on. Usually, though, the more general code is preferred.</p>
+<p>How a particular program should be written is a judgment call based on its size, predicted longevity, and what is most clear to readers. If you’re starting to lose productivity or bugs are difficult to fix, it might be time to generalize. As with almost any engineering topic, generalization is a tradeoff and can be taken too far.</p>
+</div>
+</div>
+<div id="debugging" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Debugging<a href="coding-handbook.html#debugging" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Debugging and experimentation are fundamentally the same. Debugging is done by isolating variables to identify the cause of a problem. It is comparing the results of two runs of a program with one variable changed. If one run reproduces a bug and the other doesn’t, you can usually conclude the value of the variable is the cause. (“Variable” may not be a literal variable. It may be a short section of code, or input.)</p>
+<p>Modular, functional code is easier to debug than the opposite: arbitrarily interconnected code. The reason for this is it’s easier to understand, and it’s easier to “change one thing” and understand the outcome. Code that is easy to debug is also generally <a href="coding-handbook.html#modules-and-modularity">modular</a>, <a href="coding-handbook.html#functional-programming">functional</a>, and <a href="coding-handbook.html#testability">testable</a>.</p>
+</div>
+<div id="functional-programming" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Functional Programming<a href="coding-handbook.html#functional-programming" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The term “functional” comes from Functional Programming, which is a discipline in which:</p>
+<ol style="list-style-type: decimal">
+<li>Functions always return the same output for an input. For instance:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="coding-handbook.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb2-2"><a href="coding-handbook.html#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span></code></pre></div>
+<p>Always returns the corresponding x + 2 for every x no matter the context and across time.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="coding-handbook.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randint</span>
+<span id="cb3-2"><a href="coding-handbook.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="coding-handbook.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb3-4"><a href="coding-handbook.html#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> randint(<span class="dv">0</span>, <span class="dv">10</span>)</span></code></pre></div>
+<p>Does not.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Functions have no side-effects. The function can’t modify any variables outside itself.</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="coding-handbook.html#cb4-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-2"><a href="coding-handbook.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="coding-handbook.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb4-4"><a href="coding-handbook.html#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> g</span>
+<span id="cb4-5"><a href="coding-handbook.html#cb4-5" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> g <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb4-6"><a href="coding-handbook.html#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span></code></pre></div>
+<p>Modifies <code>y</code>, which is outside the scope of the function <code>f</code>. State applies to external systems as well. Modifying a database, for instance, counts as out-of-scope, and can affect future runs of a function with the same input.</p>
+<p>These properties guarantee that a program is <a href="https://en.wikipedia.org/wiki/Referential_transparency">referentially transparent</a>. You can easily modify it because you can replace any instance of a function with a value, and you can move functions without concern that their behavior will change. Additionally, variables that can be changed by many different functions, in the worst case global mutable variables, add complexity to programs. This is analogous to running an experiment where variables can’t be controlled because the state of the program generally involves variables that could be at any state at any time and may radically change the behavior of the program. A function in functional programming (also known as a pure function) can be tested completely by changing its arguments.</p>
+<p>The benefits of functional programming are closely related to <a href="coding-handbook.html#modules-and-modularity">modularity</a>. Functional programs are modular in that every function encapsulates some functionality and has a well-defined interface, the function signature.</p>
+</div>
+<div id="unit-testing" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> Unit Testing<a href="coding-handbook.html#unit-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Unit testing is a technique of verifying applications by writing an example input and expected output for a number of simple functions in your codebase. Ideally your code will be structured to get the most out of unit tests by relying on a base of testable functions that are used throughout.</p>
+<div id="testability" class="section level3 hasAnchor" number="5.8.1">
+<h3><span class="header-section-number">5.8.1</span> Testability<a href="coding-handbook.html#testability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A function is easier to test when there’s a simple way to characterize its behavior with some inputs and expected outputs. This generally means small, easy-to-write input/output pairs. For example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="coding-handbook.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(i, j, s):</span>
+<span id="cb5-2"><a href="coding-handbook.html#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> j:</span>
+<span id="cb5-3"><a href="coding-handbook.html#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="st">&quot; is above the line&quot;</span></span>
+<span id="cb5-4"><a href="coding-handbook.html#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-5"><a href="coding-handbook.html#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="st">&quot; is below the line&quot;</span></span>
+<span id="cb5-6"><a href="coding-handbook.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="coding-handbook.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_low_f():</span>
+<span id="cb5-8"><a href="coding-handbook.html#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> f(<span class="dv">2</span>, <span class="dv">3</span>, <span class="st">&quot;test&quot;</span>) <span class="op">==</span> <span class="st">&quot;test is below the line&quot;</span></span>
+<span id="cb5-9"><a href="coding-handbook.html#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="coding-handbook.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_high_f():</span>
+<span id="cb5-11"><a href="coding-handbook.html#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> f(<span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>, <span class="st">&quot;test&quot;</span>) <span class="op">==</span> <span class="st">&quot;test is above the line&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="coding-handbook.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(i, j, s):</span>
+<span id="cb6-2"><a href="coding-handbook.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&gt;</span> j <span class="kw">and</span> is_thursday <span class="kw">and</span> urllib.request.urlopen(<span class="st">&quot;http://line.status.org&quot;</span>) <span class="kw">and</span> random.randrange(<span class="dv">1</span>,<span class="dv">10</span>) <span class="op">&gt;</span> <span class="dv">2</span>:</span>
+<span id="cb6-3"><a href="coding-handbook.html#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;It&#39;s thursday and the line status is good and you&#39;re lucky.&quot;</span></span></code></pre></div>
+<p>Function f:
+1. Is purely functional. It doesn’t modify or depend on values outside its scope, and always returns the same values for the corresponding input.</p>
+<p><code>f</code> is easy to test. <code>test_low_f</code> and <code>test_high_f</code> cover both branches (the if and else) and characterize the behavior of <code>f</code> well. Note: It’s a judgment call whether or not enough of the input space has been tested. It’s easy to see in this case that all integers will behave predictably. This also doesn’t cover exceptions, which should generally be tested.</p>
+<p>Function g:
+1. Works differently depending on the day, the status of an external web site, and a random number. The behavior of g depends on a lot of values, and values that are outside the scope of the function.
+2. Does not handle all values of its parameters.</p>
+<p><code>g</code> is not purely functional and very difficult to test. The state that would be needed to get a predictable output is difficult to prepare. (Functions should also almost never silently fail.)</p>
+<p>This most commonly occurs in practice with large global, mutable variables and large objects in general, and the results of connections to external services. Sometimes this can’t be avoided, but structuring your program strategically can minimize the effects of state.</p>
+</div>
+</div>
+<div id="modules-and-modularity" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Modules and Modularity<a href="coding-handbook.html#modules-and-modularity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The “messiness” of code is hard to quantify. Messy, difficult-to-understand code is sometimes called “spaghetti code” because connections between components are made from anywhere, to anywhere without much planning or structure. However:</p>
+<ol style="list-style-type: decimal">
+<li>A complex codebase <em>should</em> have many connections such as function calls, imports, variable mutation etc.</li>
+<li>Where and when to make connections can be a matter of what “lens” through which you’re viewing the code. There isn’t an absolute objective standard.</li>
+</ol>
+<p>Modularity is one path to clean, simple, maintainable code that is considered distinct from “spaghetti” and can be put in objective terms.</p>
+<p>The word “module” has a specific meaning in certain programming languages. As a general term, it means a section of code that acts as a unit, usually on a particular topic or domain, that has a well-defined interface.</p>
+<p>An <a href="https://en.wikipedia.org/wiki/Interface_(computing)">interface</a> is a boundary between components over which information is exchanged. The simplest well-defined interface is a function signature.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="coding-handbook.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, b, c):</span>
+<span id="cb7-2"><a href="coding-handbook.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  product <span class="op">=</span> a <span class="op">*</span> b</span>
+<span id="cb7-3"><a href="coding-handbook.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> product <span class="op">+</span> c</span></code></pre></div>
+<p>The “module” <code>f</code> has an interface that is the parameters <code>a</code>, <code>b</code>, and <code>c</code>. Any code that calls <code>f</code> needs to provide these parameters. They are defined explicitly in the codebase and enforced by the compiler. Variables within <code>f</code> can’t be accessed from outside <code>f</code>. In other words, a connection, or metaphorical spaghetti strand can’t be made to anything inside <code>f</code>.</p>
+<p>Once a codebase is organized into modules, it becomes much simpler and easier to maintain. Modularity also contributes to “<a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>” one of the most important, if not <em>the</em> most important software principle. Software organized into concerns with interfaces in between is easier to reason about because the modules can be reasoned about, and modified, independently.</p>
+<p>Returning to the evolutionary algorithm example, a more modular version might look like this:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="coding-handbook.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;Module for simulating evolution of strings.&quot;&quot;&quot;</span></span>
+<span id="cb8-2"><a href="coding-handbook.html#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="coding-handbook.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> choice, random</span>
+<span id="cb8-4"><a href="coding-handbook.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
+<span id="cb8-5"><a href="coding-handbook.html#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="coding-handbook.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fitness(trial, target):</span>
+<span id="cb8-7"><a href="coding-handbook.html#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Compare a string with a target. The more matching characters, the higher the fitness.&quot;&quot;&quot;</span></span>
+<span id="cb8-8"><a href="coding-handbook.html#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(t <span class="op">==</span> h <span class="cf">for</span> t, h <span class="kw">in</span> <span class="bu">zip</span>(trial, target))</span>
+<span id="cb8-9"><a href="coding-handbook.html#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="coding-handbook.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mutaterate(parent, target):</span>
+<span id="cb8-11"><a href="coding-handbook.html#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Calculate a mutation rate that shrinks as the target approaches.&quot;&quot;&quot;</span></span>
+<span id="cb8-12"><a href="coding-handbook.html#cb8-12" aria-hidden="true" tabindex="-1"></a>    perfectfitness <span class="op">=</span> <span class="bu">float</span>(<span class="bu">len</span>(target))</span>
+<span id="cb8-13"><a href="coding-handbook.html#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (perfectfitness <span class="op">-</span> fitness(parent, target)) <span class="op">/</span> perfectfitness</span>
+<span id="cb8-14"><a href="coding-handbook.html#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="coding-handbook.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mutate(parent, rate, alphabet):</span>
+<span id="cb8-16"><a href="coding-handbook.html#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Randomly change characters in parent to random characters from alphabet.&quot;&quot;&quot;</span></span>
+<span id="cb8-17"><a href="coding-handbook.html#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> <span class="dv">1</span> <span class="op">-</span> rate <span class="cf">else</span> choice(alphabet)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb8-18"><a href="coding-handbook.html#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="coding-handbook.html#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mate(a, b):</span>
+<span id="cb8-20"><a href="coding-handbook.html#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb8-21"><a href="coding-handbook.html#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">    Split two strings in the center and return 4 combinations of the two:</span></span>
+<span id="cb8-22"><a href="coding-handbook.html#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">        1. a</span></span>
+<span id="cb8-23"><a href="coding-handbook.html#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">        2. b</span></span>
+<span id="cb8-24"><a href="coding-handbook.html#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">        3. beginning of a, then the end of b</span></span>
+<span id="cb8-25"><a href="coding-handbook.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">        4. beginning of b, then the end of a</span></span>
+<span id="cb8-26"><a href="coding-handbook.html#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb8-27"><a href="coding-handbook.html#cb8-27" aria-hidden="true" tabindex="-1"></a>    place <span class="op">=</span> <span class="bu">int</span>(<span class="bu">len</span>(a)<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb8-28"><a href="coding-handbook.html#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, b, a[:place] <span class="op">+</span> b[place:], b[:place] <span class="op">+</span> a[place:]</span>
+<span id="cb8-29"><a href="coding-handbook.html#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-30"><a href="coding-handbook.html#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-31"><a href="coding-handbook.html#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evolve(seed, target_string, alphabet, population_size<span class="op">=</span><span class="dv">100</span>):</span>
+<span id="cb8-32"><a href="coding-handbook.html#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Randomly mutate populations of seed until it &quot;evolves&quot; into target_string.&quot;&quot;&quot;</span></span>
+<span id="cb8-33"><a href="coding-handbook.html#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-34"><a href="coding-handbook.html#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">all</span>([l <span class="kw">in</span> alphabet <span class="cf">for</span> l <span class="kw">in</span> target_string]), <span class="op">\</span></span>
+<span id="cb8-35"><a href="coding-handbook.html#cb8-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;Error: Target must only contain characters from alphabet.&quot;</span></span>
+<span id="cb8-36"><a href="coding-handbook.html#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(seed) <span class="op">==</span> <span class="bu">len</span>(target_string), <span class="op">\</span></span>
+<span id="cb8-37"><a href="coding-handbook.html#cb8-37" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;Error: Target and Seed must be the same length.&quot;</span></span>
+<span id="cb8-38"><a href="coding-handbook.html#cb8-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-39"><a href="coding-handbook.html#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># For performance</span></span>
+<span id="cb8-40"><a href="coding-handbook.html#cb8-40" aria-hidden="true" tabindex="-1"></a>    target <span class="op">=</span> <span class="bu">list</span>(target_string)</span>
+<span id="cb8-41"><a href="coding-handbook.html#cb8-41" aria-hidden="true" tabindex="-1"></a>    parent <span class="op">=</span> seed</span>
+<span id="cb8-42"><a href="coding-handbook.html#cb8-42" aria-hidden="true" tabindex="-1"></a>    generations <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-43"><a href="coding-handbook.html#cb8-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-44"><a href="coding-handbook.html#cb8-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> parent <span class="op">!=</span> target:</span>
+<span id="cb8-45"><a href="coding-handbook.html#cb8-45" aria-hidden="true" tabindex="-1"></a>        rate <span class="op">=</span> mutaterate(parent, target)</span>
+<span id="cb8-46"><a href="coding-handbook.html#cb8-46" aria-hidden="true" tabindex="-1"></a>        mutations <span class="op">=</span> [mutate(parent, rate, alphabet) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(population_size)] <span class="op">+</span> [parent]</span>
+<span id="cb8-47"><a href="coding-handbook.html#cb8-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-48"><a href="coding-handbook.html#cb8-48" aria-hidden="true" tabindex="-1"></a>        center <span class="op">=</span> <span class="bu">int</span>(population_size<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb8-49"><a href="coding-handbook.html#cb8-49" aria-hidden="true" tabindex="-1"></a>        parent1 <span class="op">=</span> <span class="bu">max</span>(mutations[:center], key<span class="op">=</span>partial(fitness, target))</span>
+<span id="cb8-50"><a href="coding-handbook.html#cb8-50" aria-hidden="true" tabindex="-1"></a>        parent2 <span class="op">=</span> <span class="bu">max</span>(mutations[center:], key<span class="op">=</span>partial(fitness, target))</span>
+<span id="cb8-51"><a href="coding-handbook.html#cb8-51" aria-hidden="true" tabindex="-1"></a>        parent <span class="op">=</span> <span class="bu">max</span>(mate(parent1, parent2), key<span class="op">=</span>partial(fitness, target))</span>
+<span id="cb8-52"><a href="coding-handbook.html#cb8-52" aria-hidden="true" tabindex="-1"></a>        generations <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb8-53"><a href="coding-handbook.html#cb8-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> generations</span>
+<span id="cb8-54"><a href="coding-handbook.html#cb8-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-55"><a href="coding-handbook.html#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Tests</span></span>
+<span id="cb8-56"><a href="coding-handbook.html#cb8-56" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> unittest</span>
+<span id="cb8-57"><a href="coding-handbook.html#cb8-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-58"><a href="coding-handbook.html#cb8-58" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> TestEvolveMethods(unittest.TestCase):</span>
+<span id="cb8-59"><a href="coding-handbook.html#cb8-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-60"><a href="coding-handbook.html#cb8-60" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_fitness(<span class="va">self</span>):</span>
+<span id="cb8-61"><a href="coding-handbook.html#cb8-61" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;axxd&quot;</span>), <span class="dv">2</span>)</span>
+<span id="cb8-62"><a href="coding-handbook.html#cb8-62" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>), <span class="dv">4</span>)</span>
+<span id="cb8-63"><a href="coding-handbook.html#cb8-63" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;wxyz&quot;</span>), <span class="dv">0</span>)</span>
+<span id="cb8-64"><a href="coding-handbook.html#cb8-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-65"><a href="coding-handbook.html#cb8-65" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mutaterate(<span class="va">self</span>):</span>
+<span id="cb8-66"><a href="coding-handbook.html#cb8-66" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;wxyz&quot;</span>), <span class="dv">1</span>)</span>
+<span id="cb8-67"><a href="coding-handbook.html#cb8-67" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abce&quot;</span>), <span class="fl">0.25</span>)</span>
+<span id="cb8-68"><a href="coding-handbook.html#cb8-68" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>), <span class="dv">0</span>)</span>
+<span id="cb8-69"><a href="coding-handbook.html#cb8-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-70"><a href="coding-handbook.html#cb8-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mutate(<span class="va">self</span>):</span>
+<span id="cb8-71"><a href="coding-handbook.html#cb8-71" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;mutate with no mutation rate returns the parent.&quot;&quot;&quot;</span></span>
+<span id="cb8-72"><a href="coding-handbook.html#cb8-72" aria-hidden="true" tabindex="-1"></a>        alphabet <span class="op">=</span> <span class="st">&quot;abcdefgh&quot;</span></span>
+<span id="cb8-73"><a href="coding-handbook.html#cb8-73" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutate(<span class="st">&quot;abcd&quot;</span>, <span class="dv">0</span>, alphabet), [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>])</span>
+<span id="cb8-74"><a href="coding-handbook.html#cb8-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-75"><a href="coding-handbook.html#cb8-75" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;mutate returns only characters from the alphabet.&quot;&quot;&quot;</span></span>
+<span id="cb8-76"><a href="coding-handbook.html#cb8-76" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertTrue(<span class="bu">all</span>([l <span class="kw">in</span> alphabet <span class="cf">for</span> l <span class="kw">in</span> mutate(<span class="st">&quot;abcd&quot;</span>, <span class="fl">0.25</span>, <span class="st">&quot;abcdefgh&quot;</span>)]))</span>
+<span id="cb8-77"><a href="coding-handbook.html#cb8-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-78"><a href="coding-handbook.html#cb8-78" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mate(<span class="va">self</span>):</span>
+<span id="cb8-79"><a href="coding-handbook.html#cb8-79" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;efgh&quot;</span>), (<span class="st">&#39;abcd&#39;</span>, <span class="st">&#39;efgh&#39;</span>, <span class="st">&#39;abgh&#39;</span>, <span class="st">&#39;efcd&#39;</span>))</span>
+<span id="cb8-80"><a href="coding-handbook.html#cb8-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-81"><a href="coding-handbook.html#cb8-81" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_evolve(<span class="va">self</span>):</span>
+<span id="cb8-82"><a href="coding-handbook.html#cb8-82" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;evolve raises error if target is not composed of the alphabet.&quot;&quot;&quot;</span></span>
+<span id="cb8-83"><a href="coding-handbook.html#cb8-83" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="va">self</span>.assertRaises(<span class="pp">AssertionError</span>):</span>
+<span id="cb8-84"><a href="coding-handbook.html#cb8-84" aria-hidden="true" tabindex="-1"></a>            evolve(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcx&quot;</span>, <span class="st">&quot;abcd&quot;</span>)</span>
+<span id="cb8-85"><a href="coding-handbook.html#cb8-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-86"><a href="coding-handbook.html#cb8-86" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;evolve raises error if seed and target are different lengths.&quot;&quot;&quot;</span></span>
+<span id="cb8-87"><a href="coding-handbook.html#cb8-87" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="va">self</span>.assertRaises(<span class="pp">AssertionError</span>):</span>
+<span id="cb8-88"><a href="coding-handbook.html#cb8-88" aria-hidden="true" tabindex="-1"></a>            evolve(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>)</span>
+<span id="cb8-89"><a href="coding-handbook.html#cb8-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-90"><a href="coding-handbook.html#cb8-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-91"><a href="coding-handbook.html#cb8-91" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Evolve some strings.&quot;</span>)</span>
+<span id="cb8-92"><a href="coding-handbook.html#cb8-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-93"><a href="coding-handbook.html#cb8-93" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb8-94"><a href="coding-handbook.html#cb8-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-95"><a href="coding-handbook.html#cb8-95" aria-hidden="true" tabindex="-1"></a><span class="co">Classic example. From random seed to english sentence.</span></span>
+<span id="cb8-96"><a href="coding-handbook.html#cb8-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-97"><a href="coding-handbook.html#cb8-97" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb8-98"><a href="coding-handbook.html#cb8-98" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="st">&quot;RHBpoxYLCGjNpUgLYnMfiKskRHmk&quot;</span></span>
+<span id="cb8-99"><a href="coding-handbook.html#cb8-99" aria-hidden="true" tabindex="-1"></a>target <span class="op">=</span> <span class="st">&quot;METHINKS IT IS LIKE A WEASEL&quot;</span></span>
+<span id="cb8-100"><a href="coding-handbook.html#cb8-100" aria-hidden="true" tabindex="-1"></a>alphabet <span class="op">=</span> <span class="st">&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ &quot;</span></span>
+<span id="cb8-101"><a href="coding-handbook.html#cb8-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-102"><a href="coding-handbook.html#cb8-102" aria-hidden="true" tabindex="-1"></a>generations <span class="op">=</span> evolve(seed, target, alphabet)</span>
+<span id="cb8-103"><a href="coding-handbook.html#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Success in </span><span class="sc">{</span>generations<span class="sc">}</span><span class="ss"> generations!&quot;</span>)</span>
+<span id="cb8-104"><a href="coding-handbook.html#cb8-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-105"><a href="coding-handbook.html#cb8-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-106"><a href="coding-handbook.html#cb8-106" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb8-107"><a href="coding-handbook.html#cb8-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-108"><a href="coding-handbook.html#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="co">DNA example.</span></span>
+<span id="cb8-109"><a href="coding-handbook.html#cb8-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-110"><a href="coding-handbook.html#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb8-111"><a href="coding-handbook.html#cb8-111" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="st">&quot;CGATGATGTATACTGTACGTATCTACTAC&quot;</span></span>
+<span id="cb8-112"><a href="coding-handbook.html#cb8-112" aria-hidden="true" tabindex="-1"></a>dna_target <span class="op">=</span> <span class="st">&quot;AATCCGCTAGGTATCAGACTAGTAGCAGT&quot;</span></span>
+<span id="cb8-113"><a href="coding-handbook.html#cb8-113" aria-hidden="true" tabindex="-1"></a>dna_alphabet <span class="op">=</span> <span class="st">&quot;ATCG&quot;</span></span>
+<span id="cb8-114"><a href="coding-handbook.html#cb8-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-115"><a href="coding-handbook.html#cb8-115" aria-hidden="true" tabindex="-1"></a>dna_generations <span class="op">=</span> evolve(seed, dna_target, dna_alphabet)</span>
+<span id="cb8-116"><a href="coding-handbook.html#cb8-116" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Success in </span><span class="sc">{</span>dna_generations<span class="sc">}</span><span class="ss"> generations!&quot;</span>)</span>
+<span id="cb8-117"><a href="coding-handbook.html#cb8-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-118"><a href="coding-handbook.html#cb8-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-119"><a href="coding-handbook.html#cb8-119" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Run tests&quot;</span>)</span>
+<span id="cb8-120"><a href="coding-handbook.html#cb8-120" aria-hidden="true" tabindex="-1"></a>unittest.main()</span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>Code is organized into functions with well-defined domains (concerns), and well-defined interfaces.</li>
+<li>Functions are purely functional unless there’s a good reason. Good reasons include needing to throw exceptions, write to logs, generate random numbers, and limited use of global variables.</li>
+<li>The “module” has a public interface (<code>evolve</code>). If this were a true module in the Python sense, or a class, all other methods could be private.</li>
+<li><code>evolve</code> returns a useful value to the caller. Functions should, in general, return values instead of modifying variables in the body, printing to the screen, writing to files etc. There’s nothing wrong with these things but they are easier to manage at the top level of a program.</li>
+<li>All parameters are exposed to the caller. The module doesn’t need to be modified to use the whole space of possible seeds, targets, and population sizes.</li>
+</ol>
+</div>
+<div id="statistics-and-other-modeling" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> Statistics and other Modeling<a href="coding-handbook.html#statistics-and-other-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Statistics and other forms of modeling and simulation are the most common form of software produced in the practice of science. It is also an area that affects reproducibility and interpretation of research. In a Nature survey assessing the effect of implementing a publication checklist, respondents strongly associated statistical reporting with research quality: “Of those survey respondents who thought the checklist had improved the quality of research at Nature journals, 83% put this down to better reporting of statistics as a result of the checklist.” <a href="https://www.nature.com/articles/d41586-018-04590-7">Nature 556, 273-274 (2018)</a></p>
+<p>[TBD]</p>
+</div>
+<div id="guidelines-for-writing-code" class="section level2 hasAnchor" number="5.11">
+<h2><span class="header-section-number">5.11</span> Guidelines for Writing Code<a href="coding-handbook.html#guidelines-for-writing-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Write comments. Cover the intention, and how this code fits in with the rest of the codebase, and any meta-information such as <a href="https://en.wikipedia.org/wiki/Deprecation">deprecation</a>.</li>
+<li>Lint. Use a linter before committing. Git hooks can be set up to run a linter every time you commit. This helps avoid committing a large number of linter corrections at once.</li>
+<li>Write unit tests. Unit tests written early will give you confidence to refactor code, and they help to verify a user is getting the same results.</li>
+<li>Use version control regularly.</li>
+<li>Write code that’s meant to be read and understood.</li>
+</ol>
+</div>
+<div id="standards" class="section level2 hasAnchor" number="5.12">
+<h2><span class="header-section-number">5.12</span> Standards<a href="coding-handbook.html#standards" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>See also <a href="how-we-work.html#reproducible-research">Reproducible research</a></p>
+<p>The key qualities that make a codebase reproducible and reusable are:</p>
+<ul>
+<li>Clarity: How simply and understandably the concepts are presented.</li>
+<li>Determinism: How well the starting state of the code, data, and environment are controlled so the user produces the same result as the researcher.</li>
+<li>Interoperability: How well the code interfaces with other tools, and has a standard method for interacting with it.</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>Document your code, preferably as you go. Even if these are rough notes at first, they are very valuable for reuse.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Documentation should be tied to a version. The version of the README in a repo should be about the same version of the code.</li>
+<li>Document for superficial users who will only run the runbook and leave, and users who might want to contribute to, or reuse your code.</li>
+</ol></li>
+<li><p>Do versioned releases. Many times there will only be one release when a paper is published for instance, but it pins your code and documentation to a point in time that is canonical.</p></li>
+<li><p>For analysis, include a runbook. It should start with data in the same format the user will receive and include any transformations. It should run tests, or give some indication that the run was successful.</p></li>
+<li><p>Include your data if possible. If your data is not publicly available, direct the users who will have access clearly to the data in the same format and file name they will receive. If the data comes from a database or API, connect to it as simply as possible to avoid confusion.</p></li>
+<li><p>Include any output data (charts, files) in the repository if possible. This gives the reader a quick reference without running the program, and will alert them if their results are slightly different.</p></li>
+<li><p>Include dependencies such as libraries, languages, and applications with versions.</p></li>
+<li><p>Treat the repository as a published artifact. Respect publishing norms such as attribution and long-term access.</p></li>
+</ol>
+</div>
+<div id="lab-systems" class="section level2 hasAnchor" number="5.13">
+<h2><span class="header-section-number">5.13</span> Lab Systems<a href="coding-handbook.html#lab-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="version-control" class="section level3 hasAnchor" number="5.13.1">
+<h3><span class="header-section-number">5.13.1</span> Version Control<a href="coding-handbook.html#version-control" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Version control systems such as git are nearly indispensable for maintaining the accuracy and integrity of a codebase. Services like Github also facilitate publishing code in a verifiable, archivable, and contributor-friendly format.</p>
+<p>There are eight git commands that are the backbone of git usage. These commands can be memorized in one sitting and provide most of what is needed for the vast majority of routine use.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="coding-handbook.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone</span>
+<span id="cb9-2"><a href="coding-handbook.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="coding-handbook.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone (copy) a repo to the current directory.</span></span>
+<span id="cb9-4"><a href="coding-handbook.html#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="coding-handbook.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add</span>
+<span id="cb9-6"><a href="coding-handbook.html#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="coding-handbook.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Begin tracking a file or directory. &quot;Add&quot; it to the local repo.</span></span>
+<span id="cb9-8"><a href="coding-handbook.html#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="coding-handbook.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span>
+<span id="cb9-10"><a href="coding-handbook.html#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="coding-handbook.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Make &lt;branch name&gt; the current branch.</span></span>
+<span id="cb9-12"><a href="coding-handbook.html#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="coding-handbook.html#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> <span class="op">&lt;</span>new branch name<span class="op">&gt;</span></span>
+<span id="cb9-14"><a href="coding-handbook.html#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="coding-handbook.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Create and check out &lt;new branch name&gt;.</span></span>
+<span id="cb9-16"><a href="coding-handbook.html#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="coding-handbook.html#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
+<span id="cb9-18"><a href="coding-handbook.html#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="coding-handbook.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the latest versions of the files in the current branch.</span></span>
+<span id="cb9-20"><a href="coding-handbook.html#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="coding-handbook.html#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status <span class="at">-s</span></span>
+<span id="cb9-22"><a href="coding-handbook.html#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="coding-handbook.html#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a list of files that have been modified locally.</span></span>
+<span id="cb9-24"><a href="coding-handbook.html#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="coding-handbook.html#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span>
+<span id="cb9-26"><a href="coding-handbook.html#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="coding-handbook.html#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the differences between the local files and the current branch.</span></span>
+<span id="cb9-28"><a href="coding-handbook.html#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="coding-handbook.html#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-am</span> <span class="st">&quot;&lt;new commit message&gt;&quot;</span></span>
+<span id="cb9-30"><a href="coding-handbook.html#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="coding-handbook.html#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Commit (create a set of changed files to be sent to the remote repository).</span></span>
+<span id="cb9-32"><a href="coding-handbook.html#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="coding-handbook.html#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb9-34"><a href="coding-handbook.html#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="coding-handbook.html#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Push new commit(s) from the local to the remote repository.</span></span>
+<span id="cb9-36"><a href="coding-handbook.html#cb9-36" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<p>The key to understanding git is 1. Understanding why it is used and 2. A good mental model of repositories, branches, and commits.</p>
+<p>Repository: A copy of all the code and history for a particular project. The remote repository is usually on a remote server or service such as github.com.</p>
+<p>Branch: A copy of the files in a repository that can be modified independently of other branches. Reconciling the differences between two branches and consolidating them into one branch is <em>merging</em> them.</p>
+<p>Commit: A bundle of changes to the files in a repository. The history of a repository consists of a list of commits to various branches, and merges of the branches into another. (Usually there’s one <em>main</em> branch where all the changes eventually end up. The canonical current state of the repo is the state of the main branch, and versioned releases are usually of the main branch.)</p>
+</div>
+<div id="midway" class="section level3 hasAnchor" number="5.13.2">
+<h3><span class="header-section-number">5.13.2</span> Midway<a href="coding-handbook.html#midway" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Note: This section was updated in August 2021. The information includes references to Midway3, but at this time the majority of computing takes place on Midway2.</p>
+<p>Midway2 and Midway3 are the main computing clusters used by the lab, run by the Research Computing Center. Midway3 was launched in March 2021. The official documentation for Midway2 and Midway3 are maintained here by RCC:</p>
+<p><strong>Midway2</strong>: <a href="https://rcc.uchicago.edu/docs/">https://rcc.uchicago.edu/docs/</a></p>
+<p><strong>Midway3</strong>: <a href="https://mdw3.rcc.uchicago.edu/">https://mdw3.rcc.uchicago.edu/</a></p>
+<p>This page contains some tasks that are likely to be useful to you.</p>
+<div id="storage-on-midway" class="section level4 hasAnchor" number="5.13.2.1">
+<h4><span class="header-section-number">5.13.2.1</span> Storage on Midway<a href="coding-handbook.html#storage-on-midway" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>There are three places you can store things on Midway: (1) your home directory; (2) your scratch space; and (3) a shared project directory for the lab.</p>
+<p>Your home directory is in <code>/home/&lt;CNetID&gt;</code> and has a quota of 30 GB. This is a good place to check out your code, install software you want to use for runs, etc. You should NOT, in general, store simulation output in your home directory.</p>
+<p>Your scratch space is <code>home/&lt;CNetID&gt;/scratch-midway2</code> and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., <code>2014-12-08-antigen-vaccine</code>; you may want prefer a hierarchy.</p>
+<p>The lab project directory is <code>/project2/cobey</code> (for Midway2() (<code>/project/cobey</code> for Midway3 but as of 8/2021 there is no storage quota) and has a quota of 4.49 TB, with a hard limit of 4.94 TB, for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. <code>/project2/cobey/bcellproject-storage/2014-12-08-test</code>. The lab directory has a file quota of 1,885,693 files, with a hard limit of 2,074,262 files.</p>
+<p>To check your disk usage, use the <code>quota</code> command. These quotas are current as of August 2021.</p>
+</div>
+<div id="connecting-to-midway" class="section level4 hasAnchor" number="5.13.2.2">
+<h4><span class="header-section-number">5.13.2.2</span> Connecting to Midway<a href="coding-handbook.html#connecting-to-midway" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Details here:</p>
+<p><a href="https://rcc.uchicago.edu/docs/connecting/">https://rcc.uchicago.edu/docs/connecting/</a></p>
+<div id="ssh-terminal" class="section level5 hasAnchor" number="5.13.2.2.1">
+<h5><span class="header-section-number">5.13.2.2.1</span> SSH (terminal)<a href="coding-handbook.html#ssh-terminal" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>To connect via ssh, use your CNetID:</p>
+<pre><code>$ ssh &lt;CNetID&gt;@midway2.rcc.uchicago.edu</code></pre>
+<p>Passwordless login is no longer available, and two factor authentication is required.</p>
+</div>
+<div id="scp" class="section level5 hasAnchor" number="5.13.2.2.2">
+<h5><span class="header-section-number">5.13.2.2.2</span> SCP<a href="coding-handbook.html#scp" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>You can copy individual files or directly back and forth using the <code>scp</code> command, e.g.,</p>
+<pre><code>$ scp &lt;local-path&gt; &lt;CNetID&gt;@midway2.rcc.uchicago.edu:&lt;remote-path&gt;
+$ scp &lt;CNetID&gt;@midway2.rcc.uchicago.edu:&lt;remote-path&gt; &lt;local-path&gt;</code></pre>
+<p>There are also graphical SSH/SCP browsers for Mac OS X, Linux, and Windows:</p>
+<ul>
+<li><a href="http://winscp.net/eng/index.php">WinSCP</a> (Windows)</li>
+<li><a href="https://filezilla-project.org">FileZilla</a> (all platforms)</li>
+<li><strong>Mac OS X specific to be updated</strong></li>
+</ul>
+</div>
+<div id="samba-smb-connect-as-a-disk" class="section level5 hasAnchor" number="5.13.2.2.3">
+<h5><span class="header-section-number">5.13.2.2.3</span> SAMBA (SMB) (connect as a disk)<a href="coding-handbook.html#samba-smb-connect-as-a-disk" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>You can make Midway to look like a local disk on your computer using <a href="https://en.wikipedia.org/wiki/Samba_(software)">SAMBA</a>. This is convenient for things like editing job submission scripts using your favorite editor directly on the server, without having to copy things back and forth.</p>
+<p>Midway’s SAMBA (SMB) hostname is <code>midwaysmb.rcc.uchicago.edu</code>.</p>
+<p>If you’re off campus, you’ll need to be connected to the U of C VPN to access SMB. It will also be pretty slow, especially if you’re on a crappy cafe connection like the one I’m on now–you may find a GUI SCP client to be a better choice offsite.</p>
+<p>On Mac OS X, go to the Finder, choose Go &gt; Connect to Server… (Command-K), and then type in the URL for the directory you want to access. The URLs are currently confusing (you need to specify your CNetID in the scratch URL but not in the home URL):</p>
+<pre><code>   Home:  smb://midwaysmb.rcc.uchicago.edu/homes
+Scratch:  smb://midwaysmb.rcc.uchicago.edu/midway-scratch/&lt;CNetID&gt;
+Project:  smb://midwaysmb.rcc.uchicago.edu/project/cobey</code></pre>
+</div>
+<div id="ssh--x-terminal-with-graphical-forwarding" class="section level5 hasAnchor" number="5.13.2.2.4">
+<h5><span class="header-section-number">5.13.2.2.4</span> ssh -X (terminal with graphical forwarding)<a href="coding-handbook.html#ssh--x-terminal-with-graphical-forwarding" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>If you connect to Midway via <code>ssh -X</code>, graphical windows will get forwarded to your local machine. On Linux, this should work out of the box; on Mac OS X you’ll need to install <a href="https://xquartz.macosforge.org/">XQuartz</a> first. (There’s probably a way to make this work on Windows too; if you figure this out, please add instructions here.)</p>
+<p>It’s then as simple as doing this when logging in:</p>
+<pre><code>$ ssh -X &lt;CNetID&gt;@midway2.rcc.uchicago.edu</code></pre>
+<p>This is especially useful for the <code>sview</code> command (see below); it also will forward the graphics of a job running on a cluster node if you use <code>ssh -X and then</code>sinteractive`.</p>
+</div>
+<div id="vnc-graphical-interface-via-thinlinc" class="section level5 hasAnchor" number="5.13.2.2.5">
+<h5><span class="header-section-number">5.13.2.2.5</span> VNC (graphical interface via ThinLinc)<a href="coding-handbook.html#vnc-graphical-interface-via-thinlinc" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>You can also get a full Linux desktop GUI on a Midway connection using a program called ThinLinc:</p>
+<p><a href="https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc">https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc</a></p>
+<p>WARNING: the first time you use ThinLinc, before you click Connect go to Options… &gt; Screen and turn off full-screen mode. Otherwise ThinLinc will take over all your screens, making it rather hard to use your computer.</p>
+</div>
+</div>
+<div id="configuring-software-on-midway" class="section level4 hasAnchor" number="5.13.2.3">
+<h4><span class="header-section-number">5.13.2.3</span> Configuring Software on Midway<a href="coding-handbook.html#configuring-software-on-midway" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Before you run anything on Midway, you’ll need to load the necessary software modules using the <code>module</code> command:</p>
+<p><a href="https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/">https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/</a></p>
+<p>If you’re not sure what the name of your module is, use, e.g.,</p>
+<pre><code>$ module avail intel</code></pre>
+<p>and you’ll be presented with a list of options. You can then load/unload modules using, e.g.,</p>
+<pre><code>$ module load intel/15.0
+$ module unload intel/15.0</code></pre>
+<p>There are multiple versions of many modules, so you’ll generally want to check <code>module avail</code> before trying <code>module load</code>.</p>
+<p>If you want to automatically load modules every time you log in, you can add <code>module load</code> commands to the end of your <code>~/.bash_profile</code> file (before <code># User specific environment and startup programs</code>).</p>
+</div>
+<div id="git" class="section level4 hasAnchor" number="5.13.2.4">
+<h4><span class="header-section-number">5.13.2.4</span> Git<a href="coding-handbook.html#git" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The easiest way to get your code onto Midway is to check it out</p>
+<pre><code>$ module avail git</code></pre>
+</div>
+<div id="java" class="section level4 hasAnchor" number="5.13.2.5">
+<h4><span class="header-section-number">5.13.2.5</span> Java<a href="coding-handbook.html#java" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>$ module avail java</code></pre>
+<p>As of writing, Midway only has one version of Java (1.7), so be sure not to use JDK 1.8 features in your Java code.</p>
+</div>
+<div id="cc" class="section level4 hasAnchor" number="5.13.2.6">
+<h4><span class="header-section-number">5.13.2.6</span> C/C++<a href="coding-handbook.html#cc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>$ module avail intel
+$ module avail gcc</code></pre>
+<p>There are three C/C++ compiler modules available on Midway: <code>gcc</code>, <code>intel</code>, and <code>pgi</code>. The Intel and PGI compilers are high-performance compilers that should produce faster machine code than GCC, but only <code>intel</code> seems to be kept up to date on Midway, so I’d recommend using that one.</p>
+<p>The Intel compilers should work essentially the same as GCC, except due to ambiguities in the C++ language specification you may sometimes find that code that worked on GCC needs adjustment for Intel. To use the Intel compiler, just load the module and compile C code using <code>icc</code> and C++ code using <code>icpc</code>.</p>
+<p>Unless you have a good reason not to, you should use <code>module avail</code> to make sure you’re using the latest GCC and Intel compilers, especially since adoption of the <a href="http://wikipedia.org/wiki/C++11">C++11 language standard</a> by compilers has been relatively recent at the time of writing.</p>
+<p>Also, it’s worth knowing that Mac OS X, by default, uses a different compiler entirely: <a href="http://llvm.org">LLVM/Clang</a>. (Currently, only an old version of LLVM/Clang is available on Midway). So you might find yourself making sure your code can compile using three different implementations of C++, each with their own quirks.</p>
+<p>Here’s how you compile C++11 code using the three compilers:</p>
+<pre><code>$ g++ -std=c++11 -O3 my_program.cpp -o my_program
+$ icpc -std=c++11 -O3 my_program.cpp -o my_program
+$ clang++ -std=c++11 -stdlib=libc++ -O3 my_program.cpp -o my_program</code></pre>
+<p>NOTE: the <code>-O3</code> flag means “optimization level 3”, which means, “make really fast code.” If you’re using a debugger, you’ll want to leave this flag off so the debugger can figure out where it is in your code. If you’re trying to generate results quickly, you’ll want to include this flag. (If you’re using Apple Xcode, having the flag off and on roughly correspond to “Debug” and “Release” configurations that you can choose in “Edit Scheme”.)</p>
+<p>If you want to make it easy to compile your code with different compilers on different systems, you can use the <code>make.py</code> script in the <a href="https://bitbucket.org/cobeylab/bcellmodel">bcellmodel</a> project as a starting point. It tries Intel, then Clang, then GCC until one is available. (This kind of thing is possible, but a bit annoying to get working, using traditional Makefiles, so I’ve switched to using simple Python build scripts for simple code.)</p>
+</div>
+<div id="r" class="section level4 hasAnchor" number="5.13.2.7">
+<h4><span class="header-section-number">5.13.2.7</span> R<a href="coding-handbook.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>$ module avail R</code></pre>
+<p>shows several versions of R. The default version (as of August 2021) is <code>R/3.6.1</code>. The best version will probably be the latest one alongside the Intel compiler, e.g., <code>R/3.3+intel-16.0</code> at the time of writing. You can choose which version of <code>R</code> to use:</p>
+<pre><code>$ module load R/4.0.1</code></pre>
+<p>If you have already loaded the default version of <code>R</code> (<code>$ module load R</code>), you will need to first unload <code>R</code> (<code>$ module unload R</code>) before you can specify a version.</p>
+</div>
+<div id="python" class="section level4 hasAnchor" number="5.13.2.8">
+<h4><span class="header-section-number">5.13.2.8</span> Python<a href="coding-handbook.html#python" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In order to keep a consistent Python environment between your personal machine and Midway, we are maintaining our own Python installations in <code>/project/cobey</code>. Skip the Midway Python modules entirely, and instead include this in your <code>~/.bash_profile</code>:</p>
+<pre><code>export PATH=/project/cobey/anaconda/bin:/project/cobey/pypy/bin:$PATH</code></pre>
+<p>To make sure things are set up properly make sure that <code>which python</code> finds <code>/project/cobey/anaconda/bin/python</code> and <code>which pypy</code> finds <code>/project/cobey/pypy/bin/pypy</code>. See the Python page on this wiki for more information.</p>
+</div>
+<div id="matlab-and-mathematica" class="section level4 hasAnchor" number="5.13.2.9">
+<h4><span class="header-section-number">5.13.2.9</span> Matlab and Mathematica<a href="coding-handbook.html#matlab-and-mathematica" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>You shouldn’t use Matlab or Mathematica if possible, because if you publish your code your results will only be reproducible to people that want to pay for Matlab or Mathematica.</p>
+<p>But if you must…</p>
+<pre><code>module avail matlab
+module avail mathematica</code></pre>
+<p>shows that they are available on Midway2. (Getting a graphical Mathematica notebook to run on the cluster is a pain in the ass, though, so you’re probably better off just running it locally if you can get away with it.)</p>
+</div>
+<div id="installing-r-and-python-libraries" class="section level4 hasAnchor" number="5.13.2.10">
+<h4><span class="header-section-number">5.13.2.10</span> Installing R and Python libraries<a href="coding-handbook.html#installing-r-and-python-libraries" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="r-1" class="section level5 hasAnchor" number="5.13.2.10.1">
+<h5><span class="header-section-number">5.13.2.10.1</span> R<a href="coding-handbook.html#r-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>We usually need specific libraries to run R scripts. It is important to check what version of <code>R</code> are necessaryfor libraries to be installed and adjust accordingly. I find it helpful to create an <code>installation.R</code> script to install libraries into the correct directory, for example:</p>
+<pre><code>#!/usr/bin/Rscript
+
+## Create the personal library if it doesn&#39;t exist. Ignore a warning if the directory already exists.
+dir.create(Sys.getenv(&quot;R_LIBS_USER&quot;), showWarnings = FALSE, recursive = TRUE)
+
+## Install multiple packages
+install.packages(c(&#39;dplyr&#39;,
+                   &#39;optparse&#39;,
+                   &#39;doParallel&#39;),
+                 dependencies = T,
+                 Sys.getenv(&quot;R_LIBS_USER&quot;),
+                 repos = &#39;http://cran.us.r-project.org&#39;
+)</code></pre>
+<p>Other libraries (such as <a href="https://rdrr.io/github/cbreto/panelPomp/"><code>panelPomp</code></a>), are not yet in the CRAN respository. These libraries often need to be installed from GitHub, which is possible using <code>devtools</code>.</p>
+<pre><code>## panelPomp from GitHub
+install.packages(c(&quot;devtools&quot;),
+                 dependencies = T,
+                 Sys.getenv(&quot;R_LIBS_USER&quot;),
+                 repos = &#39;http://cran.us.r-project.org&#39;
+)
+
+devtools::install_github(&#39;cbreto/panelPomp&#39;)</code></pre>
+</div>
+<div id="python-1" class="section level5 hasAnchor" number="5.13.2.10.2">
+<h5><span class="header-section-number">5.13.2.10.2</span> Python<a href="coding-handbook.html#python-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+</div>
+</div>
+<div id="running-jobs-on-midway" class="section level3 hasAnchor" number="5.13.3">
+<h3><span class="header-section-number">5.13.3</span> Running Jobs on Midway<a href="coding-handbook.html#running-jobs-on-midway" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>I’ll leave most of the details to the official documentation:</p>
+<p><a href="https://rcc.uchicago.edu/docs/using-midway/#using-midway">https://rcc.uchicago.edu/docs/using-midway/#using-midway</a></p>
+<p>but a summary of important stuff follows.</p>
+<div id="overview" class="section level4 hasAnchor" number="5.13.3.1">
+<h4><span class="header-section-number">5.13.3.1</span> Overview<a href="coding-handbook.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Midway consists of a large number of multi-core nodes, and uses a system called <a href="http://slurm.schedmd.com">SLURM</a> to allocate jobs to cores on nodes.</p>
+<p>Some details on the terminology: a “node” is what you normally think of as an individual computer: a box with a motherboard, a hard drive, etc., running a copy of Linux. Each node’s motherboard contains several <a href="http://en.wikipedia.org/wiki/Microprocessor">processors</a> (a physical chip that plugs into the motherboard), each of which may contain several cores. A “core” is a collection of circuits inside the processor that can, conceptually speaking, perform one series of instructions at a time. (Until a few years ago, processors only consisted of one core and people talked about “processors” the way they now talk about “cores,” so you might hear people confusing these from time to time.)</p>
+<p>If you are writing code that does only one thing at a time (serial code), then all you really need to know is that a single run of your code requires a single core.</p>
+</div>
+<div id="job-structure" class="section level4 hasAnchor" number="5.13.3.2">
+<h4><span class="header-section-number">5.13.3.2</span> Job structure<a href="coding-handbook.html#job-structure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Note that Midway counts service units, or core-hours in increments of 0.01. To minimize waste, we’re best off designing jobs to be at least several minutes each. (It makes sense that we wouldn’t want to bog down the scheduler anyway.)</p>
+</div>
+<div id="priority" class="section level4 hasAnchor" number="5.13.3.3">
+<h4><span class="header-section-number">5.13.3.3</span> Priority<a href="coding-handbook.html#priority" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>As described below, if your jobs aren’t running right away, you can use</p>
+<pre><code>$ squeue -u &lt;CNetID&gt;</code></pre>
+<p>to see what’s going on.</p>
+<p>If your jobs are queued with <code>(Priority)</code> status, it means other jobs are taking priority. Job priorities are determined by the size of the job, its time in the queue, the requested wall time (so it pays to be precise and know your jobs well), and group-level prior usage. Groups that have consumed fewer resources get higher priority than those using more. This usage has a half-life of approximately 14 days, which means it’s less awkward to spread jobs out over time. You can view the priority of queued jobs using</p>
+<pre><code>$ sprio</code></pre>
+</div>
+<div id="useful-commands" class="section level4 hasAnchor" number="5.13.3.4">
+<h4><span class="header-section-number">5.13.3.4</span> Useful commands<a href="coding-handbook.html#useful-commands" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="sinteractive" class="section level5 hasAnchor" number="5.13.3.4.1">
+<h5><span class="header-section-number">5.13.3.4.1</span> sinteractive<a href="coding-handbook.html#sinteractive" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>To get a dedicated job that you can interact with just like any login session–e.g., if you want to manually type commands at the command line to try some code out, make changes, do some analysis, etc.–you can use the <code>sinteractive</code> command:</p>
+<p><a href="https://rcc.uchicago.edu/docs/using-midway/#sinteractive">https://rcc.uchicago.edu/docs/using-midway/#sinteractive</a></p>
+<p>If you connected via <code>ssh -X</code>, then graphical windows will also get forwarded from the cluster to your local machine.</p>
+</div>
+<div id="sbatch" class="section level5 hasAnchor" number="5.13.3.4.2">
+<h5><span class="header-section-number">5.13.3.4.2</span> sbatch<a href="coding-handbook.html#sbatch" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>To submit a single non-interactive job to the cluster, use the <code>sbatch</code> command:</p>
+<p><a href="https://rcc.uchicago.edu/docs/using-midway/#sbatch">https://rcc.uchicago.edu/docs/using-midway/#sbatch</a></p>
+<p>This involves preparing a script with special indications to SLURM regarding how much memory you need, how many cores, how long you want the job to run, etc.</p>
+</div>
+<div id="squeue" class="section level5 hasAnchor" number="5.13.3.4.3">
+<h5><span class="header-section-number">5.13.3.4.3</span> squeue<a href="coding-handbook.html#squeue" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>View jobs you are currently running:</p>
+<pre><code>$ squeue -u &lt;CNetID&gt;</code></pre>
+</div>
+<div id="scancel" class="section level5 hasAnchor" number="5.13.3.4.4">
+<h5><span class="header-section-number">5.13.3.4.4</span> scancel<a href="coding-handbook.html#scancel" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Cancel jobs by job ID:</p>
+<pre><code>$ scancel &lt;job-ID&gt;</code></pre>
+<p>Cancel all of your jobs:</p>
+<pre><code>$ scancel -u &lt;CNetID&gt;</code></pre>
+</div>
+</div>
+<div id="scontrol-update" class="section level4 hasAnchor" number="5.13.3.5">
+<h4><span class="header-section-number">5.13.3.5</span> scontrol update<a href="coding-handbook.html#scontrol-update" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Useful for changing the resources requested for PENDING jobs.</p>
+<p>Move a PENDING job to another partition:</p>
+<pre><code>$ scontrol update partition=&lt;partition_name&gt; qos=&lt;partition_name&gt; jobid=&lt;jobid&gt;</code></pre>
+<p>Change the time limit for a PENDING job:</p>
+<pre><code>$ scontrol update TimeLimit=&lt;HH:MM:SS&gt; jobid=&lt;jobid&gt;</code></pre>
+<div id="accounts" class="section level5 hasAnchor" number="5.13.3.5.1">
+<h5><span class="header-section-number">5.13.3.5.1</span> accounts<a href="coding-handbook.html#accounts" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Display number of used/available CPU-hours for the lab:</p>
+<pre><code>$ accounts balance</code></pre>
+<p>Display number of CPU hours used by you:</p>
+<pre><code>$ accounts usage</code></pre>
+<p>Displace account usage (SUs) for a previous period (update –cycle to indicate the academic cycle of interest):</p>
+<pre><code>$ /software/systool/bin/accounts balance --account=pi-cobey --cycle=2019-2020</code></pre>
+</div>
+<div id="sview" class="section level5 hasAnchor" number="5.13.3.5.2">
+<h5><span class="header-section-number">5.13.3.5.2</span> sview<a href="coding-handbook.html#sview" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>If you’re connected graphically to Midway (either via <code>ssh -X</code> or using ThinLinc), you can get a graphical view of the SLURM cluster, which makes it easy to do things like selectively cancel a bunch of jobs at once:</p>
+<pre><code>$ sview</code></pre>
+<p>The most useful command: Actions &gt; Search &gt; Specific User’s Job(s)</p>
+</div>
+<div id="quota" class="section level5 hasAnchor" number="5.13.3.5.3">
+<h5><span class="header-section-number">5.13.3.5.3</span> quota<a href="coding-handbook.html#quota" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Display storage usage:</p>
+<pre><code>$ quota</code></pre>
+<p>The standard quota on an individual account is 30GB. When you exceed this, Midway will notify you the next time you log in. There is a grace period of 7 days to adjust your usage. There is also a hard limit of 35GB.</p>
+<p>The check the file and storage breakdown on <code>\project2\cobey</code> (or <code>\project\cobey</code>), add the <code>-F</code> flag:</p>
+<pre><code>$ quota -F /project2/cobey</code></pre>
+</div>
+</div>
+</div>
+<div id="slurm-tricks" class="section level3 hasAnchor" number="5.13.4">
+<h3><span class="header-section-number">5.13.4</span> SLURM tricks<a href="coding-handbook.html#slurm-tricks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>squeue -o</code> lets you specify additional information for squeue using a format string. These are annoying to type every time you want to query things. You can create an alias in your <code>.bash_profile</code> script:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb39-1"><a href="coding-handbook.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></span></code></pre></div>
+<p>which includes standard info plus some extra stuff (including time limit, # nodes, # CPUs, and memory). Then you can just type <code>sq</code>, <code>sq -p cobey</code>, <code>sq -u edbaskerville</code>, etc. to perform queries with your customized format string.</p>
+<p>See <code>man squeue</code> for a list of format string options.</p>
+<p><code>sinfo -o</code> has similar options, including the ability to see how many processors are available/in use:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb40-1"><a href="coding-handbook.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></span></code></pre></div>
+<p>A full list of aliases for user edbaskerville might look like:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb41-1"><a href="coding-handbook.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></span>
+<span id="cb41-2"><a href="coding-handbook.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> qcobey=<span class="st">&#39;sq -p cobey&#39;</span></span>
+<span id="cb41-3"><a href="coding-handbook.html#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> qsandyb=<span class="st">&#39;sq -p sandyb -u edbaskerville&#39;</span></span>
+<span id="cb41-4"><a href="coding-handbook.html#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></span>
+<span id="cb41-5"><a href="coding-handbook.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> icobey=<span class="st">&#39;si -p cobey&#39;</span></span>
+<span id="cb41-6"><a href="coding-handbook.html#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> isandyb=<span class="st">&#39;si -p sandyb&#39;</span></span></code></pre></div>
+</div>
+<div id="other-midway-items-to-keep-track-of" class="section level3 hasAnchor" number="5.13.5">
+<h3><span class="header-section-number">5.13.5</span> Other Midway items to keep track of<a href="coding-handbook.html#other-midway-items-to-keep-track-of" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="protected-health-information-phi-and-midwayr" class="section level4 hasAnchor" number="5.13.5.1">
+<h4><span class="header-section-number">5.13.5.1</span> Protected health information (PHI) and MidwayR<a href="coding-handbook.html#protected-health-information-phi-and-midwayr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>There are instances where we work with data that qualifies as <a href="https://en.wikipedia.org/wiki/Protected_health_information">PHI</a>. Most often, this is individual-level data that includes a specific date related to an individual (e.g., birth date, admission date, vaccination date). These types of data cannot be stored or used in jobs running on Midway2/Midway3. For PHI and other protected data types, MidwayR may be useful. MidwayR is similar to the Midway computing environment but is also equipped with tools and software needed to meet the highest levels of secure data protection. Even with using MidwayR, it may be necessary to obscure dates that qualify as PHI.</p>
+</div>
+<div id="allocation-requests" class="section level4 hasAnchor" number="5.13.5.2">
+<h4><span class="header-section-number">5.13.5.2</span> Allocation requests<a href="coding-handbook.html#allocation-requests" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Each September we have to submit an allocation request to the RCC to request Service Units (SUs). SUs are the basic unit of computational resources and they represents the use of one core for one hour on the Midway Cluster. Allocation requests from 2019-2020 and 2020-2021 are housed on <code>/project2/cobey/allocation_requests_midway_resources</code>.</p>
+</div>
+<div id="node-life" class="section level4 hasAnchor" number="5.13.5.3">
+<h4><span class="header-section-number">5.13.5.3</span> Node life<a href="coding-handbook.html#node-life" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For each node purchased by the lab, the warranty is 5 years. Once the warranty runs out, the nodes can still be active on Midway2, but if they break or go down, the RCC will not fix them. For any long-duration jobs, please ensure you are using a node that is under warranty to reduce the likelihood of data loss. A spreadsheet with nodes, purchase date, warranty duration, and node label is housed in <code>/project2/cobey/allocation_requests_midway_resources</code>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:node-life"></span>
+<img src="images/node_life_2021-08-17.png" alt="Expected node lifetime. Color denotes number of nodes with the same RAM and lifetime. Black vertical line denots 17 August 2021 (the time of writing)."  />
+<p class="caption">
+Figure 5.1: Expected node lifetime. Color denotes number of nodes with the same RAM and lifetime. Black vertical line denots 17 August 2021 (the time of writing).
+</p>
+</div>
+</div>
+<div id="transitioning-from-midway2-to-midway3" class="section level4 hasAnchor" number="5.13.5.4">
+<h4><span class="header-section-number">5.13.5.4</span> Transitioning from Midway2 to Midway3<a href="coding-handbook.html#transitioning-from-midway2-to-midway3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Any nodes purchased after March 2021 are housed on Midway3. The RCC will mount storage from Midway2 onto Midway3, meaning it will be accessible when running jobs from Midway3. As of August 2021, this has not yet occurred (due to delays related to the pandemic), but they expect this will occurr by October 2021. After this point, it will make sense for all new projects to be housed on Midway3 instead of Midway2.</p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="so-you-wanna.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="onboarding.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"],
+"google": true
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

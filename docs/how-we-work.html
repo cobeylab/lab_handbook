@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Cobey Lab Handbook</title>
-  <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 How we work | Cobey Lab Handbook</title>
+  <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Cobey Lab Handbook" />
+  <meta property="og:title" content="Chapter 2 How we work | Cobey Lab Handbook" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Handbook of the Cobey Lab at the University of Chicago" />
   <meta name="github-repo" content="cobeylab/lab_handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Cobey Lab Handbook" />
+  <meta name="twitter:title" content="Chapter 2 How we work | Cobey Lab Handbook" />
   
   <meta name="twitter:description" content="Handbook of the Cobey Lab at the University of Chicago" />
   
 
 
 
-<meta name="date" content="2018-11-29">
+<meta name="date" content="2022-04-28" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="why.html">
-<link rel="next" href="performance.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="prev" href="why.html"/>
+<link rel="next" href="performance.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -46,45 +47,77 @@
 
 
 
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -102,85 +135,100 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://cobeylab.uchicago.edu/">Cobey Lab</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i><b>1</b> Why we work</a></li>
-<li class="chapter" data-level="2" data-path="how-we-work.html"><a href="how-we-work.html"><i class="fa fa-check"></i><b>2</b> How we work</a><ul>
-<li class="chapter" data-level="2.1" data-path="how-we-work.html"><a href="how-we-work.html#principles"><i class="fa fa-check"></i><b>2.1</b> Principles</a></li>
-<li class="chapter" data-level="2.2" data-path="how-we-work.html"><a href="how-we-work.html#work-hours"><i class="fa fa-check"></i><b>2.2</b> Work hours</a></li>
-<li class="chapter" data-level="2.3" data-path="how-we-work.html"><a href="how-we-work.html#workspace"><i class="fa fa-check"></i><b>2.3</b> Workspace</a></li>
-<li class="chapter" data-level="2.4" data-path="how-we-work.html"><a href="how-we-work.html#communication"><i class="fa fa-check"></i><b>2.4</b> Communication</a></li>
-<li class="chapter" data-level="2.5" data-path="how-we-work.html"><a href="how-we-work.html#weekly-check-ins"><i class="fa fa-check"></i><b>2.5</b> Weekly check-ins</a></li>
-<li class="chapter" data-level="2.6" data-path="how-we-work.html"><a href="how-we-work.html#lab-meetings"><i class="fa fa-check"></i><b>2.6</b> Lab meetings</a></li>
-<li class="chapter" data-level="2.7" data-path="how-we-work.html"><a href="how-we-work.html#reproducible-research"><i class="fa fa-check"></i><b>2.7</b> Reproducible research</a></li>
+<li><a href="index.html#preface" id="toc-preface">Preface<span></span></a></li>
+<li><a href="why.html#why" id="toc-why"><span class="toc-section-number">1</span> Why we work<span></span></a></li>
+<li><a href="how-we-work.html#how-we-work" id="toc-how-we-work"><span class="toc-section-number">2</span> How we work<span></span></a>
+<ul>
+<li><a href="how-we-work.html#principles" id="toc-principles"><span class="toc-section-number">2.1</span> Principles<span></span></a></li>
+<li><a href="how-we-work.html#work-hours" id="toc-work-hours"><span class="toc-section-number">2.2</span> Work hours<span></span></a></li>
+<li><a href="how-we-work.html#workspace" id="toc-workspace"><span class="toc-section-number">2.3</span> Workspace<span></span></a></li>
+<li><a href="how-we-work.html#communication" id="toc-communication"><span class="toc-section-number">2.4</span> Communication<span></span></a></li>
+<li><a href="how-we-work.html#weekly-check-ins" id="toc-weekly-check-ins"><span class="toc-section-number">2.5</span> Weekly check-ins<span></span></a></li>
+<li><a href="how-we-work.html#lab-meetings" id="toc-lab-meetings"><span class="toc-section-number">2.6</span> Lab meetings<span></span></a></li>
+<li><a href="how-we-work.html#reproducible-research" id="toc-reproducible-research"><span class="toc-section-number">2.7</span> Reproducible research<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="performance.html"><a href="performance.html"><i class="fa fa-check"></i><b>3</b> Performance</a><ul>
-<li class="chapter" data-level="3.1" data-path="performance.html"><a href="performance.html#reviews"><i class="fa fa-check"></i><b>3.1</b> Reviews</a></li>
-<li class="chapter" data-level="3.2" data-path="performance.html"><a href="performance.html#my-commitments"><i class="fa fa-check"></i><b>3.2</b> My commitments</a></li>
-<li class="chapter" data-level="3.3" data-path="performance.html"><a href="performance.html#basic-expectations"><i class="fa fa-check"></i><b>3.3</b> Basic expectations</a></li>
-<li class="chapter" data-level="3.4" data-path="performance.html"><a href="performance.html#graduate-researchers"><i class="fa fa-check"></i><b>3.4</b> Graduate researchers</a></li>
-<li class="chapter" data-level="3.5" data-path="performance.html"><a href="performance.html#postdoctoral-researchers"><i class="fa fa-check"></i><b>3.5</b> Postdoctoral researchers</a></li>
+<li><a href="performance.html#performance" id="toc-performance"><span class="toc-section-number">3</span> Performance<span></span></a>
+<ul>
+<li><a href="performance.html#reviews" id="toc-reviews"><span class="toc-section-number">3.1</span> Reviews<span></span></a></li>
+<li><a href="performance.html#my-commitments" id="toc-my-commitments"><span class="toc-section-number">3.2</span> My commitments<span></span></a></li>
+<li><a href="performance.html#basic-expectations" id="toc-basic-expectations"><span class="toc-section-number">3.3</span> Basic expectations<span></span></a></li>
+<li><a href="performance.html#graduate-researchers" id="toc-graduate-researchers"><span class="toc-section-number">3.4</span> Graduate researchers<span></span></a></li>
+<li><a href="performance.html#postdoctoral-researchers" id="toc-postdoctoral-researchers"><span class="toc-section-number">3.5</span> Postdoctoral researchers<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="so-you-wanna.html"><a href="so-you-wanna.html"><i class="fa fa-check"></i><b>4</b> So you wanna…</a><ul>
-<li class="chapter" data-level="4.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#join-the-lab"><i class="fa fa-check"></i><b>4.1</b> Join the lab</a></li>
-<li class="chapter" data-level="4.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#do-some-research"><i class="fa fa-check"></i><b>4.2</b> Do some research</a></li>
-<li class="chapter" data-level="4.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#code-well-and-efficiently"><i class="fa fa-check"></i><b>4.3</b> Code well and efficiently</a></li>
-<li class="chapter" data-level="4.4" data-path="so-you-wanna.html"><a href="so-you-wanna.html#write-good"><i class="fa fa-check"></i><b>4.4</b> Write good</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#general-advice"><i class="fa fa-check"></i><b>4.4.1</b> General advice</a></li>
-<li class="chapter" data-level="4.4.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#initial-submissions"><i class="fa fa-check"></i><b>4.4.2</b> Initial submissions</a></li>
-<li class="chapter" data-level="4.4.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#mature-papers"><i class="fa fa-check"></i><b>4.4.3</b> “Mature” papers</a></li>
+<li><a href="so-you-wanna.html#so-you-wanna" id="toc-so-you-wanna"><span class="toc-section-number">4</span> So you wanna…<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#join-the-lab" id="toc-join-the-lab"><span class="toc-section-number">4.1</span> Join the lab<span></span></a></li>
+<li><a href="so-you-wanna.html#do-some-research" id="toc-do-some-research"><span class="toc-section-number">4.2</span> Do some research<span></span></a></li>
+<li><a href="so-you-wanna.html#code-well-and-efficiently" id="toc-code-well-and-efficiently"><span class="toc-section-number">4.3</span> Code well and efficiently<span></span></a></li>
+<li><a href="so-you-wanna.html#write-good" id="toc-write-good"><span class="toc-section-number">4.4</span> Write good<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#general-advice" id="toc-general-advice"><span class="toc-section-number">4.4.1</span> General advice<span></span></a></li>
+<li><a href="so-you-wanna.html#initial-submissions" id="toc-initial-submissions"><span class="toc-section-number">4.4.2</span> Initial submissions<span></span></a></li>
+<li><a href="so-you-wanna.html#mature-papers" id="toc-mature-papers"><span class="toc-section-number">4.4.3</span> “Mature” papers<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="so-you-wanna.html"><a href="so-you-wanna.html#email-like-a-pro"><i class="fa fa-check"></i><b>4.5</b> Email like a pro</a></li>
-<li class="chapter" data-level="4.6" data-path="so-you-wanna.html"><a href="so-you-wanna.html#make-nice-figures"><i class="fa fa-check"></i><b>4.6</b> Make nice figures</a></li>
-<li class="chapter" data-level="4.7" data-path="so-you-wanna.html"><a href="so-you-wanna.html#keep-up-with-the-literature"><i class="fa fa-check"></i><b>4.7</b> Keep up with the literature</a></li>
-<li class="chapter" data-level="4.8" data-path="so-you-wanna.html"><a href="so-you-wanna.html#get-funded"><i class="fa fa-check"></i><b>4.8</b> Get funded</a></li>
-<li class="chapter" data-level="4.9" data-path="so-you-wanna.html"><a href="so-you-wanna.html#see-our-funding"><i class="fa fa-check"></i><b>4.9</b> See our funding</a></li>
-<li class="chapter" data-level="4.10" data-path="so-you-wanna.html"><a href="so-you-wanna.html#review-your-peers"><i class="fa fa-check"></i><b>4.10</b> Review your peers</a></li>
-<li class="chapter" data-level="4.11" data-path="so-you-wanna.html"><a href="so-you-wanna.html#have-productive-meetings"><i class="fa fa-check"></i><b>4.11</b> Have productive meetings</a><ul>
-<li class="chapter" data-level="4.11.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#research-meetings"><i class="fa fa-check"></i><b>4.11.1</b> Research meetings</a></li>
-<li class="chapter" data-level="4.11.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#seminar-speakers"><i class="fa fa-check"></i><b>4.11.2</b> Seminar speakers</a></li>
+<li><a href="so-you-wanna.html#email-like-a-pro" id="toc-email-like-a-pro"><span class="toc-section-number">4.5</span> Email like a pro<span></span></a></li>
+<li><a href="so-you-wanna.html#make-nice-figures" id="toc-make-nice-figures"><span class="toc-section-number">4.6</span> Make nice figures<span></span></a></li>
+<li><a href="so-you-wanna.html#keep-up-with-the-literature" id="toc-keep-up-with-the-literature"><span class="toc-section-number">4.7</span> Keep up with the literature<span></span></a></li>
+<li><a href="so-you-wanna.html#get-funded" id="toc-get-funded"><span class="toc-section-number">4.8</span> Get funded<span></span></a></li>
+<li><a href="so-you-wanna.html#see-our-funding" id="toc-see-our-funding"><span class="toc-section-number">4.9</span> See our funding<span></span></a></li>
+<li><a href="so-you-wanna.html#review-your-peers" id="toc-review-your-peers"><span class="toc-section-number">4.10</span> Review your peers<span></span></a></li>
+<li><a href="so-you-wanna.html#have-productive-meetings" id="toc-have-productive-meetings"><span class="toc-section-number">4.11</span> Have productive meetings<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#research-meetings" id="toc-research-meetings"><span class="toc-section-number">4.11.1</span> Research meetings<span></span></a></li>
+<li><a href="so-you-wanna.html#seminar-speakers" id="toc-seminar-speakers"><span class="toc-section-number">4.11.2</span> Seminar speakers<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.12" data-path="so-you-wanna.html"><a href="so-you-wanna.html#book-travel"><i class="fa fa-check"></i><b>4.12</b> Book travel</a></li>
-<li class="chapter" data-level="4.13" data-path="so-you-wanna.html"><a href="so-you-wanna.html#be-happy-doing-research"><i class="fa fa-check"></i><b>4.13</b> Be happy doing research</a><ul>
-<li class="chapter" data-level="4.13.1" data-path="so-you-wanna.html"><a href="so-you-wanna.html#time-management"><i class="fa fa-check"></i><b>4.13.1</b> Time management</a></li>
-<li class="chapter" data-level="4.13.2" data-path="so-you-wanna.html"><a href="so-you-wanna.html#imposter-syndrome"><i class="fa fa-check"></i><b>4.13.2</b> Imposter syndrome</a></li>
-<li class="chapter" data-level="4.13.3" data-path="so-you-wanna.html"><a href="so-you-wanna.html#mental-health-and-medical-problems"><i class="fa fa-check"></i><b>4.13.3</b> Mental health and medical problems</a></li>
-<li class="chapter" data-level="4.13.4" data-path="so-you-wanna.html"><a href="so-you-wanna.html#unwelcome-environment"><i class="fa fa-check"></i><b>4.13.4</b> Unwelcome environment</a></li>
+<li><a href="so-you-wanna.html#book-travel" id="toc-book-travel"><span class="toc-section-number">4.12</span> Book travel<span></span></a></li>
+<li><a href="so-you-wanna.html#be-happy-doing-research" id="toc-be-happy-doing-research"><span class="toc-section-number">4.13</span> Be happy doing research<span></span></a>
+<ul>
+<li><a href="so-you-wanna.html#time-management" id="toc-time-management"><span class="toc-section-number">4.13.1</span> Time management<span></span></a></li>
+<li><a href="so-you-wanna.html#imposter-syndrome" id="toc-imposter-syndrome"><span class="toc-section-number">4.13.2</span> Imposter syndrome<span></span></a></li>
+<li><a href="so-you-wanna.html#mental-health-and-medical-problems" id="toc-mental-health-and-medical-problems"><span class="toc-section-number">4.13.3</span> Mental health and medical problems<span></span></a></li>
+<li><a href="so-you-wanna.html#unwelcome-environment" id="toc-unwelcome-environment"><span class="toc-section-number">4.13.4</span> Unwelcome environment<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.14" data-path="so-you-wanna.html"><a href="so-you-wanna.html#give-a-good-talk"><i class="fa fa-check"></i><b>4.14</b> Give a good talk</a></li>
-<li class="chapter" data-level="4.15" data-path="so-you-wanna.html"><a href="so-you-wanna.html#interview-someone"><i class="fa fa-check"></i><b>4.15</b> Interview someone</a></li>
-<li class="chapter" data-level="4.16" data-path="so-you-wanna.html"><a href="so-you-wanna.html#contribute-to-the-handbook"><i class="fa fa-check"></i><b>4.16</b> Contribute to the handbook</a></li>
-<li class="chapter" data-level="4.17" data-path="so-you-wanna.html"><a href="so-you-wanna.html#win-at-conferences"><i class="fa fa-check"></i><b>4.17</b> Win at conferences</a></li>
-<li class="chapter" data-level="4.18" data-path="so-you-wanna.html"><a href="so-you-wanna.html#negotiate-authorship"><i class="fa fa-check"></i><b>4.18</b> Negotiate authorship</a></li>
-<li class="chapter" data-level="4.19" data-path="so-you-wanna.html"><a href="so-you-wanna.html#engage-with-the-public"><i class="fa fa-check"></i><b>4.19</b> Engage with the public</a></li>
+<li><a href="so-you-wanna.html#give-a-good-talk" id="toc-give-a-good-talk"><span class="toc-section-number">4.14</span> Give a good talk<span></span></a></li>
+<li><a href="so-you-wanna.html#interview-someone" id="toc-interview-someone"><span class="toc-section-number">4.15</span> Interview someone<span></span></a></li>
+<li><a href="so-you-wanna.html#contribute-to-the-handbook" id="toc-contribute-to-the-handbook"><span class="toc-section-number">4.16</span> Contribute to the handbook<span></span></a></li>
+<li><a href="so-you-wanna.html#win-at-conferences" id="toc-win-at-conferences"><span class="toc-section-number">4.17</span> Win at conferences<span></span></a></li>
+<li><a href="so-you-wanna.html#negotiate-authorship" id="toc-negotiate-authorship"><span class="toc-section-number">4.18</span> Negotiate authorship<span></span></a></li>
+<li><a href="so-you-wanna.html#engage-with-the-public" id="toc-engage-with-the-public"><span class="toc-section-number">4.19</span> Engage with the public<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="midway.html"><a href="midway.html"><i class="fa fa-check"></i><b>5</b> Midway</a><ul>
-<li class="chapter" data-level="5.1" data-path="midway.html"><a href="midway.html#storage-on-midway"><i class="fa fa-check"></i><b>5.1</b> Storage on Midway</a></li>
-<li class="chapter" data-level="5.2" data-path="midway.html"><a href="midway.html#connecting-to-midway"><i class="fa fa-check"></i><b>5.2</b> Connecting to Midway</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="midway.html"><a href="midway.html#ssh-terminal"><i class="fa fa-check"></i><b>5.2.1</b> SSH (terminal)</a></li>
-<li class="chapter" data-level="5.2.2" data-path="midway.html"><a href="midway.html#scp"><i class="fa fa-check"></i><b>5.2.2</b> SCP</a></li>
-<li class="chapter" data-level="5.2.3" data-path="midway.html"><a href="midway.html#smb-connect-as-a-disk"><i class="fa fa-check"></i><b>5.2.3</b> SMB (connect as a disk)</a></li>
-<li class="chapter" data-level="5.2.4" data-path="midway.html"><a href="midway.html#ssh--x-terminal-with-graphical-forwarding"><i class="fa fa-check"></i><b>5.2.4</b> ssh -X (terminal with graphical forwarding)</a></li>
-<li class="chapter" data-level="5.2.5" data-path="midway.html"><a href="midway.html#vnc-graphical-interface-via-thinlinc"><i class="fa fa-check"></i><b>5.2.5</b> VNC (graphical interface via ThinLinc)</a></li>
+<li><a href="coding-handbook.html#coding-handbook" id="toc-coding-handbook"><span class="toc-section-number">5</span> Coding Handbook<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#justification" id="toc-justification"><span class="toc-section-number">5.1</span> Justification<span></span></a></li>
+<li><a href="coding-handbook.html#coding-culture" id="toc-coding-culture"><span class="toc-section-number">5.2</span> Coding Culture<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#cultural-practices" id="toc-cultural-practices"><span class="toc-section-number">5.2.1</span> Cultural practices<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="midway.html"><a href="midway.html#configuring-software-on-midway"><i class="fa fa-check"></i><b>5.3</b> Configuring Software on Midway</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="midway.html"><a href="midway.html#git"><i class="fa fa-check"></i><b>5.3.1</b> Git</a></li>
-<li class="chapter" data-level="5.3.2" data-path="midway.html"><a href="midway.html#java"><i class="fa fa-check"></i><b>5.3.2</b> Java</a></li>
-<li class="chapter" data-level="5.3.3" data-path="midway.html"><a href="midway.html#cc"><i class="fa fa-check"></i><b>5.3.3</b> C/C++</a></li>
-<li class="chapter" data-level="5.3.4" data-path="midway.html"><a href="midway.html#r"><i class="fa fa-check"></i><b>5.3.4</b> R</a></li>
-<li class="chapter" data-level="5.3.5" data-path="midway.html"><a href="midway.html#python"><i class="fa fa-check"></i><b>5.3.5</b> Python</a></li>
-<li class="chapter" data-level="5.3.6" data-path="midway.html"><a href="midway.html#matlab-and-mathematica"><i class="fa fa-check"></i><b>5.3.6</b> Matlab and Mathematica</a></li>
+<li><a href="coding-handbook.html#complexity" id="toc-complexity"><span class="toc-section-number">5.3</span> Complexity<span></span></a></li>
+<li><a href="coding-handbook.html#why-writing-code-is-easier-than-reading-it" id="toc-why-writing-code-is-easier-than-reading-it"><span class="toc-section-number">5.4</span> Why writing code is easier than reading it<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#science-and-software" id="toc-science-and-software"><span class="toc-section-number">5.4.1</span> Science and Software<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="midway.html"><a href="midway.html#running-jobs-on-midway"><i class="fa fa-check"></i><b>5.4</b> Running Jobs on Midway</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="midway.html"><a href="midway.html#overview"><i class="fa fa-check"></i><b>5.4.1</b> Overview</a></li>
-<li class="chapter" data-level="5.4.2" data-path="midway.html"><a href="midway.html#job-structure"><i class="fa fa-check"></i><b>5.4.2</b> Job structure</a></li>
-<li class="chapter" data-level="5.4.3" data-path="midway.html"><a href="midway.html#priority"><i class="fa fa-check"></i><b>5.4.3</b> Priority</a></li>
-<li class="chapter" data-level="5.4.4" data-path="midway.html"><a href="midway.html#useful-commands"><i class="fa fa-check"></i><b>5.4.4</b> Useful commands</a></li>
-<li class="chapter" data-level="5.4.5" data-path="midway.html"><a href="midway.html#parameter-sweeps"><i class="fa fa-check"></i><b>5.4.5</b> Parameter sweeps</a></li>
+<li><a href="coding-handbook.html#indirection-abstraction-and-generalization" id="toc-indirection-abstraction-and-generalization"><span class="toc-section-number">5.5</span> Indirection, Abstraction, and Generalization<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#example-the-weasel-algorithm" id="toc-example-the-weasel-algorithm"><span class="toc-section-number">5.5.1</span> Example: <span>The Weasel Algorithm</span><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="midway.html"><a href="midway.html#slurm-tricks"><i class="fa fa-check"></i><b>5.5</b> SLURM tricks</a></li>
+<li><a href="coding-handbook.html#debugging" id="toc-debugging"><span class="toc-section-number">5.6</span> Debugging<span></span></a></li>
+<li><a href="coding-handbook.html#functional-programming" id="toc-functional-programming"><span class="toc-section-number">5.7</span> Functional Programming<span></span></a></li>
+<li><a href="coding-handbook.html#unit-testing" id="toc-unit-testing"><span class="toc-section-number">5.8</span> Unit Testing<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#testability" id="toc-testability"><span class="toc-section-number">5.8.1</span> Testability<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="onboarding.html"><a href="onboarding.html"><i class="fa fa-check"></i><b>6</b> Onboarding</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li><a href="coding-handbook.html#modules-and-modularity" id="toc-modules-and-modularity"><span class="toc-section-number">5.9</span> Modules and Modularity<span></span></a></li>
+<li><a href="coding-handbook.html#statistics-and-other-modeling" id="toc-statistics-and-other-modeling"><span class="toc-section-number">5.10</span> Statistics and other Modeling<span></span></a></li>
+<li><a href="coding-handbook.html#guidelines-for-writing-code" id="toc-guidelines-for-writing-code"><span class="toc-section-number">5.11</span> Guidelines for Writing Code<span></span></a></li>
+<li><a href="coding-handbook.html#standards" id="toc-standards"><span class="toc-section-number">5.12</span> Standards<span></span></a></li>
+<li><a href="coding-handbook.html#lab-systems" id="toc-lab-systems"><span class="toc-section-number">5.13</span> Lab Systems<span></span></a>
+<ul>
+<li><a href="coding-handbook.html#version-control" id="toc-version-control"><span class="toc-section-number">5.13.1</span> Version Control<span></span></a></li>
+<li><a href="coding-handbook.html#midway" id="toc-midway"><span class="toc-section-number">5.13.2</span> Midway<span></span></a></li>
+<li><a href="coding-handbook.html#running-jobs-on-midway" id="toc-running-jobs-on-midway"><span class="toc-section-number">5.13.3</span> Running Jobs on Midway<span></span></a></li>
+<li><a href="coding-handbook.html#slurm-tricks" id="toc-slurm-tricks"><span class="toc-section-number">5.13.4</span> SLURM tricks<span></span></a></li>
+<li><a href="coding-handbook.html#other-midway-items-to-keep-track-of" id="toc-other-midway-items-to-keep-track-of"><span class="toc-section-number">5.13.5</span> Other Midway items to keep track of<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="onboarding.html#onboarding" id="toc-onboarding"><span class="toc-section-number">6</span> Onboarding<span></span></a></li>
+<li><a href="references.html#references" id="toc-references">References<span></span></a></li>
 </ul>
 
       </nav>
@@ -198,37 +246,104 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="how-we-work" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> How we work</h1>
-<div id="principles" class="section level2">
-<h2><span class="header-section-number">2.1</span> Principles</h2>
-<p><strong>Do ambitious research.</strong> Research always seems to take more time than it should, so spend your time on important questions. Think hard about what <em>should</em> be done, not only what can be done. Try not to let others define subfields and questions for you. Be deeply practical in evaluating your progress and choosing your next steps, but work toward lofty aims.</p>
-<p><strong>Learn fast and change direction when necessary.</strong> Research involves making mistakes, or at least doing things that seem really dumb in retrospect. Learn as much as possible from your failures. (Could you have found that bug earlier? Learned about that other technique earlier?) Do not shame yourself for them. Instead, admit them, and document this learning for yourself and others by talking about it or potentially adding some advice to the handbook. Note that failing is not the same thing as not having the result you wanted—it’s a good day when your hypothesis is not supported and you get to learn something about how the world works. Frequently reevaluate your approach and the direction of each project, and take initiative in doing this. Take initiative as a collaborator too.</p>
-<p><strong>Know your corner of the literature.</strong> It makes you much smarter and can save enormous time in the long run. It also makes it easier to spot good opportunities and unanswered questions. Knowing the history of work on your problem inside and out is a requirement for first authors. Develop a scientific reading habit if you don’t have one yet. As a general guideline, on average, graduate researchers and postdocs should be reading five papers a week, and skimming more.</p>
-<p><strong>Be open to collaboration, and respect your collaborators.</strong> Getting anything worthwhile done in research requires learning from others, including through papers, talks, and whiteboard time. Be proactive in thinking about who might have relevant expertise. Ask for help, give help, and carefully acknowledge the contributions of others. Clarify expectations when you start on a project: make agreements explicit (and for important things, in writing), with expectations and timelines, and be reliable. For instance, let your collaborators know when they can expect to hear from you with new results, drafts, etc. These principles hold for interactions inside and outside the lab. By default, you should think of yourself as a collaborator on every project in the lab, and remain engaged.</p>
-<p><strong>Communicate assertively.</strong> It’s nice to hear from other people that they’ve benefited from your analysis, timeliness, criticism, etc. Tell people whenever you can that you like what they’re doing. Consider emailing strangers when you like their paper or talk, and explain why. On the flip side, it’s frustrating to learn from a third party that someone is unhappy with something we said or did. Assertive communication means we give each other direct, constructive feedback if we think something isn’t right. You can trust me not to negatively describe your behavior to others without speaking to you first. More broadly, if you think something can be improved, speak up to the right people before complaining to others. Be constructive by criticizing the idea, analysis, or behavior, rather than the person. Communicating assertively and kindly usually takes practice.</p>
-<p><strong>Don’t be too narrow.</strong> Take time to play intellectually. Participate in departmental seminars, go to talks in other departments, meet with people who seem to be doing interesting things, and read exciting papers that might not be obviously related to your current projects. (Graduate researchers should aim to attend a departmental seminar and journal club each week.) Start journal clubs and groups that you wish existed and would make time for. Try to balance exploration with work on existing projects. I don’t know the right balance here, but it’s worth trying to figure it out.</p>
-<p><strong>Work hard but sustainably.</strong> Figure out sustainable habits for effective research. What is sustainable is personal: avoid blindly adopting others’ criteria. Focus on habits, such as working set hours each day, before benchmarks (e.g., “Publish”, “Get speaking invitation”, “Be famous!!!11!!” etc.). Resist the temptation to run from one deadline to the next, and think instead about how to make regular progress. (Do this especially if you’re (i) fresh out of undergrad, or (ii) have never done it before because you think you work best under pressure.) Aim for 40 hours of focused work per week. If you’re not happy with your progress or productivity, <em>there’s no shame in asking for help or ideas from others</em>, including your advisor. For what it’s worth, I do think it’s possible to do great research while having a life. (I’ve seen others do it… lolz) A great resource for sustainable habits is the <a href="https://www.facultydiversity.org/">National Center for Faculty Development and Diversity</a>. They have online classes, weekly newsletters, and writing support groups. The University of Chicago has a subscription, so you should be able to get free access.</p>
-<p><strong>Be accountable</strong>. All work in the lab is collaborative, involving the blood, sweat, and tears (and hopes and dreams!) of multiple people, and often indirectly taxpayers. Respect all these contributions by being a reliable, involved scientist. Let collaborators know if your contributions will be delayed, if you think something should be done differently, or if you have concerns about quality. Always look for better hypotheses and approaches. Speak up if you see something that’s not right. Remember we’ll all be dead soon enough, and this is our opportunity to help others.</p>
-<div class="figure" style="text-align: center"><span id="fig:danse-macabre"></span>
+<div id="how-we-work" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> How we work<a href="how-we-work.html#how-we-work" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="principles" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Principles<a href="how-we-work.html#principles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Do ambitious research.</strong>
+Research always seems to take more time than it should, so spend your time on important questions.
+Think hard about what <em>should</em> be done, not only what can be done.
+Try not to let others define subfields and questions for you.
+Be deeply practical in evaluating your progress and choosing your next steps, but work toward lofty aims.</p>
+<p><strong>Learn fast and change direction when necessary.</strong>
+Research involves making mistakes, or at least doing things that seem really dumb in retrospect.
+Learn as much as possible from your failures.
+(Could you have found that bug earlier? Learned about that other technique earlier?)
+Do not shame yourself for them.
+Instead, admit them, and document this learning for yourself and others by talking about it or potentially adding some advice to the handbook.
+Note that failing is not the same thing as not having the result you wanted—it’s a good day when your hypothesis is not supported and you get to learn something about how the world works.
+Frequently reevaluate your approach and the direction of each project, and take initiative in doing this.
+Take initiative as a collaborator too.</p>
+<p><strong>Know your corner of the literature.</strong>
+It makes you much smarter and can save enormous time in the long run.
+It also makes it easier to spot good opportunities and unanswered questions.
+Knowing the history of work on your problem inside and out is a requirement for first authors.
+Develop a scientific reading habit if you don’t have one yet.
+As a general guideline, on average, graduate researchers and postdocs should be reading five papers a week, and skimming more.</p>
+<p><strong>Be open to collaboration, and respect your collaborators.</strong>
+Getting anything worthwhile done in research requires learning from others, including through papers, talks, and whiteboard time.
+Be proactive in thinking about who might have relevant expertise.
+Ask for help, give help, and carefully acknowledge the contributions of others.
+Clarify expectations when you start on a project: make agreements explicit (and for important things, in writing), with expectations and timelines, and be reliable.
+For instance, let your collaborators know when they can expect to hear from you with new results, drafts, etc.
+These principles hold for interactions inside and outside the lab.
+By default, you should think of yourself as a collaborator on every project in the lab, and remain engaged.</p>
+<p><strong>Communicate assertively.</strong>
+It’s nice to hear from other people that they’ve benefited from your analysis, timeliness, criticism, etc.
+Tell people whenever you can that you like what they’re doing.
+Consider emailing strangers when you like their paper or talk, and explain why.
+On the flip side, it’s frustrating to learn from a third party that someone is unhappy with something we said or did.
+Assertive communication means we give each other direct, constructive feedback if we think something isn’t right.
+You can trust me not to negatively describe your behavior to others without speaking to you first.
+More broadly, if you think something can be improved, speak up to the right people before complaining to others.
+Be constructive by criticizing the idea, analysis, or behavior, rather than the person.
+Communicating assertively and kindly usually takes practice.</p>
+<p><strong>Don’t be too narrow.</strong>
+Take time to play intellectually.
+Participate in departmental seminars, go to talks in other departments, meet with people who seem to be doing interesting things, and read exciting papers that might not be obviously related to your current projects.
+(Graduate researchers should aim to attend a departmental seminar and journal club each week.)
+Start journal clubs and groups that you wish existed and would make time for.
+Try to balance exploration with work on existing projects.
+I don’t know the right balance here, but it’s worth trying to figure it out.</p>
+<p><strong>Work hard but sustainably.</strong>
+Figure out sustainable habits for effective research.
+What is sustainable is personal: avoid blindly adopting others’ criteria.
+Focus on habits, such as working set hours each day, before benchmarks (e.g., “Publish”, “Get speaking invitation”, “Be famous!!!11!!” etc.).
+Resist the temptation to run from one deadline to the next, and think instead about how to make regular progress.
+(Do this especially if you’re (i) fresh out of undergrad, or (ii) have never done it before because you think you work best under pressure.)
+Aim for 40 hours of focused work per week.
+If you’re not happy with your progress or productivity, <em>there’s no shame in asking for help or ideas from others</em>, including your advisor.
+For what it’s worth, I do think it’s possible to do great research while having a life. (I’ve seen others do it… lolz)
+A great resource for sustainable habits is the <a href="https://www.facultydiversity.org/">National Center for Faculty Development and Diversity</a>.
+They have online classes, weekly newsletters, and writing support groups.
+The University of Chicago has a subscription, so you should be able to get free access.</p>
+<p><strong>Be accountable</strong>.
+All work in the lab is collaborative, involving the blood, sweat, and tears (and hopes and dreams!) of multiple people, and often indirectly taxpayers.
+Respect all these contributions by being a reliable, involved scientist.
+Let collaborators know if your contributions will be delayed, if you think something should be done differently, or if you have concerns about quality.
+Always look for better hypotheses and approaches.
+Speak up if you see something that’s not right.
+Remember we’ll all be dead soon enough, and this is our opportunity to help others.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:danse-macabre"></span>
 <img src="images/danse-macabre.png" alt="A contrasting time scale of research" width="50%" />
 <p class="caption">
 Figure 2.1: A contrasting time scale of research
 </p>
 </div>
 </div>
-<div id="work-hours" class="section level2">
-<h2><span class="header-section-number">2.2</span> Work hours</h2>
-<p>I will not judge your progress based on the hours you keep in the lab: what matters most is that you make substantive progress on the lab’s goals. I encourage you to figure out how you work best. You thus have broad freedom to choose how you work, provided you communicate your plans to others and see the projects through. But because we’re human, and it’s nice to see other, non-digitized human faces regularly, aim to spend at least three days a week (for most of the workday) in lab. You don’t have to communicate your schedule with me in advance, as long as you’re around roughly this much and show up for meetings. Undergrads and out-of-state lab members will have different arrangements, of course.</p>
-<p>Take vacations! Take good ones, show us the photos, and bring back tea, chocolate, and/or fine liquor. Try to use all your vacation time. You don’t need approval from anyone before you select dates, but please try to give collaborators advance notice and consider their schedules. Mark the days you plan to be away on the lab calendar.</p>
+<div id="work-hours" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Work hours<a href="how-we-work.html#work-hours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I will not judge your progress based on the hours you keep in the lab: what matters most is that you make substantive progress on the lab’s goals.
+I encourage you to figure out how you work best.
+You thus have broad freedom to choose how you work, provided you communicate your plans to others and see the projects through.
+But because we’re human, and it’s nice to see other, non-digitized human faces regularly, aim to spend at least three days a week (for most of the workday) in lab.
+You don’t have to communicate your schedule with me in advance, as long as you’re around roughly this much and show up for meetings.
+Undergrads and out-of-state lab members will have different arrangements, of course.</p>
+<p>Take vacations!
+Take good ones, show us the photos, and bring back tea, chocolate, and/or fine liquor.
+Try to use all your vacation time.
+You don’t need approval from anyone before you select dates, but please try to give collaborators advance notice and consider their schedules.
+Mark the days you plan to be away on the lab calendar.</p>
 <p>Please stay home if you’re sick. You will be judged for this one.</p>
-<p>Non-hourly, benefits-eligible employees (including graduate students) are entitled to various forms of parental, personal, and family leave, and I encourage you to take them if you need them. If you need other accommodations, please let me know.</p>
+<p>Non-hourly, benefits-eligible employees (including graduate students) are entitled to various forms of parental, personal, and family leave, and I encourage you to take them if you need them.
+If you need other accommodations, please let me know.</p>
 </div>
-<div id="workspace" class="section level2">
-<h2><span class="header-section-number">2.3</span> Workspace</h2>
+<div id="workspace" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Workspace<a href="how-we-work.html#workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The lab space is supposed to help you work efficiently and happily: I want it to be a place where people can reliably go to get stuff done.</p>
 <ul>
-<li>Keep the main room quiet. If others are present, have meetings (in person or via Skype) in an adjacent conference room.</li>
+<li>Keep the main room quiet.
+If others are present, have meetings (in person or via Skype) in an adjacent conference room.</li>
 <li>Please feel free to customize your space. Adjust the location and height of your desk and file cabinet as you see fit. Let me know if you’d like a privacy screen, a fan or space heater, etc.</li>
 <li>Check with others before bringing pets to work.</li>
 <li>Consult others before making dramatic changes to the lighting or temperature.</li>
@@ -238,24 +353,47 @@ Figure 2.1: A contrasting time scale of research
 <li>Lock the door if you leave and no one is in the lab.</li>
 </ul>
 </div>
-<div id="communication" class="section level2">
-<h2><span class="header-section-number">2.4</span> Communication</h2>
-<p>Please limit the use of email for research questions and discussions. Use Asana instead—it makes things much easier to find in the long run, and it has no overeager spam filter. Asana is also the best tool for lab announcements and discussions.</p>
-<p>I do not expect you to check email or Asana on weekends, vacations, sick days, or holidays. I’ll always try to respond to your communications within 24 h, excluding weekends, vacations, sick days, and holidays. In general, you should check email and Asana a few times a day and try to respond to urgent requests within an hour or two (M-F), but I expect urgent requests to be few and far between. They will probably have some warning (e.g., an impending paper or grant deadline).</p>
-<p>If I’m in my office and the door is open, you’re welcome to come in to talk. If the door is closed, it means I’m working, and it’s best to communicate via Asana.</p>
+<div id="communication" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Communication<a href="how-we-work.html#communication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Please limit the use of email for research questions and discussions.
+Use Asana instead—it makes things much easier to find in the long run, and it has no overeager spam filter.
+Asana is also the best tool for lab announcements and discussions.</p>
+<p>I do not expect you to check email or Asana on weekends, vacations, sick days, or holidays.
+I’ll always try to respond to your communications within 24 h, excluding weekends, vacations, sick days, and holidays.
+In general, you should check email and Asana a few times a day and try to respond to urgent requests within an hour or two (M-F), but I expect urgent requests to be few and far between.
+They will probably have some warning (e.g., an impending paper or grant deadline).</p>
+<p>If I’m in my office and the door is open, you’re welcome to come in to talk.
+If the door is closed, it means I’m working, and it’s best to communicate via Asana.</p>
 </div>
-<div id="weekly-check-ins" class="section level2">
-<h2><span class="header-section-number">2.5</span> Weekly check-ins</h2>
-<p>Most weeks, you’ll meet individually with me to discuss research and occasionally other topics. The agendas of these meetings is largely up to you. However, I ask you to come prepared with slides, an updated summary, or notebook (Rmd, Jupyter, etc.) concisely describing progress since the last meeting. You can choose whichever format works best for you, but somehow, your notes should clearly state (i) what goals you had set last week for this week, (ii) your progress on each goal, and (iii) what you think comes next. (This structure is really helpful for me.) You should also be prepared to show system and unit tests, or some kind of validation, to convince me your research results are correct. The meeting is time to both dig into the weeds but also think about the big picture.</p>
-<p>I’ll try to remind you of this, but one of my main goals for each meeting is to learn how I can best support you, during the meeting and after. If our relationship needs adjusting, please let me know. If you want to talk about career goals, that’s fine too. This is your time, but please be organized about it.</p>
-<p>When I’m traveling, these weekly meetings may need to be rescheduled or occur over the phone. Please always feel free to request a meeting when I am traveling, unless I’m on vacation.</p>
+<div id="weekly-check-ins" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Weekly check-ins<a href="how-we-work.html#weekly-check-ins" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most weeks, you’ll meet individually with me to discuss research and occasionally other topics.
+The agendas of these meetings is largely up to you.
+However, I ask you to come prepared with slides, an updated summary, or notebook (Rmd, Jupyter, etc.) concisely describing progress since the last meeting.
+You can choose whichever format works best for you, but somehow, your notes should clearly state (i) what goals you had set last week for this week, (ii) your progress on each goal, and (iii) what you think comes next.
+(This structure is really helpful for me.)
+You should also be prepared to show system and unit tests, or some kind of validation, to convince me your research results are correct.
+The meeting is time to both dig into the weeds but also think about the big picture.</p>
+<p>I’ll try to remind you of this, but one of my main goals for each meeting is to learn how I can best support you, during the meeting and after.
+If our relationship needs adjusting, please let me know.
+If you want to talk about career goals, that’s fine too.
+This is your time, but please be organized about it.</p>
+<p>When I’m traveling, these weekly meetings may need to be rescheduled or occur over the phone.
+Please always feel free to request a meeting when I am traveling, unless I’m on vacation.</p>
 </div>
-<div id="lab-meetings" class="section level2">
-<h2><span class="header-section-number">2.6</span> Lab meetings</h2>
-<p>We’ll meet weekly as a lab. Meetings start with various announcements of abstract deadlines, cool upcoming talks, new papers, etc., and then we briefly update one another on our research (roughly 1-5 min per person). The point of these updates is to practice describing our research and especially to keep each other involved in our work, which includes providing helpful suggestions. The rest of the meeting is usually dedicated to an in-depth presentation and discussion of one of our research projects or a discussion of a paper. Plan to present your research once per quarter and to lead at least one paper discussion per quarter. Pick papers at least a week in advance so people have time to read them. Everyone is expected to show up having read and critically thought about the paper. If someone is presenting, everyone else is expected to make helpful suggestions.</p>
+<div id="lab-meetings" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Lab meetings<a href="how-we-work.html#lab-meetings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ll meet weekly as a lab.
+Meetings start with various announcements of abstract deadlines, cool upcoming talks, new papers, etc., and then we briefly update one another on our research (roughly 1-5 min per person).
+The point of these updates is to practice describing our research and especially to keep each other involved in our work, which includes providing helpful suggestions.
+The rest of the meeting is usually dedicated to an in-depth presentation and discussion of one of our research projects or a discussion of a paper.
+Plan to present your research once per quarter and to lead at least one paper discussion per quarter.
+Pick papers at least a week in advance so people have time to read them.
+Everyone is expected to show up having read and critically thought about the paper.
+If someone is presenting, everyone else is expected to make helpful suggestions.</p>
 </div>
-<div id="reproducible-research" class="section level2">
-<h2><span class="header-section-number">2.7</span> Reproducible research</h2>
+<div id="reproducible-research" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Reproducible research<a href="how-we-work.html#reproducible-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You have broad freedom in most aspects of how you work, but there are certain protocols we follow to keep our work reproducible, accessible, and organized.</p>
 <p><strong>Reproducible</strong> means that other researchers could use your notes and code to reconstruct your results precisely without guesswork or manual labor. All of the figures and results in any manuscript must be fully reproducible by executing one or a few scripts in a public github repository. It should also be easy to reproduce intermediate results during development. Basically, this means we use version control, <a href="https://git-scm.com/book/en/v1/Getting-Started-About-Version-Control">git</a>.</p>
 <p><strong>Accessible</strong> means that (i) all of your code, including small scripts, is maintained in a git repository that is regularly (e.g., daily) synced to the lab’s github account; (ii) all raw data and major results are stored on Midway projects/cobey (unless other arrangements are required by IRB); (iii) project management is visible to all lab members on Asana; and (iv) you regularly back up your laptop using an external hard drive <em>and</em> CrashPlan Pro.</p>
@@ -274,12 +412,13 @@ Figure 2.1: A contrasting time scale of research
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -287,12 +426,13 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": true,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"],
+"google": true
 },
 "fontsettings": {
 "theme": "white",
@@ -300,12 +440,23 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
@@ -315,10 +466,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
