@@ -218,7 +218,72 @@ The benefits of functional programming are closely related to [modularity](#modu
 
 ## Unit Testing
 
-Unit testing is a technique of verifying applications by writing an example input and expected output for a number of simple functions in your codebase. Ideally your code will be structured to get the most out of unit tests by relying on a base of testable functions that are used throughout.
+Unit testing is a technique for verifying a codebase by writing sample input and expected output for a number of its functions. These tests -- usually structured as functions themselves -- are binary. They either run to completion, or they throw an exception. Failure to run represents failure of the test.
+
+Unit tests are generally run without input. The input to _the function being tested_ is written as literals (`3`, `"blue"`, `[6, 7, 8]`) within the test function, or globally for several tests to use. Input to a test, or variables and environment necessary for the function to run is called a *fixture*.
+
+A _test suite_ is the set of all tests of a codebase. Usually test suites are run in their entirety, giving a simple output with the percentage of tests that passed. The codebase (usually called a "build" in this context) is said to be *passing* or *failing*.
+
+Unit testing serves two major purposes.
+
+1. A Unit test is a declaration by the author that an input/output pair is "correct." They represent what the function *should* do. A programmer could write a unit test `test_add` of the function `add`:
+
+``` python
+
+def add(a, b):
+    """One of the four basic arithmetic operations. Takes two numbers -- a and b -- and returns a + b."""
+    return a + b + 1
+
+def test_add():
+    assert add(1, 1) == 3
+
+```
+
+The test verifies that the input/output pair (a = 1, b = 1)/3 is consistent with the function `add`, but does not validate that it is functioning properly (at least according to the way `add` has been described).
+
+A valid test:
+
+``` python
+
+def test_add():
+    assert add(1, 1) == 2
+
+```
+
+would uncover the fact that `add` was either written incorrectly, or was recently broken.
+
+When writing tests, it's good to check yourself by avoiding the output of the function as it is written. Take input/output pairs from another, reliable, source or think about the problem and write what you believe is the correct output. A programmer who runs `add` and then writes a test with (a = 1, b = 1)/3 would be perpetuating the error instead of correcting it.
+
+
+2. Unit tests verify that changes to a codebase don't have unexpected effects. In other words, they help compare two versions of the code to show the functionality (set of input/output pairs) is the same.
+
+This is helpful for refactoring or rewriting where many changes are being made and the application needs to be verified repeatedly.
+
+
+### Limitations to Unit Tests
+
+Unit tests are not proofs. They test one input/output pair that stands for many pairs in the input/output space. It is always possible that one pair is not tested that will be critical to the functioning of the program, and the program does not handle it as intended.
+
+It is important, therefore, that unit tests are written for representative pairs. For instance:
+
+
+``` python
+
+def add(a, b):
+    if a == 3:
+        return a + b + 1
+
+    return a + b
+
+def test_add_ones():
+    assert add(1, 1) == 2
+
+```
+
+The test `test_add_ones` is representative of the space of three integers, but it ignores the conditional that modifies the behavior in the case of a = 3. Real-world examples will be much less obvious so this is common. The path may be one of thousands, buried in many tens of thousands of lines of code.
+
+Because all of the paths that characterize the behavior of the function are not tested, this codebase could be said to have insufficient "[coverage](https://en.wikipedia.org/wiki/Code_coverage)." Unit testing libraries will usually be able to measure coverage, which is useful for finding these cases.
+
 
 ### Testability
 
