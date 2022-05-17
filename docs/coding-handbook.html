@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-04-28" />
+<meta name="date" content="2022-05-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -212,7 +212,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="coding-handbook.html#functional-programming" id="toc-functional-programming"><span class="toc-section-number">5.7</span> Functional Programming<span></span></a></li>
 <li><a href="coding-handbook.html#unit-testing" id="toc-unit-testing"><span class="toc-section-number">5.8</span> Unit Testing<span></span></a>
 <ul>
-<li><a href="coding-handbook.html#testability" id="toc-testability"><span class="toc-section-number">5.8.1</span> Testability<span></span></a></li>
+<li><a href="coding-handbook.html#limitations-to-unit-tests" id="toc-limitations-to-unit-tests"><span class="toc-section-number">5.8.1</span> Limitations to Unit Tests<span></span></a></li>
+<li><a href="coding-handbook.html#testability" id="toc-testability"><span class="toc-section-number">5.8.2</span> Testability<span></span></a></li>
 </ul></li>
 <li><a href="coding-handbook.html#modules-and-modularity" id="toc-modules-and-modularity"><span class="toc-section-number">5.9</span> Modules and Modularity<span></span></a></li>
 <li><a href="coding-handbook.html#statistics-and-other-modeling" id="toc-statistics-and-other-modeling"><span class="toc-section-number">5.10</span> Statistics and other Modeling<span></span></a></li>
@@ -427,24 +428,64 @@ code available.</li>
 </div>
 <div id="unit-testing" class="section level2 hasAnchor" number="5.8">
 <h2><span class="header-section-number">5.8</span> Unit Testing<a href="coding-handbook.html#unit-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Unit testing is a technique of verifying applications by writing an example input and expected output for a number of simple functions in your codebase. Ideally your code will be structured to get the most out of unit tests by relying on a base of testable functions that are used throughout.</p>
-<div id="testability" class="section level3 hasAnchor" number="5.8.1">
-<h3><span class="header-section-number">5.8.1</span> Testability<a href="coding-handbook.html#testability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Unit testing is a technique for verifying a codebase by writing sample input and expected output for a number of its functions. These tests – usually structured as functions themselves – are binary. They either run to completion, or they throw an exception. Failure to run represents failure of the test.</p>
+<p>Unit tests are generally run without input. The input to <em>the function being tested</em> is written as literals (<code>3</code>, <code>"blue"</code>, <code>[6, 7, 8]</code>) within the test function, or globally for several tests to use. Input to a test, or variables and environment necessary for the function to run is called a <em>fixture</em>.</p>
+<p>A <em>test suite</em> is the set of all tests of a codebase. Usually test suites are run in their entirety, giving a simple output with the percentage of tests that passed. The codebase (usually called a “build” in this context) is said to be <em>passing</em> or <em>failing</em>.</p>
+<p>Unit testing serves two major purposes.</p>
+<ol style="list-style-type: decimal">
+<li>A Unit test is a declaration by the author that an input/output pair is “correct.” They represent what the function <em>should</em> do. A programmer could write a unit test <code>test_add</code> of the function <code>add</code>:</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="coding-handbook.html#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="coding-handbook.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb5-3"><a href="coding-handbook.html#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;One of the four basic arithmetic operations. Takes two numbers -- a and b -- and returns a + b.&quot;&quot;&quot;</span></span>
+<span id="cb5-4"><a href="coding-handbook.html#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb5-5"><a href="coding-handbook.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="coding-handbook.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add():</span>
+<span id="cb5-7"><a href="coding-handbook.html#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add(<span class="dv">1</span>, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">3</span></span></code></pre></div>
+<p>The test verifies that the input/output pair (a = 1, b = 1)/3 is consistent with the function <code>add</code>, but does not validate that it is functioning properly (at least according to the way <code>add</code> has been described).</p>
+<p>A valid test:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="coding-handbook.html#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="coding-handbook.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add():</span>
+<span id="cb6-3"><a href="coding-handbook.html#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add(<span class="dv">1</span>, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">2</span></span></code></pre></div>
+<p>would uncover the fact that <code>add</code> was either written incorrectly, or was recently broken.</p>
+<p>When writing tests, it’s good to check yourself by avoiding the output of the function as it is written. Take input/output pairs from another, reliable, source or think about the problem and write what you believe is the correct output. A programmer who runs <code>add</code> and then writes a test with (a = 1, b = 1)/3 would be perpetuating the error instead of correcting it.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Unit tests verify that changes to a codebase don’t have unexpected effects. In other words, they help compare two versions of the code to show the functionality (set of input/output pairs) is the same.</li>
+</ol>
+<p>This is helpful for refactoring or rewriting where many changes are being made and the application needs to be verified repeatedly.</p>
+<div id="limitations-to-unit-tests" class="section level3 hasAnchor" number="5.8.1">
+<h3><span class="header-section-number">5.8.1</span> Limitations to Unit Tests<a href="coding-handbook.html#limitations-to-unit-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Unit tests are not proofs. They test one input/output pair that stands for many pairs in the input/output space. It is always possible that one pair is not tested that will be critical to the functioning of the program, and the program does not handle it as intended.</p>
+<p>It is important, therefore, that unit tests are written for representative pairs. For instance:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="coding-handbook.html#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="coding-handbook.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb7-3"><a href="coding-handbook.html#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb7-4"><a href="coding-handbook.html#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a <span class="op">+</span> b <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb7-5"><a href="coding-handbook.html#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="coding-handbook.html#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb7-7"><a href="coding-handbook.html#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="coding-handbook.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add_ones():</span>
+<span id="cb7-9"><a href="coding-handbook.html#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add(<span class="dv">1</span>, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">2</span></span></code></pre></div>
+<p>The test <code>test_add_ones</code> is representative of the space of three integers, but it ignores the conditional that modifies the behavior in the case of a = 3. Real-world examples will be much less obvious so this is common. The path may be one of thousands, buried in many tens of thousands of lines of code.</p>
+<p>Because all of the paths that characterize the behavior of the function are not tested, this codebase could be said to have insufficient “<a href="https://en.wikipedia.org/wiki/Code_coverage">coverage</a>.” Unit testing libraries will usually be able to measure coverage, which is useful for finding these cases.</p>
+</div>
+<div id="testability" class="section level3 hasAnchor" number="5.8.2">
+<h3><span class="header-section-number">5.8.2</span> Testability<a href="coding-handbook.html#testability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A function is easier to test when there’s a simple way to characterize its behavior with some inputs and expected outputs. This generally means small, easy-to-write input/output pairs. For example:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="coding-handbook.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(i, j, s):</span>
-<span id="cb5-2"><a href="coding-handbook.html#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> j:</span>
-<span id="cb5-3"><a href="coding-handbook.html#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="st">&quot; is above the line&quot;</span></span>
-<span id="cb5-4"><a href="coding-handbook.html#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb5-5"><a href="coding-handbook.html#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="st">&quot; is below the line&quot;</span></span>
-<span id="cb5-6"><a href="coding-handbook.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="coding-handbook.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_low_f():</span>
-<span id="cb5-8"><a href="coding-handbook.html#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> f(<span class="dv">2</span>, <span class="dv">3</span>, <span class="st">&quot;test&quot;</span>) <span class="op">==</span> <span class="st">&quot;test is below the line&quot;</span></span>
-<span id="cb5-9"><a href="coding-handbook.html#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="coding-handbook.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_high_f():</span>
-<span id="cb5-11"><a href="coding-handbook.html#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> f(<span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>, <span class="st">&quot;test&quot;</span>) <span class="op">==</span> <span class="st">&quot;test is above the line&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="coding-handbook.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(i, j, s):</span>
-<span id="cb6-2"><a href="coding-handbook.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&gt;</span> j <span class="kw">and</span> is_thursday <span class="kw">and</span> urllib.request.urlopen(<span class="st">&quot;http://line.status.org&quot;</span>) <span class="kw">and</span> random.randrange(<span class="dv">1</span>,<span class="dv">10</span>) <span class="op">&gt;</span> <span class="dv">2</span>:</span>
-<span id="cb6-3"><a href="coding-handbook.html#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;It&#39;s thursday and the line status is good and you&#39;re lucky.&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="coding-handbook.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(i, j, s):</span>
+<span id="cb8-2"><a href="coding-handbook.html#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> j:</span>
+<span id="cb8-3"><a href="coding-handbook.html#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="st">&quot; is above the line&quot;</span></span>
+<span id="cb8-4"><a href="coding-handbook.html#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-5"><a href="coding-handbook.html#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="st">&quot; is below the line&quot;</span></span>
+<span id="cb8-6"><a href="coding-handbook.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="coding-handbook.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_low_f():</span>
+<span id="cb8-8"><a href="coding-handbook.html#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> f(<span class="dv">2</span>, <span class="dv">3</span>, <span class="st">&quot;test&quot;</span>) <span class="op">==</span> <span class="st">&quot;test is below the line&quot;</span></span>
+<span id="cb8-9"><a href="coding-handbook.html#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="coding-handbook.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_high_f():</span>
+<span id="cb8-11"><a href="coding-handbook.html#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> f(<span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>, <span class="st">&quot;test&quot;</span>) <span class="op">==</span> <span class="st">&quot;test is above the line&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="coding-handbook.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(i, j, s):</span>
+<span id="cb9-2"><a href="coding-handbook.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&gt;</span> j <span class="kw">and</span> is_thursday <span class="kw">and</span> urllib.request.urlopen(<span class="st">&quot;http://line.status.org&quot;</span>) <span class="kw">and</span> random.randrange(<span class="dv">1</span>,<span class="dv">10</span>) <span class="op">&gt;</span> <span class="dv">2</span>:</span>
+<span id="cb9-3"><a href="coding-handbook.html#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;It&#39;s thursday and the line status is good and you&#39;re lucky.&quot;</span></span></code></pre></div>
 <p>Function f:
 1. Is purely functional. It doesn’t modify or depend on values outside its scope, and always returns the same values for the corresponding input.</p>
 <p><code>f</code> is easy to test. <code>test_low_f</code> and <code>test_high_f</code> cover both branches (the if and else) and characterize the behavior of <code>f</code> well. Note: It’s a judgment call whether or not enough of the input space has been tested. It’s easy to see in this case that all integers will behave predictably. This also doesn’t cover exceptions, which should generally be tested.</p>
@@ -465,132 +506,132 @@ code available.</li>
 <p>Modularity is one path to clean, simple, maintainable code that is considered distinct from “spaghetti” and can be put in objective terms.</p>
 <p>The word “module” has a specific meaning in certain programming languages. As a general term, it means a section of code that acts as a unit, usually on a particular topic or domain, that has a well-defined interface.</p>
 <p>An <a href="https://en.wikipedia.org/wiki/Interface_(computing)">interface</a> is a boundary between components over which information is exchanged. The simplest well-defined interface is a function signature.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="coding-handbook.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, b, c):</span>
-<span id="cb7-2"><a href="coding-handbook.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  product <span class="op">=</span> a <span class="op">*</span> b</span>
-<span id="cb7-3"><a href="coding-handbook.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> product <span class="op">+</span> c</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="coding-handbook.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, b, c):</span>
+<span id="cb10-2"><a href="coding-handbook.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  product <span class="op">=</span> a <span class="op">*</span> b</span>
+<span id="cb10-3"><a href="coding-handbook.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> product <span class="op">+</span> c</span></code></pre></div>
 <p>The “module” <code>f</code> has an interface that is the parameters <code>a</code>, <code>b</code>, and <code>c</code>. Any code that calls <code>f</code> needs to provide these parameters. They are defined explicitly in the codebase and enforced by the compiler. Variables within <code>f</code> can’t be accessed from outside <code>f</code>. In other words, a connection, or metaphorical spaghetti strand can’t be made to anything inside <code>f</code>.</p>
 <p>Once a codebase is organized into modules, it becomes much simpler and easier to maintain. Modularity also contributes to “<a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>” one of the most important, if not <em>the</em> most important software principle. Software organized into concerns with interfaces in between is easier to reason about because the modules can be reasoned about, and modified, independently.</p>
 <p>Returning to the evolutionary algorithm example, a more modular version might look like this:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="coding-handbook.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;Module for simulating evolution of strings.&quot;&quot;&quot;</span></span>
-<span id="cb8-2"><a href="coding-handbook.html#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="coding-handbook.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> choice, random</span>
-<span id="cb8-4"><a href="coding-handbook.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
-<span id="cb8-5"><a href="coding-handbook.html#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="coding-handbook.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fitness(trial, target):</span>
-<span id="cb8-7"><a href="coding-handbook.html#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Compare a string with a target. The more matching characters, the higher the fitness.&quot;&quot;&quot;</span></span>
-<span id="cb8-8"><a href="coding-handbook.html#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(t <span class="op">==</span> h <span class="cf">for</span> t, h <span class="kw">in</span> <span class="bu">zip</span>(trial, target))</span>
-<span id="cb8-9"><a href="coding-handbook.html#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="coding-handbook.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mutaterate(parent, target):</span>
-<span id="cb8-11"><a href="coding-handbook.html#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Calculate a mutation rate that shrinks as the target approaches.&quot;&quot;&quot;</span></span>
-<span id="cb8-12"><a href="coding-handbook.html#cb8-12" aria-hidden="true" tabindex="-1"></a>    perfectfitness <span class="op">=</span> <span class="bu">float</span>(<span class="bu">len</span>(target))</span>
-<span id="cb8-13"><a href="coding-handbook.html#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (perfectfitness <span class="op">-</span> fitness(parent, target)) <span class="op">/</span> perfectfitness</span>
-<span id="cb8-14"><a href="coding-handbook.html#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="coding-handbook.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mutate(parent, rate, alphabet):</span>
-<span id="cb8-16"><a href="coding-handbook.html#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Randomly change characters in parent to random characters from alphabet.&quot;&quot;&quot;</span></span>
-<span id="cb8-17"><a href="coding-handbook.html#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> <span class="dv">1</span> <span class="op">-</span> rate <span class="cf">else</span> choice(alphabet)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
-<span id="cb8-18"><a href="coding-handbook.html#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-19"><a href="coding-handbook.html#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mate(a, b):</span>
-<span id="cb8-20"><a href="coding-handbook.html#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb8-21"><a href="coding-handbook.html#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">    Split two strings in the center and return 4 combinations of the two:</span></span>
-<span id="cb8-22"><a href="coding-handbook.html#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">        1. a</span></span>
-<span id="cb8-23"><a href="coding-handbook.html#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">        2. b</span></span>
-<span id="cb8-24"><a href="coding-handbook.html#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">        3. beginning of a, then the end of b</span></span>
-<span id="cb8-25"><a href="coding-handbook.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">        4. beginning of b, then the end of a</span></span>
-<span id="cb8-26"><a href="coding-handbook.html#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb8-27"><a href="coding-handbook.html#cb8-27" aria-hidden="true" tabindex="-1"></a>    place <span class="op">=</span> <span class="bu">int</span>(<span class="bu">len</span>(a)<span class="op">/</span><span class="dv">2</span>)</span>
-<span id="cb8-28"><a href="coding-handbook.html#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, b, a[:place] <span class="op">+</span> b[place:], b[:place] <span class="op">+</span> a[place:]</span>
-<span id="cb8-29"><a href="coding-handbook.html#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-30"><a href="coding-handbook.html#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-31"><a href="coding-handbook.html#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evolve(seed, target_string, alphabet, population_size<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb8-32"><a href="coding-handbook.html#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Randomly mutate populations of seed until it &quot;evolves&quot; into target_string.&quot;&quot;&quot;</span></span>
-<span id="cb8-33"><a href="coding-handbook.html#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-34"><a href="coding-handbook.html#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">all</span>([l <span class="kw">in</span> alphabet <span class="cf">for</span> l <span class="kw">in</span> target_string]), <span class="op">\</span></span>
-<span id="cb8-35"><a href="coding-handbook.html#cb8-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;Error: Target must only contain characters from alphabet.&quot;</span></span>
-<span id="cb8-36"><a href="coding-handbook.html#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(seed) <span class="op">==</span> <span class="bu">len</span>(target_string), <span class="op">\</span></span>
-<span id="cb8-37"><a href="coding-handbook.html#cb8-37" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;Error: Target and Seed must be the same length.&quot;</span></span>
-<span id="cb8-38"><a href="coding-handbook.html#cb8-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-39"><a href="coding-handbook.html#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># For performance</span></span>
-<span id="cb8-40"><a href="coding-handbook.html#cb8-40" aria-hidden="true" tabindex="-1"></a>    target <span class="op">=</span> <span class="bu">list</span>(target_string)</span>
-<span id="cb8-41"><a href="coding-handbook.html#cb8-41" aria-hidden="true" tabindex="-1"></a>    parent <span class="op">=</span> seed</span>
-<span id="cb8-42"><a href="coding-handbook.html#cb8-42" aria-hidden="true" tabindex="-1"></a>    generations <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-43"><a href="coding-handbook.html#cb8-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-44"><a href="coding-handbook.html#cb8-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> parent <span class="op">!=</span> target:</span>
-<span id="cb8-45"><a href="coding-handbook.html#cb8-45" aria-hidden="true" tabindex="-1"></a>        rate <span class="op">=</span> mutaterate(parent, target)</span>
-<span id="cb8-46"><a href="coding-handbook.html#cb8-46" aria-hidden="true" tabindex="-1"></a>        mutations <span class="op">=</span> [mutate(parent, rate, alphabet) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(population_size)] <span class="op">+</span> [parent]</span>
-<span id="cb8-47"><a href="coding-handbook.html#cb8-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-48"><a href="coding-handbook.html#cb8-48" aria-hidden="true" tabindex="-1"></a>        center <span class="op">=</span> <span class="bu">int</span>(population_size<span class="op">/</span><span class="dv">2</span>)</span>
-<span id="cb8-49"><a href="coding-handbook.html#cb8-49" aria-hidden="true" tabindex="-1"></a>        parent1 <span class="op">=</span> <span class="bu">max</span>(mutations[:center], key<span class="op">=</span>partial(fitness, target))</span>
-<span id="cb8-50"><a href="coding-handbook.html#cb8-50" aria-hidden="true" tabindex="-1"></a>        parent2 <span class="op">=</span> <span class="bu">max</span>(mutations[center:], key<span class="op">=</span>partial(fitness, target))</span>
-<span id="cb8-51"><a href="coding-handbook.html#cb8-51" aria-hidden="true" tabindex="-1"></a>        parent <span class="op">=</span> <span class="bu">max</span>(mate(parent1, parent2), key<span class="op">=</span>partial(fitness, target))</span>
-<span id="cb8-52"><a href="coding-handbook.html#cb8-52" aria-hidden="true" tabindex="-1"></a>        generations <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb8-53"><a href="coding-handbook.html#cb8-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> generations</span>
-<span id="cb8-54"><a href="coding-handbook.html#cb8-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-55"><a href="coding-handbook.html#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Tests</span></span>
-<span id="cb8-56"><a href="coding-handbook.html#cb8-56" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> unittest</span>
-<span id="cb8-57"><a href="coding-handbook.html#cb8-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-58"><a href="coding-handbook.html#cb8-58" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> TestEvolveMethods(unittest.TestCase):</span>
-<span id="cb8-59"><a href="coding-handbook.html#cb8-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-60"><a href="coding-handbook.html#cb8-60" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_fitness(<span class="va">self</span>):</span>
-<span id="cb8-61"><a href="coding-handbook.html#cb8-61" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;axxd&quot;</span>), <span class="dv">2</span>)</span>
-<span id="cb8-62"><a href="coding-handbook.html#cb8-62" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>), <span class="dv">4</span>)</span>
-<span id="cb8-63"><a href="coding-handbook.html#cb8-63" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;wxyz&quot;</span>), <span class="dv">0</span>)</span>
-<span id="cb8-64"><a href="coding-handbook.html#cb8-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-65"><a href="coding-handbook.html#cb8-65" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mutaterate(<span class="va">self</span>):</span>
-<span id="cb8-66"><a href="coding-handbook.html#cb8-66" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;wxyz&quot;</span>), <span class="dv">1</span>)</span>
-<span id="cb8-67"><a href="coding-handbook.html#cb8-67" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abce&quot;</span>), <span class="fl">0.25</span>)</span>
-<span id="cb8-68"><a href="coding-handbook.html#cb8-68" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>), <span class="dv">0</span>)</span>
-<span id="cb8-69"><a href="coding-handbook.html#cb8-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-70"><a href="coding-handbook.html#cb8-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mutate(<span class="va">self</span>):</span>
-<span id="cb8-71"><a href="coding-handbook.html#cb8-71" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;mutate with no mutation rate returns the parent.&quot;&quot;&quot;</span></span>
-<span id="cb8-72"><a href="coding-handbook.html#cb8-72" aria-hidden="true" tabindex="-1"></a>        alphabet <span class="op">=</span> <span class="st">&quot;abcdefgh&quot;</span></span>
-<span id="cb8-73"><a href="coding-handbook.html#cb8-73" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutate(<span class="st">&quot;abcd&quot;</span>, <span class="dv">0</span>, alphabet), [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>])</span>
-<span id="cb8-74"><a href="coding-handbook.html#cb8-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-75"><a href="coding-handbook.html#cb8-75" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;mutate returns only characters from the alphabet.&quot;&quot;&quot;</span></span>
-<span id="cb8-76"><a href="coding-handbook.html#cb8-76" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertTrue(<span class="bu">all</span>([l <span class="kw">in</span> alphabet <span class="cf">for</span> l <span class="kw">in</span> mutate(<span class="st">&quot;abcd&quot;</span>, <span class="fl">0.25</span>, <span class="st">&quot;abcdefgh&quot;</span>)]))</span>
-<span id="cb8-77"><a href="coding-handbook.html#cb8-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-78"><a href="coding-handbook.html#cb8-78" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mate(<span class="va">self</span>):</span>
-<span id="cb8-79"><a href="coding-handbook.html#cb8-79" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;efgh&quot;</span>), (<span class="st">&#39;abcd&#39;</span>, <span class="st">&#39;efgh&#39;</span>, <span class="st">&#39;abgh&#39;</span>, <span class="st">&#39;efcd&#39;</span>))</span>
-<span id="cb8-80"><a href="coding-handbook.html#cb8-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-81"><a href="coding-handbook.html#cb8-81" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_evolve(<span class="va">self</span>):</span>
-<span id="cb8-82"><a href="coding-handbook.html#cb8-82" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;evolve raises error if target is not composed of the alphabet.&quot;&quot;&quot;</span></span>
-<span id="cb8-83"><a href="coding-handbook.html#cb8-83" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="va">self</span>.assertRaises(<span class="pp">AssertionError</span>):</span>
-<span id="cb8-84"><a href="coding-handbook.html#cb8-84" aria-hidden="true" tabindex="-1"></a>            evolve(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcx&quot;</span>, <span class="st">&quot;abcd&quot;</span>)</span>
-<span id="cb8-85"><a href="coding-handbook.html#cb8-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-86"><a href="coding-handbook.html#cb8-86" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;evolve raises error if seed and target are different lengths.&quot;&quot;&quot;</span></span>
-<span id="cb8-87"><a href="coding-handbook.html#cb8-87" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="va">self</span>.assertRaises(<span class="pp">AssertionError</span>):</span>
-<span id="cb8-88"><a href="coding-handbook.html#cb8-88" aria-hidden="true" tabindex="-1"></a>            evolve(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>)</span>
-<span id="cb8-89"><a href="coding-handbook.html#cb8-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-90"><a href="coding-handbook.html#cb8-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-91"><a href="coding-handbook.html#cb8-91" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Evolve some strings.&quot;</span>)</span>
-<span id="cb8-92"><a href="coding-handbook.html#cb8-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-93"><a href="coding-handbook.html#cb8-93" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb8-94"><a href="coding-handbook.html#cb8-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-95"><a href="coding-handbook.html#cb8-95" aria-hidden="true" tabindex="-1"></a><span class="co">Classic example. From random seed to english sentence.</span></span>
-<span id="cb8-96"><a href="coding-handbook.html#cb8-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-97"><a href="coding-handbook.html#cb8-97" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb8-98"><a href="coding-handbook.html#cb8-98" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="st">&quot;RHBpoxYLCGjNpUgLYnMfiKskRHmk&quot;</span></span>
-<span id="cb8-99"><a href="coding-handbook.html#cb8-99" aria-hidden="true" tabindex="-1"></a>target <span class="op">=</span> <span class="st">&quot;METHINKS IT IS LIKE A WEASEL&quot;</span></span>
-<span id="cb8-100"><a href="coding-handbook.html#cb8-100" aria-hidden="true" tabindex="-1"></a>alphabet <span class="op">=</span> <span class="st">&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ &quot;</span></span>
-<span id="cb8-101"><a href="coding-handbook.html#cb8-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-102"><a href="coding-handbook.html#cb8-102" aria-hidden="true" tabindex="-1"></a>generations <span class="op">=</span> evolve(seed, target, alphabet)</span>
-<span id="cb8-103"><a href="coding-handbook.html#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Success in </span><span class="sc">{</span>generations<span class="sc">}</span><span class="ss"> generations!&quot;</span>)</span>
-<span id="cb8-104"><a href="coding-handbook.html#cb8-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-105"><a href="coding-handbook.html#cb8-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-106"><a href="coding-handbook.html#cb8-106" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb8-107"><a href="coding-handbook.html#cb8-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-108"><a href="coding-handbook.html#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="co">DNA example.</span></span>
-<span id="cb8-109"><a href="coding-handbook.html#cb8-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-110"><a href="coding-handbook.html#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb8-111"><a href="coding-handbook.html#cb8-111" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="st">&quot;CGATGATGTATACTGTACGTATCTACTAC&quot;</span></span>
-<span id="cb8-112"><a href="coding-handbook.html#cb8-112" aria-hidden="true" tabindex="-1"></a>dna_target <span class="op">=</span> <span class="st">&quot;AATCCGCTAGGTATCAGACTAGTAGCAGT&quot;</span></span>
-<span id="cb8-113"><a href="coding-handbook.html#cb8-113" aria-hidden="true" tabindex="-1"></a>dna_alphabet <span class="op">=</span> <span class="st">&quot;ATCG&quot;</span></span>
-<span id="cb8-114"><a href="coding-handbook.html#cb8-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-115"><a href="coding-handbook.html#cb8-115" aria-hidden="true" tabindex="-1"></a>dna_generations <span class="op">=</span> evolve(seed, dna_target, dna_alphabet)</span>
-<span id="cb8-116"><a href="coding-handbook.html#cb8-116" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Success in </span><span class="sc">{</span>dna_generations<span class="sc">}</span><span class="ss"> generations!&quot;</span>)</span>
-<span id="cb8-117"><a href="coding-handbook.html#cb8-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-118"><a href="coding-handbook.html#cb8-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-119"><a href="coding-handbook.html#cb8-119" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Run tests&quot;</span>)</span>
-<span id="cb8-120"><a href="coding-handbook.html#cb8-120" aria-hidden="true" tabindex="-1"></a>unittest.main()</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="coding-handbook.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;Module for simulating evolution of strings.&quot;&quot;&quot;</span></span>
+<span id="cb11-2"><a href="coding-handbook.html#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="coding-handbook.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> choice, random</span>
+<span id="cb11-4"><a href="coding-handbook.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> partial</span>
+<span id="cb11-5"><a href="coding-handbook.html#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="coding-handbook.html#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fitness(trial, target):</span>
+<span id="cb11-7"><a href="coding-handbook.html#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Compare a string with a target. The more matching characters, the higher the fitness.&quot;&quot;&quot;</span></span>
+<span id="cb11-8"><a href="coding-handbook.html#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(t <span class="op">==</span> h <span class="cf">for</span> t, h <span class="kw">in</span> <span class="bu">zip</span>(trial, target))</span>
+<span id="cb11-9"><a href="coding-handbook.html#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="coding-handbook.html#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mutaterate(parent, target):</span>
+<span id="cb11-11"><a href="coding-handbook.html#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Calculate a mutation rate that shrinks as the target approaches.&quot;&quot;&quot;</span></span>
+<span id="cb11-12"><a href="coding-handbook.html#cb11-12" aria-hidden="true" tabindex="-1"></a>    perfectfitness <span class="op">=</span> <span class="bu">float</span>(<span class="bu">len</span>(target))</span>
+<span id="cb11-13"><a href="coding-handbook.html#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (perfectfitness <span class="op">-</span> fitness(parent, target)) <span class="op">/</span> perfectfitness</span>
+<span id="cb11-14"><a href="coding-handbook.html#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="coding-handbook.html#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mutate(parent, rate, alphabet):</span>
+<span id="cb11-16"><a href="coding-handbook.html#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Randomly change characters in parent to random characters from alphabet.&quot;&quot;&quot;</span></span>
+<span id="cb11-17"><a href="coding-handbook.html#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(ch <span class="cf">if</span> random() <span class="op">&lt;=</span> <span class="dv">1</span> <span class="op">-</span> rate <span class="cf">else</span> choice(alphabet)) <span class="cf">for</span> ch <span class="kw">in</span> parent]</span>
+<span id="cb11-18"><a href="coding-handbook.html#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="coding-handbook.html#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mate(a, b):</span>
+<span id="cb11-20"><a href="coding-handbook.html#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb11-21"><a href="coding-handbook.html#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co">    Split two strings in the center and return 4 combinations of the two:</span></span>
+<span id="cb11-22"><a href="coding-handbook.html#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co">        1. a</span></span>
+<span id="cb11-23"><a href="coding-handbook.html#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co">        2. b</span></span>
+<span id="cb11-24"><a href="coding-handbook.html#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co">        3. beginning of a, then the end of b</span></span>
+<span id="cb11-25"><a href="coding-handbook.html#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co">        4. beginning of b, then the end of a</span></span>
+<span id="cb11-26"><a href="coding-handbook.html#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb11-27"><a href="coding-handbook.html#cb11-27" aria-hidden="true" tabindex="-1"></a>    place <span class="op">=</span> <span class="bu">int</span>(<span class="bu">len</span>(a)<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb11-28"><a href="coding-handbook.html#cb11-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a, b, a[:place] <span class="op">+</span> b[place:], b[:place] <span class="op">+</span> a[place:]</span>
+<span id="cb11-29"><a href="coding-handbook.html#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-30"><a href="coding-handbook.html#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-31"><a href="coding-handbook.html#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evolve(seed, target_string, alphabet, population_size<span class="op">=</span><span class="dv">100</span>):</span>
+<span id="cb11-32"><a href="coding-handbook.html#cb11-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Randomly mutate populations of seed until it &quot;evolves&quot; into target_string.&quot;&quot;&quot;</span></span>
+<span id="cb11-33"><a href="coding-handbook.html#cb11-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-34"><a href="coding-handbook.html#cb11-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">all</span>([l <span class="kw">in</span> alphabet <span class="cf">for</span> l <span class="kw">in</span> target_string]), <span class="op">\</span></span>
+<span id="cb11-35"><a href="coding-handbook.html#cb11-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;Error: Target must only contain characters from alphabet.&quot;</span></span>
+<span id="cb11-36"><a href="coding-handbook.html#cb11-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(seed) <span class="op">==</span> <span class="bu">len</span>(target_string), <span class="op">\</span></span>
+<span id="cb11-37"><a href="coding-handbook.html#cb11-37" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;Error: Target and Seed must be the same length.&quot;</span></span>
+<span id="cb11-38"><a href="coding-handbook.html#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="coding-handbook.html#cb11-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># For performance</span></span>
+<span id="cb11-40"><a href="coding-handbook.html#cb11-40" aria-hidden="true" tabindex="-1"></a>    target <span class="op">=</span> <span class="bu">list</span>(target_string)</span>
+<span id="cb11-41"><a href="coding-handbook.html#cb11-41" aria-hidden="true" tabindex="-1"></a>    parent <span class="op">=</span> seed</span>
+<span id="cb11-42"><a href="coding-handbook.html#cb11-42" aria-hidden="true" tabindex="-1"></a>    generations <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-43"><a href="coding-handbook.html#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-44"><a href="coding-handbook.html#cb11-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> parent <span class="op">!=</span> target:</span>
+<span id="cb11-45"><a href="coding-handbook.html#cb11-45" aria-hidden="true" tabindex="-1"></a>        rate <span class="op">=</span> mutaterate(parent, target)</span>
+<span id="cb11-46"><a href="coding-handbook.html#cb11-46" aria-hidden="true" tabindex="-1"></a>        mutations <span class="op">=</span> [mutate(parent, rate, alphabet) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(population_size)] <span class="op">+</span> [parent]</span>
+<span id="cb11-47"><a href="coding-handbook.html#cb11-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-48"><a href="coding-handbook.html#cb11-48" aria-hidden="true" tabindex="-1"></a>        center <span class="op">=</span> <span class="bu">int</span>(population_size<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb11-49"><a href="coding-handbook.html#cb11-49" aria-hidden="true" tabindex="-1"></a>        parent1 <span class="op">=</span> <span class="bu">max</span>(mutations[:center], key<span class="op">=</span>partial(fitness, target))</span>
+<span id="cb11-50"><a href="coding-handbook.html#cb11-50" aria-hidden="true" tabindex="-1"></a>        parent2 <span class="op">=</span> <span class="bu">max</span>(mutations[center:], key<span class="op">=</span>partial(fitness, target))</span>
+<span id="cb11-51"><a href="coding-handbook.html#cb11-51" aria-hidden="true" tabindex="-1"></a>        parent <span class="op">=</span> <span class="bu">max</span>(mate(parent1, parent2), key<span class="op">=</span>partial(fitness, target))</span>
+<span id="cb11-52"><a href="coding-handbook.html#cb11-52" aria-hidden="true" tabindex="-1"></a>        generations <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb11-53"><a href="coding-handbook.html#cb11-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> generations</span>
+<span id="cb11-54"><a href="coding-handbook.html#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-55"><a href="coding-handbook.html#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Tests</span></span>
+<span id="cb11-56"><a href="coding-handbook.html#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> unittest</span>
+<span id="cb11-57"><a href="coding-handbook.html#cb11-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-58"><a href="coding-handbook.html#cb11-58" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> TestEvolveMethods(unittest.TestCase):</span>
+<span id="cb11-59"><a href="coding-handbook.html#cb11-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-60"><a href="coding-handbook.html#cb11-60" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_fitness(<span class="va">self</span>):</span>
+<span id="cb11-61"><a href="coding-handbook.html#cb11-61" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;axxd&quot;</span>), <span class="dv">2</span>)</span>
+<span id="cb11-62"><a href="coding-handbook.html#cb11-62" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>), <span class="dv">4</span>)</span>
+<span id="cb11-63"><a href="coding-handbook.html#cb11-63" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(fitness(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;wxyz&quot;</span>), <span class="dv">0</span>)</span>
+<span id="cb11-64"><a href="coding-handbook.html#cb11-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-65"><a href="coding-handbook.html#cb11-65" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mutaterate(<span class="va">self</span>):</span>
+<span id="cb11-66"><a href="coding-handbook.html#cb11-66" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;wxyz&quot;</span>), <span class="dv">1</span>)</span>
+<span id="cb11-67"><a href="coding-handbook.html#cb11-67" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abce&quot;</span>), <span class="fl">0.25</span>)</span>
+<span id="cb11-68"><a href="coding-handbook.html#cb11-68" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutaterate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>), <span class="dv">0</span>)</span>
+<span id="cb11-69"><a href="coding-handbook.html#cb11-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-70"><a href="coding-handbook.html#cb11-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mutate(<span class="va">self</span>):</span>
+<span id="cb11-71"><a href="coding-handbook.html#cb11-71" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;mutate with no mutation rate returns the parent.&quot;&quot;&quot;</span></span>
+<span id="cb11-72"><a href="coding-handbook.html#cb11-72" aria-hidden="true" tabindex="-1"></a>        alphabet <span class="op">=</span> <span class="st">&quot;abcdefgh&quot;</span></span>
+<span id="cb11-73"><a href="coding-handbook.html#cb11-73" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mutate(<span class="st">&quot;abcd&quot;</span>, <span class="dv">0</span>, alphabet), [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>])</span>
+<span id="cb11-74"><a href="coding-handbook.html#cb11-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-75"><a href="coding-handbook.html#cb11-75" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;mutate returns only characters from the alphabet.&quot;&quot;&quot;</span></span>
+<span id="cb11-76"><a href="coding-handbook.html#cb11-76" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertTrue(<span class="bu">all</span>([l <span class="kw">in</span> alphabet <span class="cf">for</span> l <span class="kw">in</span> mutate(<span class="st">&quot;abcd&quot;</span>, <span class="fl">0.25</span>, <span class="st">&quot;abcdefgh&quot;</span>)]))</span>
+<span id="cb11-77"><a href="coding-handbook.html#cb11-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-78"><a href="coding-handbook.html#cb11-78" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_mate(<span class="va">self</span>):</span>
+<span id="cb11-79"><a href="coding-handbook.html#cb11-79" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(mate(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;efgh&quot;</span>), (<span class="st">&#39;abcd&#39;</span>, <span class="st">&#39;efgh&#39;</span>, <span class="st">&#39;abgh&#39;</span>, <span class="st">&#39;efcd&#39;</span>))</span>
+<span id="cb11-80"><a href="coding-handbook.html#cb11-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-81"><a href="coding-handbook.html#cb11-81" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_evolve(<span class="va">self</span>):</span>
+<span id="cb11-82"><a href="coding-handbook.html#cb11-82" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;evolve raises error if target is not composed of the alphabet.&quot;&quot;&quot;</span></span>
+<span id="cb11-83"><a href="coding-handbook.html#cb11-83" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="va">self</span>.assertRaises(<span class="pp">AssertionError</span>):</span>
+<span id="cb11-84"><a href="coding-handbook.html#cb11-84" aria-hidden="true" tabindex="-1"></a>            evolve(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcx&quot;</span>, <span class="st">&quot;abcd&quot;</span>)</span>
+<span id="cb11-85"><a href="coding-handbook.html#cb11-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-86"><a href="coding-handbook.html#cb11-86" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;evolve raises error if seed and target are different lengths.&quot;&quot;&quot;</span></span>
+<span id="cb11-87"><a href="coding-handbook.html#cb11-87" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="va">self</span>.assertRaises(<span class="pp">AssertionError</span>):</span>
+<span id="cb11-88"><a href="coding-handbook.html#cb11-88" aria-hidden="true" tabindex="-1"></a>            evolve(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;abcd&quot;</span>)</span>
+<span id="cb11-89"><a href="coding-handbook.html#cb11-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-90"><a href="coding-handbook.html#cb11-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-91"><a href="coding-handbook.html#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Evolve some strings.&quot;</span>)</span>
+<span id="cb11-92"><a href="coding-handbook.html#cb11-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-93"><a href="coding-handbook.html#cb11-93" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb11-94"><a href="coding-handbook.html#cb11-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-95"><a href="coding-handbook.html#cb11-95" aria-hidden="true" tabindex="-1"></a><span class="co">Classic example. From random seed to english sentence.</span></span>
+<span id="cb11-96"><a href="coding-handbook.html#cb11-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-97"><a href="coding-handbook.html#cb11-97" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb11-98"><a href="coding-handbook.html#cb11-98" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="st">&quot;RHBpoxYLCGjNpUgLYnMfiKskRHmk&quot;</span></span>
+<span id="cb11-99"><a href="coding-handbook.html#cb11-99" aria-hidden="true" tabindex="-1"></a>target <span class="op">=</span> <span class="st">&quot;METHINKS IT IS LIKE A WEASEL&quot;</span></span>
+<span id="cb11-100"><a href="coding-handbook.html#cb11-100" aria-hidden="true" tabindex="-1"></a>alphabet <span class="op">=</span> <span class="st">&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ &quot;</span></span>
+<span id="cb11-101"><a href="coding-handbook.html#cb11-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-102"><a href="coding-handbook.html#cb11-102" aria-hidden="true" tabindex="-1"></a>generations <span class="op">=</span> evolve(seed, target, alphabet)</span>
+<span id="cb11-103"><a href="coding-handbook.html#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Success in </span><span class="sc">{</span>generations<span class="sc">}</span><span class="ss"> generations!&quot;</span>)</span>
+<span id="cb11-104"><a href="coding-handbook.html#cb11-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-105"><a href="coding-handbook.html#cb11-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-106"><a href="coding-handbook.html#cb11-106" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb11-107"><a href="coding-handbook.html#cb11-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-108"><a href="coding-handbook.html#cb11-108" aria-hidden="true" tabindex="-1"></a><span class="co">DNA example.</span></span>
+<span id="cb11-109"><a href="coding-handbook.html#cb11-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-110"><a href="coding-handbook.html#cb11-110" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb11-111"><a href="coding-handbook.html#cb11-111" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="st">&quot;CGATGATGTATACTGTACGTATCTACTAC&quot;</span></span>
+<span id="cb11-112"><a href="coding-handbook.html#cb11-112" aria-hidden="true" tabindex="-1"></a>dna_target <span class="op">=</span> <span class="st">&quot;AATCCGCTAGGTATCAGACTAGTAGCAGT&quot;</span></span>
+<span id="cb11-113"><a href="coding-handbook.html#cb11-113" aria-hidden="true" tabindex="-1"></a>dna_alphabet <span class="op">=</span> <span class="st">&quot;ATCG&quot;</span></span>
+<span id="cb11-114"><a href="coding-handbook.html#cb11-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-115"><a href="coding-handbook.html#cb11-115" aria-hidden="true" tabindex="-1"></a>dna_generations <span class="op">=</span> evolve(seed, dna_target, dna_alphabet)</span>
+<span id="cb11-116"><a href="coding-handbook.html#cb11-116" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Success in </span><span class="sc">{</span>dna_generations<span class="sc">}</span><span class="ss"> generations!&quot;</span>)</span>
+<span id="cb11-117"><a href="coding-handbook.html#cb11-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-118"><a href="coding-handbook.html#cb11-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-119"><a href="coding-handbook.html#cb11-119" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Run tests&quot;</span>)</span>
+<span id="cb11-120"><a href="coding-handbook.html#cb11-120" aria-hidden="true" tabindex="-1"></a>unittest.main()</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Code is organized into functions with well-defined domains (concerns), and well-defined interfaces.</li>
 <li>Functions are purely functional unless there’s a good reason. Good reasons include needing to throw exceptions, write to logs, generate random numbers, and limited use of global variables.</li>
@@ -643,42 +684,42 @@ code available.</li>
 <h3><span class="header-section-number">5.13.1</span> Version Control<a href="coding-handbook.html#version-control" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Version control systems such as git are nearly indispensable for maintaining the accuracy and integrity of a codebase. Services like Github also facilitate publishing code in a verifiable, archivable, and contributor-friendly format.</p>
 <p>There are eight git commands that are the backbone of git usage. These commands can be memorized in one sitting and provide most of what is needed for the vast majority of routine use.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="coding-handbook.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone</span>
-<span id="cb9-2"><a href="coding-handbook.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="coding-handbook.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone (copy) a repo to the current directory.</span></span>
-<span id="cb9-4"><a href="coding-handbook.html#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="coding-handbook.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add</span>
-<span id="cb9-6"><a href="coding-handbook.html#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="coding-handbook.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Begin tracking a file or directory. &quot;Add&quot; it to the local repo.</span></span>
-<span id="cb9-8"><a href="coding-handbook.html#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="coding-handbook.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span>
-<span id="cb9-10"><a href="coding-handbook.html#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="coding-handbook.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Make &lt;branch name&gt; the current branch.</span></span>
-<span id="cb9-12"><a href="coding-handbook.html#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="coding-handbook.html#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> <span class="op">&lt;</span>new branch name<span class="op">&gt;</span></span>
-<span id="cb9-14"><a href="coding-handbook.html#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="coding-handbook.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Create and check out &lt;new branch name&gt;.</span></span>
-<span id="cb9-16"><a href="coding-handbook.html#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-17"><a href="coding-handbook.html#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
-<span id="cb9-18"><a href="coding-handbook.html#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-19"><a href="coding-handbook.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the latest versions of the files in the current branch.</span></span>
-<span id="cb9-20"><a href="coding-handbook.html#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-21"><a href="coding-handbook.html#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status <span class="at">-s</span></span>
-<span id="cb9-22"><a href="coding-handbook.html#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-23"><a href="coding-handbook.html#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a list of files that have been modified locally.</span></span>
-<span id="cb9-24"><a href="coding-handbook.html#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-25"><a href="coding-handbook.html#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span>
-<span id="cb9-26"><a href="coding-handbook.html#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-27"><a href="coding-handbook.html#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the differences between the local files and the current branch.</span></span>
-<span id="cb9-28"><a href="coding-handbook.html#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-29"><a href="coding-handbook.html#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-am</span> <span class="st">&quot;&lt;new commit message&gt;&quot;</span></span>
-<span id="cb9-30"><a href="coding-handbook.html#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-31"><a href="coding-handbook.html#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Commit (create a set of changed files to be sent to the remote repository).</span></span>
-<span id="cb9-32"><a href="coding-handbook.html#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-33"><a href="coding-handbook.html#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
-<span id="cb9-34"><a href="coding-handbook.html#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-35"><a href="coding-handbook.html#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Push new commit(s) from the local to the remote repository.</span></span>
-<span id="cb9-36"><a href="coding-handbook.html#cb9-36" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="coding-handbook.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone</span>
+<span id="cb12-2"><a href="coding-handbook.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="coding-handbook.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone (copy) a repo to the current directory.</span></span>
+<span id="cb12-4"><a href="coding-handbook.html#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="coding-handbook.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add</span>
+<span id="cb12-6"><a href="coding-handbook.html#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="coding-handbook.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Begin tracking a file or directory. &quot;Add&quot; it to the local repo.</span></span>
+<span id="cb12-8"><a href="coding-handbook.html#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="coding-handbook.html#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span>
+<span id="cb12-10"><a href="coding-handbook.html#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="coding-handbook.html#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Make &lt;branch name&gt; the current branch.</span></span>
+<span id="cb12-12"><a href="coding-handbook.html#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="coding-handbook.html#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> <span class="op">&lt;</span>new branch name<span class="op">&gt;</span></span>
+<span id="cb12-14"><a href="coding-handbook.html#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="coding-handbook.html#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Create and check out &lt;new branch name&gt;.</span></span>
+<span id="cb12-16"><a href="coding-handbook.html#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="coding-handbook.html#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
+<span id="cb12-18"><a href="coding-handbook.html#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="coding-handbook.html#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the latest versions of the files in the current branch.</span></span>
+<span id="cb12-20"><a href="coding-handbook.html#cb12-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-21"><a href="coding-handbook.html#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status <span class="at">-s</span></span>
+<span id="cb12-22"><a href="coding-handbook.html#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-23"><a href="coding-handbook.html#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a list of files that have been modified locally.</span></span>
+<span id="cb12-24"><a href="coding-handbook.html#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="coding-handbook.html#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span>
+<span id="cb12-26"><a href="coding-handbook.html#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="coding-handbook.html#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the differences between the local files and the current branch.</span></span>
+<span id="cb12-28"><a href="coding-handbook.html#cb12-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-29"><a href="coding-handbook.html#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-am</span> <span class="st">&quot;&lt;new commit message&gt;&quot;</span></span>
+<span id="cb12-30"><a href="coding-handbook.html#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-31"><a href="coding-handbook.html#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Commit (create a set of changed files to be sent to the remote repository).</span></span>
+<span id="cb12-32"><a href="coding-handbook.html#cb12-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-33"><a href="coding-handbook.html#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb12-34"><a href="coding-handbook.html#cb12-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-35"><a href="coding-handbook.html#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Push new commit(s) from the local to the remote repository.</span></span>
+<span id="cb12-36"><a href="coding-handbook.html#cb12-36" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
 <p>The key to understanding git is 1. Understanding why it is used and 2. A good mental model of repositories, branches, and commits.</p>
 <p>Repository: A copy of all the code and history for a particular project. The remote repository is usually on a remote server or service such as github.com.</p>
 <p>Branch: A copy of the files in a repository that can be modified independently of other branches. Reconciling the differences between two branches and consolidating them into one branch is <em>merging</em> them.</p>
@@ -921,18 +962,18 @@ devtools::install_github(&#39;cbreto/panelPomp&#39;)</code></pre>
 <div id="slurm-tricks" class="section level3 hasAnchor" number="5.13.4">
 <h3><span class="header-section-number">5.13.4</span> SLURM tricks<a href="coding-handbook.html#slurm-tricks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>squeue -o</code> lets you specify additional information for squeue using a format string. These are annoying to type every time you want to query things. You can create an alias in your <code>.bash_profile</code> script:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb39-1"><a href="coding-handbook.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb42-1"><a href="coding-handbook.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></span></code></pre></div>
 <p>which includes standard info plus some extra stuff (including time limit, # nodes, # CPUs, and memory). Then you can just type <code>sq</code>, <code>sq -p cobey</code>, <code>sq -u edbaskerville</code>, etc. to perform queries with your customized format string.</p>
 <p>See <code>man squeue</code> for a list of format string options.</p>
 <p><code>sinfo -o</code> has similar options, including the ability to see how many processors are available/in use:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb40-1"><a href="coding-handbook.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb43-1"><a href="coding-handbook.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></span></code></pre></div>
 <p>A full list of aliases for user edbaskerville might look like:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb41-1"><a href="coding-handbook.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></span>
-<span id="cb41-2"><a href="coding-handbook.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> qcobey=<span class="st">&#39;sq -p cobey&#39;</span></span>
-<span id="cb41-3"><a href="coding-handbook.html#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> qsandyb=<span class="st">&#39;sq -p sandyb -u edbaskerville&#39;</span></span>
-<span id="cb41-4"><a href="coding-handbook.html#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></span>
-<span id="cb41-5"><a href="coding-handbook.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> icobey=<span class="st">&#39;si -p cobey&#39;</span></span>
-<span id="cb41-6"><a href="coding-handbook.html#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> isandyb=<span class="st">&#39;si -p sandyb&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb44-1"><a href="coding-handbook.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> sq=<span class="st">&#39;squeue -o &quot;%.18i %a %.9P %.8j %.8u %.8T %.10M %.9l %R %B %C %D %m&quot;&#39;</span></span>
+<span id="cb44-2"><a href="coding-handbook.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> qcobey=<span class="st">&#39;sq -p cobey&#39;</span></span>
+<span id="cb44-3"><a href="coding-handbook.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> qsandyb=<span class="st">&#39;sq -p sandyb -u edbaskerville&#39;</span></span>
+<span id="cb44-4"><a href="coding-handbook.html#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> si=<span class="st">&#39;sinfo -o &quot;%P %.5a %.10l %.6D %.6t %C&quot;&#39;</span></span>
+<span id="cb44-5"><a href="coding-handbook.html#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> icobey=<span class="st">&#39;si -p cobey&#39;</span></span>
+<span id="cb44-6"><a href="coding-handbook.html#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> isandyb=<span class="st">&#39;si -p sandyb&#39;</span></span></code></pre></div>
 </div>
 <div id="other-midway-items-to-keep-track-of" class="section level3 hasAnchor" number="5.13.5">
 <h3><span class="header-section-number">5.13.5</span> Other Midway items to keep track of<a href="coding-handbook.html#other-midway-items-to-keep-track-of" class="anchor-section" aria-label="Anchor link to header"></a></h3>
