@@ -154,6 +154,10 @@ Pick papers at least a week in advance so people have time to read them.
 Everyone is expected to show up having read and critically thought about the paper.
 If someone is presenting, everyone else is expected to make helpful suggestions.
 
+## Daily "Standup"
+
+We use a Slack app to do quick check-ins on a daily basis. In the morning, everyone receives a prompt to list the work they're planning for the day. Everyone's activities then appear at 10 AM Central for others to read. Checking in is optional and skipping the prompt is acceptable with or without explanation. We use this to start conversations, and to build the habit of formulating our intentions in advance.
+
 ## Reproducible research
 
 You have broad freedom in most aspects of how you work, but there are certain protocols we follow to keep our work reproducible, accessible, and organized. 
