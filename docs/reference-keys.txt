@@ -10,6 +10,7 @@ workspace
 communication
 weekly-check-ins
 lab-meetings
+daily-standup
 reproducible-research
 performance
 reviews
