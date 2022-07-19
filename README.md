@@ -5,7 +5,7 @@
 
 # Building
 
-*Currently built with [Bookdown](https://github.com/rstudio/bookdown) 0.25.*
+*Currently built with [Bookdown](https://github.com/rstudio/bookdown) 0.27.*
 
 ``` bash
 
