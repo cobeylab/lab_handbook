@@ -25,8 +25,8 @@ I can also help link you up with people who can help with housing.
 * Request access to the theory group calendar and the lab calendar
 * Download and install the [University VPN](https://uchicago.service-now.com/it?id=kb_article&kb=kb00015292) so you can access resources off campus.
 * Consider signing up for emails on additional seminar series and groups. (Note that a list of almost all BSD seminars will automatically be emailed to you every day.)
-* Ask Garnett to help you set up CrashPlan Pro and the external hard drive for backups.
-* Garnett can also help you add the printer.
+* Ask Mike Guerra to help you set up CrashPlan Pro and the external hard drive for backups.
+* Mike Guerra can also help you add the printer.
 * Figure out a lab service task. These tasks are basically chores, e.g., managing office supplies and the lab environment, maintaining the lab calendar and getting people signed up for meetings, etc. On Asana, they go by the euphemism "Areas of Responsibility". They're nonetheless critical for allowing us to work efficiently and happily. You'll also be assigned to a week of kitchen duty (basically, making sure other people clean up their messes, and picking up the slack if they don't).
 * Write your profile for the lab website, and upload your CV (we could review it together first, if you like).
 
