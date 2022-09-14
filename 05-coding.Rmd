@@ -995,6 +995,10 @@ For each node purchased by the lab, the warranty is 5 years. Once the warranty r
 knitr::include_graphics(rep("images/node_life_2021-08-17.png"))
 ```
 
+```{r private-nodes, out.width='100%', echo=FALSE, fig.show='hold', fig.align="center", fig.cap='Node list with status September 2022'}
+knitr::include_graphics(rep("images/private-nodes.png"))
+```
+
 #### Transitioning from Midway2 to Midway3
 Any nodes purchased after March 2021 are housed on Midway3. The RCC will mount storage from Midway2 onto Midway3, meaning it will be accessible when running jobs from Midway3. As of August 2021, this has not yet occurred (due to delays related to the pandemic), but they expect this will occurr by October 2021. After this point, it will make sense for all new projects to be housed on Midway3 instead of Midway2.
 
