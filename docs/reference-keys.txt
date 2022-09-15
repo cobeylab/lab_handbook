@@ -1,6 +1,7 @@
 fig:danse-macabre
 fig:owl-plot
 fig:node-life
+fig:private-nodes
 fig:data-plot
 why
 how-we-work
