@@ -991,9 +991,21 @@ Each September we have to submit an allocation request to the RCC to request Ser
 #### Node life
 For each node purchased by the lab, the warranty is 5 years. Once the warranty runs out, the nodes can still be active on Midway2, but if they break or go down, the RCC will not fix them. For any long-duration jobs, please ensure you are using a node that is under warranty to reduce the likelihood of data loss. A spreadsheet with nodes, purchase date, warranty duration, and node label is housed in `/project2/cobey/allocation_requests_midway_resources`.
 
-```{r node-life, echo=FALSE, fig.show='hold', fig.align="center", fig.cap='Expected node lifetime. Color denotes number of nodes with the same RAM and lifetime. Black vertical line denots 17 August 2021 (the time of writing).'}
-knitr::include_graphics(rep("images/node_life_2021-08-17.png"))
+For the current status of private nodes, use:
+
+
+```{sh}
+sinfo -p cobey
 ```
+
+Or for nodes with "cobey" in the name:
+
+```{sh}
+sinfo | grep cobey
+```
+
+
+
 
 ```{r private-nodes, out.width='100%', echo=FALSE, fig.show='hold', fig.align="center", fig.cap='Node list with status September 2022'}
 knitr::include_graphics(rep("images/private-nodes.png"))
