@@ -1041,9 +1041,17 @@ Protected Health Information (PHI) and (PII) must be handled carefully according
 
 [HIPAA Privacy](https://services.uchospitals.edu/sites/PoliciesAndProcedures/Pages/HIPAA-Privacy.aspx)
 
-### Transferring Data to MidwayR
+### Handling PHI
 
-Data is vulnerable "at rest" (on a local machine, or cloud storage) and "in transit" between machines over the internet or other network. It can also be recovered after it has been deleted from certain types of drive, and copies are retained on systems where the data was stored. Files in recycle bins, logs, backups, and swap files are examples of this, but there are many others. Online services (Slack, email systems, Github, messaging apps) where attachments appear to be limited to two parties, also expose data to the company that owns the service, and their internal logs, backups, third-party services et cetera.
+Data is vulnerable "at rest" (on a local machine, or cloud storage) and "in transit" between machines over the internet or other network. It can also be recovered after it has been deleted from certain types of drive, and copies are often retained on systems where data was stored. Online services (Slack, email systems, Github, messaging apps) -- even when attachments appear to be limited to two parties -- also expose data to the company that owns the service, and their internal logs, backups, third-party services et cetera.
 
-It is important, therefore, to use secure systems even for temporary storage, or transferring files to MidwayR. Documentation on transferring files is available in the [MidwayR User Guide](https://midwayr-docs.rcc.uchicago.edu/data-transfer/).
+It is important, therefore, to use secure systems even for temporary storage, or when transferring files to MidwayR. PHI generally needs to be deleted after the conclusion of a study according to a Data Use Agreement, or IRB protocol.
+
+CrashPlan Pro should be set up to exclude any PHI data directories, and backups should be included when deleting data. Copies can also be in recycle bins, logs, and swap files.
+
+There's no official secure deletion application for individual files. However, [CCleaner](https://www.ccleaner.com/) and similar programs can help with the process on local machines. Whole-disk deletion should be coordinated with the [BSD Information Security Office](https://security.bsd.uchicago.edu/).
+
+If data is exposed, lost or stolen, it should be reported according to the corresponding protocol or agreement.
+
+Methods for transferring files are available in the [MidwayR User Guide](https://midwayr-docs.rcc.uchicago.edu/data-transfer/).
 
