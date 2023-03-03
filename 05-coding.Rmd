@@ -602,7 +602,7 @@ There are three places you can store things on Midway: (1) your home directory; 
 
 Your home directory is in `/home/<CNetID>` and has a quota of 30 GB. This is a good place to check out your code, install software you want to use for runs, etc. You should NOT, in general, store simulation output in your home directory.
 
-Your scratch space is `home/<CNetID>/scratch-midway2` and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., `2014-12-08-antigen-vaccine`; you may want prefer a hierarchy.
+Your scratch space is `/scratch/midway3/<CNet ID>/` and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., `2014-12-08-antigen-vaccine`; you may want prefer a hierarchy.
 
 The lab project directory is `/project2/cobey` (for Midway2() (`/project/cobey` for Midway3 but as of 8/2021 there is no storage quota) and has a quota of 4.49 TB, with a hard limit of 4.94 TB, for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. `/project2/cobey/bcellproject-storage/2014-12-08-test`. The lab directory has a file quota of 1,885,693 files, with a hard limit of 2,074,262 files.
 
