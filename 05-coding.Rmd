@@ -1014,3 +1014,44 @@ knitr::include_graphics(rep("images/private-nodes.png"))
 #### Transitioning from Midway2 to Midway3
 Any nodes purchased after March 2021 are housed on Midway3. The RCC will mount storage from Midway2 onto Midway3, meaning it will be accessible when running jobs from Midway3. As of August 2021, this has not yet occurred (due to delays related to the pandemic), but they expect this will occurr by October 2021. After this point, it will make sense for all new projects to be housed on Midway3 instead of Midway2.
 
+
+
+## PHI and PII
+
+Protected Health Information (PHI) and (PII) must be handled carefully according to the IRB protocol of the project, legal restrictions, and UChicago policy. Policies are covered in the Human Subjects, and HIPAA trainings.
+
+
+### Links to Policies
+
+(Available only within UCM network or VPN)
+
+[Access Control Policy](https://services.uchospitals.edu/sites/PoliciesAndProcedures/HIPAA%20Security/1%20-%20IT%20Security%20Policies/03_POL-AC%20Access%20Control%20Policy.pdf)
+
+[Responsibilities and Oversight Policy](https://services.uchospitals.edu/sites/PoliciesAndProcedures/HIPAA%20Security/1%20-%20IT%20Security%20Policies/01_POL-RO%20Responsibility%20and%20Oversight%20Policy.pdf)
+
+[Personal Computing Device Policy](https://services.uchospitals.edu/sites/PoliciesAndProcedures/HIPAA%20Security/1%20-%20IT%20Security%20Policies/06_POL-BD%20Personal%20Computing%20Device%20Policy.pdf)
+
+[Data Classification Policy and Handling Procedures](https://services.uchospitals.edu/sites/PoliciesAndProcedures/HIPAA%20Security/1%20-%20IT%20Security%20Policies/02_POL-DC%20Data%20Classification.pdf)
+
+[HIPAA Security](https://services.uchospitals.edu/sites/PoliciesAndProcedures/Pages/HIPAA-Security.aspx)
+
+[UCMC Remote Work Policy](https://services.uchospitals.edu/sites/PoliciesAndProcedures/UCH%20Administrative/A09-23%20_Remote%20Work.pdf)
+
+[Biological Sciences Division Security Office](https://security.bsd.uchicago.edu/)
+
+[HIPAA Privacy](https://services.uchospitals.edu/sites/PoliciesAndProcedures/Pages/HIPAA-Privacy.aspx)
+
+### Handling PHI
+
+Data is vulnerable "at rest" (on a local machine, or cloud storage) and "in transit" between machines over the internet or other network. It can also be recovered after it has been deleted from certain types of drive, and copies are often retained on systems where data was stored. Online services (Slack, email systems, Github, messaging apps) -- even when attachments appear to be limited to two parties -- also expose data to the company that owns the service, and their internal logs, backups, third-party services et cetera.
+
+It is important, therefore, to use secure systems even for temporary storage, or when transferring files to MidwayR. PHI generally needs to be deleted after the conclusion of a study according to a Data Use Agreement, or IRB protocol.
+
+CrashPlan Pro should be set up to exclude any PHI data directories, and backups should be included when deleting data. Copies can also be in recycle bins, logs, and swap files.
+
+There's no official secure deletion application for individual files. However, [CCleaner](https://www.ccleaner.com/) and similar programs can help with the process on local machines. Whole-disk deletion should be coordinated with the [BSD Information Security Office](https://security.bsd.uchicago.edu/).
+
+If data is exposed, lost or stolen, it should be reported according to the corresponding protocol or agreement.
+
+Methods for transferring files are available in the [MidwayR User Guide](https://midwayr-docs.rcc.uchicago.edu/data-transfer/).
+
