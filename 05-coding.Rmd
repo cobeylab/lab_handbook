@@ -675,6 +675,10 @@ You can also get a full Linux desktop GUI on a Midway connection using a program
 
 WARNING: the first time you use ThinLinc, before you click Connect go to Options... > Screen and turn off full-screen mode. Otherwise ThinLinc will take over all your screens, making it rather hard to use your computer.
 
+##### Connecting to Eduroam internationally
+
+See [UChicago ServiceNow](https://uchicago.service-now.com/it?id=kb_article&kb=KB00015370).
+
 #### Configuring Software on Midway
 
 Before you run anything on Midway, you'll need to load the necessary software modules using the `module` command:
