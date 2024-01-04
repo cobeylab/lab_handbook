@@ -994,13 +994,13 @@ For each node purchased by the lab, the warranty is 5 years. Once the warranty r
 For the current status of private nodes, use:
 
 
-```{sh}
+```
 sinfo -p cobey
 ```
 
 Or for nodes with "cobey" in the name:
 
-```{sh}
+```
 sinfo | grep cobey
 ```
 
@@ -1054,4 +1054,16 @@ There's no official secure deletion application for individual files. However, [
 If data is exposed, lost or stolen, it should be reported according to the corresponding protocol or agreement.
 
 Methods for transferring files are available in the [MidwayR User Guide](https://midwayr-docs.rcc.uchicago.edu/data-transfer/).
+
+
+### Data Locations
+
+
+|Name|MidwayR Directory|Aura Name|IRB Code|Location(s)|
+|----|-----------------|---------|--------|-----------|
+|PARIS/SPARTA|cobey-covid|COVID-19 immune dynamics|IRB20-2105|MidwayR|
+|DRIVE|cobey-drive|Flu and COVID-19 RCT|IRB20-0217|MidwayR|
+|Marshfield|N/A|Flu vaccine effectiveness|IRB17-1134|UChicago Box|
+|NPICS|N/A|Longitudinal dynamics|IRB18-0554|Midway/UChicago Box|
+|DIVERsity|N/A|Heterogeneous responses|IRB22-0713|CRI/UChicago Box|
 
