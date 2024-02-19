@@ -65,7 +65,7 @@ The following workflow seems to work well, but if you prefer another one, let me
 11. Ask a colleague to try to run your code, given the manuscript and access to the repository, and no other help from you.
 12. When the final manuscript is ready for coauthors' approval, confirm with them (if you've not yet) their funding and preferred and non-preferred reviewers. Make sure they don't have a COI with any of the preferred reviewers.
 13. Draft the cover letter, or whatever introductory text the journal requires.
-14. When all coauthors have approved the manuscript, we submit it to a preprint server (without journal-specific typesetting), publish the repository, and submit to a journal.
+14. When all coauthors have approved the manuscript, we submit it to a preprint server (without journal-specific typesetting), publish the repository, and submit to a journal. Note: Preprints should be licensed [CC BY](https://creativecommons.org/share-your-work/cclicenses/) 4.0 without noncommercial or nondistribution restrictions.
 15. Celebrate.
 
 ### "Mature" papers
