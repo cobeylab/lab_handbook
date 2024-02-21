@@ -94,10 +94,12 @@ More on that below.
 Take vacations! 
 Take good ones, show us the photos, and bring back tea, chocolate, and/or fine liquor.
 Try to use all your vacation time. 
-You don't need approval from anyone before you select dates, but please try to give collaborators advance notice and consider their schedules.
+Please double check with me before you select your dates (assign the review to me via Asana), mostly so I know to start making necessary accommodations.
 Mark the days you plan to be away on the lab calendar.
 
-Please stay home if you're sick. You will be judged for this one.
+Please stay home if you're sick. 
+You will be judged for this one.
+Post on Slack that you're taking a sick day.
 
 Non-hourly, benefits-eligible employees (including graduate students) are entitled to various forms of parental, personal, and family leave, and I encourage you to take them if you need them.
 If you need other accommodations, please let me know.
