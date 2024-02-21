@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 How we work | Cobey Lab Handbook</title>
   <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 How we work | Cobey Lab Handbook" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-09-15" />
+<meta name="date" content="2024-02-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,71 +53,11 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -207,7 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="coding-handbook.html"><a href="coding-handbook.html#indirection-abstraction-and-generalization"><i class="fa fa-check"></i><b>5.5</b> Indirection, Abstraction, and Generalization</a>
 <ul>
-<li class="chapter" data-level="5.5.1" data-path="coding-handbook.html"><a href="coding-handbook.html#example-the-weasel-algorithm"><i class="fa fa-check"></i><b>5.5.1</b> Example: <span>The Weasel Algorithm</span></a></li>
+<li class="chapter" data-level="5.5.1" data-path="coding-handbook.html"><a href="coding-handbook.html#example-the-weasel-algorithm"><i class="fa fa-check"></i><b>5.5.1</b> Example: The Weasel Algorithm</a></li>
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="coding-handbook.html"><a href="coding-handbook.html#debugging"><i class="fa fa-check"></i><b>5.6</b> Debugging</a></li>
 <li class="chapter" data-level="5.7" data-path="coding-handbook.html"><a href="coding-handbook.html#functional-programming"><i class="fa fa-check"></i><b>5.7</b> Functional Programming</a></li>
@@ -227,6 +167,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.13.3" data-path="coding-handbook.html"><a href="coding-handbook.html#running-jobs-on-midway"><i class="fa fa-check"></i><b>5.13.3</b> Running Jobs on Midway</a></li>
 <li class="chapter" data-level="5.13.4" data-path="coding-handbook.html"><a href="coding-handbook.html#slurm-tricks"><i class="fa fa-check"></i><b>5.13.4</b> SLURM tricks</a></li>
 <li class="chapter" data-level="5.13.5" data-path="coding-handbook.html"><a href="coding-handbook.html#other-midway-items-to-keep-track-of"><i class="fa fa-check"></i><b>5.13.5</b> Other Midway items to keep track of</a></li>
+</ul></li>
+<li class="chapter" data-level="5.14" data-path="coding-handbook.html"><a href="coding-handbook.html#phi-and-pii"><i class="fa fa-check"></i><b>5.14</b> PHI and PII</a>
+<ul>
+<li class="chapter" data-level="5.14.1" data-path="coding-handbook.html"><a href="coding-handbook.html#links-to-policies"><i class="fa fa-check"></i><b>5.14.1</b> Links to Policies</a></li>
+<li class="chapter" data-level="5.14.2" data-path="coding-handbook.html"><a href="coding-handbook.html#handling-phi"><i class="fa fa-check"></i><b>5.14.2</b> Handling PHI</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="onboarding.html"><a href="onboarding.html"><i class="fa fa-check"></i><b>6</b> Onboarding</a></li>
@@ -265,13 +210,14 @@ Do not shame yourself for them.
 Instead, admit them, and document this learning for yourself and others by talking about it or potentially adding some advice to the handbook.
 Note that failing is not the same thing as not having the result you wanted—it’s a good day when your hypothesis is not supported and you get to learn something about how the world works.
 Frequently reevaluate your approach and the direction of each project, and take initiative in doing this.
-Take initiative as a collaborator too.</p>
+Take initiative as a collaborator (middle author) too.</p>
 <p><strong>Know your corner of the literature.</strong>
 It makes you much smarter and can save enormous time in the long run.
 It also makes it easier to spot good opportunities and unanswered questions.
 Knowing the history of work on your problem inside and out is a requirement for first authors.
 Develop a scientific reading habit if you don’t have one yet.
-As a general guideline, on average, graduate researchers and postdocs should be reading five papers a week, and skimming more.</p>
+As a general guideline, on average, graduate researchers and postdocs should be reading five papers a week and skimming at least twice as many.
+When starting out in a new area, you should probably spend most of your time reading.</p>
 <p><strong>Be open to collaboration, and respect your collaborators.</strong>
 Getting anything worthwhile done in research requires learning from others, including through papers, talks, and whiteboard time.
 Be proactive in thinking about who might have relevant expertise.
@@ -467,20 +413,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
