@@ -23,7 +23,8 @@ It makes you much smarter and can save enormous time in the long run.
 It also makes it easier to spot good opportunities and unanswered questions.
 Knowing the history of work on your problem inside and out is a requirement for first authors.
 Develop a scientific reading habit if you don't have one yet.
-As a general guideline, on average, graduate researchers and postdocs should be reading five papers a week, and skimming more.
+As a general guideline, on average, graduate researchers and postdocs should be reading five papers a week and skimming at least twice as many.
+When starting out in a new area, you should probably spend most of your time reading.
 
 **Be open to collaboration, and respect your collaborators.**
 Getting anything worthwhile done in research requires learning from others, including through papers, talks, and whiteboard time.
@@ -51,7 +52,7 @@ Participate in departmental seminars, go to talks in other departments, meet wit
 (Graduate researchers should aim to attend a departmental seminar and journal club each week.)
 Start journal clubs and groups that you wish existed and would make time for.
 Try to balance exploration with work on existing projects.
-I don't know the right balance here, but it's worth trying to figure it out.
+I don't know the right balance here, but it's worth trying to figure it out and is something we should discuss periodically.
 
 **Work hard but sustainably.**
 Figure out sustainable habits for effective research. 
@@ -61,7 +62,6 @@ Resist the temptation to run from one deadline to the next, and think instead ab
 (Do this especially if you're (i) fresh out of undergrad, or (ii) have never done it before because you think you work best under pressure.)
 Aim for 40 hours of focused work per week.
 If you're not happy with your progress or productivity, *there's no shame in asking for help or ideas from others*, including your advisor.
-For what it's worth, I do think it's possible to do great research while having a life. (I've seen others do it... lolz)
 A great resource for sustainable habits is the [National Center for Faculty Development and Diversity](https://www.facultydiversity.org/). 
 They have online classes, weekly newsletters, and writing support groups. 
 The University of Chicago has a subscription, so you should be able to get free access.
@@ -69,6 +69,7 @@ The University of Chicago has a subscription, so you should be able to get free 
 **Be accountable**.
 All work in the lab is collaborative, involving the blood, sweat, and tears (and hopes and dreams!) of multiple people, and often indirectly taxpayers.
 Respect all these contributions by being a reliable, involved scientist.
+Show up to meetings on time.
 Let collaborators know if your contributions will be delayed, if you think something should be done differently, or if you have concerns about quality.
 Always look for better hypotheses and approaches.
 Speak up if you see something that's not right.
@@ -87,6 +88,9 @@ But because we're human, and it's nice to see other, non-digitized human faces r
 You don't have to communicate your schedule with me in advance, as long as you're around roughly this much and show up for meetings.
 Undergrads and out-of-state lab members will have different arrangements, of course.
 
+Everyone, regardless of where they are working, should check in with our messaging and project management systems (Slack and Asana) at least three times per day (morning, mid-day, and afternoon). 
+More on that below.
+
 Take vacations! 
 Take good ones, show us the photos, and bring back tea, chocolate, and/or fine liquor.
 Try to use all your vacation time. 
@@ -103,33 +107,38 @@ If you need other accommodations, please let me know.
 The lab space is supposed to help you work efficiently and happily: I want it to be a place where people can reliably go to get stuff done.
 
 * Keep the main room quiet. 
-If others are present, have meetings (in person or via Skype) in an adjacent conference room.
-* Please feel free to customize your space. Adjust the location and height of your desk and file cabinet as you see fit. Let me know if you'd like a privacy screen, a fan or space heater, etc.
-* Check with others before bringing pets to work.
+If others are present, have meetings (in person or via Zoom) in the Framery pod or an adjacent conference room.
+* Please feel free to customize your space. Let me know if you'd like a privacy screen, a fan or space heater, need a different display, etc.
 * Consult others before making dramatic changes to the lighting or temperature.
 * Keep things clean. Wipe your desk. Wipe the kitchen counter. Do not wipe crumbs on the floor. Clean up spills. Gently encourage others to do the same. Bad habits kill mice.
-* To make the room easier to clean, avoid letting your stuff overflow past your desk. Don't leave piles of stuff on the floor for more than a few days.
+* To make the room easier to clean and easier on others' eyes, avoid letting your stuff overflow past your desk. Don't leave piles of stuff on the floor for more than a few days.
 * Please let me know if there are ways the space can be more comfortable, or if there are particular things (e.g., new computer or software) that would improve your work.
 * Lock the door if you leave and no one is in the lab.
 
 ## Communication
 Please limit the use of email for research questions and discussions.
-Use Asana instead---it makes things much easier to find in the long run, and it has no overeager spam filter.
-Asana is also the best tool for lab announcements and discussions.
+Use Slack or Asana instead---they make things much easier to find in the long run.
 
-I do not expect you to check email or Asana on weekends, vacations, sick days, or holidays. 
-I'll always try to respond to your communications within 24 h, excluding weekends, vacations, sick days, and holidays.
-In general, you should check email and Asana a few times a day and try to respond to urgent requests within an hour or two (M-F), but I expect urgent requests to be few and far between. 
-They will probably have some warning (e.g., an impending paper or grant deadline).
+We use Slack for announcements, sharing papers, coordinating meetings, and discussing research. 
+It's also a place you can ask me quick questions. 
+
+We use Asana for managing research projects, admin, and associated tasks.
+Research projects are by default public to anyone in our group, and this is a place to see what people are working on and what's next, and to access important reference docs.
+It's also often a convenient place for task-related discussions.
+
+I do not expect you to check email, Slack, or Asana on weekends, vacations, sick days, or holidays, or outside typical working hours. 
+I'll always try to respond to your communications within 24 h, again excluding weekends, vacations, sick days, and holidays.
+In general, you should check Slack and Asana a few times per day and try to respond to most requests within a few hours (M-F), even if it's to ask if a full response is needed now.
+Note there is an [Asana plugin](https://cobeylab.slack.com/apps/A01734836JY-asana?tab=more_info) for Slack.
 
 If I'm in my office and the door is open, you're welcome to come in to talk.
-If the door is closed, it means I'm working, and it's best to communicate via Asana.
+If the door is closed, it means I'm working, and it's best to communicate via Slack.
 
-## Weekly check-ins
+## Weekly check-ins and meetings
 
 Most weeks, you'll meet individually with me to discuss research and occasionally other topics.
-The agendas of these meetings is largely up to you.
-However, I ask you to come prepared with slides, an updated summary, or notebook (Rmd, Jupyter, etc.) concisely describing progress since the last meeting. 
+The agendas of these meetings is largely up to you, but you should know what you want to get from the meeting before it starts.
+I ask researchers to come prepared with slides, an updated summary, or notebook (Rmd, Jupyter, etc.) concisely describing progress since the last meeting. 
 You can choose whichever format works best for you, but somehow, your notes should clearly state (i) what goals you had set last week for this week, (ii) your progress on each goal, and (iii) what you think comes next.
 (This structure is really helpful for me.)
 You should also be prepared to show system and unit tests, or some kind of validation, to convince me your research results are correct.
@@ -140,8 +149,9 @@ If our relationship needs adjusting, please let me know.
 If you want to talk about career goals, that's fine too.
 This is your time, but please be organized about it.
 
-When I'm traveling, these weekly meetings may need to be rescheduled or occur over the phone.
+When I'm traveling, these weekly meetings will by default be cancelled, but you're welcome to reschedule them.
 Please always feel free to request a meeting when I am traveling, unless I'm on vacation.
+You can sign up to meet with me using my Calendly link.
 
 ## Lab meetings
 
@@ -153,10 +163,6 @@ Plan to present your research once per quarter and to lead at least one paper di
 Pick papers at least a week in advance so people have time to read them.
 Everyone is expected to show up having read and critically thought about the paper.
 If someone is presenting, everyone else is expected to make helpful suggestions.
-
-## Daily "Standup"
-
-We use a Slack app to do quick check-ins on a daily basis. In the morning, everyone receives a prompt to list the work they're planning for the day. Everyone's activities then appear at 10 AM Central for others to read. Checking in is optional and skipping the prompt is acceptable with or without explanation. We use this to start conversations, and to build the habit of formulating our intentions in advance.
 
 ## Reproducible research
 
