@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2024-02-21" />
+<meta name="date" content="2024-02-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -110,7 +110,7 @@
 <li class="chapter" data-level="4.6" data-path="so-you-wanna.html"><a href="so-you-wanna.html#make-nice-figures"><i class="fa fa-check"></i><b>4.6</b> Make nice figures</a></li>
 <li class="chapter" data-level="4.7" data-path="so-you-wanna.html"><a href="so-you-wanna.html#keep-up-with-the-literature"><i class="fa fa-check"></i><b>4.7</b> Keep up with the literature</a></li>
 <li class="chapter" data-level="4.8" data-path="so-you-wanna.html"><a href="so-you-wanna.html#get-funded"><i class="fa fa-check"></i><b>4.8</b> Get funded</a></li>
-<li class="chapter" data-level="4.9" data-path="so-you-wanna.html"><a href="so-you-wanna.html#ask-for-a-letter-of-recommendation"><i class="fa fa-check"></i><b>4.9</b> Ask for a letter of recommendation</a></li>
+<li class="chapter" data-level="4.9" data-path="so-you-wanna.html"><a href="so-you-wanna.html#ask-for-a-recommendation"><i class="fa fa-check"></i><b>4.9</b> Ask for a recommendation</a></li>
 <li class="chapter" data-level="4.10" data-path="so-you-wanna.html"><a href="so-you-wanna.html#see-our-funding"><i class="fa fa-check"></i><b>4.10</b> See our funding</a></li>
 <li class="chapter" data-level="4.11" data-path="so-you-wanna.html"><a href="so-you-wanna.html#review-your-peers"><i class="fa fa-check"></i><b>4.11</b> Review your peers</a></li>
 <li class="chapter" data-level="4.12" data-path="so-you-wanna.html"><a href="so-you-wanna.html#have-productive-meetings"><i class="fa fa-check"></i><b>4.12</b> Have productive meetings</a>
@@ -212,10 +212,11 @@ Figure 4.1: Basically, except less sequential
 </p>
 </div>
 <p><strong>Identify a good question:</strong> This can take some time. Talk with other people, read, keep talking, study patterns, reason from first principles, and keep talking. What phenomena are you trying to explain? Generate many questions. Consider the next step, if necessary, in picking one.</p>
-<p><strong>Develop a game plan:</strong> Posit some answers to your question. What do those answers imply? What patterns or processes are (in)consistent with them? How can you test them? (And how can you make sure you’re testing them correctly, i.e., that your analysis is correct?) Draft some approaches. Prioritize a few. Add the actionable tasks to Asana. (You can keep backup ideas there too in a separate section.) Read up on <a href="http://thenewpi.blogspot.com/2018/03/why-you-should-care-about-project.html">project management</a>.</p>
-<p><strong>Set up a notebook:</strong> Create a version-controlled “lab notebook” in which to record your progress, which includes your thinking, notes from papers, and your analyses. There are many fine ways to do this: what’s most important is that the notebook is organized and that you use it. You could use Asana and Overleaf (Latex), Quarto, R markdown, or a Jupyter notebook. The last three are probably most seamless, but it doesn’t matter too much. Be sure to keep files (notes, scripts) in a repository, included in the <a href="https://github.com/cobeylab">lab’s github account</a>. N.B. Data may need to be stored locally or in a special location, depending on its use restrictions (see below). Everything you do should be traceable and reproducible in some way—no quick “one off” figures that exist only on your laptop.</p>
-<p><strong>Work steadily:</strong> The point of the repository is to make it easy to save work, catch errors, roll back, and track progress. You should generally be “committing” (pushing code and new results to) your repository at least once per day. In the same vein, you should checking off tasks at least once every few days (ideally more often). Tracking progress through tasks makes it easy to summarize weekly progress and see the next steps.</p>
-<p><strong>Understand context and constraints.</strong> If you’re working with data, there might be IRB restrictions on how it can be used, stored, and shared. Find out and comply. Check that incoming data does not contain protected health information if it’s not supposed to. Also ask how the work is funded, if you do not yet know, and what kinds of reporting requirements and deadlines we may have. Contracts often require bimonthly progress reports; those for grants are less frequent. Identify any collaborators and make a plan for working with them</p>
+<p><strong>Develop a game plan:</strong> Posit some answers to your question. What do those answers imply? What patterns or processes are (in)consistent with them? How can you test them? (And how can you make sure you’re testing them correctly, i.e., that your analysis is correct?) Draft some approaches. Prioritize a few. Add the actionable tasks to Asana. (You can keep backup ideas there too in a separate section.) Read up on <a href="http://thenewpi.blogspot.com/2018/03/why-you-should-care-about-project.html">project management</a>. Sketch out the first few milestones and discuss with me. Not all projects are worth six months, three years, etc.</p>
+<p><strong>Set up a notebook:</strong> Create a version-controlled “lab notebook” in which to record your progress, which includes your thinking, notes from papers, and your analyses. There are many fine ways to do this: what’s most important is that the notebook is organized and that you use it. You could use Asana and Overleaf (Latex), Quarto, R markdown, or a Jupyter notebook. The last three are probably most seamless, but it doesn’t matter too much. Be sure to keep files (notes, scripts) in a repository, included in the <a href="https://github.com/cobeylab">lab’s github account</a>. N.B. Data may need to be stored locally or in a special location, depending on its use restrictions (see below). Everything you do should be traceable and reproducible in some way—no quick “one off” figures that exist only on your laptop, or where you have to guess at which parameters or data set you used.</p>
+<p><strong>Think about what it would take to trust your results:</strong> How will you know if you have a bug? Can you tweak your parameters or assumptions so they match analytic expectations? What sort of reality checks can you think of, both for your model and the overall hypothesis? Write code in a modular way so that it is easy to test and debug. Elaborate inferential models should always be fitted to synthetic data first. Always plot your data and check for nonsensical values or suspicious trends. How would you know if columns or rows got swapped?</p>
+<p><strong>Work steadily:</strong> The point of the repository is to make it easy to save work, catch errors, roll back, and track progress. You should generally be “committing” (pushing code and new thoughts/results to) your repository at least once per day. In the same vein, you should checking off tasks at least once every few days (ideally more often). Tracking progress through tasks makes it easy to summarize weekly progress and see the next steps, which we’ll discuss in weekly or biweekly meetings.</p>
+<p><strong>Understand context and constraints.</strong> If you’re working with data, there might be IRB restrictions on how it can be used, stored, and shared. Your laptop might need password protection and encryption. Find out and comply. Always check that incoming data does not contain protected health information if it’s not supposed to. Also ask how the work is funded, if you do not yet know, and what kinds of reporting requirements and deadlines we may have. Contracts often require bimonthly progress reports; those for grants are less frequent. Identify any collaborators and make a plan for working with them</p>
 <p><strong>Have the right attitude:</strong> As long as you’re reasoning based on evidence, you’re making progress. See <a href="http://jcs.biologists.org/content/128/15/2745">Schwartz (2015)</a>. Not all projects should move ahead. This is why it’s useful to step back, reassess, and discuss your work with others. Revisit and revise your previous questions.</p>
 </div>
 <div id="code-well-and-efficiently" class="section level2 hasAnchor" number="4.3">
@@ -228,20 +229,20 @@ Figure 4.1: Basically, except less sequential
 <h3><span class="header-section-number">4.4.1</span> General advice<a href="so-you-wanna.html#general-advice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>One of the best ways to write good papers is to read lots of good papers.
-This is more comfortable than learning incrementally from rejections. Also, there are useful books and essays on the subject (see below).</li>
-<li>For grants and papers, the central challenge is to articulate an interesting question and show how you have helped or will help answer it. Practice doing this from the beginning of your research project, as you sketch ideas and results in your notebook. A key skill, and the reason it’s important to read, talk with others, attend seminars, etc., is that what’s considered an interesting question varies widely by field. Learn to appeal to different audiences.</li>
+This is more comfortable than learning incrementally from rejections. Additionally, there are useful books and essays on the subject (see below) that can help you avoid common mistakes.</li>
+<li>For grants and papers, the central challenge is to articulate an interesting question and show how you have helped answer it. Practice doing this from the beginning of your research project, as you sketch ideas and results in your notebook and share progress with others. A key insight, and the reason it’s important to read, talk with others, attend seminars, etc., is that what’s considered an interesting question varies widely by field. Learn what appeals to different audiences.</li>
 <li><strong>Be clear.</strong> Use topic sentences. Assume your reader is an intelligent first-year graduate student, but with less time on her hands. Try to state things vividly and directly. Your writing will almost always improve if you try to explain your reasoning as transparently as possible.</li>
 <li>Focus on ideas, not people or studies. Avoid “Many studies have shown X.” Just state what has been shown and give references.</li>
 <li>Be consistent. If you define a parameter, refer to it the same way throughout your paper. This holds for all sorts of annoying punctuation and formatting conventions. Channel the reader’s attention into one clear, fascinating story, and let nothing distract from it.</li>
 <li>I like Claus Wilke’s advice about knowing, when you sit down to write, if you are drafting or revising/editing. If you are drafting, don’t worry so much about the flow. Just get the ideas down. Under no circumstances should you show me that draft, however.</li>
-<li>Recommendations: <a href="https://stevenpinker.com/files/pinker/files/why_academics_stink_at_writing.pdf">“Why Academics Stink at Writing”</a>, <a href="https://www.bartleby.com/141/index.html"><em>The Elements of Style</em></a> (which I really like, contrary to <a href="https://serialmentor.com/blog/2017/11/12/move-over-Strunk-White">Claus</a>), <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003453">“Ten Simple Rules for Writing Research Papers”</a>, <a href="https://sarneckalab.blogspot.com/2018/07/writing-workshop-table-of-contents.html">Sarnecka Lab’s “Writing Workshop”</a></li>
+<li>Recommendations: <a href="https://www.bartleby.com/141/index.html"><em>The Elements of Style</em></a> (which I really like, contrary to <a href="https://serialmentor.com/blog/2017/11/12/move-over-Strunk-White">Claus</a>), <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003453">“Ten Simple Rules for Writing Research Papers”</a>, <a href="https://sarneckalab.blogspot.com/2018/07/writing-workshop-table-of-contents.html">Sarnecka Lab’s “Writing Workshop”</a>, <a href="https://www.baconediting.com/blog/who-are-you-writing-for">Claire Bacon’s “Writing Tips”</a></li>
 </ul>
 </div>
 <div id="initial-submissions" class="section level3 hasAnchor" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> Initial submissions<a href="so-you-wanna.html#initial-submissions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The following workflow seems to work well, but if you prefer another one, let me know.</p>
 <ol style="list-style-type: decimal">
-<li>Start yesterday by writing summaries of the research in your lab notebook as you go. You can probably write most of the methods and many results this way. You’ll also accumulate the major points for the intro and discussion in your notes too.</li>
+<li>Write summaries of the research in your lab notebook as you go. You can probably write most of the methods and many results this way. You’ll also accumulate the major points for the intro and discussion in your notes too.</li>
 <li>Identify a target journal in consultation with me and coauthors. Check the journal’s instructions for authors so you know how to structure your manuscript. Note any word and figure limits.</li>
 <li>When it is time to write the manuscript, set up a repository synced to Overleaf. I prefer using a generic template rather than a journal-specific one, since reformatting can take precious time, and generic templates are better for preprints. Draft the figures and abstract first. Discuss the arc with me and potentially other coauthors. Sign up for a future lab meeting or theory meeting, in which we’ll discuss the complete draft (which you’ll need to distribute a week in advance). Propose an ordered author list and discuss with me.</li>
 <li>Next write an outline—with the main steps in the argument as topic sentences, so it’s really possible to trace the whole story—with each result in its own subsection and figures inline.</li>
@@ -253,16 +254,16 @@ This is more comfortable than learning incrementally from rejections. Also, ther
 <li>Ensure your repository is well documented and up to date, and that all the analysis—including the figures—can be run from the included code with minimal effort. We will make a “clean” (new) version of the repository public when we submit the manuscript to a preprint server, bioRxiv or medRxiv. Double check that you are not sharing protected data.</li>
 <li>Ask a colleague to try to run your code, given the manuscript and access to the repository, and no other help from you.</li>
 <li>When the final manuscript is ready for coauthors’ approval, confirm with them (if you’ve not yet) their funding and preferred and non-preferred reviewers. Make sure they don’t have a conflict of interest (COI) with any of the preferred reviewers. This typically means no coauthors, friends, or collaborators. First authors of key papers cited in the manuscript are often good candidate reviewers. Suggest at least five reviewers to limit unnecessary delays.</li>
-<li>Draft the cover letter, or whatever introductory text the journal requires. The cover letter should very succinctly describe what is important about the manuscript and place it very directly in context of other work (“To our knowledge, this is the first paper that…”) without repeating the abstract.</li>
-<li>When all coauthors have approved the manuscript, we submit it to a preprint server (without journal-specific typesetting), publish the repository, and submit to a journal. If the work is funded by CIVIC or CEIRR, we also need to inform them of the preprint.</li>
-<li>Ask Jessie to add the preprint as a “Paper” to the lab website. Prepare a one-sentence, lay-person summary of the main finding for us to add as a news item on the side. Draft a “Tweetorial” for BlueSky or post for LinkedIn. If the work is CEIRR-funded, it should probably also be added to the Computational Modeling Core website.</li>
+<li>Draft the cover letter, or whatever introductory text the journal requires. The cover letter should succinctly describe what is important about the manuscript (“A longstanding question is…”) and place it directly in context of other work (“To our knowledge, this is the first paper that…”) without repeating the abstract in roughly one page. It is usually good to cite the main paper your work builds on or responds to, especially if they were published in a “peer” journal.</li>
+<li>When all coauthors have approved the manuscript, we submit it to a preprint server (without journal-specific typesetting), publish the GitHub repository, and submit to a journal. If the work is funded by CIVIC or CEIRR, we also need to inform them of the preprint immediately.</li>
+<li>Ask Jessie to add the preprint as a “Paper” to the lab website. Prepare a one-sentence, lay-person summary of the main finding for us to add as a news item on the side and assign to me for review in Asana. Draft a “Tweetorial” for BlueSky or post for LinkedIn and similarly assign to me. If the work is CEIRR-funded, it should probably also be added to the Computational Modeling Core website.</li>
 <li>Celebrate!</li>
 </ol>
 </div>
 <div id="mature-papers" class="section level3 hasAnchor" number="4.4.3">
 <h3><span class="header-section-number">4.4.3</span> “Mature” papers<a href="so-you-wanna.html#mature-papers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Ideally at least 20 min have passed before we receive a decision from the journal. (That’s the fastest rejection I’ve heard someone receiving from <em>Nature</em>.) If we receive a rejection without review (a “desk rejection”), we probably need to improve our abstract, introduction, and/or cover letter. If we’re rejected after review, we’ll take 2-3 days to consider the reviews and make a plan for revisions. Be sure to communicate decisions to coauthors, if the journal does not email them automatically, and to let the coauthors know the plan for responding to the decision.</li>
+<li>Ideally at least 20 min have passed before we receive a decision from the journal. (That’s the fastest rejection I’ve heard someone receiving from <em>Nature</em>.) If we receive a rejection without review (a “desk rejection”), we might need to improve our abstract, introduction, and/or cover letter. If we’re rejected after review, we’ll take 2-3 days to consider the reviews and make a plan for revisions. Be sure to communicate decisions to coauthors, if the journal does not email them automatically, and to let the coauthors know the plan for responding to the decision.</li>
 <li>If the journal requests a revision, we track changes (using colored text) and write a polite and succinct reply. I like replies that are as self-contained as possible, so that months after having done the initial review, the reviewer can read over the reply and be sufficiently reminded of the context for each criticism that she or he doesn’t need to reread the whole paper. In the reply, we describe exactly what has been changed in the paper and quote the changed text (with as much context as necessary, including corresponding line numbers). Ask other lab members for sample replies to get a sense of the tone and format.</li>
 <li>It is to our advantage to revise quickly. With greater distance from the paper, reviewers can easily take issue with new parts. Novelty tends to decrease with time, even if nothing has been published in the interim.</li>
 <li>Ask coauthors in advance if they could inspect revisions and the reply during some time window—they should know when to expect our draft.</li>
@@ -287,7 +288,7 @@ One error that very junior scientists sometimes make is being excessively defere
 <div id="make-nice-figures" class="section level2 hasAnchor" number="4.6">
 <h2><span class="header-section-number">4.6</span> Make nice figures<a href="so-you-wanna.html#make-nice-figures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Mostly, see Claus Wilke’s excellent online guide, <a href="https://serialmentor.com/dataviz/">Data Visualization</a>, and these <a href="https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368">suggestions</a> from Sarah Leo of <em>The Economist</em>.
-Some immediate suggestions:</p>
+Additionally, remember to</p>
 <ul>
 <li>Label your axes. All parameters should be spelled out and accompanied by their symbol (e.g., “Transmission rate, <span class="math inline">\(\beta\)</span>”).</li>
 <li>Save figures in vector formats.</li>
@@ -296,6 +297,7 @@ Some immediate suggestions:</p>
 <li>Titles are frequently a waste of space, but be sure to include key information somewhere nearby, e.g., what the shaded area represents, how you assessed significance, etc.</li>
 <li>To increase accessibility, avoid relying on red/green contrasts.</li>
 <li>Please don’t use the default color palettes. <a href="https://www.molecularecologist.com/2020/04/23/simple-tools-for-mastering-color-in-scientific-figures/">There are better ones</a> that indicate some thought.</li>
+<li>As with writing, be consistent. Use the same font sizes, styles, nomenclature, etc.</li>
 </ul>
 </div>
 <div id="keep-up-with-the-literature" class="section level2 hasAnchor" number="4.7">
@@ -319,8 +321,8 @@ Some immediate suggestions:</p>
 <div id="get-funded" class="section level2 hasAnchor" number="4.8">
 <h2><span class="header-section-number">4.8</span> Get funded<a href="so-you-wanna.html#get-funded" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li><p>You’ll almost certainly have funding from me, but it’s still usually a good idea search for opportunities. Check with me first. Ask the grad student and postdoc coordinators, ask your peers, do searches, etc.</p></li>
-<li><p>Work backwards from deadlines, giving yourself much more time than seems necessary, and establish a schedule. Considerations: (i) Ask Jessie if the grant will need to be reviewed by the <strong>URA</strong> and find out what their deadline is. This is the effective deadline (it’s usually about two weeks before the submission deadline). (ii) <strong>Letter writers</strong> usually need at least three weeks before then, and it is best if you can give them a good copy of your research proposal by then too. (iii) Depending on the complexity of the application, we may need four or more weeks to <strong>bounce drafts back and forth</strong>. (iv) For applications with mentoring plans, it’s especially useful to get started several months ahead, so we can identify if <strong>another sponsor</strong> should be brought on board. (v) It’s also important to start early if we’re unsure the research will be a <strong>good fit</strong> for the funder: we need the time to revise our pitch in coordination with the program officer. (vi) Many grants require <strong>preliminary data</strong>, and it’s good to figure out what that should be early.</p></li>
+<li><p>You’ll almost certainly have funding from me, but it’s often a good idea search for opportunities. Check with me first. Ask the grad student and postdoc coordinators, ask your peers, do searches, etc.</p></li>
+<li><p>Work backwards from deadlines, giving yourself much more time than seems necessary, and establish a schedule. Considerations: (i) Ask Jessie if the grant will need to be reviewed by the <strong>URA</strong> and find out what their deadline is. This is the effective deadline (it’s usually one to two weeks before the submission deadline). (ii) <strong>Letter writers</strong> usually need <em>at least</em> three weeks before then, and it is best if you can give them a good copy of your research proposal by then too (see below). (iii) Depending on the complexity of the application, we may need four or more weeks to <strong>bounce drafts back and forth</strong>. (iv) For applications with mentoring plans, it’s especially useful to get started several months ahead, so we can identify if <strong>another sponsor</strong> should be brought on board. (v) It’s also important to start early if we’re unsure the research will be a <strong>good fit</strong> for the funder: we need the time to revise our pitch in coordination with the program officer. (vi) Many grants require <strong>preliminary data</strong>, and it’s good to figure out what that should be early.</p></li>
 <li><p>Identify several people who will read a draft of your proposal. It’s best if some of them have been successfully funded and if they are not in your subfield. (Ideally, they’d be just like the review panel.) Ask how long they’ll need with the proposal to give you comments, and work backwards to figure out when your draft needs to be ready.</p></li>
 <li><p>Obtain copies of as many successfully funded applications of this type as you can, ideally with their summary sheets or reviewer comments.
 Promise confidentiality.
@@ -335,18 +337,20 @@ Potentially consult with program officers and other applicants to make sure you 
 <li><p>Write the proposal, and get funded! No seriously, we’ll discuss proposal-specific details in person. But as a mentor once told me, people generally like things in proportion to how well they understand them, so you want to make sure the proposal is really exciting—see <em>4 Steps to Funding</em>—and really, really clear. This is why we ask people outside our subfield to give us comments.</p></li>
 </ol>
 </div>
-<div id="ask-for-a-letter-of-recommendation" class="section level2 hasAnchor" number="4.9">
-<h2><span class="header-section-number">4.9</span> Ask for a letter of recommendation<a href="so-you-wanna.html#ask-for-a-letter-of-recommendation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Remember that writing letters is part of the job for senior academics. That said, it’s important to show respect for their time.
-* Ask for the letter at least six weeks in advance, if possible, especially if this is a letter for a faculty position.
-* Say you’d include the research statement/proposal synopsis/relevant material by X date, where X is ideally at least three weeks before the deadline, and ask them if they need any material sooner.
-* In the follow-up email or potentially the initial one, give the writer a suggested list of points to highlight in their letter. This is your opportunity to ask them to emphasize aspects of your training or goals that are particularly valuable or nuanced, e.g., you made the key insight for a research project, the proposed research is especially novel, you were delayed in publishing because of a health problem but are otherwise fast, etc.
-* Thank them for writing, and follow up with the writer when you learn the outcome of the competition, thanking them again for their support.</p>
+<div id="ask-for-a-recommendation" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> Ask for a recommendation<a href="so-you-wanna.html#ask-for-a-recommendation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Remember that writing letters is part of the job for senior academics. That said, it’s important to show respect for their time.</p>
+<ul>
+<li>Ask for the letter at least six weeks in advance, if possible, especially if this is a letter for a faculty position.</li>
+<li>Say you’d include the research statement/proposal synopsis/relevant material by X date, where X is ideally at least three weeks before the deadline, and ask them if they would like any material sooner.</li>
+<li>In the follow-up email, give the writer a suggested list of points to highlight in their letter. This is your opportunity to ask them to emphasize aspects of your training or goals that are particularly valuable or nuanced, e.g., you made the key insight for a research project, the proposed research is especially novel, you were delayed in publishing because of a health problem but are otherwise fast, etc.</li>
+<li>At the deadline, thank them for writing. Follow up with the writer when you learn the outcome of the competition, thanking them again for their support.</li>
+</ul>
 </div>
 <div id="see-our-funding" class="section level2 hasAnchor" number="4.10">
 <h2><span class="header-section-number">4.10</span> See our funding<a href="so-you-wanna.html#see-our-funding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We keep copies of funded and unfunded grants in the “Grant proposals” project on Asana.
-Assume these grants are confidential; do not share them outside the lab.
+Assume these grants are confidential and do not share them outside the lab.
 Feel free to ask me about them if you have questions, and if you write a fellowship proposal, please add your submitted proposal (excluding the budget) to the project.</p>
 </div>
 <div id="review-your-peers" class="section level2 hasAnchor" number="4.11">
@@ -358,7 +362,7 @@ If you make smart comments, there’s a chance editors will notice.
 Rest assured I’m always on the lookout for papers I can invite lab members to review with me or in my place.</p>
 <p>If you’ve been asked to review a paper,</p>
 <ul>
-<li>Ensure you do not have a conflict of interest. Check the journal’s policy, but regardless, look in your heart of hearts, and do not overestimate your impartiality. You should decline to review papers by friends and recent collaborators. I also decline to read manuscripts that seem to be directly “competing” with my own, i.e., they are tackling the same question using similar methods. They’re probably not really competing, but if I feel they are, that’s enough to disqualify me.</li>
+<li>Ensure you do not have a conflict of interest. Check the journal’s policy, but regardless, look in your heart of hearts, and do not overestimate your impartiality. You should decline to review papers by friends and recent collaborators. I also decline to read manuscripts that seem to be directly “competing” with my own, i.e., they are tackling the same question using similar methods. They’re probably not really competing, but if I feel they are, that’s enough to disqualify me. People often favor manuscripts by authors of the same gender and nationality (<a href="https://www.biorxiv.org/content/biorxiv/early/2018/08/29/400515.full.pdf">Murray et al. 2018</a>). (There are also biases in the selection of reviewers; <a href="https://elifesciences.org/articles/21718">Helmer et al. 2017</a>.)</li>
 <li>Confirm you can make the deadline. If you need more time, it’s better to ask the editor for extra time now.</li>
 <li>It might be a good idea to ask if they want your review as a backup. It seems rude to ask and probably usually is, but I’ve twice agreed to review manuscripts for journals only to be told <em>after I’d agreed but before the deadline</em> that they had received a sufficient number of reviews and no longer needed mine. This doesn’t seem polite except under extraordinary circumstances and wasted hours of my time.</li>
 <li>Read over the journal’s criteria for judging manuscripts. For some journals, novelty is unimportant, or there’s no requirement to work with empirical data. It’s really annoying to be held to standards that the journal itself does not endorse; the editors often don’t appear to recognize when this is happening. (Nope, no baggage here!)</li>
@@ -367,12 +371,12 @@ Rest assured I’m always on the lookout for papers I can invite lab members to 
 <li>Give evidence for your views. Especially regarding claims of novelty, cite! One of the most maddening things is to get a review saying, “Yawn, this has basically been done before,” with no references. Citations also help the authors improve their work quickly, especially if you’re suggesting relevant papers they’ve missed.</li>
 <li>In general, do not punish the authors for not doing the study you would’ve done or think should be done. Focus on what the paper <em>does</em> contribute or could contribute with minor or moderate changes.</li>
 <li>Do not recommend acceptance, major revisions, minor revisions, etc., directly in the body of the review. That recommendation is for the editor to make. Your job is to help the editor make a decision and the authors to understand your impression of their paper—both what’s good about it and what can be improved.</li>
-<li>Be constructive. <em>Never</em> be snarky or sarcastic. Imagine this is the first review the first author is receiving, or that the authors have feelings.</li>
+<li>Be constructive. <em>Never</em> be snarky or sarcastic or impugn the motives of the authors. Imagine this is the first review the first author is receiving, or that the authors have feelings.</li>
 <li>Let the editor know in your review or confidential comments if you do not feel qualified to judge certain parts of the manuscript. It is okay to state this in the main body of your review too. Just remember you have a positive duty to disclose.</li>
 <li>Especially for papers that need a lot of work, it’s not a good use of time to note every small mistake. You do not need to be the copy editor. If there are small technical mistakes, e.g., the lines on a graph are switched or the notation is messed up, put them in a section for minor comments.</li>
 <li>For papers involving code, try in 10 min to run the code and check its documentation, but do not reimplement the analysis unless you want to. You also do not need to check complex mathematical derivations. However, the methods should be clear and completely reproducible from the content of the manuscript. (I am not a fan of “See previous papers <span class="math inline">\(X_{t_1}\)</span>, <span class="math inline">\(X_{t_2}\)</span>,…”, though a bit is okay.)</li>
 <li>It’s fine, even good, to comment on other reviewers’ comments in later rounds of review, especially if you disagree with them. If you think a reviewer has made a major error, email the editor.</li>
-<li>Try to limit your likeliy biases in peer review. People often favor manuscripts by authors of the same gender and nationality (<a href="https://www.biorxiv.org/content/biorxiv/early/2018/08/29/400515.full.pdf">Murray et al. 2018</a>). (There are also biases in the selection of reviewers; <a href="https://elifesciences.org/articles/21718">Helmer et al. 2017</a>.)</li>
+<li>Peer review can take a long time, sometimes more time than is worth it. Please check with me about how much time to spend on peer review before accepting an assignment.</li>
 </ul>
 </div>
 <div id="have-productive-meetings" class="section level2 hasAnchor" number="4.12">
@@ -381,14 +385,14 @@ Rest assured I’m always on the lookout for papers I can invite lab members to 
 <h3><span class="header-section-number">4.12.1</span> Research meetings<a href="so-you-wanna.html#research-meetings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Before the meeting:</strong></p>
 <ol style="list-style-type: decimal">
-<li><p>Make sure every meeting has a purpose that everyone understands. It is good if you can send an agenda beforehand. Some people also like to review materials, such as summaries, beforehand. Ask they want this.</p></li>
+<li><p>Make sure every meeting has a purpose that everyone understands. It is good if you can send an agenda beforehand. Some people also like to review materials, such as summaries, beforehand. Ask they want this. If someone requests a meeting with you, it is also completely fine to ask what the agenda or objectives will be.</p></li>
 <li><p>If proposing an ad hoc meeting, give an estimate of how much time it should take in your invitation. This will help people focus during the meeting.</p></li>
 <li><p>If the meeting is routine, let the other participants know in advance if you expect it to be especially short or long.</p></li>
-<li><p>I dislike meeting reminders, but some people need them. Find out.</p></li>
+<li><p>Send a formal calendar invitation for the meeting. You might need to ask especially senior participants who do not “accept” the invitation if they need a meeting reminder. I dislike meeting reminders.</p></li>
 </ol>
 <p><strong>At the meeting:</strong></p>
 <ol style="list-style-type: decimal">
-<li><p>Quickly review the agenda and the meeting’s purpose.</p></li>
+<li><p>Quickly review the meeting’s purpose and agenda.</p></li>
 <li><p>If discussing research, ensure you give appropriate background information and context, and ensure your figures and numbers are clear (even if they’re not “pretty”).</p></li>
 <li><p>Take notes rather than forcing yourself to recall things later.</p></li>
 <li><p>End by summarizing the next steps, responsibilities, and timeline.</p></li>
@@ -397,7 +401,7 @@ Rest assured I’m always on the lookout for papers I can invite lab members to 
 <p><strong>After the meeting:</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>For committee meetings, meetings with collaborators, etc., send a short follow-up email summarizing what was decided and what will happen next.
-For meetings with me, tasks should be updated in Asana, and additional notes can be there or your lab notebook.</p></li>
+For meetings with me, tasks should be updated in Asana, and additional notes can be there or in your lab notebook.</p></li>
 <li><p>Follow up on those commitments.</p></li>
 </ol>
 </div>
@@ -414,14 +418,14 @@ If you’re having trouble getting on the schedule, let me know.</p>
 <h2><span class="header-section-number">4.13</span> Book travel<a href="so-you-wanna.html#book-travel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The general idea is to reduce costs as much as possible while remaining comfortable and productive.
 (These savings will go toward more travel, research, and fun lab things.)
-The grants that fund travel have different allowable expenses and documentation requirements, so please check flights and your total budget with me before booking.</p>
+The grants that fund travel have different allowable expenses and documentation requirements, so please check flights and your total budget with Jessie before booking.</p>
 <p>Guidelines:</p>
 <ul>
-<li>Imagine the money as your own. Please plan your travel far enough in advance that we are not paying through the nose for registration or flights.
+<li>Please plan your travel far enough in advance that we are not paying through the nose for registration or flights.
 Please book flights at least six weeks in advance, unless you’re really confident the price is dropping.
 For conferences, book flights earlier.</li>
-<li>CEIRR and CIVIC are contracts that generally do not support conference participation: all travel must be in direct service of the research. They often can be used for trips to visit collaborators in the consortium. <em>All travel for CEIRR and CIVIC must be approved in writing by the center at least a month before the travel occurs.</em> Please talk with Jessie and me well in advance if you are CEIRR/CIVIC funded and want to travel.</li>
-<li>We need to book travel through the Fox Travel Agency through a University portal. Jessie can book the flight and hotel for you so you do not have to pay and then be reimbursed. If you pay upfront yourself (this is generally frowned on), you will have to wait until after the travel is complete to be reimbursed.</li>
+<li><strong>CEIRR and CIVIC are contracts that generally do not support conference participation</strong>: all travel must be in direct service of the research, e.g., trips to work with collaborators in the consortium. <em>All travel for CEIRR and CIVIC must be approved in writing by the center at least a month before the travel occurs.</em> Please talk with Jessie and me well in advance if you are CEIRR/CIVIC funded and want to travel.</li>
+<li>We are generally required to book travel through the Fox Travel Agency through a University portal. Jessie can book the flight and hotel for you so you do not have to pay and then be reimbursed. If you pay upfront yourself (this is generally frowned on), you will have to wait until after the travel is complete to be reimbursed.</li>
 <li>If you book an atypical flight, such as something arriving a few days early or leaving a few days late, or that includes personal travel, funding groups generally require that you also include a quote, <em>obtained at the time of booking</em>, of the cost of the flight for typical (business-only) travel.
 They’ll only reimburse up to this amount. But it’s otherwise totally fine to include personal travel with business, as long as you document carefully.</li>
 <li>If your travel is funded by the federal government, you generally must fly with a U.S. carrier or book your ticket through that carrier.</li>
@@ -429,7 +433,7 @@ They’ll only reimburse up to this amount. But it’s otherwise totally fine to
 <li>It’s also great if you can share rides/taxis and take public transit, but you’re not expected to go to great inconvenience to save money.</li>
 <li>The University will reimburse only original itemized receipts; it will not give you a per diem. Food costs are reimbursable up to federal rates if covered by a federal grant, or $100 if from a non-grant account, per University policy. CEIRR and CIVIC meetings do not reimburse for food. I think the principled thing to do is only submit receipts for food costs above what you’d normally spend (and not to go crazy with spending). Note the receipts must be itemized, and alcohol cannot appear on the receipts of NIH-funded travel.</li>
 <li>Internet charges cannot be expensed to federal grants.</li>
-<li>Submit receipts to Jessie within three weeks of travel.</li>
+<li>Submit receipts to Jessie within three weeks of travel. Her deadline to submit receipts is one month after travel. If she’s away, submit receipts more promptly.</li>
 <li>I suggest you sign up for airline loyalty programs if you haven’t yet. Southwest and United are the University’s preferred airlines, and they will often be cheapest.</li>
 </ul>
 </div>
@@ -450,11 +454,10 @@ If you think something is missing from this section, please let me know or add i
 The <a href="https://www.facultydiversity.org/">National Center for Faculty Development and Diversity</a> has excellent materials, designed for faculty but relevant for everyone, on helping you use your time well.
 You should be able to get free access to the videos and tools through the University.
 If you’re regularly feeling overwhelmed by tasks or unhappy with your progress, this is also something we can discuss at weekly meetings.
-(Full disclosure: I’m far from perfect and perennially trying to improve in this area.)
-As mentioned, I think 40 h of carefully chosen, focused work per week is enough to get things done.</p>
+As mentioned, I think 40 h of carefully chosen, focused work per week (excluding breaks) is enough to get things done.</p>
 <p>Practical suggestions:</p>
 <ul>
-<li>I use the <a href="https://freedom.to/">Freedom</a> app and <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a> when I’m having trouble focusing or really resisting some task. Often when I’m resisting a task there’s some emotion behind it (e.g., not wanting to be bored), and recognizing that emotion and setting a timer (I can handle 20 min of boredom) helps me avoid procrastination.</li>
+<li>I use the <a href="https://freedom.to/">Freedom</a> app and <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a> when I’m having trouble focusing or really resisting some task. Often when I’m resisting a task there’s some emotion behind it (e.g., not wanting to be bored), and recognizing that emotion and setting a timer (I can handle 20 min of boredom) helps me avoid procrastination. It’s important to realize you can feel all sorts of things and achieve your goals anyway.</li>
 <li>Every important task or task &gt;5 min goes into Asana and immediately placed on my calendar. This helps things get real. It’s harder to be deluded about how much time I have.</li>
 <li>I find it useful to compare my scheduled day to how I actually spent my time. It has made me realize the necessity of adding a bit of extra time for spontaneous meetings, scheduling brainless tasks after teaching, etc.</li>
 <li>I also give myself weekly and quarterly goals, and do the same comparisons.</li>
@@ -463,10 +466,10 @@ As mentioned, I think 40 h of carefully chosen, focused work per week is enough 
 </div>
 <div id="imposter-syndrome" class="section level3 hasAnchor" number="4.14.2">
 <h3><span class="header-section-number">4.14.2</span> Imposter syndrome<a href="so-you-wanna.html#imposter-syndrome" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>It’s really common and can’t completely be cured.
+<p>It’s really common and can’t completely be cured, but you can decide not to care about it.
 My best advice is to practice acknowledging doubt and then moving on to whatever you want to do.
 (I like <a href="https://psycgirl.wordpress.com/2016/07/22/the-tale-of-the-unwritten-manuscript/">this post</a> from psycgirl.)
-Because research involves working on unsolved problems with an ever-expanding set of tools, and the world is complicated, we have to be comfortable pushing through the discomfort of ignorance and mediocrity (<a href="http://jcs.biologists.org/content/121/11/1771">Schwartz 2008</a>).
+Because research involves working on unsolved problems with an ever-expanding set of tools, and the world is complicated, we have to be comfortable pushing through the discomfort of ignorance, failure, and mediocrity (<a href="http://jcs.biologists.org/content/121/11/1771">Schwartz 2008</a>).
 Once you accept this, it can mostly be fun to work on interesting problems with great people.</p>
 <p>In general, you should not conflate your <em>or anyone else’s</em> confidence and competence (see the <a href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect">Dunning-Kruger effect</a>).
 This is important in making science more equitable.</p>
@@ -489,7 +492,7 @@ Your workplace should obviously be supporting you.</p>
 </div>
 <div id="give-a-good-talk" class="section level2 hasAnchor" number="4.15">
 <h2><span class="header-section-number">4.15</span> Give a good talk<a href="so-you-wanna.html#give-a-good-talk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I like this <a href="https://people.eecs.berkeley.edu/~jrs/speaking.html">advice from Jonathan Shewchuk</a>.
+<p>I like this <a href="https://people.eecs.berkeley.edu/~jrs/speaking.html">advice from Jonathan Shewchuk</a> and this <a href="https://mfr.osf.io/render?url=https%3A%2F%2Fosf.io%2Fd8wm9%2Fdownload">outstanding advice from Rachael Meager</a> (applies to writing papers and grants too).
 If you’re scared to get started, read <a href="https://waitbutwhy.com/2016/03/doing-a-ted-talk-the-full-story.html">Tim Urban’s</a> essay about his TED talk for inspiration.
 If it’s the first time you’ve given the talk, sign up on the lab calendar to give a practice presentation at least a week before the talk itself.</p>
 </div>
@@ -500,17 +503,34 @@ These are usually great opportunities to talk research with someone new, but the
 You play an essential role in helping identify top performers.
 We want colleagues who will not only do great work but who will make the lab, department, etc., a more invigorating place to be.
 Please take advantage of opportunities to meet with people and learn about what they do.
-You can take it as read that whoever is doing the hiring wants feedback promptly: try to provide feedback (in person, over the phone, or in writing) quickly, e.g., &lt;24 h.
-Please also let me know if you think particularly great people are on the market!</p>
+You can take it as read that whoever is doing the hiring wants feedback promptly: provide comments (in person, over the phone, or in writing) quickly, e.g., &lt;24 h.
+Please also let me know if you think particularly great people are on the market!
+We generally need to act quickly.</p>
 <p>It’s vitally important to decide <em>before</em> we meet a potential hire what criteria we should use to judge them: studies show that we often subconsciously rationalize biases by identifying criteria post hoc.
 I think academics in particular are prone to discrimination because their self-identity is so predicated on objectivity.
 It is useful to have a core, fixed set of questions or topics to discuss with different candidates.
-This doesn’t mean the conversation can’t wander, but it promotes fair comparisons.
-I’m happy to talk about the criteria I use for different positions.</p>
-<p>Please keep in mind that many laws exist to protect people from discrimination, and they affect what potential employers can and cannot ask interviewees.
+This doesn’t mean the conversation can’t wander, but it promotes fair comparisons.</p>
+<p>I often ask the following of potential lab members:</p>
+<ul>
+<li><em>Why do you want to work in this field?</em> Can they name problems they find interesting? Shifts in methods or recent findings that make them particularly excited?</li>
+<li><em>Which papers have particularly influenced you?</em> We want people who understand the scientific context for their work and have gone beyond the NYT articles, Tweetorials, assigned reading, etc. They should be able to discuss papers related to their research interests that they have found themselves or in the course of voluntary research, rather than coursework.</li>
+<li><em>Why do you want to join our lab/department? Why do you want this job?</em> They should show discernment and some thought about the culture they are looking for. They should be able to describe how our expertise intersects with their goals. Their meta-goal should be producing high-quality research/papers.</li>
+<li><em>What does your ideal day or week look like?</em> It should involve mostly research and fairly independent work, not mostly meetings, but they should also want scientific exchanges and inspiration from a fast-paced scientific environment.<br />
+</li>
+<li><em>How would you go about solving [a recent research problem]?</em> This is a good opportunity to test their skills. Are they thinking about the problem logically? You can also ask about their background in reproducible research, programming, math/stats, etc. Remember that pretty much no one starts with a perfect background in everything.</li>
+</ul>
+<p>Additionally, I pay attention to</p>
+<ul>
+<li>whether I can discuss scientific concepts easily with the candidate.</li>
+<li>whether they ask me good questions about our work vs. questions that could have easily been answered through a quick search.</li>
+</ul>
+<p>I also spend a lot of time aligning expectations about their potential future role.</p>
+<p>Remember again that the purpose of the interview is two-fold, in that it’s also an opportunity to bring great people into the lab.
+If this appears to be a good fit, I explain why.</p>
+<p>Please keep in mind that <strong>many laws exist to protect people from discrimination, and they affect what potential employers can and cannot ask interviewees</strong>.
 Even though you might not have hiring authority, as a representative of the University, you should avoid asking these questions too, even indirectly.
 (You might not have any intent to discriminate, but the questions could rattle the candidate, and others who hear might be inappropriately influenced.)
-Do not ask questions about race, color, national identity, or citizenship; religion; sex, gender identity, or sexual orientation; pregnancy status, marital status, or parenthood status; disability; and age.
+Do not ask questions about race, color, national identity, or citizenship; religion; sex, gender identity, or sexual orientation; pregnancy status, marital status, or parenthood status; disability; veteran status; and age.
 For instance, do not ask about what languages someone speaks (unless it is somehow relevant to the position, which it usually isn’t), their accent, where their parents were born, or their partner’s job, or the existence of a partner.
 It is especially inappropriate to bring up two-body issues when discussing candidates until an offer has been made.
 Questions related to economic status (e.g., car or home ownership, debt, etc.) are also unwise.</p>
@@ -537,11 +557,12 @@ If you’d like to make many contributions, let me know, and I’ll add you as a
 <h2><span class="header-section-number">4.18</span> Win at conferences<a href="so-you-wanna.html#win-at-conferences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are a bazillion resources on this. I think they boil down to</p>
 <ul>
-<li>Try to develop a list of people you’d like to talk to before you go, and have an idea of what you’d like to discuss with them. It can sometimes help to send an email in advance if there’s someone you really want to connect with. You can set up a time and place to meet.</li>
+<li>Try to develop a list of people you’d like to talk to before you go, and have an idea of what you’d like to discuss with them. It can <em>sometimes</em> help to send an email in advance if there’s someone you really want to connect with. You can set up a time and place to meet. Happy to discuss.</li>
 <li>Pace yourself. Get sleep. Go to talks, but not necessarily all of them. Make time for dinner and socializing. Ask people to join you for dinner.</li>
 <li>Practice asking speakers questions.</li>
 <li>Get in the habit of introducing yourself, asking people about their research, etc.</li>
 <li>Avoid spending much time with lab members. Really, the opportunity cost of hanging out with lab members is big. Meeting new people might not always feel like it amounts to much, but it will pay big dividends, I promise. You’ll see many of them again. You’ll probably collaborate with a few.</li>
+<li>It’s not (just) you: scientists are awkward.</li>
 </ul>
 </div>
 <div id="negotiate-authorship" class="section level2 hasAnchor" number="4.19">
@@ -555,15 +576,13 @@ Not everyone we work with follows these guidelines, and they can differ from jou
 We’ll talk about it.
 Authorship frequently needs to be <a href="https://www.apa.org/science/about/psa/2015/06/determining-authorship.aspx">renegotiated</a>.
 It’s better not to postpone this.
-Please talk to me if you are unclear about authorship.
-In general, I expect first authors to be corresponding authors, unless they want to pass responsibility for future communication to me (or whoever’s the senior author).</p>
+Please talk to me if you are unclear about authorship.</p>
+<p><strong>Other expectations of first authors:</strong> First authors lead the project, write the first complete draft of the manuscript, take the lead in assembling figures, handle submissions to preprint servers and journals, and handle/coordinate revisions (including follow-up analyses) and resubmissions. I expect first authors to be corresponding authors, unless they want to pass responsibility for future communication to me or whoever’s the senior author. N.B. If you stop working on a manuscript, so that someone else needs to do the submission, revision, or resubmission, your position as first author might change. The first author, in other words, not only needs to lead the work but also finish it. For example, if you leave the lab before a paper is accepted, you’ll have the opportunity to continue working on it as first author when reviews are returned, but if you cannot do this promptly, others in the lab will be invited to take over. Someone else might become first author. We have an obligation to publish the work funded by grants and contracts.</p>
 </div>
 <div id="engage-with-the-public" class="section level2 hasAnchor" number="4.20">
 <h2><span class="header-section-number">4.20</span> Engage with the public<a href="so-you-wanna.html#engage-with-the-public" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Locally:</strong> The University has established relationships with local schools through the <a href="https://nsp.uchicago.edu/">Neighborhood Schools Program</a> and with the community through the <a href="https://civicengagement.uchicago.edu/education/tutoring-enrichment/">Office of Civic Engagement</a>.
-We also sometimes talk with local journalists and radio hosts (e.g., on WBEZ).
-Let me know if you think there’s something we should share.</p>
-<p><strong>And beyond:</strong> If you’re interesting in educational outreach, consider <a href="https://www.skypeascientist.com/">Skype a Scientist</a>. If writing is more your thing, check out the <a href="https://www.theopedproject.org/">OpEd Project</a>.</p>
+<p><strong>Locally:</strong> The University has established relationships with local schools through the <a href="https://nsp.uchicago.edu/">Neighborhood Schools Program</a>.</p>
+<p><strong>And beyond:</strong> Check out the <a href="https://www.theopedproject.org/">OpEd Project</a> and please let me know if you’re interested in talking to reporters about particular topics.</p>
 
 </div>
 </div>

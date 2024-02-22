@@ -69,7 +69,7 @@ The University of Chicago has a subscription, so you should be able to get free 
 **Be accountable**.
 All work in the lab is collaborative, involving the blood, sweat, and tears (and hopes and dreams!) of multiple people, and often indirectly taxpayers.
 Respect all these contributions by being a reliable, involved scientist.
-Show up to meetings on time.
+Show up to meetings on time; cancel meetings with sufficient notice.
 Let collaborators know if your contributions will be delayed, if you think something should be done differently, or if you have concerns about quality.
 Always look for better hypotheses and approaches.
 Speak up if you see something that's not right.
@@ -93,7 +93,7 @@ More on that below.
 
 Take vacations! 
 Take good ones, show us the photos, and bring back tea, chocolate, and/or fine liquor.
-Try to use all your vacation time. 
+Try to use all your vacation time. (If you're unsure how much you have, ask.) 
 Please double check with me before you select your dates (assign the review to me via Asana), mostly so I know to start making necessary accommodations.
 Mark the days you plan to be away on the lab calendar.
 
@@ -142,13 +142,14 @@ Most weeks, you'll meet individually with me to discuss research and occasionall
 The agendas of these meetings is largely up to you, but you should know what you want to get from the meeting before it starts.
 I ask researchers to come prepared with slides, an updated summary, or notebook (Rmd, Jupyter, etc.) concisely describing progress since the last meeting. 
 You can choose whichever format works best for you, but somehow, your notes should clearly state (i) what goals you had set last week for this week, (ii) your progress on each goal, and (iii) what you think comes next.
-(This structure is really helpful for me.)
+(This structure is really helpful for me and [many PIs](https://twitter.com/TomGaborski/status/1632502308822024196?s=20).)
 You should also be prepared to show system and unit tests, or some kind of validation, to convince me your research results are correct.
 The meeting is time to both dig into the weeds but also think about the big picture.
 
 I'll try to remind you of this, but one of my main goals for each meeting is to learn how I can best support you, during the meeting and after. 
 If our relationship needs adjusting, please let me know.
 If you want to talk about career goals, that's fine too.
+If we need another meeting or a longer meeting to discuss the science, please say so.
 This is your time, but please be organized about it.
 
 When I'm traveling, these weekly meetings will by default be cancelled, but you're welcome to reschedule them.
