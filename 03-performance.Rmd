@@ -25,6 +25,11 @@ Postdocs and salaried researchers will get formal annual reviews as required by 
 
 * Follow the lab's principles (Section \@ref(principles)) and all our described work practices, including the project management and programming techniques described in Section \@ref(so-you-wanna).
 * Take full intellectual ownership of your research, i.e., think hard about whether you and your collaborators are doing the right thing, search for relevant papers, and push your projects forward at a good pace. 
+* Respect restrictions on data usage and information sharing. 
+The lab conducts "human subjects research" (in that we work with data from individual humans) and often works with protected health information (PHI) and limited data sets (LDS). 
+Lab members need to be aware of what PHI looks like so they can report its possible misuse. 
+For instance, files containing PHI may accidentally be stored on the wrong machine, or another research group might accidentally email PHI.
+The CIVIC and CEIRR consortia to which we belong have non-disclosure agreements prohibiting sharing of information (results, comments, etc.) from meetings.
 * Develop annual and long-term professional goals as soon as you join the lab, and discuss them with me then and regularly thereafter. Let me know whenever yours goals change. (It's okay if your long-term goals are amorphous, just let me know.)
 * Work hard and steadily, understand how you work, and let me know how I can help you work better. 
 Please let me know especially if my availability, the environment, software, or hardware are slowing you down.
@@ -39,8 +44,7 @@ Your adviser and committee will help steer you, but you are in control.
 * *Intellectual independence and mastery*
     * Be able to define a coherent field of study, including the progress that has been made in it and the problems that remain. 
     This requires following the literature by regular, self-directed reading (at least five papers a week, conservatively, on average).
-    * Have enough statistical and general knowledge to assess the strength of evidence of (almost) any study or general claim in this field
-    * Practice good stewardship of data, and understand constraints on human subjects research.
+    * Have enough statistical and general knowledge to assess the strength of evidence of (almost) any study or general claim in this field.
     * Propose and carry out tractable, meaningful studies. In general, I expect graduate students to propose at least two projects or chapters for their thesis, including at least one for their thesis proposal.
     * Identify new questions you want to answer and have an idea of how to address them.
     * Have a demonstrated history of acquiring skills through self-driven instruction and self-initiated collaborations.
