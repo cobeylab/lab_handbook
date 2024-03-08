@@ -1,64 +1,14 @@
-# Onboarding
+# Pre-onboarding
 
-Welcome to the lab! This is an incomplete checklist of items to cover in your first week. We'll review all of this in a meeting the first day.
+Welcome to the lab! We'll have a more detailed schedule and orientation as soon as you arrive, but there are some things to start on beforehand.
 
-The most important things are to read the whole handbook and not to hesitate to ask questions.
+The most important are to read the whole handbook and not to hesitate to ask questions.
 
-**Before you arrive**, if possible, let me know if you'll need a laptop, so we can have one waiting for you.
-Connie can work with you if you need a visa.
-I can also help link you up with people who can help with housing.
+**Before you arrive**, 
 
-**Workspace**
+* Let me know if you'll need a laptop, mouse, display, etc., so we can have the right hardware waiting for you. Please let me know if you will need other accommodations for your workspace.
+* Connie Homan will work with you if you need a visa.
+* I strongly suggest you consult lab members about good neighborhoods, blocks, landlords, transit options, etc., before you sign a lease. We're happy to help.
+* Plan ahead for travel within the first few months of your start and discuss it with me: Is there a conference or other work trip you've already committed to? Personal trip? Is there a conference coming up that you'd like to attend and with an impending abstract deadline? If you'll be working on CEIRR-related research, we need to submit all travel requests ~30 days in advance for approval.
 
-* Identify hardware to purchase: monitor, laptop, external hard drive, keyboard, mouse, etc. 
-* Any other accommodations needed for comfortable work station?
-* Key to lab (from E&E office, $20 deposit required)
-* Get UChicago ID card from library. This gives you access to the building.
-* Consider asking for access now to other spaces you may visit, e.g., immunology (4th floor of KCBD).
-
-**Computing and admin**
-
-* [Request an account](https://rcc.uchicago.edu/accounts-allocations/general-user-account-request) to use the Cobey partition on Midway.
-* Request access to the lab's Asana workspace.
-* Request access to the [cobeylab github account](https://github.com/cobeylab). (Create a github account if you've not yet.)
-* Get access to our [Instagram account](https://www.instagram.com/cobeylab/). You're free to contribute whenever you want, but please check with subjects that they don't mind their picture being posted to the internet.
-* Request access to the theory group calendar and the lab calendar
-* Download and install the [University VPN](https://uchicago.service-now.com/it?id=kb_article&kb=kb00015292) so you can access resources off campus.
-* Consider signing up for emails on additional seminar series and groups. (Note that a list of almost all BSD seminars will automatically be emailed to you every day.)
-* Ask Mike Guerra to help you set up CrashPlan Pro and the external hard drive for backups.
-* Mike can also help you with ongoing IT support requests such as adding a printer. *Please CC bsdis@bsd.uchicago.edu on all requests so a ticket is generated.*
-* Figure out a lab service task. These tasks are basically chores, e.g., managing office supplies and the lab environment, maintaining the lab calendar and getting people signed up for meetings, etc. On Asana, they go by the euphemism "Areas of Responsibility". They're nonetheless critical for allowing us to work efficiently and happily. You'll also be assigned to a week of kitchen duty (basically, making sure other people clean up their messes, and picking up the slack if they don't).
-* Write your profile for the lab website, and upload your CV (we could review it together first, if you like).
-
-**Research**
-
-* Scour the active research projects on Asana. (If you can see them, you're welcome to investigate the contents.) Ask people what's going on with each.
-* Read more recent papers from the lab so you are familiar with lab member's areas of expertise.
-* Discuss one-year goals and your long-term plans. 
-* Identify short-term research goals (i.e., your initial project(s)), deadlines for initial research outputs, and deadlines for funding and conferences. 
-Although we should focus on outputs, let's discuss if there are any immediate skills you need to develop to complete the work (Figure).
-* Let me know how you like to interact, how you like to work, and if there are practices or principles described in the handbook that you would like to see changed, or at least don't work well for you. We can negotiate policies.
-* Learn who/what is funding your research. Read at least the corresponding grant proposal, if we have one, and potentially other recent proposals (all on Asana).
-* Identify a time for weekly meetings.
-* Figure out with me if you need training in human subjects research.
-
-```{r data-plot, out.width='40%', echo=FALSE, fig.show='hold', fig.align="center", fig.cap='No'}
-knitr::include_graphics(rep("images/data_science.png"))
-```
-
-**Introductions**
-
-* Lab members! We'll have a big lab lunch or dinner soon after you arrive, but I encourage you to meet with everyone individually in the first week or two.
-* E&E administrators and IT
-* Building administrators and custodians
-* Neighbors in the Erman Building
-* Other faculty
-* Postdocs should consider joining the postdoc happy hour on Fridays
-
-**Life and around town**
-
-* Check out University [perks & discounts](https://humanresources.uchicago.edu/benefits/retirefinancial/perks/index.shtml). Note deals for phones, housing, etc.
-* If you're commuting from outside Hyde Park, consider signing up for commuter benefits (if you are eligible). Get a [Ventra](https://www.ventrachicago.com/) card, which works on all buses and the El/CTA.
-* You can download the [Metra](https://metrarail.com/) app if you'll be taking the Metra Electric line to/from downtown.
-* Ask around about which health plans are en vogue.
-
+**In your first few weeks**, you can expect to be checking in with me or another lab member most days per week before we settle on a more regular cadence. The exception to this would be new graduate students, who have a bazillion orientations and other events to attend, and who will usually be preoccupied with coursework for the first two quarters. We will check in less often. But I encourage graduate students to be in touch if they would like to work in the lab, attend lab meetings, etc., before the quarter starts.
