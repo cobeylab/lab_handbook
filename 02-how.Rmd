@@ -138,35 +138,48 @@ If the door is closed, it means I'm working, and it's best to communicate via Sl
 
 ## Weekly check-ins and meetings
 
-Most weeks, you'll meet individually with me or your project group to discuss research and occasionally other topics.
-The agendas of these meetings is largely up to you, but you should know what you want to get from the meeting before it starts.
-I ask researchers to come prepared with slides, an updated summary, or notebook (Rmd, Jupyter, etc.) concisely describing progress since the last meeting. 
-You can choose whichever format works best for you, but somehow, your notes should clearly state (i) what goals you had set last week for this week, (ii) your progress on each goal, and (iii) what you think comes next.
-(This structure is really helpful for me and [many PIs](https://twitter.com/TomGaborski/status/1632502308822024196?s=20).)
-You should also be prepared to show system and unit tests, or some kind of validation, to convince me your research results are correct.
-The meeting is time to both dig into the weeds but also think about the big picture.
+Most people in the lab are leading a project.
+Every week, each project leader should complete the lab's template-based "Friday update" that contains (i) the overarching project goals and key objectives for the quarter, (ii) the progress on each goal over the past week, (iii) your priorities for next week, (iv) any notable roadblocks/obstacles and plans to overcome them, and (v) (optionally) any reminders, lessons, or other scientific ideas you want to note. 
+These updates should be brief and take roughly 5-10 min to complete. They are due by noon on Fridays.
+I'll comment on them.
 
-I'll try to remind you of this, but one of my main goals for each meeting is to learn how I can best support you, during the meeting and after. 
-If our relationship needs adjusting, please let me know.
-If you want to talk about career goals, that's fine too.
+The Friday updates will be shared with the group---please read them! The alternative is to give "live" updates in lab meeting, but we've decided that doesn't work so well.
+
+Most weeks, you'll meet with me as part of your project group to discuss research progress and troubleshoot.
+The agendas of these meetings is largely up to you, but you should know what you want to get from the meeting before it starts.
+Come prepared with slides, an updated summary, or notebook (Rmd, Jupyter, etc.) describing progress since the last meeting. 
+In general, be prepared to show system and unit tests, or some kind of validation, to convince others the research results are correct.
+The meeting is time to both dig into the weeds but also think about the big picture.
+If you're making steady progress, have nothing to discuss, and our priorities are aligned, it might make sense to skip the meeting.
+(For this reason, it's best to schedule meetings properly using ics invitations so that others can be sure of the status.)
+
+
+I'll try to remind you of this, but one of my main goals for each project meeting is to learn how I can best support you, during the meeting and after. 
 If we need another meeting or a longer meeting to discuss the science, please say so.
 This is your time, but please be organized about it.
 
-When I'm traveling, these weekly meetings will by default be cancelled, but you're welcome to reschedule them.
+At least quarterly, we should have a 1:1 meeting to discuss your career goals and other topics.
+If our relationship needs adjusting, please let me know any time.
+
+When I'm traveling, weekly meetings will by default be cancelled, but you're welcome to reschedule them.
 Please always feel free to request a meeting when I am traveling, unless I'm on vacation.
 You can sign up to meet with me using my Calendly link.
 
 ## Lab meetings
 
 We'll meet weekly as a lab.
-Meetings start with various announcements of abstract deadlines, cool upcoming talks, new papers, etc., and then we briefly update one another on our research (roughly 1-5 min per person).
-The point of these updates is to practice describing our research and especially to keep each other involved in our work, which includes providing helpful suggestions.
-The rest of the meeting is usually dedicated to an in-depth presentation and discussion of one of our research projects or a discussion of a paper.
-Plan to present your research once per quarter and to lead at least one paper discussion per quarter.
-Pick papers at least a week in advance so people have time to read them.
-Everyone is expected to show up having read and critically thought about the paper.
-If someone is presenting, everyone else is expected to make helpful suggestions.
-Please also plan to keep your camera on, unless you have a good reason you need to keep it off.
+Our lab meetings will focus on our research, with a different project meeting (described above) becoming the lab meeting each week.
+This is an opportunity for people to become more familiar with different problems, learn new techniques, etc., but the main focus should be on advancing the project's goals, no matter how hairy a state the project is in.
+To save time, announcements will occur via Slack beforehand.
+Everyone else is expected to make helpful suggestions.
+Please keep your camera on, unless you have a good reason you need to keep it off.
+
+Every sixth or seventh week, if not presenting some nascent or ancillary project myself, I will suggest some papers to read critically or discuss as a lab.
+I'll pick those papers at least a week in advance.
+Everyone is expected to show up having read and critically thought about the papers.
+Additionally, you might want to request people read a particularly important paper for a project-focused lab meeting. 
+
+You're welcome to schedule additional meetings to discuss papers, give practice talks, etc., at any time yourself.
 
 ## Reproducible research
 
