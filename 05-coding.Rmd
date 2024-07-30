@@ -584,6 +584,7 @@ Branch: A copy of the files in a repository that can be modified independently o
 Commit: A bundle of changes to the files in a repository. The history of a repository consists of a list of commits to various branches, and merges of the branches into another. (Usually there's one *main* branch where all the changes eventually end up. The canonical current state of the repo is the state of the main branch, and versioned releases are usually of the main branch.)
 
 
+
 ### Midway
 
 Note: This section was updated in August 2021. The information includes references to Midway3, but at this time the majority of computing takes place on Midway2.
@@ -604,9 +605,11 @@ Your home directory is in `/home/<CNetID>` and has a quota of 30 GB. This is a g
 
 Your scratch space is `/scratch/midway3/<CNet ID>/` and has a quota of 100 GB. This is where you should dump simulation output. I recommend organizing your simulation output using a predictable system: I like to put each experiment in a directory tagged by the date and a name, e.g., `2014-12-08-antigen-vaccine`; you may want prefer a hierarchy.
 
-The lab project directory is `/project2/cobey` (for Midway2() (`/project/cobey` for Midway3 but as of 8/2021 there is no storage quota) and has a quota of 4.49 TB, with a hard limit of 4.94 TB, for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. `/project2/cobey/bcellproject-storage/2014-12-08-test`. The lab directory has a file quota of 1,885,693 files, with a hard limit of 2,074,262 files.
+The lab project directory is `/project2/cobey` for Midway2 (and `/project/cobey` for Midway3 but as of 8/2021 there is no storage quota) and has a quota of 4.49 TB, with a hard limit of 4.94 TB, for everyone. If you want to share simulation output with other people in the lab, put them here. Keep things organized into separate project directories; I would recommend tagging directories with dates as above, e.g. `/project2/cobey/bcellproject-storage/2014-12-08-test`. The lab directory has a file quota of 1,885,693 files, with a hard limit of 2,074,262 files.
 
 To check your disk usage, use the `quota` command. These quotas are current as of August 2021.
+
+
 
 #### Connecting to Midway
 
@@ -624,6 +627,8 @@ $ ssh <CNetID>@midway2.rcc.uchicago.edu
 
 Passwordless login is no longer available, and two factor authentication is required.
 
+
+
 ##### SCP
 
 You can copy individual files or directly back and forth using the `scp` command, e.g.,
@@ -638,6 +643,8 @@ There are also graphical SSH/SCP browsers for Mac OS X, Linux, and Windows:
 * [WinSCP](http://winscp.net/eng/index.php) (Windows)
 * [FileZilla](https://filezilla-project.org) (all platforms)
 * **Mac OS X specific to be updated**
+
+
 
 ##### SAMBA (SMB) (connect as a disk)
 
@@ -666,6 +673,7 @@ $ ssh -X <CNetID>@midway2.rcc.uchicago.edu
 ```
 
 This is especially useful for the `sview` command (see below); it also will forward the graphics of a job running on a cluster node if you use `ssh -X and then `sinteractive`.
+
 
 ##### VNC (graphical interface via ThinLinc)
 
@@ -745,6 +753,9 @@ NOTE: the `-O3` flag means "optimization level 3", which means, "make really fas
 
 If you want to make it easy to compile your code with different compilers on different systems, you can use the `make.py` script in the [bcellmodel](https://bitbucket.org/cobeylab/bcellmodel) project as a starting point. It tries Intel, then Clang, then GCC until one is available. (This kind of thing is possible, but a bit annoying to get working, using traditional Makefiles, so I've switched to using simple Python build scripts for simple code.)
 
+
+
+
 #### R
 
 ```
@@ -781,6 +792,8 @@ module avail mathematica
 
 shows that they are available on Midway2. (Getting a graphical Mathematica notebook to run on the cluster is a pain in the ass, though, so you're probably better off just running it locally if you can get away with it.)
 
+
+
 #### Installing R and Python libraries
 
 ##### R
@@ -806,6 +819,8 @@ install.packages(c('dplyr',
 Other libraries (such as [`panelPomp`](https://rdrr.io/github/cbreto/panelPomp/)), are not yet in the CRAN respository. These libraries often need to be installed from GitHub, which is possible using `devtools`.
 
 ```
+
+
 ## panelPomp from GitHub
 install.packages(c("devtools"),
                  dependencies = T,
@@ -827,6 +842,8 @@ I'll leave most of the details to the official documentation:
 [https://rcc.uchicago.edu/docs/using-midway/#using-midway](https://rcc.uchicago.edu/docs/using-midway/#using-midway)
 
 but a summary of important stuff follows.
+
+
 
 #### Overview
 
@@ -854,6 +871,8 @@ If your jobs are queued with `(Priority)` status, it means other jobs are taking
 ```
 $ sprio
 ```
+
+
 
 #### Useful commands
 
@@ -911,6 +930,8 @@ Change the time limit for a PENDING job:
 $ scontrol update TimeLimit=<HH:MM:SS> jobid=<jobid>
 ```
 
+
+
 ##### accounts
 
 Display number of used/available CPU-hours for the lab:
@@ -930,6 +951,8 @@ Displace account usage (SUs) for a previous period (update --cycle to indicate t
 ```
 $ /software/systool/bin/accounts balance --account=pi-cobey --cycle=2019-2020
 ```
+
+
 ##### sview
 
 If you're connected graphically to Midway (either via `ssh -X` or using ThinLinc), you can get a graphical view of the SLURM cluster, which makes it easy to do things like selectively cancel a bunch of jobs at once:
@@ -954,6 +977,8 @@ The check the file and storage breakdown on `\project2\cobey` (or `\project\cobe
 ```
 $ quota -F /project2/cobey
 ```
+
+
 
 ### SLURM tricks
 
@@ -998,15 +1023,11 @@ For each node purchased by the lab, the warranty is 5 years. Once the warranty r
 For the current status of private nodes, use:
 
 
-```{sh}
-sinfo -p cobey
-```
+`sinfo -p cobey`
 
 Or for nodes with "cobey" in the name:
 
-```{sh}
-sinfo | grep cobey
-```
+`sinfo | grep cobey`
 
 
 
