@@ -1032,8 +1032,8 @@ Or for nodes with "cobey" in the name:
 
 
 
-```{r private-nodes, out.width='100%', echo=FALSE, fig.show='hold', fig.align="center", fig.cap='Node list with status September 2022'}
-knitr::include_graphics(rep("images/private-nodes.png"))
+```{r private-nodes, out.width='100%', echo=FALSE, fig.show='hold', fig.align="center", fig.cap='Node list with status September 2024'}
+knitr::include_graphics(rep("images/private-nodes-Sept2024.png"))
 ```
 
 #### Transitioning from Midway2 to Midway3
