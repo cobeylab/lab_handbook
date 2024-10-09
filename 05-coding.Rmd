@@ -587,7 +587,7 @@ Commit: A bundle of changes to the files in a repository. The history of a repos
 
 ### Midway
 
-Note: This section was updated in August 2021. The information includes references to Midway3, but at this time the majority of computing takes place on Midway2.
+Note: This section was updated in October 2024. At this time the majority of computing takes place on Midway3, but Midway2 is still functional.
 
 Midway2 and Midway3 are the main computing clusters used by the lab, run by the Research Computing Center. Midway3 was launched in March 2021. The official documentation for Midway2 and Midway3 are maintained here by RCC:
 
