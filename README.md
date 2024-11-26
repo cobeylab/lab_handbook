@@ -12,4 +12,8 @@
 ./_build.sh
 
 ```
+# or
 
+
+launch R proj
+bookdown::render_book()
