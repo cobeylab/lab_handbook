@@ -14,6 +14,7 @@ description: "Handbook of the Cobey Lab at the University of Chicago"
 
 # Preface {-}
 
+TEST123
 This handbook is partly for prospective or new lab members who want to know how we do things. The first chapters, where we lay out our principles and general style of work, are most relevant here. 
 
 The main purpose of this handbook, however, is to help current lab members share knowledge, develop skills, and get things done. Contributions welcome.
