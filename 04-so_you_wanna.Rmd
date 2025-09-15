@@ -82,6 +82,7 @@ The following workflow seems to work well, but if you prefer another one, let me
 5. Ask coauthors in advance if they could inspect revisions and the reply during some time window---they should know when to expect our draft.
 6. When we resubmit to the journal, we *immediately* upload the revised manuscript (without journal-specific typesetting) to the preprint server. Once the manuscript is accepted, it's usually too late to submit a revision. We would then have to decide between paying exorbitant OA fees to the journal or leaving the article behind the journal's paywall, thereby encouraging people to access the outdated version. It's best if the accepted version is already on the server.
 7. Remember that rejections and revisions are [part of the game](https://twitter.com/dsquintana/status/1053898526667739136).
+8. If possible, choose a CC-BY license (not NC/ND) for the paper.
 
 ## Email like a pro
 
