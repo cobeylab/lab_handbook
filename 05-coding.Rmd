@@ -591,7 +591,7 @@ Note: This section was updated in October 2024. At this time the majority of com
 
 Midway2 and Midway3 are the main computing clusters used by the lab, run by the Research Computing Center. Midway3 was launched in March 2021. The official documentation for Midway2 and Midway3 are maintained here by RCC:
 
-**Midway2**: [https://rcc.uchicago.edu/docs/](https://rcc.uchicago.edu/docs/)
+**Midway2**: [https://docs.rcc.uchicago.edu/](https://docs.rcc.uchicago.edu/)
 
 **Midway3**: [https://mdw3.rcc.uchicago.edu/](https://mdw3.rcc.uchicago.edu/)
 
@@ -615,7 +615,7 @@ To check your disk usage, use the `quota` command. These quotas are current as o
 
 Details here:
 
-[https://rcc.uchicago.edu/docs/connecting/](https://rcc.uchicago.edu/docs/connecting/)
+[https://docs.rcc.uchicago.edu/101/connecting/](https://docs.rcc.uchicago.edu/101/connecting/)
 
 ##### SSH (terminal)
 
@@ -679,7 +679,7 @@ This is especially useful for the `sview` command (see below); it also will forw
 
 You can also get a full Linux desktop GUI on a Midway connection using a program called ThinLinc:
 
-[https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc](https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc)
+[https://docs.rcc.uchicago.edu/101/connecting/#connecting-with-thinlinc](https://docs.rcc.uchicago.edu/101/connecting/#connecting-with-thinlinc)
 
 WARNING: the first time you use ThinLinc, before you click Connect go to Options... > Screen and turn off full-screen mode. Otherwise ThinLinc will take over all your screens, making it rather hard to use your computer.
 
@@ -691,7 +691,7 @@ See [UChicago ServiceNow](https://uchicago.service-now.com/it?id=kb_article&kb=K
 
 Before you run anything on Midway, you'll need to load the necessary software modules using the `module` command:
 
-[https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/](https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/)
+[https://docs.rcc.uchicago.edu/software/](https://docs.rcc.uchicago.edu/software/)
 
 If you're not sure what the name of your module is, use, e.g.,
 
