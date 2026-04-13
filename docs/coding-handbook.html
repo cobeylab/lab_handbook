@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Coding Handbook | Cobey Lab Handbook</title>
   <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago" />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Coding Handbook | Cobey Lab Handbook" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2025-09-09" />
+<meta name="date" content="2026-04-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,8 +54,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -738,7 +739,7 @@ code available.</li>
 <h3><span class="header-section-number">5.13.2</span> Midway<a href="coding-handbook.html#midway" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Note: This section was updated in October 2024. At this time the majority of computing takes place on Midway3, but Midway2 is still functional.</p>
 <p>Midway2 and Midway3 are the main computing clusters used by the lab, run by the Research Computing Center. Midway3 was launched in March 2021. The official documentation for Midway2 and Midway3 are maintained here by RCC:</p>
-<p><strong>Midway2</strong>: <a href="https://rcc.uchicago.edu/docs/">https://rcc.uchicago.edu/docs/</a></p>
+<p><strong>Midway2</strong>: <a href="https://docs.rcc.uchicago.edu/">https://docs.rcc.uchicago.edu/</a></p>
 <p><strong>Midway3</strong>: <a href="https://mdw3.rcc.uchicago.edu/">https://mdw3.rcc.uchicago.edu/</a></p>
 <p>This page contains some tasks that are likely to be useful to you.</p>
 <div id="storage-on-midway" class="section level4 hasAnchor" number="5.13.2.1">
@@ -752,7 +753,7 @@ code available.</li>
 <div id="connecting-to-midway" class="section level4 hasAnchor" number="5.13.2.2">
 <h4><span class="header-section-number">5.13.2.2</span> Connecting to Midway<a href="coding-handbook.html#connecting-to-midway" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Details here:</p>
-<p><a href="https://rcc.uchicago.edu/docs/connecting/">https://rcc.uchicago.edu/docs/connecting/</a></p>
+<p><a href="https://docs.rcc.uchicago.edu/101/connecting/">https://docs.rcc.uchicago.edu/101/connecting/</a></p>
 <div id="ssh-terminal" class="section level5 hasAnchor" number="5.13.2.2.1">
 <h5><span class="header-section-number">5.13.2.2.1</span> SSH (terminal)<a href="coding-handbook.html#ssh-terminal" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>To connect via ssh, use your CNetID:</p>
@@ -791,7 +792,7 @@ Project:  smb://midwaysmb.rcc.uchicago.edu/project/cobey</code></pre>
 <div id="vnc-graphical-interface-via-thinlinc" class="section level5 hasAnchor" number="5.13.2.2.5">
 <h5><span class="header-section-number">5.13.2.2.5</span> VNC (graphical interface via ThinLinc)<a href="coding-handbook.html#vnc-graphical-interface-via-thinlinc" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>You can also get a full Linux desktop GUI on a Midway connection using a program called ThinLinc:</p>
-<p><a href="https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc">https://rcc.uchicago.edu/docs/connecting/#connecting-with-thinlinc</a></p>
+<p><a href="https://docs.rcc.uchicago.edu/101/connecting/#connecting-with-thinlinc">https://docs.rcc.uchicago.edu/101/connecting/#connecting-with-thinlinc</a></p>
 <p>WARNING: the first time you use ThinLinc, before you click Connect go to Options… &gt; Screen and turn off full-screen mode. Otherwise ThinLinc will take over all your screens, making it rather hard to use your computer.</p>
 </div>
 <div id="connecting-to-eduroam-internationally" class="section level5 hasAnchor" number="5.13.2.2.6">
@@ -802,7 +803,7 @@ Project:  smb://midwaysmb.rcc.uchicago.edu/project/cobey</code></pre>
 <div id="configuring-software-on-midway" class="section level4 hasAnchor" number="5.13.2.3">
 <h4><span class="header-section-number">5.13.2.3</span> Configuring Software on Midway<a href="coding-handbook.html#configuring-software-on-midway" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Before you run anything on Midway, you’ll need to load the necessary software modules using the <code>module</code> command:</p>
-<p><a href="https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/">https://rcc.uchicago.edu/docs/tutorials/intro-to-software-modules/</a></p>
+<p><a href="https://docs.rcc.uchicago.edu/software/">https://docs.rcc.uchicago.edu/software/</a></p>
 <p>If you’re not sure what the name of your module is, use, e.g.,</p>
 <pre><code>$ module avail intel</code></pre>
 <p>and you’ll be presented with a list of options. You can then load/unload modules using, e.g.,</p>
