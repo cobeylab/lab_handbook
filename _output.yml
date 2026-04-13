@@ -10,6 +10,4 @@ bookdown::gitbook:
     edit: null
     download: null
     search: yes
-    sharing:
-      twitter: yes
-      google: yes
+    sharing: no
