@@ -100,7 +100,7 @@ sview
 quota
 slurm-tricks
 other-midway-items-to-keep-track-of
-protected-health-information-phi-and-midwayr
+phi-midway
 allocation-requests
 node-life
 transitioning-from-midway2-to-midway3
