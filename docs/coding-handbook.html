@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Coding Handbook | Cobey Lab Handbook</title>
   <meta name="description" content="Handbook of the Cobey Lab at the University of Chicago" />
-  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Coding Handbook | Cobey Lab Handbook" />
   <meta property="og:type" content="book" />
@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2026-04-13" />
+<meta name="date" content="2026-11-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -993,9 +993,13 @@ devtools::install_github(&#39;cbreto/panelPomp&#39;)</code></pre>
 </div>
 <div id="other-midway-items-to-keep-track-of" class="section level3 hasAnchor" number="5.13.5">
 <h3><span class="header-section-number">5.13.5</span> Other Midway items to keep track of<a href="coding-handbook.html#other-midway-items-to-keep-track-of" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="protected-health-information-phi-and-midwayr" class="section level4 hasAnchor" number="5.13.5.1">
-<h4><span class="header-section-number">5.13.5.1</span> Protected health information (PHI) and MidwayR<a href="coding-handbook.html#protected-health-information-phi-and-midwayr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="phi-midway" class="section level4 hasAnchor" number="5.13.5.1">
+<h4><span class="header-section-number">5.13.5.1</span> Protected health information (PHI) and Midway<a href="coding-handbook.html#phi-midway" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>There are instances where we work with data that qualifies as <a href="https://en.wikipedia.org/wiki/Protected_health_information">PHI</a>. Most often, this is individual-level data that includes a specific date related to an individual (e.g., birth date, admission date, vaccination date). These types of data cannot be stored or used in jobs running on Midway2/Midway3. For PHI and other protected data types, MidwayR may be useful. MidwayR is similar to the Midway computing environment but is also equipped with tools and software needed to meet the highest levels of secure data protection. Even with using MidwayR, it may be necessary to obscure dates that qualify as PHI.</p>
+<p>In practice, even when exact dates are necessary for the analyses, the dates themselves don’t need to be on the cluster. It’s easy to transform dates so they are expressed as a number of days since a reference date (the beginning of the study, the date when participants received an intervention, etc). As long as the reference date is not included, the numbers of days themselves can be kept on Midway2/Midway3. Similarly, when dates are used to determine the order of events (e.g., did an infection happen before this sample was collected?), keeping the order (e.g., <code>TRUE</code> or <code>FALSE</code>) without the actual dates on Midway2/Midway3 will be safe and sufficient for the analyses. Transforming and removing dates should be done in a device that is approved to store and analyze PHI. It should be done automatically by the code that prepares data for the analyses, never by hand.</p>
+<p>Depending on how it’s written, a script that transforms data to remove PHI might allow a person with access to the script to recover the original data. For instance, a script that converts absolute to relative dates based on a reference date hard-coded in the script itself allows anyone with access to the script and transformed data to recover the absolute dates. <strong>Whenever a script allows PHI to be reconstructed from the transformed data, the script itself must be treated as de facto PHI</strong> (and therefore kept in a PHI-safe location, inaccessible to LLMs or unauthorized people, etc.).</p>
+<p>It’s usually possible to write scripts that are not de facto PHI. In the example above, a script that reads the reference date from a separate confidential file does not itself need to be kept confidential (since only a file path is visible, not the actual date). A script that simply removes PHI columns by referencing their names, or a script that computes relative dates by subtracting date columns and removing the original columns from the output, are also okay.</p>
+<p>As a general rule, avoid hardcoding PHI in transformation scripts. If you absolutely need specific PHI values (and not just column names) to perform the transformation, have the script read them from a file that is kept confidential. But remember that PHI is not only dates: Always make sure the script does not allow for the data to be reverse-transformed before putting it anywhere where PHI shouldn’t be.</p>
 </div>
 <div id="allocation-requests" class="section level4 hasAnchor" number="5.13.5.2">
 <h4><span class="header-section-number">5.13.5.2</span> Allocation requests<a href="coding-handbook.html#allocation-requests" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1038,12 +1042,31 @@ Figure 5.1: Node list with status September 2025
 </div>
 <div id="handling-phi" class="section level3 hasAnchor" number="5.14.2">
 <h3><span class="header-section-number">5.14.2</span> Handling PHI<a href="coding-handbook.html#handling-phi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Data is vulnerable “at rest” (on a local machine, or cloud storage) and “in transit” between machines over the internet or other network. It can also be recovered after it has been deleted from certain types of drive, and copies are often retained on systems where data was stored. Online services (Slack, email systems, Github, messaging apps) – even when attachments appear to be limited to two parties – also expose data to the company that owns the service, and their internal logs, backups, third-party services et cetera.</p>
-<p>It is important, therefore, to use secure systems even for temporary storage, or when transferring files to MidwayR. PHI generally needs to be deleted after the conclusion of a study according to a Data Use Agreement, or IRB protocol.</p>
-<p>CrashPlan Pro should be set up to exclude any PHI data directories, and backups should be included when deleting data. Copies can also be in recycle bins, logs, and swap files.</p>
-<p>There’s no official secure deletion application for individual files. However, <a href="https://www.ccleaner.com/">CCleaner</a> and similar programs can help with the process on local machines. Whole-disk deletion should be coordinated with the <a href="https://security.bsd.uchicago.edu/">BSD Information Security Office</a>.</p>
+<p>Data is vulnerable “at rest” (on a local machine, or cloud storage) and “in transit” between machines over the internet or other network. It can also be recovered after it has been deleted from certain types of drive, and copies are often retained on systems where data was stored. Online services (Slack, email systems, Github, messaging apps) – even when attachments appear to be limited to two parties – also expose data to the company that owns the service, and their internal logs, backups, third-party services et cetera.
+It is important, therefore, to use secure systems even for temporary storage of PHI, or when transferring files to collaborators. This excludes all apps and methods mentioned above.</p>
+<p>The easiest way to safely store and transfer data containing PHI is to use <a href="https://uchicago.service-now.com/services?id=kb_article&amp;sysparm_article=KB06000647">UChicago Box</a>. While you can upload and download files using the web interface, it’s better to download the Box desktop app. The app gives you access to your Box folder via a path on your machine (<code>~/Box/</code>, if you’re on a Mac). With the app installed, you should set up the following system for storing and sharing PHI:</p>
+<ul>
+<li><p>Create a directory for the project inside your Box folder.</p></li>
+<li><p>Initialize a git repository in that directory. You can do that by moving to the directory in the terminal (e.g. <code>cd ~/Box/project_X_data/</code>) and running <code>git init</code>. <em>Do not link this repo to Github</em>. Remember: Box is approved to store PHI, Github isn’t. You can nonetheless version control the data, and the <code>.git/</code> folder will be backed up to Box like everything else in the folder.</p></li>
+<li><p>You can use the same Box folder for both storing and transferring data. Because the other person often shouldn’t have access to the full data, you can create transfer folders inside the master project folder. On the Box website, you can authorize specific people to access just the transfer folder, and you can create multiple transfer folders for different people as needed. Do not use unrestricted links to share PHI.</p></li>
+<li><p>When you receive data, move it from the transfer folder to its permanent location, then stage and commit the files to the git repository. If you receive new versions of the same data, version control makes it safe to delete or overwrite previous versions. It’s a good idea to keep READMEs in the data folder and its internal folders. Version control them too.</p></li>
+<li><p>Though git makes accidental changes to the data easy to detect and fix, you can guard against accidental edits (e.g. an unintended save in your editor) by making the files read-only (<code>chmod 444</code>). Note that this does not prevent git operations or a forced <code>rm</code> from changing the files.</p></li>
+<li><p>Because you can point to the data using the path to the mounted box folder (<code>~/Box/</code>), you don’t need to keep copies of the data anywhere else on your machine. For instance, when you’re developing code in a local copy of your code repo, you don’t need to copy data from its permanent storage on Box into a <code>data/</code> folder next to where your code is. Doing so is bad because 1) you might accidentally push the copied data to GitHub, and 2) you need to make a fresh copy of the data whenever it’s been updated on Box, so you risk developing code for or drawing conclusions from outdated data.</p></li>
+<li><p>See <a href="coding-handbook.html#phi-midway">PHI and Midway</a> for how to transform and remove PHI before transferring data to Midway2/Midway3.</p></li>
+<li><p>CrashPlan Pro should be set up to exclude any PHI data directories, including the local Box mount.</p></li>
+<li><p>Claude should not be given access to PHI, including the local Box mount. If it tries to go there, the Box app will probably ask for your permission, which you should not give. You can explicitly prohibit Claude from accessing the Box mount by adding the following to your <code>settings.json</code> file:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb45-1"><a href="coding-handbook.html#cb45-1" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb45-2"><a href="coding-handbook.html#cb45-2" tabindex="-1"></a>    <span class="dt">&quot;permissions&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb45-3"><a href="coding-handbook.html#cb45-3" tabindex="-1"></a>        <span class="dt">&quot;deny&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb45-4"><a href="coding-handbook.html#cb45-4" tabindex="-1"></a>            <span class="st">&quot;Read(~/Box/**)&quot;</span><span class="ot">,</span></span>
+<span id="cb45-5"><a href="coding-handbook.html#cb45-5" tabindex="-1"></a>            <span class="st">&quot;Edit(~/Box/**)&quot;</span></span>
+<span id="cb45-6"><a href="coding-handbook.html#cb45-6" tabindex="-1"></a>        <span class="ot">]</span></span>
+<span id="cb45-7"><a href="coding-handbook.html#cb45-7" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb45-8"><a href="coding-handbook.html#cb45-8" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<p>PHI generally needs to be deleted after the conclusion of a study according to a Data Use Agreement, or IRB protocol. There’s no official secure deletion application for individual files. However, <a href="https://www.ccleaner.com/">CCleaner</a> and similar programs can help with the process on local machines. Whole-disk deletion should be coordinated with the <a href="https://security.bsd.uchicago.edu/">BSD Information Security Office</a>.</p>
 <p>If data is exposed, lost or stolen, it should be reported according to the corresponding protocol or agreement.</p>
-<p>Methods for transferring files are available in the <a href="https://midwayr-docs.rcc.uchicago.edu/data-transfer/">MidwayR User Guide</a>.</p>
+<p>Methods for transferring files to MidwayR are available in the <a href="https://midwayr-docs.rcc.uchicago.edu/data-transfer/">MidwayR User Guide</a>.</p>
 
 </div>
 </div>
